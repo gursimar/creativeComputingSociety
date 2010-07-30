@@ -1,0 +1,2288 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Embedded Systems Design - Embedded.com
+Date: Thu, 24 Jun 2010 00:36:39 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0130_01CB1335.4F361550"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.embedded.com/columns/15201575;jsessionid=V5WTRLVMJ1INJQE1GHPSKH4ATMY32JVN?printable=true
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Embedded Systems Design - Embedded.com</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><!-- title and meta tags -->
+<META name=3Ddescription=20
+content=3D"Welcome to Embedded.com, the on-line resource for embedded =
+systems developers. This is the place to come for tutorials, code, =
+demos, and news, along with information about Embedded Systems Design =
+Magazine and the Embedded Systems Conferences.">
+<META name=3Dkeywords=20
+content=3D"embedded =
+systems,conference,development,real-time,programming,emulators,multitaski=
+ng,debugging,software,optimization,engineer,RTOS,chips,tools,microcontrol=
+lers,DSP,operating systems,kernel,microprocessors,object-oriented,single =
+board,ada,C++,visual basic, forth,RISC,compilers,specialty libraries, =
+configuration management,ICE,ROM emulators,logic analyzers,device =
+programmers,oscilloscopes,8-bit,eprom,flash,OEM,boards,CMP Media =
+LLC,vendor,magazine,custom =
+publishing,esp,esc,directories,mwmedia,Windows CE, Win CE, CE, Windows, =
+Microsoft, developer, software, operating system, hand held, wallet, PC, =
+OS, mobile, wireless, portable, driver, ETK, OAL, OAK, Pentium, 486, =
+MIPS, Smartcards, Cellular Phone, Small-Form-Factor, H/PC, Palm, CE, =
+RFA, PDA, PIC">
+<META name=3Drevisit-after content=3D"2 days">
+<META name=3Drobots content=3Dindex,follow>
+<META name=3Dcreated content=3D20031007><LINK rel=3Dstylesheet =
+type=3Dtext/css=20
+href=3D"http://i.cmpnet.com/embedded/v2/css/embeddedv2.css"><LINK =
+rel=3Dstylesheet=20
+type=3Dtext/css =
+href=3D"http://i.cmpnet.com/embedded/v2/css/tabber.css"><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://i.cmpnet.com/embedded/v2/css/cc.css">
+<SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+src=3D"http://i.cmpnet.com/embedded/v2/js/top_nav.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+src=3D"http://i.cmpnet.com/embedded/v2/js/tabber.js"></SCRIPT>
+
+<SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+src=3D"http://i.cmpnet.com/embedded/v2/js/cc.js"></SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY><!-- SiteCatalyst code version: H.20.3.
+Copyright 1997-2009 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+src=3D"http://i.cmpnet.com/shared/omniture/s_code_remote_eetimes.js"></SC=
+RIPT>
+
+<SCRIPT language=3DJavaScript>
+<!--
+s.pageName=3D"";
+s.server=3D"";
+s.channel=3D"";
+s.pageType=3D"";
+s.prop1=3D"";
+s.prop2=3D"";
+s.prop3=3D"Embedded Systems Design | 15201575 | Fixed-point math in C";
+s.prop4=3D"";
+s.prop5=3D"Embedded | Software & Web Development | Columns | =
+Algorithms/DSP | Embedded Systems Design | 1) Design Library";
+s.prop6=3D"";
+s.prop7=3D"Joe Lemieux";
+s.prop8=3D"125.19.69.2 | Mozilla/4.0 (compatible; MSIE 8.0; Windows NT =
+6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; =
+.NET CLR 3.0.30729; Media Center PC 6.0; FDM; .NET4.0C; .NET4.0E; =
+BCD2000)";
+s.prop9=3D"";
+s.prop10=3D"";
+s.prop11=3D"";
+s.prop12=3D"";
+s.prop14=3D"";
+s.prop15=3D"";
+s.prop16=3D"";
+s.prop19=3D"False";
+s.prop21=3D"";
+
+/* Conversion Variables */
+s.campaign=3D"";
+s.state=3D"";
+s.zip=3D"";
+s.events=3D"event5";
+s.products=3D"";
+s.purchaseID=3D"";
+s.eVar1=3D"";
+s.eVar2=3D"";
+s.eVar3=3D"";
+s.eVar4=3D"";
+s.eVar5=3D"";
+s.eVar21=3D"";
+s.eVar22=3D"";
+s.eVar23=3D"False";
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=3Ds.t();if(s_code)document.write(s_code)//--></SCRIPT>
+
+<SCRIPT language=3DJavaScript type=3Dtext/javascript><!--
+if(navigator.appVersion.indexOf('MSIE')>=3D0)document.write(unescape('%3C=
+')+'\!-'+'-')
+//--></SCRIPT>
+<NOSCRIPT><A title=3D"Web Analytics" =
+href=3D"http://www.omniture.com/"><IMG border=3D0=20
+alt=3D"" =
+src=3D"http://om.eetimes.com/b/ss/cmpglobalvista/1/H.20.3--NS/0" =
+width=3D1=20
+height=3D1></A></NOSCRIPT><!--/DO NOT REMOVE/--> <!-- End SiteCatalyst =
+code version: H.20.3. --><!-- reader opinion links --><!-- <droplet =
+src=3D"opinion_links.jhtml"/> --><!-- headline -->
+<DIV class=3Darticle_headline>Fixed-point math in C</DIV><!-- sub head =
+--><!-- /sub head --><!-- icons --><!-- author/byline -->
+<DIV class=3Darticle_author>By Joe Lemieux</DIV><!-- site -->
+<DIV class=3Darticle_site><!-- remove http:// substring (if present) =
+from the url --><A=20
+href=3D"http://www.embedded.com/" target=3D_blank>Embedded Systems =
+Design </A></DIV><!-- date -->
+<DIV class=3Darticle_date>(10/07/03, 12:00:00 PM EDT)</DIV><!-- article =
+body --><!-- <p> -->
+<DIV class=3Darticle_body><FONT size=3D2 face=3DVerdana>
+<P><B>Floating-point arithmetic can be expensive if you're using an =
+integer-only=20
+processor. But floating-point values can be manipulated as integers, asa =
+less=20
+expensive alternative.</B>=20
+<P>One advantage of using a high-level language is the native support of =
+
+floating-point math. This simplifies the task of programming and =
+increases the=20
+accuracy of calculations. When used in a system that includes a hardware =
+
+floating-point math unit, this can be a very powerful feature. However, =
+if=20
+floating-point math is used on a microprocessor that supports only =
+integer math,=20
+significant overhead can be incurred to emulate floating point, both in =
+ROM size=20
+and in execution time. The alternative, used by assembly language =
+programmers=20
+for years, is to use fixed-point math that is executed using integer =
+functions.=20
+This article will discuss a method to implement fixed-point math in C.=20
+<P>Fixed-point math typically takes the form of a larger integer number, =
+for=20
+instance 16 bits, where the most significant eight bits are the integer =
+part and=20
+the least significant eight bits are the fractional part. Through the =
+simple use=20
+of integer operations, the math can be efficiently performed with very =
+little=20
+loss of accuracy. Unfortunately, C does not provide native support for=20
+fixed-point math. The method presented in this article is essentially =
+the same=20
+as in assembly language and is described in the following steps.=20
+<P><FONT color=3D#333366 size=3D3 =
+face=3DVerdana><B>Initialization</B></FONT><BR>The=20
+first step in the fixed-point math algorithm is to initialize the =
+system. This=20
+step defines the parameters used later in the development of the system. =
+To=20
+illustrate each step, assume that your application requires a variable =
+that=20
+ranges from 0 to 1 with a granularity of 0.01, another variable family =
+that=20
+ranges from 0 to 100 with a granularity of 0.1, and a third variable =
+family that=20
+ranges from -1,000 to 1,000 with a granularity of 0.01. The steps are =
+performed=20
+as follows.=20
+<P>First, determine the maximum absolute value M that you wish to =
+calculate for=20
+each class of fixed-point variable. The value of M for each example =
+requirement=20
+is 1, 100, and 1,000, respectively.=20
+<P>Second, calculate the number of bits x required to store this number =
+such=20
+that 2<SUP><I>x</I></SUP> <IMG border=3D0 align=3Dbottom=20
+src=3D"http://i.cmpnet.com/embedded/gifs/2001/0104/geq.gif"> M <IMG =
+border=3D0=20
+align=3Dbottom =
+src=3D"http://i.cmpnet.com/embedded/gifs/2001/0104/geq.gif">=20
+2<SUP><I>x</I>-1</SUP>.=20
+<P>If the number is to be signed, add 1 to <I>x</I>. For our example=20
+requirements, <I>x</I> is 1, 7, and 11, respectively.=20
+<P>Then, determine the granularity G that is required. The example =
+requirements=20
+define the granularity and no further calculation is needed.=20
+<P>Next, calculate the number of bits y required to provide this =
+granularity=20
+such that 1/2<SUP><I>y</I></SUP> <IMG border=3D0 align=3Dbottom=20
+src=3D"http://i.cmpnet.com/embedded/gifs/2001/0104/geq.gif"> G <IMG =
+border=3D0=20
+align=3Dbottom =
+src=3D"http://i.cmpnet.com/embedded/gifs/2001/0104/geq.gif">=20
+1/2<SUP><I>y</I>-1</SUP>. For our example requirements, this is 7 (1/128 =
+=3D=20
+.0078125), 4 (1/16 =3D .0625), and 7.=20
+<P>Finally, the minimum number of bits required is <I>x</I>+<I>y</I>. =
+Round this=20
+sum up to either 8, 16, or 32. This sum will be referred to later as the =
+
+FULLSIZEINT. If this sum is greater than the maximum integer size in =
+your=20
+system, then floating-point numbers are required and will probably be =
+more=20
+efficient. The results for our example requirements for all the initial=20
+parameters are shown in Table 1. The resultant columns show the actual =
+ranges=20
+and granularity available after the bit requirements are complete.=20
+<P>
+<TABLE cellSpacing=3D3 width=3D400>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD colSpan=3D9 align=3Dleft><FONT size=3D-2 face=3DVerdana><B>Table =
+1 Example=20
+      initialization results</B></FONT></TD></TR>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana><B>No.</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana><B>Range</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana><B>M</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana><B>x</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana><B>Resultant=20
+      <BR>range</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2=20
+face=3DVerdana><B>Granularity</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana><B>y</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana><B>Resultant=20
+      <BR>granularity</B></FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana><B>Number of =
+<BR>bits=20
+      required</B></FONT></TD></TR>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>1</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0=961</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>1</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>1</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0=961</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0.01</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>7</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0.0078125</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>8</FONT></TD></TR>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>2</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0=96100</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>100</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>7</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0=96127</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>0.1</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>4</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0.0625</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>16</FONT></TD></TR>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>3</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>-1000=96</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>1000</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>11</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>-1024=961023</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0.01</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 face=3DVerdana>7</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>0.0078125</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>32</FONT></TD></TR>
+  <TR vAlign=3Dtop>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>1000</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2 =
+face=3DVerdana>&nbsp;</FONT></TD>
+    <TD bgColor=3D#ccccff><FONT size=3D-2=20
+face=3DVerdana>&nbsp;</FONT></TD></TR></TBODY></TABLE>
+<P><FONT color=3D#333366 size=3D3 =
+face=3DVerdana><B>Definition</B></FONT><BR>The=20
+second step in the algorithm is to create the definitions for C that are =
+
+required to implement the variables. This consists of typedefs and =
+macros, with=20
+the possibility that a function may need to be developed.=20
+<P><B>Typedef</B><BR>Definition of the fixed-point algorithm requires a =
+typedef=20
+for each fixed-point variable type that will be used by the system. This =
+typedef=20
+is a union with an embedded structure as follows. The structure assumes =
+that the=20
+compiler assigns the bits in an integer from most significant to least=20
+significant. If this is not the case, reverse the declaration of the =
+structure=20
+members integer and fraction in the structure. This typedef is not =
+portable, and=20
+is best put in a unique header file:=20
+<P><B>typedef union FIXEDX_Ytag {<BR>&nbsp;&nbsp;&nbsp;&nbsp;FULLSIZEINT =
+
+full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;struct partX_Ytag=20
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FULLSIZEINT =
+integer:=20
+x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FULLSIZEINT =
+fraction:=20
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;FULLSIZEINT-x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}=20
+part;<BR>} FIXEDX_Y;</B>=20
+<P>FULLSIZEINT is either <B>long</B>, <B>int</B>, <B>short</B>, or =
+<B>char</B>=20
+and either signed or unsigned and cannot be longer than the maximum =
+length=20
+integer available, or the structure will not work. If FULLSIZEINT is =
+longer than=20
+this maximum, then floating point needs to be used.=20
+<P>Notice that the fractional portion of the structure is calculated as=20
+FULLSIZEINT-<I>x</I>, instead of using <I>y</I> as the size of the =
+member. Since=20
+a complete integer is available, I have chosen to increase the =
+granularity of=20
+the system in order to decrease the error of the calculations. In your=20
+application, you may wish to increase the integer member in order to =
+provide a=20
+method to check for math overflow.=20
+<P><B>Macros</B><BR>After the typedefs have been declared, macros need =
+to be=20
+defined. Substitute the actual value for the equations using <I>X</I> =
+and=20
+<I>Y</I> in each of the following macros.=20
+<P>Define a macro to convert a value into the fixed-point variable. A is =
+the=20
+integer part and B is the decimal part, expressed as normal decimal. =
+These=20
+values must be hard-coded constants so the preprocessor and compiler can =
+
+completely resolve the macro into an integer. If either A or B are =
+variables,=20
+then the macro will actually generate floating-point code and eliminate =
+the=20
+savings of this algorithm. Check the results of the compile in the =
+listing to=20
+make sure that the compiler functioned properly. (To do this, you must =
+have the=20
+compiler interlace the assembly code with the C statements.)=20
+<P><B>#define FIXEDX_YCONST(A,B) (FULL-SIZEINT)((A&lt;&lt;Y) + ((B +=20
+1/(2^(Y+1)))*2^Y))</B>=20
+<P>Define macros to perform multiplication and division of the =
+fixed-point=20
+variables:=20
+<P><B>#define MULTX_Y(A,B) (FULL-=20
+&nbsp;&nbsp;&nbsp;&nbsp;SIZEINT+1)(A.full*B.full+=20
+&nbsp;&nbsp;&nbsp;&nbsp;2^(Y-1))&gt;&gt;Y #define DIVX_Y(A,B) (FULL-=20
+&nbsp;&nbsp;&nbsp;&nbsp;SIZEINT+1)((A.full&lt;&lt;Y+1)/=20
+&nbsp;&nbsp;&nbsp;&nbsp;B.full)+1)/2</B>=20
+<P>where FULLSIZEINT+1 is the next largest integer over =
+<I>X</I>+<I>Y</I>. If=20
+FULLSIZEINT is the largest available integer, then either floating point =
+must be=20
+used, or a subroutine is required for multiply and divide.=20
+<P>Listing 1 shows the definitions for one of our example requirements =
+sets. In=20
+this file, I first define the integer typedefs so the code that is =
+written is=20
+portable. Next, the typedefs and macros are defined.=20
+<P><B>Listing 1: Example typedef and macros=20
+<P>*&nbsp;&nbsp;&nbsp;&nbsp;Range=20
+0-1.9921875<BR>*&nbsp;&nbsp;&nbsp;&nbsp;Granularity 0.0078125<BR>
+<P>typedef union FIXED1_7tag {<BR>&nbsp;&nbsp;&nbsp;&nbsp;unsigned char=20
+full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;struct part1_7tag=20
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;unsigned char fraction:=20
+7;<BR>&nbsp;&nbsp;&nbsp;&nbsp;unsigned char integer:=20
+1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;} part;<BR>} FIXED1_7;=20
+<P>#define FIXED1_7CONST(A,B) (unsigned char)((A&lt;&lt;7) + ((B +=20
+0.00390625)*128))<BR>#define MULT1_7(A,B) (unsigned=20
+short)(A.full*B.full+64)&gt;&gt;7<BR>#define DIV1_7(A,B)(unsigned=20
+short)((A.full&lt;&lt;8)/B.full)+1)/2</B>=20
+<P>Listing 2 shows the multiply and divide routines used for the 32-bit =
+example,=20
+assuming that a 64-bit integer is not available in the system, since =
+that cannot=20
+be done in a macro. Notice that in the divide routine, I am using a=20
+floating-point number for the calculation. If your system requires =
+division, the=20
+amount of memory used cannot be reduced this way, but the add, subtract, =
+
+compare, and multiply routines will still execute faster than the =
+comparable=20
+floating-point routines.=20
+<P><B>Listing 2: Multiply and divide for 32-bit variables=20
+<P>int MULT11_21(FIXED11_21 a, FIXED11_21 =
+b)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;int=20
+temp,result;<BR>&nbsp;&nbsp;&nbsp;&nbsp;char sign =3D=20
+0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;if (a.full =
+&lt;=20
+0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;sign=20
+=3D 1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.full =3D=20
+-a.full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;if =
+(b.full &lt;=20
+0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;sign^=20
+=3D 1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b.full =3D=20
+-b.full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;result =3D (((a.full &amp; 0x0000FFFF) * =
+(b.full &amp;=20
+0x0000FFFF))+1048576)&gt;&gt;21;<BR>&nbsp;&nbsp;&nbsp;&nbsp;result =3D =
+result +=20
+((((a.full&gt;&gt;16) * (b.full &amp;=20
+0x0000FFFF))+16)&gt;&gt;5);<BR>&nbsp;&nbsp;&nbsp;&nbsp;result =3D result =
++=20
+((((b.full&gt;&gt;16) * (a.full &amp;=20
+0x0000FFFF))+16)&gt;&gt;5);<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp =3D =
+(a.full&gt;&gt;16)=20
+* (b.full&gt;&gt;16);<BR>&nbsp;&nbsp;&nbsp;&nbsp;result =3D result +=20
+(temp&lt;&lt;11);<BR>&nbsp;&nbsp;&nbsp;&nbsp;return (result * =
+-sign);<BR>}=20
+<P>int DIV11_21(FIXED11_21 a, FIXED11_21=20
+b)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;double=20
+temp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;FIXED11_21=20
+result;<BR>&nbsp;&nbsp;&nbsp;&nbsp;unsigned char sign =3D 0;=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;temp =3D=20
+(double)a.full/(double)b.full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;if=20
+(temp&lt;0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;temp=20
+=3D -temp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sign =3D=20
+1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;result.part.in=
+teger =3D=20
+temp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;result.part.fraction =3D=20
+((temp-result.part.integer)*4194304 +=20
+1)/2;<BR>&nbsp;&nbsp;&nbsp;&nbsp;result.part.integer *=3D=20
+-sign;<BR>&nbsp;&nbsp;&nbsp;&nbsp;return (result.full);<BR>} </B>
+<P><FONT color=3D#333366 size=3D3 =
+face=3DVerdana><B>Usage</B></FONT><BR>When using the=20
+fixed-point variables in an application, first declare variables using =
+the new=20
+typedef. Next, use the new variables in the application as defined in =
+the=20
+following paragraphs.=20
+<P>When adding, subtracting, or performing logical comparisons on two =
+variables=20
+with the same-resolution fixed-point numbers, use the .full portion of =
+the union=20
+and perform straight integer arithmetic. Listing 3 shows a small routine =
+that=20
+performs each operation and prints the result for the number of type=20
+<B>FIXED1_7</B>. In this routine, the numbers are added and the result =
+is=20
+printed to the display. A set of comparisons are then done to determine =
+if a=20
+subtraction would work, and if so, the subtraction is performed and the =
+results=20
+written to the display. If a subtraction would result in an unsigned =
+underflow,=20
+an error is displayed.=20
+<P><B>Listing 3: Simple math on same granularity variables=20
+<P>void Test1_7(FIXED1_7 a, FIXED1_7=20
+b)<BR>{<BR>&amp;<BR>nbsp;&nbsp;&nbsp;&nbsp;FIXED1_7 temp;=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;printf("Results of operations on 1_7=20
+variables\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D a.full +=20
+b.full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Addition result is =
+%d.%2.2d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*100+64)/128);<BR>&nbsp;&nbsp;&nbsp;&nbsp;if=20
+(a.full &lt;=20
+b.full)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;printf("a=20
+is less than b. Subtraction=20
+overflows.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;i=
+f=20
+(a.full =3D=3D=20
+b.full)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;printf("a=20
+is the same as b. Result =3D=20
+0.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;if =
+(a.full &gt;=20
+b.full)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;temp.full=20
+=3D a.full -=20
+b.full;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Subtra=
+ction=20
+result is %d.%2.2d\n", temp.part.integer,=20
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(temp.part.fraction*1=
+00+64)/128);<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>}</B>=20
+
+<P>When adding, subtracting, or performing logical comparisons on two =
+variables=20
+with different-resolution fixed-point numbers, first scale the different =
+
+resolution number to the same resolution as the result. Listing 4 shows =
+a small=20
+routine that performs some mixed operations and prints the results. This =
+routine=20
+performs the same function as Listing 3.=20
+<P><B>Listing 4: Simple math on different granularity variables=20
+<P>void Test7_9(FIXED7_9 a, FIXED1_7 =
+b)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;FIXED7_9=20
+temp;=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;printf("\nResults of operations on 7_9 and =
+1_7=20
+variables\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D a.full +=20
+(b.full&lt;&lt;2);<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Addition result is =
+
+%d.%1.1d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*10+256)/512);<BR>&nbsp;&nbsp;&nbsp;&nbsp;if=20
+(a.full &lt;=20
+(b.full&lt;&lt;2))<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;printf("a=20
+is less than b. Subtraction=20
+overflows.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;i=
+f=20
+(a.full =3D=3D=20
+(b.full&lt;&lt;2))<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;printf("a=20
+is the same as b. Result =3D=20
+0.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;if =
+(a.full &gt;=20
+(b.full&lt;&lt;2))<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;temp.full=20
+=3D a.full -=20
+(b.full&lt;&lt;2);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pri=
+ntf("Subtraction=20
+result is %d.%1.1d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+(temp.part.fraction*10+256)/512);<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>}</B>=20
+<P>When multiplying or dividing variables of the same-resolution =
+fixed-point=20
+numbers, use the macros previously defined. Listing 5 shows a small =
+routine that=20
+performs each operation and prints the result. This routine simply =
+performs the=20
+multiply and divide without checking, then displays the results. With =
+multiply=20
+and divide, you cannot pass the full value, so you must pass the =
+structure name.=20
+
+<P><B>Listing 5: Multiplication and division on same granularity =
+variables=20
+<P>void Test7_9_X(FIXED7_9 a, FIXED7_9=20
+b)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;FIXED7_9 temp;=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;printf("\nResults of multiply and divide on =
+7_9=20
+variables.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D=20
+MULT7_9(a,b);<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Multiply result is =
+%d.%1.1d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*10+256)/512);<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full=20
+=3D DIV7_9(a,b);<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Divide result is =
+%d.%1.1d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*10+256)/512);<BR>}</B>=20
+
+<P>When multiplying or dividing variables of different-resolution =
+fixed-point=20
+numbers, use the same macro as the result and scale the operands as with =
+
+addition and subtraction. Listing 6 shows a small routine that performs =
+an=20
+operation like this and prints the results.=20
+<P><B>Listing 6: Multiplication and division on different granularity=20
+<P>void Test11_21(FIXED11_21 a, FIXED7_9=20
+b)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;FIXED11_21 temp;=20
+<P>&nbsp;&nbsp;&nbsp;&nbsp;printf("\nResults of multiply and divide on =
+11_21 and=20
+7_9 variables.\n");<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D b.full =
+&lt;&lt;=20
+12;<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D=20
+MULT11_21(a,temp);<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Multiply result is =
+
+%d.%2.2d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*100+1048576)/2097152);<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.f=
+ull=20
+=3D b.full &lt;&lt; 12;<BR>&nbsp;&nbsp;&nbsp;&nbsp;temp.full =3D=20
+DIV11_21(a,temp);<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf("Divide result is=20
+%d.%2.2d\n",=20
+temp.part.integer,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(te=
+mp.part.fraction*100+1048576)/2097152);<BR>}</B>=20
+
+<P>The value can be displayed using the integer and fractional portions =
+of the=20
+structure.=20
+<P><FONT color=3D#333366 size=3D3 face=3DVerdana><B>Words of=20
+caution</B></FONT><BR>When these algorithms are implemented, a few areas =
+of=20
+caution need to be addressed. If they aren't, erroneous results may be =
+obtained.=20
+
+<P>The C language does not check integer arithmetic for overflows or =
+underflows.=20
+The programmer must take care to either prevent or check for these =
+conditions.=20
+This is usually accomplished by using a subroutine, possibly in assembly =
+
+language, for each math operation and checking the limits. However, it =
+can also=20
+be accomplished by adding bits to the integer portion, and limiting to a =
+smaller=20
+number after each math operation.=20
+<P>The compiler may perform signed integer arithmetic in a subroutine =
+and may=20
+not provide a tremendous benefit.=20
+<P>A rounding error may be injected in the result due to the value of =
+the least=20
+significant bit. Since the expectation is an LSB of 0.1, and in fact the =
+value=20
+is something less, an error of 1 LSB is injected that can compound =
+during=20
+mathematical operations. For example, using our FIXED1_7 example, 0.02 =
+is=20
+represented as a full number of 3, and 0.06 is represented as a full =
+number of=20
+8. The sum should be 0.08, or a full number of 10. The actual result is =
+11,=20
+which is closer to 0.09. To limit this error, use a larger number such =
+as 16=20
+bits, and increase the granularity from 7 bits to 15 bits.=20
+<P>Fixed-point math provides a small, fast alternative to floating-point =
+numbers=20
+in situations where small rounding errors are acceptable. After =
+implementing the=20
+algorithms described in this article, your application will be able to =
+harness=20
+the power of C and still retain the efficiency of assembly.=20
+<P>All examples in this article were tested using Microsoft Visual C++ =
+v. 4.0=20
+Standard edition. The source code for the test files can be found on the =
+web at=20
+<A=20
+href=3D"ftp://ftp.embedded.com/pub/2001/lemieux">ftp://ftp.embedded.com/p=
+ub/2001/lemieux</A>.=20
+
+<P><B>Joseph Lemieux</B> is a senior applied specialist with EDS =
+Embedded=20
+Solutions in Troy, MI. He holds an MS in electrical engineering from the =
+
+University of Michigan and has been writing software for embedded =
+systems in the=20
+automotive industry for over 17 years. He can be reached by e-mail at <A =
+
+href=3D"mailto:joe.lemieux@eds.com">joe.lemieux@eds.com</A></FONT>.</P></=
+DIV><!-- pagination --><!-- rate this article -->
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop align=3Dleft>
+      <SCRIPT language=3DJavaScript type=3Dtext/javascript>
+var jiveTitle =3D "Comments for: \"Fixed-point math in C\"";
+var sURL =3D unescape(window.location.href);
+var sQuery =3D =
+sURL.indexOf("?")>0?sURL.substr(sURL.indexOf("?"),sURL.length):"";
+sURL =3D =
+sURL.indexOf(";jsessionid")>0?sURL.substr(0,sURL.indexOf(";jsessionid"))+=
+sQuery:sURL;
+var jiveDescription =3D "Read the article here: <a href\=3D\"" + sURL + =
+"\">Fixed-point math in C</a>";
+</SCRIPT>
+
+      <SCRIPT language=3DJavaScript type=3Dtext/javascript=20
+      =
+src=3D"http://www.embedded.com/tigforums/communityjs/780?forum=3D23&amp;k=
+ey=3D15201575"></SCRIPT>
+    </TD></TR></TBODY></TABLE></BODY></HTML>
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://om.eetimes.com/b/ss/cmpglobalvista/1/H.20.3--NS/0
+
+R0lGODlhAgACAIAAAP///wAAACH5BAEAAAAALAAAAAACAAIAAAIChFEAOw==
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://i.cmpnet.com/embedded/gifs/2001/0104/geq.gif
+
+R0lGODlhCAAMAIAAAAAAAL+/vyH5BAEAAAEALAAAAAAIAAwAAAIRRI4Bm7jWDotT1udg3Pt53RQA
+Ow==
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/embedded/v2/css/embeddedv2.css
+
+.search {
+	FONT-FAMILY: Verdana, Helvetica, sans-serif; BACKGROUND-POSITION: =
+center 50%; COLOR: #424c74; FONT-SIZE: 9px; FONT-WEIGHT: bold
+}
+.teal_header {
+	FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+LETTER-SPACING: 1px; COLOR: #005288; MARGIN-LEFT: 0px; FONT-SIZE: 12px; =
+FONT-WEIGHT: bold
+}
+.footer_gold_text {
+	TEXT-TRANSFORM: none; FONT: 11px Verdana, Arial, Helvetica, sans-serif; =
+COLOR: #a13006
+}
+.side_related_link1 {
+	TEXT-TRANSFORM: none; FONT: 11px Verdana, Arial, Helvetica, sans-serif; =
+COLOR: #003399
+}
+.footer_red {
+	TEXT-TRANSFORM: none; FONT: 11px Verdana, Arial, Helvetica, sans-serif; =
+COLOR: #bf551d; TEXT-DECORATION: none
+}
+.embedded_gray {
+	LINE-HEIGHT: 17px; FONT-FAMILY: arial,helvetica; COLOR: #666666; =
+FONT-SIZE: 12px
+}
+.footer_gray {
+	TEXT-TRANSFORM: none; FONT: 11px Arial, Helvetica, sans-serif; COLOR: =
+#666666; TEXT-DECORATION: none
+}
+A.footer_gray:link {
+	COLOR: #666666; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.footer_gray:visited {
+	COLOR: #666666; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.footer_gray:hover {
+	COLOR: #666666; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.footer_gray:active {
+	COLOR: #666666; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+UL.most_popular {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: =
+none; MARGIN-TOP: 5px; PADDING-LEFT: 0px; BORDER-TOP-STYLE: none; =
+MARGIN-LEFT: 0px; BORDER-LEFT-STYLE: none
+}
+UL.most_popular LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 14px; PADDING-LEFT: 15px; BACKGROUND: =
+url(http://i.cmpnet.com/embedded/2007/blue_dot.jpg) no-repeat 2px 0.35em
+}
+UL.most_popular A {
+	FONT-FAMILY: verdana,arial; COLOR: #000000; FONT-SIZE: 10px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+UL.purple {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: =
+none; MARGIN-TOP: 0px; PADDING-LEFT: 0px; BORDER-TOP-STYLE: none; =
+MARGIN-LEFT: 0px; BORDER-LEFT-STYLE: none
+}
+UL.purple LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 16px; PADDING-LEFT: 15px; BACKGROUND: =
+url(http://i.cmpnet.com/embedded/2007/black_dot.gif) no-repeat 2px =
+0.35em
+}
+UL.purple A {
+	FONT-FAMILY: verdana,arial; COLOR: #145e8d; FONT-SIZE: 11px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.poll {
+	LINE-HEIGHT: 150%; FONT-FAMILY: verdana,arial; COLOR: #000000; =
+FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.column {
+	TEXT-ALIGN: left; FONT-FAMILY: verdana,arial; COLOR: #000000; =
+FONT-SIZE: 10px; VERTICAL-ALIGN: top
+}
+.column A {
+	TEXT-DECORATION: none
+}
+.column_header {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 3px; FONT-FAMILY: verdana,arial; =
+COLOR: #bf551d; FONT-SIZE: 12px; VERTICAL-ALIGN: top; FONT-WEIGHT: bold
+}
+.column_header A {
+	TEXT-DECORATION: none
+}
+.top_story_headline {
+	FONT-FAMILY: verdana,arial; COLOR: #145e8d; FONT-SIZE: 14px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.top_story_blurb {
+	LINE-HEIGHT: 16px; FONT-FAMILY: verdana,arial; FONT-SIZE: 11px; =
+PADDING-TOP: 4px
+}
+.story_headline {
+	PADDING-BOTTOM: 3px; FONT-FAMILY: verdana,arial; COLOR: #145e8d; =
+FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.story_blurb {
+	PADDING-BOTTOM: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: verdana,arial; =
+COLOR: #000000; FONT-SIZE: 11px
+}
+.tabbed_top_story_content {
+	PADDING-TOP: 10px
+}
+.tabbed_main_content {
+	PADDING-TOP: 7px
+}
+.gold_head {
+	FONT-FAMILY: verdana,arial; COLOR: #bf551d; FONT-SIZE: 11px; =
+FONT-WEIGHT: bold; PADDING-TOP: 10px
+}
+.more {
+	MARGIN-TOP: -18px
+}
+.more A {
+	FONT-FAMILY: verdana,arial; COLOR: #000000; FONT-SIZE: 11px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.sub_template {
+	MARGIN-TOP: -5px
+}
+.breadcrumb {
+	MARGIN-TOP: 4px; FONT-FAMILY: arial,helvetica; MARGIN-BOTTOM: 4px; =
+LETTER-SPACING: 0px; COLOR: #666666; MARGIN-LEFT: 14px; FONT-SIZE: 11px; =
+FONT-WEIGHT: bold; PADDING-TOP: 3px
+}
+.breadcrumb A {
+	TEXT-DECORATION: none
+}
+.vertical_line {
+	BACKGROUND-IMAGE: url(http://i.cmpnet.com/embedded/2007/gray_dot.gif); =
+BACKGROUND-REPEAT: repeat
+}
+.archive_link {
+	PADDING-BOTTOM: 20px; FONT-FAMILY: verdana,arial; COLOR: #000000; =
+FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: =
+5px
+}
+.archive_header {
+	PADDING-BOTTOM: 20px; FONT-FAMILY: verdana,arial; COLOR: #145e8d; =
+FONT-SIZE: 17px; FONT-WEIGHT: bold
+}
+.archive_sort {
+	FONT-FAMILY: verdana,arial; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.archive_gray {
+	FONT-FAMILY: arial,helvetica; COLOR: #666666; FONT-SIZE: 11px; =
+TEXT-DECORATION: none
+}
+.archive_black {
+	FONT-FAMILY: arial,helvetica; COLOR: #000000; FONT-SIZE: 11px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.archive_header_row {
+	BACKGROUND-COLOR: #145e8d; FONT-FAMILY: verdana,arial; COLOR: #ffffff; =
+FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.archive_title {
+	FONT-FAMILY: verdana,arial; COLOR: #145e8d; FONT-SIZE: 10px; =
+FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.archive_auth_date {
+	FONT-FAMILY: verdana,arial; COLOR: #000000; FONT-SIZE: 10px; =
+FONT-WEIGHT: bold
+}
+.archive_pagination {
+	PADDING-LEFT: 5px; FONT-FAMILY: verdana,arial; COLOR: #145e8d; =
+FONT-SIZE: 10px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.archive_pagination_current {
+	PADDING-LEFT: 5px; FONT-FAMILY: verdana,arial; COLOR: #000000; =
+FONT-SIZE: 10px; FONT-WEIGHT: bold
+}
+.article_headline {
+	FONT-FAMILY: verdana,arial; FONT-SIZE: 17px; FONT-WEIGHT: bold
+}
+.article_sub_head {
+	FONT-FAMILY: verdana,arial; FONT-SIZE: 13px; FONT-WEIGHT: bold; =
+PADDING-TOP: 10px
+}
+.article_author {
+	FONT-FAMILY: verdana,arial; FONT-SIZE: 12px; PADDING-TOP: 20px
+}
+.article_site {
+	FONT-FAMILY: verdana,arial; COLOR: #145e8d; FONT-SIZE: 12px; =
+FONT-WEIGHT: bold
+}
+.article_site A {
+	COLOR: #145e8d
+}
+.article_date {
+	FONT-FAMILY: verdana,arial; FONT-SIZE: 12px
+}
+.article_body {
+	PADDING-RIGHT: 3px; FONT-FAMILY: verdana,arial; FONT-SIZE: 12px; =
+PADDING-TOP: 20px
+}
+.article_pagination {
+	TEXT-ALIGN: center; FONT-FAMILY: verdana,arial; LETTER-SPACING: 4px; =
+COLOR: #145e8d; FONT-SIZE: 10px; FONT-WEIGHT: bold; PADDING-TOP: 5px
+}
+.article_pagination A {
+	COLOR: #145e8d; TEXT-DECORATION: none
+}
+.article_icons_wrapper {
+	PADDING-LEFT: 30px; WIDTH: 105px; FLOAT: right; PADDING-TOP: 20px
+}
+.article_icons_main {
+	BORDER-BOTTOM: #eff3f6 solid; BORDER-LEFT: #eff3f6 solid; =
+PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; WIDTH: 105px; PADDING-RIGHT: =
+5px; FLOAT: right; BORDER-TOP: #eff3f6 solid; BORDER-RIGHT: #eff3f6 =
+solid; PADDING-TOP: 5px
+}
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/embedded/v2/css/tabber.css
+
+.tabberlive .tabbertabhide {
+	DISPLAY: none
+}
+.tabber {
+=09
+}
+.tabberlive {
+	MARGIN-TOP: 5px
+}
+UL.tabbernav {
+	BORDER-BOTTOM: #b7b8bd 1px solid; PADDING-BOTTOM: 3px; MARGIN: 0px; =
+PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: bold 11px Verdana, Arial, =
+Helvetica, sans-serif; PADDING-TOP: 3px
+}
+UL.tabbernav LI {
+	LIST-STYLE-TYPE: none; MARGIN: 0px; DISPLAY: inline
+}
+UL.tabbernav LI A {
+	BACKGROUND-IMAGE: url(http://i.cmpnet.com/embedded/2007/design_bg.jpg); =
+BORDER-BOTTOM: medium none; BORDER-LEFT: #b7b8bd 1px solid; =
+PADDING-BOTTOM: 3px; PADDING-LEFT: 1em; PADDING-RIGHT: 1em; FONT: bold =
+11px Verdana, Arial, Helvetica, sans-serif; COLOR: white; MARGIN-LEFT: =
+0px; BORDER-TOP: #b7b8bd 1px solid; BORDER-RIGHT: #b7b8bd 1px solid; =
+TEXT-DECORATION: none; PADDING-TOP: 3px
+}
+UL.tabbernav LI.tabberactive A {
+	BACKGROUND-IMAGE: =
+url(http://i.cmpnet.com/embedded/2007/design2_bg.jpg); BORDER-BOTTOM: =
+#fff 1px solid; COLOR: #145e8d; MARGIN-LEFT: 0px
+}
+.tabberlive .tabbertab {
+	BORDER-BOTTOM: #b7b8bd 1px solid; BORDER-LEFT: #b7b8bd 1px solid; =
+PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #ffffff; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; BORDER-TOP: 0px; BORDER-RIGHT: #b7b8bd 1px solid; =
+PADDING-TOP: 5px
+}
+.tabberlive .tabbertab H2 {
+	DISPLAY: none
+}
+.tabberlive .tabbertab H3 {
+	DISPLAY: none
+}
+.tabberlive#tab1 {
+=09
+}
+.tabberlive#tab2 {
+=09
+}
+.tabberlive#tab2 .tabbertab {
+	HEIGHT: 200px; OVERFLOW: auto
+}
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/embedded/v2/css/cc.css
+
+#cc_container {
+	BORDER-BOTTOM: #145e8d 0px solid; TEXT-ALIGN: left; BORDER-LEFT: =
+#145e8d 0px solid; PADDING-BOTTOM: 5px; FONT: bold 11px arial; HEIGHT: =
+150px; OVERFLOW: hidden; BORDER-TOP: #145e8d 0px solid; BORDER-RIGHT: =
+#145e8d 0px solid; PADDING-TOP: 5px
+}
+#cc_container A {
+	COLOR: #145e8d; TEXT-DECORATION: none
+}
+#cc_header_box {
+	PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #145e8d; PADDING-LEFT: 4px; =
+PADDING-RIGHT: 4px; COLOR: #ffffff; FONT-SIZE: 12px; PADDING-TOP: 4px
+}
+#cc_control_box {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; HEIGHT: =
+40px; PADDING-TOP: 8px
+}
+#cc_expression {
+	FLOAT: left
+}
+#cc_controls {
+	FLOAT: right
+}
+#cc_techcareerbox_left {
+	FLOAT: left
+}
+#cc_techcareerbox_right {
+	FLOAT: right
+}
+#sponsorbox {
+	TEXT-ALIGN: center; BACKGROUND: #dadee8
+}
+.cc_techcareerbox {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; =
+PADDING-RIGHT: 5px; FONT: bold 11px arial; PADDING-TOP: 5px
+}
+.cc_top_box {
+	BORDER-BOTTOM: #145e8d 1px solid; BORDER-LEFT: #145e8d 1px solid; =
+WIDTH: auto; MARGIN-BOTTOM: 0px; HEIGHT: 125px; BORDER-TOP: #145e8d 1px =
+solid; BORDER-RIGHT: #145e8d 1px solid
+}
+.cc_bottom_box {
+	BORDER-BOTTOM: #145e8d 1px solid; BORDER-LEFT: #145e8d 1px solid; =
+WIDTH: auto; HEIGHT: auto; VISIBILITY: hidden; BORDER-TOP: #145e8d 1px =
+solid; BORDER-RIGHT: #145e8d 1px solid
+}
+UL.jobsearch {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; LIST-STYLE-TYPE: =
+none; MARGIN-TOP: 0px; PADDING-LEFT: 0px; BORDER-TOP-STYLE: none; =
+MARGIN-LEFT: 0px; BORDER-LEFT-STYLE: none
+}
+UL.jobsearch LI {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: =
+url(http://i.cmpnet.com/embedded/2007/black_dot.gif) no-repeat 2px =
+0.35em
+}
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/embedded/v2/js/top_nav.js
+
+//TOP NAVIGATION MOUSEOVER
+if (document.images) {
+
+   image1on =3D new Image();
+   image1on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_home_blue.gif";
+   image2on =3D new Image();
+   image2on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_design_blue.gif";
+   image3on =3D new Image();
+   image3on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_products_blue.gif";
+   image4on =3D new Image();
+   image4on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_columns_blue.gif";
+   image5on =3D new Image();
+   image5on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_elearning_blue.gif";
+   image6on =3D new Image();
+   image6on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_conferences_blue.gif";
+   image7on =3D new Image();
+   image7on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_code_blue.gif";
+   image8on =3D new Image();
+   image8on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_forums_blue.gif";
+   image9on =3D new Image();
+   image9on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_newsletters_blue.gif";
+   image10on =3D new Image();
+   image10on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_contact_blue.gif";
+   image11on =3D new Image();
+   image11on.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_sitefeat_blue.gif";
+   image12on =3D new Image();
+   image12on.src =3D "http://i.cmpnet.com/embedded/2007/topnav_rss.gif";
+   image1off =3D new Image();
+   image1off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_home_white.gif";
+   image2off =3D new Image();
+   image2off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_design_white.gif";
+   image3off =3D new Image();
+   image3off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_products_white.gif";
+   image4off =3D new Image();
+   image4off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_columns_white.gif";
+   image5off =3D new Image();
+   image5off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_elearning_white.gif";
+   image6off =3D new Image();
+   image6off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_conferences_white.gif";
+   image7off =3D new Image();
+   image7off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_code_white.gif";
+   image8off =3D new Image();
+   image8off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_forums_white.gif";
+   image9off =3D new Image();
+   image9off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_newsletters_white.gif";
+   image10off =3D new Image();
+   image10off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_contact_white.gif";
+   image11off =3D new Image();
+   image11off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_sitefeat_white.gif";
+   image12off =3D new Image();
+   image12off.src =3D =
+"http://i.cmpnet.com/embedded/2007/topnav_rss.gif";
+
+}
+
+
+function changeImages() {
+
+   if (document.images) {
+
+      for (var i=3D0; i<changeImages.arguments.length; i+=3D2) {
+
+         document[changeImages.arguments[i]].src =3D =
+eval(changeImages.arguments[i+1] + ".src");
+
+      }
+
+   }
+
+}
+
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/embedded/v2/js/tabber.js
+
+/*=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D
+  $Id: tabber.js,v 1.9 2006/04/27 20:51:51 pat Exp $
+  tabber.js by Patrick Fitzgerald pat@barelyfitz.com
+
+  Documentation can be found at the following URL:
+  http://www.barelyfitz.com/projects/tabber/
+
+  License (http://www.opensource.org/licenses/mit-license.php)
+
+  Copyright (c) 2006 Patrick Fitzgerald
+
+  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the "Software"), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be
+  included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  =
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+*/
+
+function tabberObj(argsObj)
+{
+  var arg; /* name of an argument to override */
+
+  /* Element for the main tabber div. If you supply this in argsObj,
+     then the init() method will be called.
+  */
+  this.div =3D null;
+
+  /* Class of the main tabber div */
+  this.classMain =3D "tabber";
+
+  /* Rename classMain to classMainLive after tabifying
+     (so a different style can be applied)
+  */
+  this.classMainLive =3D "tabberlive";
+
+  /* Class of each DIV that contains a tab */
+  this.classTab =3D "tabbertab";
+
+  /* Class to indicate which tab should be active on startup */
+  this.classTabDefault =3D "tabbertabdefault";
+
+  /* Class for the navigation UL */
+  this.classNav =3D "tabbernav";
+
+  /* When a tab is to be hidden, instead of setting display=3D'none', we
+     set the class of the div to classTabHide. In your screen
+     stylesheet you should set classTabHide to display:none.  In your
+     print stylesheet you should set display:block to ensure that all
+     the information is printed.
+  */
+  this.classTabHide =3D "tabbertabhide";
+
+  /* Class to set the navigation LI when the tab is active, so you can
+     use a different style on the active tab.
+  */
+  this.classNavActive =3D "tabberactive";
+
+  /* Elements that might contain the title for the tab, only used if a
+     title is not specified in the TITLE attribute of DIV classTab.
+  */
+  this.titleElements =3D ['h2','h3','h4','h5','h6'];
+
+  /* Should we strip out the HTML from the innerHTML of the title =
+elements?
+     This should usually be true.
+  */
+  this.titleElementsStripHTML =3D true;
+
+  /* If the user specified the tab names using a TITLE attribute on
+     the DIV, then the browser will display a tooltip whenever the
+     mouse is over the DIV. To prevent this tooltip, we can remove the
+     TITLE attribute after getting the tab name.
+  */
+  this.removeTitle =3D true;
+
+  /* If you want to add an id to each link set this to true */
+  this.addLinkId =3D false;
+
+  /* If addIds=3D=3Dtrue, then you can set a format for the ids.
+     <tabberid> will be replaced with the id of the main tabber div.
+     <tabnumberzero> will be replaced with the tab number
+       (tab numbers starting at zero)
+     <tabnumberone> will be replaced with the tab number
+       (tab numbers starting at one)
+     <tabtitle> will be replaced by the tab title
+       (with all non-alphanumeric characters removed)
+   */
+  this.linkIdFormat =3D '<tabberid>nav<tabnumberone>';
+
+  /* You can override the defaults listed above by passing in an object:
+     var mytab =3D new tabber({property:value,property:value});
+  */
+  for (arg in argsObj) { this[arg] =3D argsObj[arg]; }
+
+  /* Create regular expressions for the class names; Note: if you
+     change the class names after a new object is created you must
+     also change these regular expressions.
+  */
+  this.REclassMain =3D new RegExp('\\b' + this.classMain + '\\b', 'gi');
+  this.REclassMainLive =3D new RegExp('\\b' + this.classMainLive + =
+'\\b', 'gi');
+  this.REclassTab =3D new RegExp('\\b' + this.classTab + '\\b', 'gi');
+  this.REclassTabDefault =3D new RegExp('\\b' + this.classTabDefault + =
+'\\b', 'gi');
+  this.REclassTabHide =3D new RegExp('\\b' + this.classTabHide + '\\b', =
+'gi');
+
+  /* Array of objects holding info about each tab */
+  this.tabs =3D new Array();
+
+  /* If the main tabber div was specified, call init() now */
+  if (this.div) {
+
+    this.init(this.div);
+
+    /* We don't need the main div anymore, and to prevent a memory leak
+       in IE, we must remove the circular reference between the div
+       and the tabber object. */
+    this.div =3D null;
+  }
+}
+
+
+/*--------------------------------------------------
+  Methods for tabberObj
+  --------------------------------------------------*/
+
+
+tabberObj.prototype.init =3D function(e)
+{
+  /* Set up the tabber interface.
+
+     e =3D element (the main containing div)
+
+     Example:
+     init(document.getElementById('mytabberdiv'))
+   */
+
+  var
+  childNodes, /* child nodes of the tabber div */
+  i, i2, /* loop indices */
+  t, /* object to store info about a single tab */
+  defaultTab=3D0, /* which tab to select by default */
+  DOM_ul, /* tabbernav list */
+  DOM_li, /* tabbernav list item */
+  DOM_a, /* tabbernav link */
+  aId, /* A unique id for DOM_a */
+  headingElement; /* searching for text to use in the tab */
+
+  /* Verify that the browser supports DOM scripting */
+  if (!document.getElementsByTagName) { return false; }
+
+  /* If the main DIV has an ID then save it. */
+  if (e.id) {
+    this.id =3D e.id;
+  }
+
+  /* Clear the tabs array (but it should normally be empty) */
+  this.tabs.length =3D 0;
+
+  /* Loop through an array of all the child nodes within our tabber =
+element. */
+  childNodes =3D e.childNodes;
+  for(i=3D0; i < childNodes.length; i++) {
+
+    /* Find the nodes where class=3D"tabbertab" */
+    if(childNodes[i].className &&
+       childNodes[i].className.match(this.REclassTab)) {
+     =20
+      /* Create a new object to save info about this tab */
+      t =3D new Object();
+     =20
+      /* Save a pointer to the div for this tab */
+      t.div =3D childNodes[i];
+     =20
+      /* Add the new object to the array of tabs */
+      this.tabs[this.tabs.length] =3D t;
+
+      /* If the class name contains classTabDefault,
+	 then select this tab by default.
+      */
+      if (childNodes[i].className.match(this.REclassTabDefault)) {
+	defaultTab =3D this.tabs.length-1;
+      }
+    }
+  }
+
+  /* Create a new UL list to hold the tab headings */
+  DOM_ul =3D document.createElement("ul");
+  DOM_ul.className =3D this.classNav;
+ =20
+  /* Loop through each tab we found */
+  for (i=3D0; i < this.tabs.length; i++) {
+
+    t =3D this.tabs[i];
+
+    /* Get the label to use for this tab:
+       From the title attribute on the DIV,
+       Or from one of the this.titleElements[] elements,
+       Or use an automatically generated number.
+     */
+    t.headingText =3D t.div.title;
+
+    /* Remove the title attribute to prevent a tooltip from appearing */
+    if (this.removeTitle) { t.div.title =3D ''; }
+
+    if (!t.headingText) {
+
+      /* Title was not defined in the title of the DIV,
+	 So try to get the title from an element within the DIV.
+	 Go through the list of elements in this.titleElements
+	 (typically heading elements ['h2','h3','h4'])
+      */
+      for (i2=3D0; i2<this.titleElements.length; i2++) {
+	headingElement =3D =
+t.div.getElementsByTagName(this.titleElements[i2])[0];
+	if (headingElement) {
+	  t.headingText =3D headingElement.innerHTML;
+	  if (this.titleElementsStripHTML) {
+	    t.headingText.replace(/<br>/gi," ");
+	    t.headingText =3D t.headingText.replace(/<[^>]+>/g,"");
+	  }
+	  break;
+	}
+      }
+    }
+
+    if (!t.headingText) {
+      /* Title was not found (or is blank) so automatically generate a
+         number for the tab.
+      */
+      t.headingText =3D i + 1;
+    }
+
+    /* Create a list element for the tab */
+    DOM_li =3D document.createElement("li");
+
+    /* Save a reference to this list item so we can later change it to
+       the "active" class */
+    t.li =3D DOM_li;
+
+    /* Create a link to activate the tab */
+    DOM_a =3D document.createElement("a");
+    DOM_a.appendChild(document.createTextNode(t.headingText));
+    DOM_a.href =3D "javascript:void(null);";
+    DOM_a.title =3D t.headingText;
+    DOM_a.onclick =3D this.navClick;
+
+    /* Add some properties to the link so we can identify which tab
+       was clicked. Later the navClick method will need this.
+    */
+    DOM_a.tabber =3D this;
+    DOM_a.tabberIndex =3D i;
+
+    /* Do we need to add an id to DOM_a? */
+    if (this.addLinkId && this.linkIdFormat) {
+
+      /* Determine the id name */
+      aId =3D this.linkIdFormat;
+      aId =3D aId.replace(/<tabberid>/gi, this.id);
+      aId =3D aId.replace(/<tabnumberzero>/gi, i);
+      aId =3D aId.replace(/<tabnumberone>/gi, i+1);
+      aId =3D aId.replace(/<tabtitle>/gi, =
+t.headingText.replace(/[^a-zA-Z0-9\-]/gi, ''));
+
+      DOM_a.id =3D aId;
+    }
+
+    /* Add the link to the list element */
+    DOM_li.appendChild(DOM_a);
+
+    /* Add the list element to the list */
+    DOM_ul.appendChild(DOM_li);
+  }
+
+  /* Add the UL list to the beginning of the tabber div */
+  e.insertBefore(DOM_ul, e.firstChild);
+
+  /* Make the tabber div "live" so different CSS can be applied */
+  e.className =3D e.className.replace(this.REclassMain, =
+this.classMainLive);
+
+  /* Activate the default tab, and do not call the onclick handler */
+  this.tabShow(defaultTab);
+
+  /* If the user specified an onLoad function, call it now. */
+  if (typeof this.onLoad =3D=3D 'function') {
+    this.onLoad({tabber:this});
+  }
+
+  return this;
+};
+
+
+tabberObj.prototype.navClick =3D function(event)
+{
+  /* This method should only be called by the onClick event of an <A>
+     element, in which case we will determine which tab was clicked by
+     examining a property that we previously attached to the <A>
+     element.
+
+     Since this was triggered from an onClick event, the variable
+     "this" refers to the <A> element that triggered the onClick
+     event (and not to the tabberObj).
+
+     When tabberObj was initialized, we added some extra properties
+     to the <A> element, for the purpose of retrieving them now. Get
+     the tabberObj object, plus the tab number that was clicked.
+  */
+
+  var
+  rVal, /* Return value from the user onclick function */
+  a, /* element that triggered the onclick event */
+  self, /* the tabber object */
+  tabberIndex, /* index of the tab that triggered the event */
+  onClickArgs; /* args to send the onclick function */
+
+  a =3D this;
+  if (!a.tabber) { return false; }
+
+  self =3D a.tabber;
+  tabberIndex =3D a.tabberIndex;
+
+  /* Remove focus from the link because it looks ugly.
+     I don't know if this is a good idea...
+  */
+  a.blur();
+
+  /* If the user specified an onClick function, call it now.
+     If the function returns false then do not continue.
+  */
+  if (typeof self.onClick =3D=3D 'function') {
+
+    onClickArgs =3D {'tabber':self, 'index':tabberIndex, 'event':event};
+
+    /* IE uses a different way to access the event object */
+    if (!event) { onClickArgs.event =3D window.event; }
+
+    rVal =3D self.onClick(onClickArgs);
+    if (rVal =3D=3D=3D false) { return false; }
+  }
+
+  self.tabShow(tabberIndex);
+
+  return false;
+};
+
+
+tabberObj.prototype.tabHideAll =3D function()
+{
+  var i; /* counter */
+
+  /* Hide all tabs and make all navigation links inactive */
+  for (i =3D 0; i < this.tabs.length; i++) {
+    this.tabHide(i);
+  }
+};
+
+
+tabberObj.prototype.tabHide =3D function(tabberIndex)
+{
+  var div;
+
+  if (!this.tabs[tabberIndex]) { return false; }
+
+  /* Hide a single tab and make its navigation link inactive */
+  div =3D this.tabs[tabberIndex].div;
+
+  /* Hide the tab contents by adding classTabHide to the div */
+  if (!div.className.match(this.REclassTabHide)) {
+    div.className +=3D ' ' + this.classTabHide;
+  }
+  this.navClearActive(tabberIndex);
+
+  return this;
+};
+
+
+tabberObj.prototype.tabShow =3D function(tabberIndex)
+{
+  /* Show the tabberIndex tab and hide all the other tabs */
+
+  var div;
+
+  if (!this.tabs[tabberIndex]) { return false; }
+
+  /* Hide all the tabs first */
+  this.tabHideAll();
+
+  /* Get the div that holds this tab */
+  div =3D this.tabs[tabberIndex].div;
+
+  /* Remove classTabHide from the div */
+  div.className =3D div.className.replace(this.REclassTabHide, '');
+
+  /* Mark this tab navigation link as "active" */
+  this.navSetActive(tabberIndex);
+
+  /* If the user specified an onTabDisplay function, call it now. */
+  if (typeof this.onTabDisplay =3D=3D 'function') {
+    this.onTabDisplay({'tabber':this, 'index':tabberIndex});
+  }
+
+  return this;
+};
+
+tabberObj.prototype.navSetActive =3D function(tabberIndex)
+{
+  /* Note: this method does *not* enforce the rule
+     that only one nav item can be active at a time.
+  */
+
+  /* Set classNavActive for the navigation list item */
+  this.tabs[tabberIndex].li.className =3D this.classNavActive;
+
+  return this;
+};
+
+
+tabberObj.prototype.navClearActive =3D function(tabberIndex)
+{
+  /* Note: this method does *not* enforce the rule
+     that one nav should always be active.
+  */
+
+  /* Remove classNavActive from the navigation list item */
+  this.tabs[tabberIndex].li.className =3D '';
+
+  return this;
+};
+
+
+/*=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D*/
+
+
+function tabberAutomatic(tabberArgs)
+{
+  /* This function finds all DIV elements in the document where
+     class=3Dtabber.classMain, then converts them to use the tabber
+     interface.
+
+     tabberArgs =3D an object to send to "new tabber()"
+  */
+  var
+    tempObj, /* Temporary tabber object */
+    divs, /* Array of all divs on the page */
+    i; /* Loop index */
+
+  if (!tabberArgs) { tabberArgs =3D {}; }
+
+  /* Create a tabber object so we can get the value of classMain */
+  tempObj =3D new tabberObj(tabberArgs);
+
+  /* Find all DIV elements in the document that have class=3Dtabber */
+
+  /* First get an array of all DIV elements and loop through them */
+  divs =3D document.getElementsByTagName("div");
+  for (i=3D0; i < divs.length; i++) {
+   =20
+    /* Is this DIV the correct class? */
+    if (divs[i].className &&
+	divs[i].className.match(tempObj.REclassMain)) {
+     =20
+      /* Now tabify the DIV */
+      tabberArgs.div =3D divs[i];
+      divs[i].tabber =3D new tabberObj(tabberArgs);
+    }
+  }
+ =20
+  return this;
+}
+
+
+/*=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D*/
+
+
+function tabberAutomaticOnLoad(tabberArgs)
+{
+  /* This function adds tabberAutomatic to the window.onload event,
+     so it will run after the document has finished loading.
+  */
+  var oldOnLoad;
+
+  if (!tabberArgs) { tabberArgs =3D {}; }
+
+  /* Taken from: =
+http://simon.incutio.com/archive/2004/05/26/addLoadEvent */
+
+  oldOnLoad =3D window.onload;
+  if (typeof window.onload !=3D 'function') {
+    window.onload =3D function() {
+      tabberAutomatic(tabberArgs);
+    };
+  } else {
+    window.onload =3D function() {
+      oldOnLoad();
+      tabberAutomatic(tabberArgs);
+    };
+  }
+}
+
+
+/*=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D*/
+
+
+/* Run tabberAutomaticOnload() unless the "manualStartup" option was =
+specified */
+
+if (typeof tabberOptions =3D=3D 'undefined') {
+
+    tabberAutomaticOnLoad();
+
+} else {
+
+  if (!tabberOptions['manualStartup']) {
+    tabberAutomaticOnLoad(tabberOptions);
+  }
+
+}
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://i.cmpnet.com/embedded/v2/js/cc.js
+
+function jobsopen() {
+
+   var bottomBox = document.getElementById("cc_bottomBox");
+   var container = document.getElementById("cc_container");
+   container.style.height = "auto";
+   bottomBox.style.visibility = "visible";
+
+}
+
+function jobsclose() {
+
+   var bottomBox = document.getElementById("cc_bottomBox");
+   var container = document.getElementById("cc_container");
+   container.style.height = "";
+   bottomBox.style.visibility = "hidden";
+
+}
+
+
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://i.cmpnet.com/shared/omniture/s_code_remote_eetimes.js
+
+/* SiteCatalyst code version: H.20.3.
+Copyright 1997-2009 Omniture, Inc. More info available at
+http://www.omniture.com */
+
+var s_account=3D"cmpglobalvista"
+var s=3Ds_gi(s_account)
+
+/************************** CONFIG SECTION **************************/
+/* You may add or alter any code config here. */
+s.charSet=3D"ISO-8859-1"
+/* Conversion Config */
+s.currencyCode=3D"USD"
+/* Link Tracking Config */
+s.trackDownloadLinks=3Dtrue
+s.trackExternalLinks=3Dtrue
+s.trackInlineStats=3Dtrue
+s.linkDownloadFileTypes=3D"exe,zip,wav,mp3,mov,mpg,avi,wmv,doc,pdf,xls,rm=
+"
+s.linkInternalFilters=3D"javascript:,symantecendpointgame.com,storagestra=
+tegies.techweb.com,think-services.com,sunstorage.techweb.com,inside-beaut=
+y.com,openenterprise.techweb.com,mobilegamenews.biz,indiegames.com,emails=
+ecurityandavailability.techweb.com,ba.emailsecurityandavailability.techwe=
+b.com,ba.stateof.techweb.com,stateof.techweb.com,ba.storagestrategies.tec=
+hweb.com,seriousgamessource.com,informationweek,bankandtechguide,insuranc=
+eandtechguide,wsandtechguide,banksystemsandtechnology,banktech,financetec=
+h,insurancetech,wallstreetandtech,governmententerprise,insuranceandtech,i=
+nsuranceandtechnology,insuretech,microsofttoday,networkcomputing,optimize=
+mag,optimize,optimizebrand,optimizemagazine,outsourcingpipeline,rfidinsig=
+hts,wallstandtech,wallstreetandtechnology,wstonline,ftexpo,financialteche=
+xpo,fintechexpo,schooltech,ftl-foundation,oraclepeoplesoftinsider,theemer=
+gingenterprise,data,datainstitute,dbmsmag,dbpd,iesummit,intelligentcrm,in=
+telligententerprise,iemagazine,serviceagent,intelligenterp,intelligentapp=
+lications,intelligent-apps,intelligenteai,intelligentintegration,intellig=
+entbpm,intelligent-bpm,intelligentperformance,intelligentkm,intelligent-p=
+ortals,intelligentportals,itprodownloads,nwc,networkmagazine,lanmag,netwo=
+rk-mag,itarchitectmag,itarchitect,oreview,realwareawards,the-eagroup,secu=
+reenterprisemag,contentandcollaboration,idsmagazine,imagingmagazine,trans=
+form,transformmag,transformmagazine,csi32nd,advancedtechnologypipeline,at=
+pipeline,bpopipeline,businessapplicationspipeline,java-pipeline,solaris-p=
+ipeline,sun-pipeline,technology-pipeline,windowspipeline,advancedippipeli=
+ne,advancedip,bizintelligencepipeline,compliancepipeline,governancepipeli=
+ne,databasepipeline,desktopipeline,desktoppipeline,desktop-pipeline,devel=
+operpipeline,enterpriseappspipeline,enterpriseapplicationspipeline,si-pip=
+eline,systemsintegrationpipeline,internetweek,lantimes,itutilitypipeline,=
+linuxpipeline,managingoffshore,messagingpipeline,mobilepipeline,networkin=
+gpipeline,personaltechpipeline,securitypipeline,serverpipeline,smallbizpi=
+peline,smallbusinesspipeline,webservicespipeline,soa-pipeline,soapipeline=
+,compipeline,storagepipeline,systemsmanagementpipeline,techweb,winmag,win=
+dowsmag,windowsmagazine,techwebpipelines,thenewsshow,channelweb,enterpris=
+epartner,partnernews,cmpxchange,crn,solutionprovidertips,solutionprovider=
+tv,digitalconnectmag,digitalconnectmagazine,digitalconnectionmagazine,dig=
+italconnectionsmagazine,digitalconnect,techbuilder,theiped,varbusiness,co=
+mputerretailweb,crw,varbiz,audiodesignline,design,csdmag,deepchip,digital=
+tvdesignline,ecsmag,edtnscandinavia,eedesign,eemarketing,eeproductcenter,=
+eetimes,eet,insidedsp,electronics-express,electronicsexpress,embedded.com=
+,esconline,greensupplyline,industrialcontroldesignline,mobilehandsetdesig=
+nline,mwee,microwaveengineering,microwave-engineering,my-esm,electronicss=
+m,networksystemsdesignline,planetanalog,powermanagementdesignline,program=
+mablelogicdesignline,pldesignline,questlink,securitydesignline,siliconstr=
+ategies,supplynetwork,design-reuse,videsignline,3dgate,csiannual,computer=
+securityinstitute,computer-security-institute,csiannualconference,gocsi,c=
+allcentermagazine,accecmp,annualcallcenterexpo,theannualcallceneter,callc=
+enterdemo,ccdemo,ccsummit,cconvergence,communicationconvergence,communica=
+tionsconvergence,commweb,teledotcom,digvideo,dv,digitalvideoexpo,schoolci=
+o,techlearning,technologyandlearning,technologylearning,diagnosticimaging=
+,diagnostic-imaging,dimag,dionline,discan,cmellc,geriatrictimes,gericongr=
+ess,healthcareenterprise,healthieryou,issuesinaging,mccexpo,medinfosource=
+,medreach,mhsource,mrupdate,narsadartworks,netseminar,neuroinfosource,neu=
+rologycme,neurologytimes,psychcongress,psychiatrictimes,thewritebrain,tra=
+ckyourcme,adaptivecenter,bladeknowledge,boardroomconnection,btoawards,cmp=
+,db2mag,db2magazine,devicesoftwareoptimization,dso,mobilizedsoftware,netw=
+orkcomputingreports,thegridadvantage,vpnresourcecenter,csdn,cmpnetasia,da=
+tanet,itweb,resellerweb,iwebd,beaminstitute,netsec13,sifair,pqhp,cruisesh=
+ipping,cruise-events,gamanetwork,gamasutra,gamebusiness,gdceurope,gdc-eur=
+ope,londongamesweek,london-games-week,scoreevent,score-event,gdcmobile,gd=
+conf,gdmag,igf,indiegames,seriousgamessummit,seriousgamessource,mobilegam=
+enews,developer-pipeline,sdmediagroup,prnewswire,3gdesignline,ablationcli=
+nic,acumeninfo,advance,appneurology,chipcenter,at-pipeline,automotivedesi=
+gnline,biomech,broadbanddesignline,byte,cancernetwork,careerspipeline,cel=
+lulardesignline,cmeinfostore,cmpcirc,consultantlive,consumeraudiodesignli=
+ne,cuj,customsystemsmagazine,ddj,displaysdesignline,dvexpo,eetnetwork,eet=
+uk,cmpbooks,forums,fpgadesignline,iesummi,imagingdesignline,iped,itcareer=
+spipeline,itslabs,motorcontroldesignline,netsystemsdesignline,network,nwm=
+,portableelectronicsdesignline,samag,sdexpo,sd,secur,sensorsdesignline,se=
+rverconsolidator,pipeline,socdesignline,telecomdesignline,tpj,trn,tumorcl=
+inic,uemproduction,unixreview,v2,videodesignline,wirelessdesignline,wirel=
+essnetdesignline,mcediciones.net,crn.ru,ba.openenterprise.techweb.com,gam=
+esetwatch,ba.aspnet.cmp.com,aspnet.cmp.com,ba.adaptivewan.financetech.com=
+,mhinfosource,mfi.com,computerresellernews,adaptivewan.financetech.com,gl=
+obalservicesmedia,ondemandmanagement.techweb.com,ba.ondemandmanagement.te=
+chweb.com,techonline,cmpbooks.com,cmp-books.com,gamedeveloperchoiceawards=
+.tv,gdcawards.tv,gdchoiceawards.tv,gamechoiceawards.tv,gamechoiceawards.b=
+iz,gdcawards.biz,gamedeveloperchoiceawards.com,gamechoiceawards.net,gdcho=
+iceawards.com,gdcawards.net,gamedeveloperchoiceawards.biz,gdchoiceawards.=
+biz,gamedeveloperchoiceawards.net,gdcawards.com,gdchoiceawards.net,gamech=
+oiceawards.com,personalcareexpo.com,smallbizresource.com,ba.smallbizresou=
+rce.com,searchsolutions.techweb.com,ba.searchsolutions.techweb.com,partne=
+rnews.cmp.com,threatmanagement.techweb.com,ba.sunstorage.techweb.com,bran=
+ch.techweb.com,ba.branch.techweb.com,infrastructure.financetech.com,ba.in=
+frastructure.financetech.com,informationweekdownloads.com,itservices.tech=
+web.com,ba.informationweekdownloads.com,ba.itservices.techweb.com,trading=
+infrastructure.financetech.com,ba.tradinginfrastructure.financetech.com,d=
+imag.com,gdcradio.org,gdcradio.com,gdcradio.net,gdctv.net,gdctv.biz,dspde=
+signline.com,ba.dspdesignline.com,gdcfocuson.com,awanewsletters.com,awane=
+wsletters.net,grokongoogle.com,grokongoogle.net,grokgoogle.com,grokgoogle=
+.net,mocoline.com,mocoline.net,mobilecontentline.net,techcareers.com,mhso=
+urce.com,mhinfosource.com,globalwatch.psychiatrictimes.com,psychiatrictim=
+es.com,darkreading.com,gdclondon.com,londongamessummit.com,wirelessmobili=
+ty.techweb.com,resourcecenter.networkcomputing.com,vpro.techweb.com,gamer=
+bytes.com,printandimage.com,resources.cmp.com,internetfax.techweb.com,my.=
+informationweek.com,eetimes.eu,net3roadshow.com,storagesolutions.channelw=
+eb.com,itnews.com.au,pcauthority.com.au,incoming.com,infoweek.com.mx,hbae=
+xpo.com,hollywoodandgames.com,iesubscriptions.com,submag.com,drdobbs.com,=
+cmeinc.com,innovativesolutions.techweb.com,stateof.techweb.com/itam,custo=
+merengagement.financetech.com,cmpchannelgroup.com,edadesignline.com,ba.ed=
+adesignline.com,procurve.techweb.com,ba.procurve.techweb.com,gamecareergu=
+ide.com,netmedia.info,csi33rd.com,eetimes-ace.com,execsecurityretreat.com=
+,ba.execsecurityretreat.com,scaleoutadvantage.techweb.com,searchmedica.co=
+m,gdcprime.com,gamesondeck.com,unstrung.com,lightreading.com,heavyreading=
+.com,dimag.us,dionline.com,viss.cmellc.com,mobilesecurity.techweb.com,tec=
+hnet.cmp.com,itconnections.techweb.com,informationweek.com/ciosuncensored=
+2/,forefront.techweb.com,colordocumentsolutions.techweb.com,globalservice=
+ssubscriptions.com,customerservicecmp.com,ddjsubscriptions.com,customerse=
+rvicedigitalconnect.com,sdsubs.comsecureenterprisesubscriptions.com,secur=
+eenterprisesubscriptions.com,gdcaustin.net,ingrian.techweb.com,techweb.co=
+m,systemcenter.techweb.com,mechatropolis.com,unifiedcommunications.inform=
+ationweek.com,life20.net,automate.techweb.com,herestheskinny.com,enterpri=
+secontentmanagement.techweb.com,workstation.financetech.com,businesstrans=
+formation.techweb.com,claimsfraud.financetech.com,itgovernance.techweb.co=
+m,endpointsecurity.techweb.com,righttimereporting.techweb.com,documentima=
+gingsolutions.techweb.com,good.techweb.com,dartmail.net,rfid-world.com,co=
+ntentinople.com,pcgameon.com,gdcchina.cn,mobilegamesseminar.com,itconnect=
+ionsiwk.techweb.com,itconnectionsnwc.techweb.com,itgovernance2.techweb.co=
+m,ddjsilverlight.com,embedded.techweb.com,cmpevents.com,ddjvista.com,nove=
+ll.channelweb.com,mcafeepartnernews.cmp.com,internetevolution.com,cmisigh=
+t.com,synopsysoc.org,securesla.techweb.com,optimizingyournetwork.techweb.=
+com,businessinnovation.techweb.com,wewanttoknow.net,stateof10gigethernet.=
+informationweek.com,emergingsecuritythreats.techweb.com,hpbtc.techweb.com=
+,fujitsuenterprise.techweb.com,icmijobs.com,bitty.internetevolution.com,e=
+learningforsuccess.techweb.com,datawarehouse.techweb.com,eetimes.eu/franc=
+e,eetimes.eu/germany,eetimes.eu/uk,eetimes.eu/scandinavia,energyefficient=
+datacenters.techweb.com,eetimes.semiconductor.com,nojitter.com,futureofre=
+tailbanking.banktech.com,cmpsocdesigncommunity.com,networkstorage.techweb=
+.com,cmp-egevents.com,techwebtv.feedroom.com,configurationaudit.techweb.c=
+om,cmphpbsmvirtualquizcom,automotivedesign-europe.com,cmpcontestrenesasin=
+teractivecom,cmpdocumentsolutionstechwebcom,cmprenesasinteractivecom,cmpi=
+nformationweekcomwhitepaper,definingcio.techweb.com,cmplightreadingcomnxt=
+comm,cmpcmptvnet,cmplightreadingcomtelcotv,cmplightreadingcomgsma,embedde=
+d.intel.com,howmachineswork.com,biztransformcenter.com,powermanagement-eu=
+rope.com,drdobbsarchworld.com,securworld.channelweb.com,teardown.com,smar=
+tenterpriseexchange.com,securityarena.channelweb.com,securingvmware.infor=
+mationweek.com,captivasolutions.channelweb.com,techinsights.com,studio.te=
+chinsights.com,mobile.techweb.com,cmpnetseminars,sunscavengerhunt.com,myp=
+ic32.com,ubmtechnology.com,webperformancemanagement.techweb.com,cmpanalog=
+-europecom,enterprisesearch.techweb.com,industrial-europe.com,dobbscodeta=
+lk.com,dobbschallenge.com,createyournextcustomer.com,nac.informationweek.=
+com,security.informationweek.com,informationweekanalytics.com,transformat=
+ionenablers.com,techonlineindia"
+s.linkLeaveQueryString=3Dfalse
+s.linkTrackVars=3D"None"
+s.linkTrackEvents=3D"None"
+s.usePlugins=3Dtrue
+
+/* Plugin Config */
+function s_doPlugins(s)
+{
+
+	/* Plugin: getQueryParam 2.3 */
+	s.campaign=3Ds.getQueryParam('cid,kw,',':');
+
+	/* Plugin: getNewRepeat 1.0 */
+	s.prop17=3Ds.getNewRepeat();
+
+/*Set evar17=3Dprop17 so that Campaigns report values can be correlated =
+to Visitor Status*/
+	if(!s.evar17)
+		s.eVar17=3Ds.prop17;
+
+}
+/* End Plugin Config */
+s.doPlugins=3Ds_doPlugins
+
+/************************** PLUGINS SECTION *************************/
+/* You may insert any plugins you wish to use here.                 */
+
+/*
+ * Plugin: getQueryParam 2.3
+ */
+s.getQueryParam=3Dnew Function("p","d","u",""
++"var =
+s=3Dthis,v=3D'',i,t;d=3Dd?d:'';u=3Du?u:(s.pageURL?s.pageURL:s.wd.locati"
++"on);if(u=3D=3D'f')u=3Ds.gtfs().location;while(p){i=3Dp.indexOf(',');i=3D=
+i<0?p"
++".length:i;t=3Ds.p_gpv(p.substring(0,i),u+'');if(t){t=3Dt.indexOf('#')>-=
+"
++"1?t.substring(0,t.indexOf('#')):t;}if(t)v+=3Dv?d+t:t;p=3Dp.substring(i=3D=
+"
++"=3Dp.length?i:i+1)}return v");
+s.p_gpv=3Dnew Function("k","u",""
++"var =
+s=3Dthis,v=3D'',i=3Du.indexOf('?'),q;if(k&&i>-1){q=3Du.substring(i+1);v"
++"=3Ds.pt(q,'&','p_gvf',k)}return v");
+s.p_gvf=3Dnew Function("t","k",""
++"if(t){var =
+s=3Dthis,i=3Dt.indexOf('=3D'),p=3Di<0?t:t.substring(0,i),v=3Di<0?'T"
++"rue':t.substring(i+1);if(p.toLowerCase()=3D=3Dk.toLowerCase())return =
+s."
++"epa(v)}return ''");
+
+/*
+ * Plugin: getNewRepeat 1.0 - Return whether user is new or repeat
+ */
+s.getNewRepeat=3Dnew Function(""
++"var s=3Dthis,e=3Dnew =
+Date(),cval,ct=3De.getTime(),y=3De.getYear();e.setTime"
++"(ct+30*24*60*60*1000);cval=3Ds.c_r('s_nr');if(cval.length=3D=3D0){s.c_w=
+("
++"'s_nr',ct,e);return 'New';}if(cval.length!=3D0&&ct-cval<30*60*1000){s"
++".c_w('s_nr',ct,e);return 'New';}if(cval<1123916400001){e.setTime(cv"
++"al+30*24*60*60*1000);s.c_w('s_nr',ct,e);return 'Repeat';}else retur"
++"n 'Repeat';");
+
+
+
+/* WARNING: Changing any of the below variables will cause drastic
+changes to how your visitor data is collected.  Changes should only be
+made when instructed to do so by your account manager.*/
+s.visitorNamespace=3D"cmp"
+s.dc=3D"112"
+
+s.trackingServer=3D"om.eetimes.com"
+s.trackingServerSecure=3D"som.eetimes.com"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=3D'',s_objectID;function s_gi(un,pg,ss){var =
+c=3D"=3Dfun`o(~.substring(~){`Ps=3D^O~.indexOf(~#2 ~;$2~`b$2~=3Dnew =
+Fun`o(~.length~.toLowerCase()~`Ps#8c_#k^an+'],~=3Dnew =
+Object~};s.~`YMigrationServer~.toU"
++"pperCase~){$2~','~s.wd~);s.~')q=3D'~=3Dnew =
+Array~ookieDomainPeriods~.location~^LingServer~dynamicAccount~var =
+~link~s.m_~=3D=3D'~s.apv~BufferedRequests~Element~)$2x^b!Object#WObject.p=
+rototype#WObject.protot"
++"ype[x])~etTime~visitor~$w@c(~referrer~else =
+~s.pt(~s.maxDelay~}c#E(e){~#i+~=3D''~.lastIndexOf(~^wc_i~}$2~.protocol~=3D=
+new =
+Date~^wobjectID=3Ds.ppu=3D$I=3D$Iv1=3D$Iv2=3D$Iv3~for(i=3D~ction~javaEnab=
+led~onclick~Name~te"
++"rnalFilters~javascript~s.dl~@6s.b.addBehavior(\"# default# =
+~=3DparseFloat(~typeof(v)=3D=3D\"~window~cookie~while(~s.vl_g~Type~;i#U{~=
+tfs~s.un~&&s.~o^woid~browser~.parent~document~colorDepth~String~.host~s"
++".fl(~s.rep(~s.eo~'+tm@S~s.sq~parseInt(~t=3Ds.ot(o)~track~nload~j=3D'1.~=
+this~#PURL~}else{~s.vl_l~lugins~'){q=3D'~dynamicVariablePrefix~');~;for(~=
+Sampling~s.rc[un]~Event~._i~&&(~loadModule~resolution~s.c_r"
++"(~s.c_w(~s.eh~s.isie~\"m_\"+n~Secure~Height~tcf~isopera~ismac~escape(~'=
+s_~.href~screen.~s#8gi(~Version~harCode~variableProvider~.s_~)s_sv(v,n[k]=
+,i)}~')>=3D~){s.~)?'Y':'N'~u=3Dm[t+1](~i)clearTimeout(~e&"
++"&l$bSESSION'~name~home#P~;try{~,$m)~s.ssl~s.oun~s.rl[u~Width~o.type~s.v=
+l_t~=3Ds.sp(~Lifetime~s.gg('objectID~sEnabled~'+n+'~.mrq(@wun+'\"~Externa=
+lLinks~charSet~lnk~onerror~http~currencyCode~.src~disab"
++"le~.get~MigrationKey~(''+~&&!~f',~){t=3D~r=3Ds[f](~u=3Dm[t](~Opera~Math=
+.~s.ape~s.fsg~s.ns6~conne~InlineStats~&&l$bNONE'~Track~'0123456789~true~+=
+\"_c\"]~s.epa(~t.m_nl~s.va_t~m._d~n=3Ds.oid(o)~,'sqs',q);~Lea"
++"veQuery~?'&~'=3D')~n){~\"'+~){n=3D~'_'+~'+n;~\",''),~,255)}~if(~vo)~s.s=
+ampled~=3Ds.oh(o);~+(y<1900?~n]=3D~1);~&&o~:'';h=3Dh?h~;'+(n?'o.~sess~cam=
+paign~lif~ in ~s.co(~ffset~s.pe~m._l~s.c_d~s.brl~s.nrs~s[mn]~,'"
++"vo~s.pl~=3D(apn~space~\"s_gs(\")~vo._t~b.attach~2o7.net'~Listener~Year(=
+~d.create~=3Ds.n.app~)}}}~!=3D'~'||t~)+'/~s()+'~){p=3D~():''~a['!'+t]~&&c=
+){~://')i+=3D~){v=3Ds.n.~channel~100~rs,~.target~o.value~s_si(t)~"
++"')dc=3D'1~\".tl(\")~etscape~s_')t=3Dt~omePage~=3D'+~&&t~[b](e);~\"){n[k=
+]~';s.va_~a+1,b):~return~mobile~height~events~random~code~=3Ds_~=3Dun~,pe=
+v~'MSIE ~'fun~floor(~atch~transa~s.num(~m._e~s.c_gd~,'lt~tm.g~."
++"inner~;s.gl(~,f1,f2~',s.bc~page~Group,~.fromC~sByTag~')<~++)~)){~||!~+'=
+;'~i);~y+=3D~l&&~''+x~[t]=3D~[i]=3D~[n];~' =
+'+~'+v]~>=3D5)~:'')~+1))~il['+s~!a[t])~~s._c=3D^pc';`H=3D`y`5!`H`i@v`H`il=
+`K;`H`in=3D0;}s^al=3D`H`il"
++";s^an=3D`H`in;s^al[s^a$7s;`H`in++;s.an#8an;s.cls`0x,c){`Pi,y`g`5!c)c=3D=
+^O.an;`n0;i<x`8^3n=3Dx`1i,i+1)`5c`3n)>=3D0)#Zn}`4y`Cfl`0x,l){`4x?@Ux)`10,=
+l):x`Cco`0o`F!o)`4o;`Pn`B,x^Wx$Fo)$2x`3'select#T0&&x`3'filter"
++"#T0)n[x]=3Do[x];`4n`Cnum`0x){x`g+x^W`Pp=3D0;p<x`8;p#U$2(@j')`3x`1p,p#j<=
+0)`40;`41`Crep#8rep;s.sp#8sp;s.jn#8jn;@c`0x`2,h=3D@jABCDEF',i,c=3Ds.@L,n,=
+l,e,y`g;c=3Dc?c`E$g`5x){x`g+x`5c`SAUTO'^b'').c^uAt){`n0;i<x`8^3"
++"c=3Dx`1i,i+$8n=3Dx.c^uAt(i)`5n>127){l=3D0;e`g;^0n||l<4){e=3Dh`1n%16,n%1=
+6+1)+e;n=3D(n-n%16)/16;l++}#Z'%u'+e}`6c`S+')#Z'%2B';`b#Z^oc)}x=3Dy^Qx=3Dx=
+?^F^o#b),'+`G%2B'):x`5x&&c^6em=3D=3D1&&x`3'%u#T0&&x`3'%U#T0){i=3Dx`3'%^V^=
+"
++"0i>=3D0){i++`5h`18)`3x`1i,i+1)`E())>=3D0)`4x`10,i)+'u00'+x`1#Yi=3Dx`3'%=
+',i$a}`4x`Cepa`0x`2;`4x?un^o^F#b,'+`G =
+')):x`Cpt`0x,d,f,a`2,t=3Dx,z=3D0,y,r;^0t){y=3Dt`3d);y=3Dy<0?t`8:y;t=3Dt`1=
+0,y);@Yt,a)`5r)`4r;z+=3Dy+d`8;t=3Dx"
++"`1z,x`8);t=3Dz<x`8?t:''}`4''`Cisf`0t,a){`Pc=3Da`3':')`5c>=3D0)a=3Da`10,=
+c)`5t`10,2)`S$u`12);`4(t!`g$x=3D=3Da)`Cfsf`0t,a`2`5`ca,`G,'is@Wt))@d+=3D(=
+@d!`g?`G`ft;`40`Cfs`0x,f`2;@d`g;`cx,`G,'fs@Wf);`4@d`Csi`0wd`2,c`g+s"
++"_gi,a=3Dc`3\"{\"),b=3Dc`h\"}\"),m;c#8fe(a>0&&b>0?c`1#10)`5wd&&wd.^A$iwd=
+.s`Xout(#C`o =
+s_sv(o,n,k){`Pv=3Do[k],i`5v`F`xstring\"||`xnumber\")n[k]=3Dv;`bif =
+(`xarray$z`K;`n0;i<v`8;i++^x`bif (`xobject$z`B^Wi$Fv^x}"
++"}fun`o =
+$q{`Pwd=3D`y,s,i,j,c,a,b;wd^wgi`7\"un\",\"pg\",\"ss\",@wc+'\");wd.^s@w@9+=
+'\");s=3Dwd.s;s.sa(@w^5+'\"`I^4=3Dwd;`c^1,\",\",\"vo1\",t`I@M=3D^G=3Ds.`Q=
+`r=3Ds.`Q^2=3D`H`m=3D\\'\\'`5t.m_#a@n)`n0;i<@n`8^3n=3D@n[i]`5@"
++"vm=3Dt#ec=3Dt[^i]`5m$ic=3D\"\"+c`5c`3\"fun`o\")>=3D0){a=3Dc`3\"{\");b=3D=
+c`h\"}\");c=3Da>0&&b>0?c`1#10;s[^i@l=3Dc`5#H)s.^c(n)`5s[n])for(j=3D0;j<$J=
+`8;j#Us_sv(m,s[n],$J[j]$a}}`Pe,o,t@6o=3D`y.opener`5o$9^wgi@Xo^wgi(@w^5+'"=
+
++"\")`5t)$q}`e}',1)}`Cc_d`g;#If`0t,a`2`5!#Gt))`41;`40`Cc_gd`0`2,d=3D`H`M^=
+D@4,n=3Ds.fpC`L,p`5!n)n=3Ds.c`L`5d@V$K@xn?^Jn):2;n=3Dn>2?n:2;p=3Dd`h'.')`=
+5p>=3D0){^0p>=3D0&&n>1$fd`h'.',p-$8n--}$K=3Dp>0&&`cd,'.`Gc_gd@W0)?d`1"
++"p):d}}`4$K`Cc_r`0k`2;k=3D@c(k);`Pc=3D#fs.d.`z,i=3Dc`3#fk+@u,e=3Di<0?i:c=
+`3';',i),v=3Di<0?'':@mc`1i+2+k`8,e<0?c`8:e));`4v$b[[B]]'?v:''`Cc_w`0k,v,e=
+`2,d=3D#I(),l=3Ds.`z@F,t;v`g+v;l=3Dl?@Ul)`E$g`5@3@h@X(v!`g?^Jl?l:0):-"
++"60)`5t){e`l;e.s`X(e.g`X()+(t*$m0))}`jk@h^zd.`z=3Dk+'`Zv!`g?v:'[[B]]')+'=
+; path=3D/;'+(@3?' expires$we.toGMT^C()#X`f(d?' =
+domain$wd#X:'^V`4^ek)=3D=3Dv}`40`Ceh`0o,e,r,f`2,b=3D^p'+e+@ys^an,n=3D-1,l=
+,i,x`5!^gl)^gl`K;"
++"l=3D^gl;`n0;i<l`8&&n<0;i++`Fl[i].o=3D=3Do&&l[i].e=3D=3De)n=3Di`jn<0@xi;=
+l[n]`B}x=3Dl#ex.o=3Do;x.e=3De;f=3Dr?x.b:f`5r||f){x.b=3Dr?0:o[e];x.o[e]=3D=
+f`jx.b){x.o[b]=3Dx.b;`4b}`40`Ccet`0f,a,t,o,b`2,r,^l`5`T>=3D5^b!s.^m||`T>=3D=
+7#V^l`7'"
++"s`Gf`Ga`Gt`G`Pe,r@6@Ya)`er=3Ds[t](e)}`4r^Vr=3D^l(s,f,a,t)^Q$2s.^n^6u`3#=
+B4^y0)r=3Ds[b](a);else{^g(`H,'@N',0,o);@Ya`Ieh(`H,'@N',1)}}`4r`Cg^4et`0e`=
+2;`4s.^4`Cg^4oe`7'e`G`Ac;^g(`y,\"@N\",1`Ie^4=3D1;c=3Ds.t()`5c)s"
++".d.write(c`Ie^4=3D0;`4@k'`Ig^4fb`0a){`4`y`Cg^4f`0w`2,p=3Dw^9,l=3Dw`M;s.=
+^4=3Dw`5p&&p`M!=3D#ap`M^D=3D=3Dl^D^z^4=3Dp;`4s.g^4f(s.^4)}`4s.^4`Cg^4`0`2=
+`5!s.^4^z^4=3D`H`5!s.e^4)s.^4=3Ds.cet('g^4@Ws.^4,'g^4et',s.g^4oe,'g^4fb')=
+"
++"}`4s.^4`Cmrq`0u`2,l=3D@A],n,r;@A]=3D0`5l)for(n=3D0;n<l`8;n#U{r=3Dl#es.m=
+r(0,0,r.r,0,r.t,r.u)}`Cbr`0id,rs`2`5s.@R`U#W^f^pbr',rs))$L=3Drs`Cflush`U`=
+0){^O.fbr(0)`Cfbr`0id`2,br=3D^e^pbr')`5!br)br=3D$L`5br`F!s.@R`U)^f^"
++"pbr`G'`Imr(0,0,br)}$L=3D0`Cmr`0$C,q,$nid,ta,u`2,dc=3Ds.dc,t1=3Ds.`N,t2=3D=
+s.`N^j,tb=3Ds.`NBase,p=3D'.sc',ns=3Ds.`Y`r$R,un=3Ds.cls(u?u:(ns?ns:s.fun)=
+),r`B,l,imn=3D^pi_'+(un),im,b,e`5!rs`Ft1`Ft2^6ssl)t1=3Dt2^Q$2!tb)tb=3D'$V=
+"
++"`5dc)dc=3D@Udc)`9;`bdc=3D'd1'`5tb`S$V`Fdc`Sd1$r12';`6dc`Sd2$r22';p`g}t1=
+#9+'.'+dc+'.'+p+tb}rs=3D'@O'+(@8?'s'`f'://'+t1+'/b/ss/'+^5+'/'+(s.#3?'5.1=
+':'1'$dH.20.3/'+$C+'?AQB=3D1&ndh=3D1'+(q?q`f'&AQE=3D1'`5^h@Vs.^n`"
++"F`T>5.5)rs=3D^E$n4095);`brs=3D^E$n2047)`jid^zbr(id,rs);#2}`js.d.images&=
+&`T>=3D3^b!s.^m||`T>=3D7)^b@e<0||`T>=3D6.1)`F!s.rc)s.rc`B`5!^Y){^Y=3D1`5!=
+s.rl)s.rl`B;@An]`K;s`Xout('$2`y`il)`y`il['+s^an+']@J)',750)^Ql=3D@A"
++"n]`5l){r.t=3Dta;r.u#9;r.r=3Drs;l[l`8]=3Dr;`4''}imn+=3D@y^Y;^Y++}im=3D`H=
+[imn]`5!im)im=3D`H[im$7new =
+Image;im^wl=3D0;im.o^M`7'e`G^O^wl=3D1;`Pwd=3D`y,s`5wd`il){s=3Dwd`il['+s^a=
+n+'];s@J`Inrs--`5!$M)`Rm(\"rr\")}')`5!$M^znrs=3D"
++"1;`Rm('rs')}`b$M++;im@Q=3Drs`5rs`3'&pe=3D^y0^b!ta||ta`S_self$ca`S_top'|=
+|(`H.@4$xa=3D=3D`H.@4)#Vb=3De`l;^0!im^w#ae.g`X()-b.g`X()<500)e`l}`4''}`4'=
+<im'+'g sr'+'c=3D@wrs+'\" width=3D1 #4=3D1 border=3D0 =
+alt=3D\"\">'`Cgg`0v"
++"`2`5!`H[^p#g)`H[^p#g`g;`4`H[^p#g`Cglf`0t,a`Ft`10,2)`S$u`12);`Ps=3D^O,v=3D=
+s.gg(t)`5v)s#cv`Cgl`0v`2`5s.pg)`cv,`G,'gl@W0)`Crf`0x`2,y,i,j,h,l,a,b`g,c`=
+g,t`5x){y`g+x;i=3Dy`3'?')`5i>0){a=3Dy`1i+$8y=3Dy`10,#Yh=3Dy`9;i"
++"=3D0`5h`10,7)`S@O$j7;`6h`10,8)`S@Os$j8;h=3Dh`1#Yi=3Dh`3\"/\")`5i>0){h=3D=
+h`10,i)`5h`3'google^y0){a@Ea,'&')`5a`8>1){l=3D',q,ie,start,search_key,wor=
+d,kw,cd,'^Wj=3D0;j<a`8;j++@Xa[j];i=3Dt`3@u`5i>0&&l`3`G+t`10,i)+`G)"
++">=3D0)b+=3D(b@t'`ft;`bc+=3D(c@t'`ft`jb$i#Z'?'+b+'&'+c`5#b!=3Dy)x=3Dy}}}=
+}}}`4x`Chav`0`2,qs`g,fv=3Ds.`Q@iVa$nfe=3Ds.`Q@i^Zs,mn,i`5$I){mn=3D$I`10,1=
+)`E()+$I`11)`5$N){fv=3D$N.^LVars;fe=3D$N.^L^Zs}}fv=3Dfv?fv+`G+^R+`G+^R2:'=
+';"
++"`n0;i<@o`8^3`Pk=3D@o[i],v=3Ds[k],b=3Dk`10,4),x=3Dk`14),n=3D^Jx),q=3Dk`5=
+v&&k$b`Q`r'&&k$b`Q^2'`F$I||s.@M||^G`Ffv^b`G+fv+`G)`3`G+k+`G)<0)v`g`5k`S#5=
+'&&fe)v=3Ds.fs(v,fe)`jv`Fk`S^U`JD';`6k`S`YID`Jvid';`6k`S^P^Tg';v=3D^E"
++"v$1`6k`S`a^Tr';v=3D^Es.rf(v)$1`6k`Svmk'||k`S`Y@T`Jvmt';`6k`S`D^Tvmf'`5@=
+8^6`D^j)v`g}`6k`S`D^j^Tvmf'`5!@8^6`D)v`g}`6k`S@L^Tce'`5v`E()`SAUTO')v=3D'=
+ISO8859-1';`6s.em=3D=3D2)v=3D'UTF-8'}`6k`S`Y`r$R`Jns';`6k`Sc`L`"
++"Jcdp';`6k`S`z@F`Jcl';`6k`S^v`Jvvp';`6k`S@P`Jcc';`6k`S$l`Jch';`6k`S#F`oI=
+D`Jxact';`6k`S$D`Jv0';`6k`S^d`Js';`6k`S^B`Jc';`6k`S`t^t`Jj';`6k`S`p`Jv';`=
+6k`S`z@H`Jk';`6k`S^8@B`Jbw';`6k`S^8^k`Jbh';`6k`S@f`o^"
++"2`Jct';`6k`S@5`Jhp';`6k`Sp^S`Jp';`6#Gx)`Fb`Sprop`Jc@z`6b`SeVar`Jv@z`6b`=
+Slist`Jl@z`6b`Shier^Th@zv=3D^Ev$1`jv)qs+=3D'&'+q+'$w(k`10,3)$bpev'?@c(v):=
+v$a`4qs`Cltdf`0t,h@Xt?t`9$A`9:'';`Pqi=3Dh`3'?^Vh=3Dqi>=3D0?h`10"
++",qi):h`5t&&h`1h`8-(t`8#j`S.'+t)`41;`40`Cltef`0t,h@Xt?t`9$A`9:''`5t&&h`3=
+t)>=3D0)`41;`40`Clt`0h`2,lft=3Ds.`QDow^MFile^2s,lef=3Ds.`QEx`s,$E=3Ds.`QI=
+n`s;$E=3D$E?$E:`H`M^D@4;h=3Dh`9`5s.^LDow^MLinks&&lft&&`clft,`G#Jd"
++"@Wh))`4'd'`5s.^L@K&&h`10,1)$b# =
+'^blef||$E)^b!lef||`clef,`G#Je@Wh))^b!$E#W`c$E,`G#Je@Wh)))`4'e';`4''`Clc`=
+7'e`G`Ab=3D^g(^O,\"`q\"`I@M=3D$G^O`It(`I@M=3D0`5b)`4^O$y`4@k'`Ibc`7'e`G`A=
+f,^l`5s.d^6d.all^6d.all.cp"
++"pXYctnr)#2;^G=3De@Q`V?e@Q`V:e$o;^l`7\"s\",\"`Pe@6$2^G^b^G.tag`r||^G^9`V=
+||^G^9Node))s.t()`e}\");^l(s`Ieo=3D0'`Ioh`0o`2,l=3D`H`M,h=3Do^q?o^q:'',i,=
+j,k,p;i=3Dh`3':^Vj=3Dh`3'?^Vk=3Dh`3'/')`5h^bi<0||(j>=3D0&&i>j)||(k>=3D0"
++"&&i>k))$fo`k$9`k`8>1?o`k:(l`k?l`k:'^Vi=3Dl.path@4`h'/^Vh=3D(p?p+'//'`f(=
+o^D?o^D:(l^D?l^D#i)+(h`10,1)$b/'?l.path@4`10,i<0?0:i$d'`fh}`4h`Cot`0o){`P=
+t=3Do.tag`r;t=3Dt$x`E?t`E$g`5t`SSHAPE')t`g`5t`Ft`SINPUT'&&@C&"
++"&@C`E)t=3D@C`E();`6!t$9^q)t=3D'A';}`4t`Coid`0o`2,^K,p,c,n`g,x=3D0`5t@V^=
+7$fo`k;c=3Do.`q`5o^q^bt`SA$c`SAREA')^b!c#Wp||p`9`3'`t#T0))n$5`6c@x^Fs.rep=
+(^Fs.rep@Uc,\"\\r$0\"\\n$0\"\\t$0' `G^Vx=3D2}`6$p^bt`SINPUT$c`S"
++"SUBMIT')@x$p;x=3D3}`6o@Q$x`SIMAGE')n=3Do@Q`5@v^7=3D^En@7;^7t=3Dx}}`4^7`=
+Crqf`0t,un`2,e=3Dt`3@u,u=3De>=3D0?`G+t`10,e)+`G:'';`4u&&u`3`G+un+`G)>=3D0=
+?@mt`1e#j:''`Crq`0un`2,c#9`3`G),v=3D^e^psq'),q`g`5c<0)`4`cv,'&`Grq@Wun)"
++";`4`cun,`G,'rq',0)`Csqp`0t,a`2,e=3Dt`3@u,q=3De<0?'':@mt`1e+1)`Isqq[q]`g=
+`5e>=3D0)`ct`10,e),`G@r`40`Csqs`0un,q`2;^Iu[u$7q;`40`Csq`0q`2,k=3D^psq',v=
+=3D^ek),x,c=3D0;^Iq`B;^Iu`B;^Iq[q]`g;`cv,'&`Gsqp',0`Ipt(^5,`G@rv`"
++"g^Wx$F^Iu`W)^Iq[^Iu[x]]+=3D(^Iq[^Iu[x]]?`G`fx^Wx$F^Iq`W^6sqq[x]^bx=3D=3D=
+q||c<2#Vv+=3D(v@t'`f^Iq[x]+'`Zx);c++}`4^fk,v,0)`Cwdl`7'e`G`Ar=3D@k,b=3D^g=
+(`H,\"o^M\"),i,o,oc`5b)r=3D^O$y`n0;i<s.d.`Qs`8^3o=3Ds.d.`Qs[i];oc=3Do."
++"`q?\"\"+o.`q:\"\"`5(oc`3$S<0||oc`3\"^woc(\")>=3D0)$9c`3$s<0)^g(o,\"`q\"=
+,0,s.lc);}`4r^V`Hs`0`2`5`T>3^b!^h#Ws.^n||`T#h`Fs.b^6$U^Z)s.$U^Z('`q#O);`6=
+s.b^6b.add^Z$W)s.b.add^Z$W('click#O,false);`b^g(`H,'o^M"
++"',0,`Hl)}`Cvs`0x`2,v=3Ds.`Y^X,g=3Ds.`Y^X#Qk=3D^pvsn_'+^5+(g?@yg#i,n=3D^=
+ek),e`l,y=3De@S$X);e.set$Xy+10$61900:0))`5v){v*=3D$m`5!n`F!^fk,x,e))`40;n=
+=3Dx`jn%$m00>v)`40}`41`Cdyasmf`0t,m`Ft&&m&&m`3t)>=3D0)`41;`40`Cdyasf`"
++"0t,m`2,i=3Dt?t`3@u:-1,n,x`5i>=3D0&&m){`Pn=3Dt`10,i),x=3Dt`1i+1)`5`cx,`G=
+,'dyasm@Wm))`4n}`40`Cuns`0`2,x=3Ds.`OSele`o,l=3Ds.`OList,m=3Ds.`OM#E,n,i;=
+^5=3D^5`9`5x&&l`F!m)m=3D`H`M^D`5!m.toLowerCase)m`g+m;l=3Dl`9;m=3Dm`9;n=3D=
+`cl,"
++"';`Gdyas@Wm)`5n)^5=3Dn}i=3D^5`3`G`Ifun=3Di<0?^5:^5`10,i)`Csa`0un`2;^5#9=
+`5!@9)@9#9;`6(`G+@9+`G)`3`G+un+`G)<0)@9+=3D`G+un;^5s()`Cm_i`0n,a`2,m,f=3D=
+n`10,1),r,l,i`5!`Rl)`Rl`B`5!`Rnl)`Rnl`K;m=3D`Rl[n]`5!a&&m&&#H@Vm^"
++"a)`Ra(n)`5!m){m`B,m._c=3D^pm';m^an=3D`H`in;m^al=3Ds^al;m^al[m^a$7m;`H`i=
+n++;m.s=3Ds;m._n=3Dn;$J`K('_c`G_in`G_il`G_i`G_e`G_d`G_dl`Gs`Gn`G_r`G_g`G_=
+g1`G_t`G_t1`G_x`G_x1`G_rs`G_rr`G_l'`Im_l[$7m;`Rnl[`Rnl`8]=3Dn}`6m"
++"._r@Vm._m){r=3Dm._r;r._m=3Dm;l=3D$J;`n0;i<l`8;i#U$2m[l[i]])r[l[i]]=3Dm[=
+l[i]];r^al[r^a$7r;m=3D`Rl[$7r`jf=3D=3Df`E())s[$7m;`4m`Cm_a`7'n`Gg`Ge`G$2!=
+g)g=3D^i;`Ac=3Ds[g@l,m,x,f=3D0`5!c)c=3D`H[\"s_\"+g@l`5c&&s_d)s[g]`7\"s\",=
+s_"
++"ft(s_d(c)));x=3Ds[g]`5!x)x=3D`H[\\'s_\\'+g]`5!x)x=3D`H[g];m=3D`Ri(n,1)`=
+5x^b!m^a||g!=3D^i#Vm^a=3Df=3D1`5(\"\"+x)`3\"fun`o\")>=3D0)x(s);`b`Rm(\"x\=
+",n,x,e)}m=3D`Ri(n,1)`5@pl)@pl=3D@p=3D0;`ut();`4f'`Im_m`0t,n,d,e@X@yt;`Ps=
+=3D^"
++"O,i,x,m,f=3D@yt,r=3D0,u`5`R#a`Rnl)`n0;i<`Rnl`8^3x=3D`Rnl[i]`5!n||x=3D=3D=
+@vm=3D`Ri(x);u=3Dm[t]`5u`F@Uu)`3#C`o^y0`Fd&&e)@Zd,e);`6d)@Zd);`b@Z)}`ju)r=
+=3D1;u=3Dm[t+1]`5u@Vm[f]`F@Uu)`3#C`o^y0`Fd&&e)@1d,e);`6d)@1d);`b@1)}}m"
++"[f]=3D1`5u)r=3D1}}`4r`Cm_ll`0`2,g=3D`Rdl,i,o`5g)`n0;i<g`8^3o=3Dg[i]`5o)=
+s.^c(o.n,o.u,o.d,o.l,o.e,$8g#d0}`C^c`0n,u,d,l,e,ln`2,m=3D0,i,g,o=3D0#N,c=3D=
+s.h?s.h:s.b,b,^l`5@vi=3Dn`3':')`5i>=3D0){g=3Dn`1i+$8n=3Dn`10,i)}`bg=3D^i;=
+m=3D"
++"`Ri(n)`j(l||(n@V`Ra(n,g)))&&u^6d&&c^6$Y`V`Fd){@p=3D1;@pl=3D1`jln`F@8)u=3D=
+^Fu,'@O:`G@Os:^Vi=3D^ps:'+s^an+':@I:'+g;b=3D'`Ao=3Ds.d@S`VById(@wi+'\")`5=
+s$9`F!o.#a`H.'+g+'){o.l=3D1`5o.@2o.#Yo.i=3D0;`Ra(\"@I\",@wg+'@w(e?'"
++",@we+'\"'`f')}';f2=3Db+'o.c++`5!`d)`d=3D250`5!o.l$9.c<(`d*2)/$m)o.i=3Ds=
+`Xout(o.f2@7}';f1`7'e',b+'}^V^l`7's`Gc`Gi`Gu`Gf1`Gf2`G`Pe,o=3D0@6o=3Ds.$Y=
+`V(\"script\")`5o){@C=3D\"text/`t\"$Bid=3Di;o.defer=3D@k;o.o^M=3Do.onre"
++"adystatechange=3Df1;o.f2=3Df2;o.l=3D0;'`f'o@Q=3Du;c.appendChild(o)$Bc=3D=
+0;o.i=3Ds`Xout(f2@7'`f'}`eo=3D0}`4o^Vo=3D^l(s,c,i,u#N)^Qo`B;o.n=3Dn+':'+g=
+;o.u=3Du;o.d=3Dd;o.l=3Dl;o.e=3De;g=3D`Rdl`5!g)g=3D`Rdl`K;i=3D0;^0i<g`8&&g=
+[i])i++;g#d"
++"o}}`6@vm=3D`Ri(n);#H=3D1}`4m`Cvo1`0t,a`Fa[t]||$h)^O#ca[t]`Cvo2`0t,a`F#l=
+{a#c^O[t]`5#l$h=3D1}`Cdlt`7'`Ad`l,i,vo,f=3D0`5`ul)`n0;i<`ul`8^3vo=3D`ul[i=
+]`5vo`F!`Rm(\"d\")||d.g`X()-$T>=3D`d){`ul#d0;s.t($3}`bf=3D1}`j`u@2`"
++"ui`Idli=3D0`5f`F!`ui)`ui=3Ds`Xout(`ut,`d)}`b`ul=3D0'`Idl`0vo`2,d`l`5!$3=
+vo`B;`c^1,`G$O2',$3;$T=3Dd.g`X()`5!`ul)`ul`K;`ul[`ul`8]=3Dvo`5!`d)`d=3D25=
+0;`ut()`Ct`0vo,id`2,trk=3D1,tm`l,sed=3DMath&&@b#6?@b#D@b#6()*$m000000"
++"00000):#K`X(),$C=3D's'+@b#D#K`X()/10800000)%10+sed,y=3Dtm@S$X),vt=3Dtm@=
+SDate($d^HMonth($d'$6y+1900:y)+' ^HHour$e:^HMinute$e:^HSecond$e =
+^HDay()+#f#K`XzoneO$H(),^l,^4=3Ds.g^4(),ta`g,q`g,qs`g,#7`g,vb`B#M^1`Iu"
++"ns(`Im_ll()`5!s.td){`Ptl=3D^4`M,a,o,i,x`g,c`g,v`g,p`g,bw`g,bh`g,^N0',k=3D=
+^f^pcc`G@k',0@0,hp`g,ct`g,pn=3D0,ps`5^C&&^C.prototype){^N1'`5j.m#E){^N2'`=
+5tm.setUTCDate){^N3'`5^h^6^n&&`T#h^N4'`5pn.toPrecisio@v^N"
++"5';a`K`5a.forEach){^N6';i=3D0;o`B;^l`7'o`G`Pe,i=3D0@6i=3Dnew =
+Iterator(o)`e}`4i^Vi=3D^l(o)`5i&&i.next)^N7'}}}}`j`T>=3D4)x=3D^rwidth+'x'=
++^r#4`5s.isns||s.^m`F`T>=3D3$k`p(@0`5`T>=3D4){c=3D^rpixelDepth;bw=3D`H#L@=
+B;bh=3D`H#L^"
++"k}}$P=3Ds.n.p^S}`6^h`F`T>=3D4$k`p(@0;c=3D^r^B`5`T#h{bw=3Ds.d.^A`V.o$H@B=
+;bh=3Ds.d.^A`V.o$H^k`5!s.^n^6b){^l`7's`Gtl`G`Pe,hp=3D0`vh$v\");hp=3Ds.b.i=
+sH$v(tl)?\"Y\":\"N\"`e}`4hp^Vhp=3D^l(s,tl);^l`7's`G`Pe,ct=3D0`vclientCa"
++"ps\");ct=3Ds.b.@f`o^2`e}`4ct^Vct=3D^l(s$a`br`g`j$P)^0pn<$P`8&&pn<30){ps=
+=3D^E$P[pn].@4@7#X`5p`3ps)<0)p+=3Dps;pn++}s.^d=3Dx;s.^B=3Dc;s.`t^t=3Dj;s.=
+`p=3Dv;s.`z@H=3Dk;s.^8@B=3Dbw;s.^8^k=3Dbh;s.@f`o^2=3Dct;s.@5=3Dhp;s.p^S=3D=
+p;s.td=3D"
++"1`j$3{`c^1,`G$O2',vb`Ipt(^1,`G$O1',$3`js.useP^S)s.doP^S(s);`Pl=3D`H`M,r=
+=3D^4.^A.`a`5!s.^P)s.^P=3Dl^q?l^q:l`5!s.`a@Vs._1_`a^z`a=3Dr;s._1_`a=3D1`j=
+(vo&&$T)#W`Rm('d'#V`Rm('g')`5s.@M||^G){`Po=3D^G?^G:s.@M`5!o)`4'';"
++"`Pp=3Ds.#P`r,w=3D1,^K,@q,x=3D^7t,h,l,i,oc`5^G$9=3D=3D^G){^0o@Vn$x$bBODY=
+'){o=3Do^9`V?o^9`V:o^9Node`5!o)`4'';^K;@q;x=3D^7t}oc=3Do.`q?''+o.`q:''`5(=
+oc`3$S>=3D0$9c`3\"^woc(\")<0)||oc`3$s>=3D0)`4''}ta=3Dn?o$o:1;h$5i=3Dh`3'?=
+^Vh=3D"
++"s.`Q@s^C||i<0?h:h`10,#Yl=3Ds.`Q`r;t=3Ds.`Q^2?s.`Q^2`9:s.lt(h)`5t^bh||l)=
+)q+=3D'&pe=3D@M_'+(t`Sd$c`Se'?@c(t):'o')+(h@tpev1`Zh)`f(l@tpev2`Zl):'^V`b=
+trk=3D0`5s.^L@g`F!p$fs.^P;w=3D0}^K;i=3Do.sourceIndex`5@G')@x@G^Vx=3D1"
++";i=3D1`jp&&n$x)qs=3D'&pid`Z^Ep,255))+(w@tpidt$ww`f'&oid`Z^En@7)+(x@toid=
+t$wx`f'&ot`Zt)+(i@toi$wi#i}`j!trk@Vqs)`4'';$4=3Ds.vs(sed)`5trk`F$4)#7=3Ds=
+.mr($C,(vt@tt`Zvt)`fs.hav()+q+(qs?qs:s.rq(^5)),0,id,ta);qs`g;"
++"`Rm('t')`5s.p_r)s.p_r(`I`a`g}^I(qs);^Q`u($3;`j$3`c^1,`G$O1',vb`I@M=3D^G=
+=3Ds.`Q`r=3Ds.`Q^2=3D`H`m`g`5s.pg)`H^w@M=3D`H^weo=3D`H^w`Q`r=3D`H^w`Q^2`g=
+`5!id@Vs.tc^ztc=3D1;s.flush`U()}`4#7`Ctl`0o,t,n,vo`2;s.@M=3D$Go`I`Q^2=3Dt=
+"
++";s.`Q`r=3Dn;s.t($3}`5pg){`H^wco`0o){`P^s\"_\",1,$8`4$Go)`Cwd^wgs`0u@v`P=
+^sun,1,$8`4s.t()`Cwd^wdc`0u@v`P^sun,$8`4s.t()}}@8=3D(`H`M`k`9`3'@Os^y0`Id=
+=3D^A;s.b=3Ds.d.body`5s.d@S`V#S`r^zh=3Ds.d@S`V#S`r('HEAD')`5s.h"
++")s.h=3Ds.h[0]}s.n=3Dnavigator;s.u=3Ds.n.userAgent;@e=3Ds.u`3'N$t6/^V`Pa=
+pn$Z`r,v$Z^t,ie=3Dv`3#B'),o=3Ds.u`3'@a =
+'),i`5v`3'@a^y0||o>0)apn=3D'@a';^h$Q`SMicrosoft Internet =
+Explorer'`Iisns$Q`SN$t'`I^m$Q`S@a'`I^n=3D(s.u`"
++"3'Mac^y0)`5o>0)`T`ws.u`1o+6));`6ie>0){`T=3D^Ji=3Dv`1ie+5))`5`T>3)`T`wi)=
+}`6@e>0)`T`ws.u`1@e+10));`b`T`wv`Iem=3D0`5^C#R^u){i=3D^o^C#R^u(256))`E(`I=
+em=3D(i`S%C4%80'?2:(i`S%U0$m'?1:0))}s.sa(un`Ivl_l=3D'^U,`YID,vmk,"
++"`Y@T,`D,`D^j,ppu,@L,`Y`r$R,c`L,`z@F,#P`r,^P,`a,@P#0l@E^R,`G`Ivl_t=3D^R+=
+',^v,$l,server,#P^2,#F`oID,purchaseID,$D,state,zip,#5,products,`Q`r,`Q^2'=
+^W`Pn=3D1;n<51;n#U@D+=3D',prop@I,eVar@I,hier@I,list@z^R2=3D',"
++"tnt,pe#A1#A2#A3,^d,^B,`t^t,`p,`z@H,^8@B,^8^k,@f`o^2,@5,p^S';@D+=3D^R2;@=
+o@E@D,`G`Ivl_g=3D@D+',`N,`N^j,`NBase,fpC`L,@R`U,#3,`Y^X,`Y^X#Q`OSele`o,`O=
+List,`OM#E,^LDow^MLinks,^L@K,^L@g,`Q@s^C,`QDow^MFile^2s,`"
++"QEx`s,`QIn`s,`Q@iVa$n`Q@i^Zs,`Q`rs,@M,eo,_1_`a#0g@E^1,`G`Ipg=3Dpg#M^1)`=
+5!ss)`Hs()",
+w=3Dwindow,l=3Dw.s_c_il,n=3Dnavigator,u=3Dn.userAgent,v=3Dn.appVersion,e=3D=
+v.indexOf('MSIE =
+'),m=3Du.indexOf('Netscape6/'),a,i,s;if(un){un=3Dun.toLowerCase();if(l)fo=
+r(i=3D0;i<l.length;i++){s=3Dl[i];if(!s._c||s._c=3D=3D's_c'){if(s.oun=3D=3D=
+un)return s;else if(s.fs&&s.sa&&s.fs(s.oun,un)){s.sa(un);return =
+s}}}}w.s_an=3D'0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuv=
+wxyz';
+w.s_sp=3Dnew Function("x","d","var a=3Dnew =
+Array,i=3D0,j;if(x){if(x.split)a=3Dx.split(d);else =
+if(!d)for(i=3D0;i<x.length;i++)a[a.length]=3Dx.substring(i,i+1);else =
+while(i>=3D0){j=3Dx.indexOf(d,i);a[a.length]=3Dx.subst"
++"ring(i,j<0?x.length:j);i=3Dj;if(i>=3D0)i+=3Dd.length}}return a");
+w.s_jn=3Dnew Function("a","d","var =
+x=3D'',i,j=3Da.length;if(a&&j>0){x=3Da[0];if(j>1){if(a.join)x=3Da.join(d)=
+;else for(i=3D1;i<j;i++)x+=3Dd+a[i]}}return x");
+w.s_rep=3Dnew Function("x","o","n","return s_jn(s_sp(x,o),n)");
+w.s_d=3Dnew Function("x","var t=3D'`^@$#',l=3Ds_an,l2=3Dnew =
+Object,x2,d,b=3D0,k,i=3Dx.lastIndexOf('~~'),j,v,w;if(i>0){d=3Dx.substring=
+(0,i);x=3Dx.substring(i+2);l=3Ds_sp(l,'');for(i=3D0;i<62;i++)l2[l[i]]=3Di=
+;t=3Ds_sp(t,'');d"
++"=3Ds_sp(d,'~');i=3D0;while(i<5){v=3D0;if(x.indexOf(t[i])>=3D0) =
+{x2=3Ds_sp(x,t[i]);for(j=3D1;j<x2.length;j++){k=3Dx2[j].substring(0,1);w=3D=
+t[i]+k;if(k!=3D' =
+'){v=3D1;w=3Dd[b+l2[k]]}x2[j]=3Dw+x2[j].substring(1)}}if(v)x=3Ds_jn("
++"x2,'');else{w=3Dt[i]+' =
+';if(x.indexOf(w)>=3D0)x=3Ds_rep(x,w,t[i]);i++;b+=3D62}}}return x");
+w.s_fe=3Dnew Function("c","return =
+s_rep(s_rep(s_rep(c,'\\\\','\\\\\\\\'),'\"','\\\\\"'),\"\\n\",\"\\\\n\")"=
+);
+w.s_fa=3Dnew Function("f","var =
+s=3Df.indexOf('(')+1,e=3Df.indexOf(')'),a=3D'',c;while(s>=3D0&&s<e){c=3Df=
+.substring(s,s+1);if(c=3D=3D',')a+=3D'\",\"';else if((\"\\n\\r\\t =
+\").indexOf(c)<0)a+=3Dc;s++}return a?'\"'+a+'\"':"
++"a");
+w.s_ft=3Dnew Function("c","c+=3D'';var =
+s,e,o,a,d,q,f,h,x;s=3Dc.indexOf('=3Dfunction(');while(s>=3D0){s++;d=3D1;q=
+=3D'';x=3D0;f=3Dc.substring(s);a=3Ds_fa(f);e=3Do=3Dc.indexOf('{',s);e++;w=
+hile(d>0){h=3Dc.substring(e,e+1);if(q){i"
++"f(h=3D=3Dq&&!x)q=3D'';if(h=3D=3D'\\\\')x=3Dx?0:1;else =
+x=3D0}else{if(h=3D=3D'\"'||h=3D=3D\"'\")q=3Dh;if(h=3D=3D'{')d++;if(h=3D=3D=
+'}')d--}if(d>0)e++}c=3Dc.substring(0,s)+'new =
+Function('+(a?a+',':'')+'\"'+s_fe(c.substring(o+1,e))+'\")"
++"'+c.substring(e+1);s=3Dc.indexOf('=3Dfunction(')}return c;");
+c=3Ds_d(c);if(e>0){a=3DparseInt(i=3Dv.substring(e+5));if(a>3)a=3DparseFlo=
+at(i)}else if(m>0)a=3DparseFloat(u.substring(m+10));else =
+a=3DparseFloat(v);if(a>=3D5&&v.indexOf('Opera')<0&&u.indexOf('Opera')<0){=
+w.s_c=3Dnew Function("un","pg","ss","var s=3Dthis;"+c);return new =
+s_c(un,pg,ss)}else s=3Dnew Function("un","pg","ss","var s=3Dnew =
+Object;"+s_ft(c)+";return s");return s(un,pg,ss)}
+
+------=_NextPart_000_0130_01CB1335.4F361550
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.embedded.com/tigforums/communityjs/780?forum=23&key=15201575
+
+document.write('<div id=3D"jive-system-error" style=3D"border:1px solid =
+red;padding:8px;font-weight:bold;">This site is not authorized to access =
+the Community Everywhere feature.</div>');
+
+------=_NextPart_000_0130_01CB1335.4F361550--
