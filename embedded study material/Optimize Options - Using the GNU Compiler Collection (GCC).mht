@@ -1,0 +1,3016 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Optimize Options - Using the GNU Compiler Collection (GCC)
+Date: Mon, 28 Jun 2010 09:38:57 +0530
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Optimize-Options.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang=3Den><HEAD><TITLE>Optimize Options - Using the GNU Compiler =
+Collection (GCC)</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3Ddescription content=3D"Using the GNU Compiler Collection =
+(GCC)">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"><LINK =
+title=3DTop rel=3Dstart=20
+href=3D"index.html#Top"><LINK title=3D"Invoking GCC" rel=3Dup=20
+href=3D"Invoking-GCC.html#Invoking-GCC"><LINK title=3D"Debugging =
+Options" rel=3Dprev=20
+href=3D"Debugging-Options.html#Debugging-Options"><LINK=20
+title=3D"Preprocessor Options" rel=3Dnext=20
+href=3D"Preprocessor-Options.html#Preprocessor-Options"><LINK=20
+title=3D"Texinfo Homepage" rel=3Dgenerator-home=20
+href=3D"http://www.gnu.org/software/texinfo/"><!--=0A=
+Copyright (C) 1988, 1989, 1992, 1993, 1994, 1995, 1996, 1997, 1998,=0A=
+1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007=0A=
+2008 Free Software Foundation, Inc.=0A=
+=0A=
+Permission is granted to copy, distribute and/or modify this document=0A=
+under the terms of the GNU Free Documentation License, Version 1.2 or=0A=
+any later version published by the Free Software Foundation; with the=0A=
+Invariant Sections being ``GNU General Public License'' and ``Funding=0A=
+Free Software'', the Front-Cover texts being (a) (see below), and with=0A=
+the Back-Cover Texts being (b) (see below).  A copy of the license is=0A=
+included in the section entitled ``GNU Free Documentation License''.=0A=
+=0A=
+(a) The FSF's Front-Cover Text is:=0A=
+=0A=
+     A GNU Manual=0A=
+=0A=
+(b) The FSF's Back-Cover Text is:=0A=
+=0A=
+     You have freedom to copy and modify this GNU Manual, like GNU=0A=
+     software.  Copies published by the Free Software Foundation raise=0A=
+     funds for GNU development.-->
+<META content=3Dtext/css http-equiv=3DContent-Style-Type>
+<STYLE type=3Dtext/css>PRE.display {
+	FONT-FAMILY: inherit
+}
+PRE.format {
+	FONT-FAMILY: inherit
+}
+PRE.smalldisplay {
+	FONT-FAMILY: inherit; FONT-SIZE: smaller
+}
+PRE.smallformat {
+	FONT-FAMILY: inherit; FONT-SIZE: smaller
+}
+PRE.smallexample {
+	FONT-SIZE: smaller
+}
+PRE.smalllisp {
+	FONT-SIZE: smaller
+}
+SPAN.sc {
+	FONT-VARIANT: small-caps
+}
+SPAN.roman {
+	FONT-FAMILY: serif; FONT-WEIGHT: normal
+}
+SPAN.sansserif {
+	FONT-FAMILY: sans-serif; FONT-WEIGHT: normal
+}
+</STYLE>
+</HEAD>
+<BODY>
+<DIV class=3Dnode>
+<P><A name=3DOptimize-Options></A>Next:&nbsp;<A accessKey=3Dn=20
+href=3D"http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Preprocessor-Options.=
+html#Preprocessor-Options"=20
+rel=3Dnext>Preprocessor Options</A>, Previous:&nbsp;<A accessKey=3Dp=20
+href=3D"http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Debugging-Options.htm=
+l#Debugging-Options"=20
+rel=3Dprevious>Debugging Options</A>, Up:&nbsp;<A accessKey=3Du=20
+href=3D"http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Invoking-GCC.html#Inv=
+oking-GCC"=20
+rel=3Dup>Invoking GCC</A>=20
+<HR>
+</DIV>
+<H3 class=3Dsection>3.10 Options That Control Optimization</H3>
+<P><A name=3Dindex-optimize-options-608></A><A=20
+name=3Dindex-options_002c-optimization-609></A>These options control =
+various sorts=20
+of optimizations.=20
+<P>Without any optimization option, the compiler's goal is to reduce the =
+cost of=20
+compilation and to make debugging produce the expected results. =
+Statements are=20
+independent: if you stop the program with a breakpoint between =
+statements, you=20
+can then assign a new value to any variable or change the program =
+counter to any=20
+other statement in the function and get exactly the results you would =
+expect=20
+from the source code.=20
+<P>Turning on optimization flags makes the compiler attempt to improve =
+the=20
+performance and/or code size at the expense of compilation time and =
+possibly the=20
+ability to debug the program.=20
+<P>The compiler performs optimization based on the knowledge it has of =
+the=20
+program. Optimization levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> =
+and=20
+above, in particular, enable <EM>unit-at-a-time</EM> mode, which allows =
+the=20
+compiler to consider information gained from later functions in the file =
+when=20
+compiling a function. Compiling multiple files at once to a single =
+output file=20
+in <EM>unit-at-a-time</EM> mode allows the compiler to use information =
+gained=20
+from all of the files when compiling each of them.=20
+<P>Not all optimizations are controlled directly by a flag. Only =
+optimizations=20
+that have a flag are listed.=20
+<DL>
+  <DT><CODE>-O</CODE>
+  <DT><CODE>-O1</CODE>
+  <DD><A name=3Dindex-O-610></A><A name=3Dindex-O1-611></A>Optimize. =
+Optimizing=20
+  compilation takes somewhat more time, and a lot more memory for a =
+large=20
+  function.=20
+  <P>With <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, the compiler =
+tries to=20
+  reduce code size and execution time, without performing any =
+optimizations that=20
+  take a great deal of compilation time.=20
+  <P><SAMP><SPAN class=3Doption>-O</SPAN></SAMP> turns on the following=20
+  optimization flags: <PRE class=3Dsmallexample>          -fauto-inc-dec =
+
+          -fcprop-registers=20
+          -fdce=20
+          -fdefer-pop=20
+          -fdelayed-branch=20
+          -fdse=20
+          -fguess-branch-probability=20
+          -fif-conversion2=20
+          -fif-conversion=20
+          -finline-small-functions=20
+          -fipa-pure-const=20
+          -fipa-reference=20
+          -fmerge-constants
+          -fsplit-wide-types=20
+          -ftree-ccp=20
+          -ftree-ch=20
+          -ftree-copyrename=20
+          -ftree-dce=20
+          -ftree-dominator-opts=20
+          -ftree-dse=20
+          -ftree-fre=20
+          -ftree-sra=20
+          -ftree-ter=20
+          -funit-at-a-time
+     </PRE>
+  <P><SAMP><SPAN class=3Doption>-O</SPAN></SAMP> also turns on =
+<SAMP><SPAN=20
+  class=3Doption>-fomit-frame-pointer</SPAN></SAMP> on machines where =
+doing so=20
+  does not interfere with debugging. <BR></P>
+  <DT><CODE>-O2</CODE>
+  <DD><A name=3Dindex-O2-612></A>Optimize even more. GCC performs nearly =
+all=20
+  supported optimizations that do not involve a space-speed tradeoff. =
+The=20
+  compiler does not perform loop unrolling or function inlining when you =
+specify=20
+  <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>. As compared to =
+<SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP>, this option increases both =
+compilation time and=20
+  the performance of the generated code.=20
+  <P><SAMP><SPAN class=3Doption>-O2</SPAN></SAMP> turns on all =
+optimization flags=20
+  specified by <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>. It also =
+turns on the=20
+  following optimization flags: <PRE class=3Dsmallexample>          =
+-fthread-jumps=20
+          -falign-functions  -falign-jumps=20
+          -falign-loops  -falign-labels=20
+          -fcaller-saves=20
+          -fcrossjumping=20
+          -fcse-follow-jumps  -fcse-skip-blocks=20
+          -fdelete-null-pointer-checks=20
+          -fexpensive-optimizations=20
+          -fgcse  -fgcse-lm =20
+          -foptimize-sibling-calls=20
+          -fpeephole2=20
+          -fregmove=20
+          -freorder-blocks  -freorder-functions=20
+          -frerun-cse-after-loop =20
+          -fsched-interblock  -fsched-spec=20
+          -fschedule-insns  -fschedule-insns2=20
+          -fstrict-aliasing -fstrict-overflow=20
+          -ftree-pre=20
+          -ftree-vrp
+     </PRE>
+  <P>Please note the warning under <SAMP><SPAN =
+class=3Doption>-fgcse</SPAN></SAMP>=20
+  about invoking <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP> on =
+programs that use=20
+  computed gotos. <BR></P>
+  <DT><CODE>-O3</CODE>
+  <DD><A name=3Dindex-O3-613></A>Optimize yet more. <SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP> turns on all optimizations specified =
+by=20
+  <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP> and also turns on the =
+<SAMP><SPAN=20
+  class=3Doption>-finline-functions</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-funswitch-loops</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-fpredictive-commoning</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-fgcse-after-reload</SPAN></SAMP> options. <BR>
+  <DT><CODE>-O0</CODE>
+  <DD><A name=3Dindex-O0-614></A>Reduce compilation time and make =
+debugging=20
+  produce the expected results. This is the default. <BR>
+  <DT><CODE>-Os</CODE>
+  <DD><A name=3Dindex-Os-615></A>Optimize for size. <SAMP><SPAN=20
+  class=3Doption>-Os</SPAN></SAMP> enables all <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> optimizations that do not typically =
+increase=20
+  code size. It also performs further optimizations designed to reduce =
+code=20
+  size.=20
+  <P><SAMP><SPAN class=3Doption>-Os</SPAN></SAMP> disables the following =
+
+  optimization flags: <PRE class=3Dsmallexample>          =
+-falign-functions  -falign-jumps  -falign-loops=20
+          -falign-labels  -freorder-blocks  =
+-freorder-blocks-and-partition=20
+          -fprefetch-loop-arrays  -ftree-vect-loop-version
+     </PRE>
+  <P>If you use multiple <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> =
+options, with=20
+  or without level numbers, the last such option is the one that is =
+effective.=20
+  </P></DD></DL>
+<P>Options of the form <SAMP><SPAN =
+class=3Doption>-f</SPAN><VAR>flag</VAR></SAMP>=20
+specify machine-independent flags. Most flags have both positive and =
+negative=20
+forms; the negative form of <SAMP><SPAN =
+class=3Doption>-ffoo</SPAN></SAMP> would=20
+be <SAMP><SPAN class=3Doption>-fno-foo</SPAN></SAMP>. In the table =
+below, only one=20
+of the forms is listed=97the one you typically will use. You can figure =
+out the=20
+other form by either removing `<SAMP><SPAN =
+class=3Dsamp>no-</SPAN></SAMP>' or=20
+adding it.=20
+<P>The following options control specific optimizations. They are either =
+
+activated by <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> options or are =
+related to=20
+ones that are. You can use the following flags in the rare cases when=20
+=93fine-tuning=94 of optimizations to be performed is desired.=20
+<DL>
+  <DT><CODE>-fno-default-inline</CODE>
+  <DD><A name=3Dindex-fno_002ddefault_002dinline-616></A>Do not make =
+member=20
+  functions inline by default merely because they are defined inside the =
+class=20
+  scope (C++ only). Otherwise, when you specify <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP><!-- /@w -->, member functions defined =
+inside=20
+  class scope are compiled inline by default; i.e., you don't need to =
+add=20
+  `<SAMP><SPAN class=3Dsamp>inline</SPAN></SAMP>' in front of the member =
+function=20
+  name. <BR>
+  <DT><CODE>-fno-defer-pop</CODE>
+  <DD><A name=3Dindex-fno_002ddefer_002dpop-617></A>Always pop the =
+arguments to=20
+  each function call as soon as that function returns. For machines =
+which must=20
+  pop arguments after a function call, the compiler normally lets =
+arguments=20
+  accumulate on the stack for several function calls and pops them all =
+at once.=20
+  <P>Disabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fforward-propagate</CODE>
+  <DD><A name=3Dindex-fforward_002dpropagate-618></A>Perform a forward =
+propagation=20
+  pass on RTL. The pass tries to combine two instructions and checks if =
+the=20
+  result can be simplified. If loop unrolling is active, two passes are=20
+  performed and the second is scheduled after loop unrolling.=20
+  <P>This option is enabled by default at optimization levels =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fomit-frame-pointer</CODE>
+  <DD><A name=3Dindex-fomit_002dframe_002dpointer-619></A>Don't keep the =
+frame=20
+  pointer in a register for functions that don't need one. This avoids =
+the=20
+  instructions to save, set up and restore frame pointers; it also makes =
+an=20
+  extra register available in many functions. <STRONG>It also makes =
+debugging=20
+  impossible on some machines.</STRONG>=20
+  <P>On some machines, such as the VAX, this flag has no effect, because =
+the=20
+  standard calling sequence automatically handles the frame pointer and =
+nothing=20
+  is saved by pretending it doesn't exist. The machine-description macro =
+
+  <CODE>FRAME_POINTER_REQUIRED</CODE> controls whether a target machine =
+supports=20
+  this flag. See <A=20
+  =
+href=3D"http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gccint/Registers.html#Reg=
+isters">Register=20
+  Usage</A>.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-foptimize-sibling-calls</CODE>
+  <DD><A name=3Dindex-foptimize_002dsibling_002dcalls-620></A>Optimize =
+sibling and=20
+  tail recursive calls.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fno-inline</CODE>
+  <DD><A name=3Dindex-fno_002dinline-621></A>Don't pay attention to the=20
+  <CODE>inline</CODE> keyword. Normally this option is used to keep the =
+compiler=20
+  from expanding any functions inline. Note that if you are not =
+optimizing, no=20
+  functions can be expanded inline. <BR>
+  <DT><CODE>-finline-small-functions</CODE>
+  <DD><A name=3Dindex-finline_002dsmall_002dfunctions-622></A>Integrate =
+functions=20
+  into their callers when their body is smaller than expected function =
+call code=20
+  (so overall size of program gets smaller). The compiler heuristically =
+decides=20
+  which functions are simple enough to be worth integrating in this way. =
+
+  <P>Enabled at level <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>. =
+<BR></P>
+  <DT><CODE>-finline-functions</CODE>
+  <DD><A name=3Dindex-finline_002dfunctions-623></A>Integrate all simple =
+functions=20
+  into their callers. The compiler heuristically decides which functions =
+are=20
+  simple enough to be worth integrating in this way.=20
+  <P>If all calls to a given function are integrated, and the function =
+is=20
+  declared <CODE>static</CODE>, then the function is normally not output =
+as=20
+  assembler code in its own right.=20
+  <P>Enabled at level <SAMP><SPAN class=3Doption>-O3</SPAN></SAMP>. =
+<BR></P>
+  <DT><CODE>-finline-functions-called-once</CODE>
+  <DD><A =
+name=3Dindex-finline_002dfunctions_002dcalled_002donce-624></A>Consider=20
+  all <CODE>static</CODE> functions called once for inlining into their =
+caller=20
+  even if they are not marked <CODE>inline</CODE>. If a call to a given =
+function=20
+  is integrated, then the function is not output as assembler code in =
+its own=20
+  right.=20
+  <P>Enabled if <SAMP><SPAN =
+class=3Doption>-funit-at-a-time</SPAN></SAMP> is=20
+  enabled. <BR></P>
+  <DT><CODE>-fearly-inlining</CODE>
+  <DD><A name=3Dindex-fearly_002dinlining-625></A>Inline functions =
+marked by=20
+  <CODE>always_inline</CODE> and functions whose body seems smaller than =
+the=20
+  function call overhead early before doing <SAMP><SPAN=20
+  class=3Doption>-fprofile-generate</SPAN></SAMP> instrumentation and =
+real=20
+  inlining pass. Doing so makes profiling significantly cheaper and =
+usually=20
+  inlining faster on programs having large chains of nested wrapper =
+functions.=20
+  <P>Enabled by default. <BR></P>
+  <DT><CODE>-finline-limit=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-finline_002dlimit-626></A>By default, GCC limits =
+the size of=20
+  functions that can be inlined. This flag allows coarse control of this =
+limit.=20
+  <VAR>n</VAR> is the size of functions that can be inlined in number of =
+pseudo=20
+  instructions.=20
+  <P>Inlining is actually controlled by a number of parameters, which =
+may be=20
+  specified individually by using <SAMP><SPAN class=3Doption>--param=20
+  </SPAN><VAR>name</VAR><SPAN =
+class=3Doption>=3D</SPAN><VAR>value</VAR></SAMP>. The=20
+  <SAMP><SPAN class=3Doption>-finline-limit=3D</SPAN><VAR>n</VAR></SAMP> =
+option sets=20
+  some of these parameters as follows:=20
+  <DL>
+    <DT><CODE>max-inline-insns-single</CODE>
+    <DD>is set to <VAR>n</VAR>/2. <BR>
+    <DT><CODE>max-inline-insns-auto</CODE>
+    <DD>is set to <VAR>n</VAR>/2. </DD></DL>
+  <P>See below for a documentation of the individual parameters =
+controlling=20
+  inlining and for the defaults of these parameters.=20
+  <P><EM>Note:</EM> there may be no value to <SAMP><SPAN=20
+  class=3Doption>-finline-limit</SPAN></SAMP> that results in default =
+behavior.=20
+  <P><EM>Note:</EM> pseudo instruction represents, in this particular =
+context,=20
+  an abstract measurement of function's size. In no way does it =
+represent a=20
+  count of assembly instructions and as such its exact meaning might =
+change from=20
+  one release to an another. <BR></P>
+  <DT><CODE>-fkeep-inline-functions</CODE>
+  <DD><A name=3Dindex-fkeep_002dinline_002dfunctions-627></A>In C, emit=20
+  <CODE>static</CODE> functions that are declared <CODE>inline</CODE> =
+into the=20
+  object file, even if the function has been inlined into all of its =
+callers.=20
+  This switch does not affect functions using the <CODE>extern =
+inline</CODE>=20
+  extension in GNU C89. In C++, emit any and all inline functions into =
+the=20
+  object file. <BR>
+  <DT><CODE>-fkeep-static-consts</CODE>
+  <DD><A name=3Dindex-fkeep_002dstatic_002dconsts-628></A>Emit variables =
+declared=20
+  <CODE>static const</CODE> when optimization isn't turned on, even if =
+the=20
+  variables aren't referenced.=20
+  <P>GCC enables this option by default. If you want to force the =
+compiler to=20
+  check if the variable was referenced, regardless of whether or not=20
+  optimization is turned on, use the <SAMP><SPAN=20
+  class=3Doption>-fno-keep-static-consts</SPAN></SAMP> option. <BR></P>
+  <DT><CODE>-fmerge-constants</CODE>
+  <DD><A name=3Dindex-fmerge_002dconstants-629></A>Attempt to merge =
+identical=20
+  constants (string constants and floating point constants) across =
+compilation=20
+  units.=20
+  <P>This option is the default for optimized compilation if the =
+assembler and=20
+  linker support it. Use <SAMP><SPAN=20
+  class=3Doption>-fno-merge-constants</SPAN></SAMP> to inhibit this =
+behavior.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fmerge-all-constants</CODE>
+  <DD><A name=3Dindex-fmerge_002dall_002dconstants-630></A>Attempt to =
+merge=20
+  identical constants and identical variables.=20
+  <P>This option implies <SAMP><SPAN=20
+  class=3Doption>-fmerge-constants</SPAN></SAMP>. In addition to =
+<SAMP><SPAN=20
+  class=3Doption>-fmerge-constants</SPAN></SAMP> this considers e.g. =
+even constant=20
+  initialized arrays or initialized constant variables with integral or =
+floating=20
+  point types. Languages like C or C++ require each non-automatic =
+variable to=20
+  have distinct location, so using this option will result in =
+non-conforming=20
+  behavior. <BR></P>
+  <DT><CODE>-fmodulo-sched</CODE>
+  <DD><A name=3Dindex-fmodulo_002dsched-631></A>Perform swing modulo =
+scheduling=20
+  immediately before the first scheduling pass. This pass looks at =
+innermost=20
+  loops and reorders their instructions by overlapping different =
+iterations.=20
+<BR>
+  <DT><CODE>-fmodulo-sched-allow-regmoves</CODE>
+  <DD><A =
+name=3Dindex-fmodulo_002dsched_002dallow_002dregmoves-632></A>Perform=20
+  more aggressive SMS based modulo scheduling with register moves =
+allowed. By=20
+  setting this flag certain anti-dependences edges will be deleted which =
+will=20
+  trigger the generation of reg-moves based on the life-range analysis. =
+This=20
+  option is effective only with <SAMP><SPAN=20
+  class=3Doption>-fmodulo-sched</SPAN></SAMP> enabled. <BR>
+  <DT><CODE>-fno-branch-count-reg</CODE>
+  <DD><A name=3Dindex-fno_002dbranch_002dcount_002dreg-633></A>Do not =
+use=20
+  =93decrement and branch=94 instructions on a count register, but =
+instead generate=20
+  a sequence of instructions that decrement a register, compare it =
+against zero,=20
+  then branch based upon the result. This option is only meaningful on=20
+  architectures that support such instructions, which include x86, =
+PowerPC,=20
+  IA-64 and S/390.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fbranch-count-reg</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fno-function-cse</CODE>
+  <DD><A name=3Dindex-fno_002dfunction_002dcse-634></A>Do not put =
+function=20
+  addresses in registers; make each instruction that calls a constant =
+function=20
+  contain the function's address explicitly.=20
+  <P>This option results in less efficient code, but some strange hacks =
+that=20
+  alter the assembler output may be confused by the optimizations =
+performed when=20
+  this option is not used.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-ffunction-cse</SPAN></SAMP>=20
+  <BR></P>
+  <DT><CODE>-fno-zero-initialized-in-bss</CODE>
+  <DD><A =
+name=3Dindex-fno_002dzero_002dinitialized_002din_002dbss-635></A>If the=20
+  target supports a BSS section, GCC by default puts variables that are=20
+  initialized to zero into BSS. This can save space in the resulting =
+code.=20
+  <P>This option turns off this behavior because some programs =
+explicitly rely=20
+  on variables going to the data section. E.g., so that the resulting =
+executable=20
+  can find the beginning of that section and/or make assumptions based =
+on that.=20
+  <P>The default is <SAMP><SPAN=20
+  class=3Doption>-fzero-initialized-in-bss</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fmudflap -fmudflapth -fmudflapir</CODE>
+  <DD><A name=3Dindex-fmudflap-636></A><A =
+name=3Dindex-fmudflapth-637></A><A=20
+  name=3Dindex-fmudflapir-638></A><A =
+name=3Dindex-bounds-checking-639></A><A=20
+  name=3Dindex-mudflap-640></A>For front-ends that support it (C and =
+C++),=20
+  instrument all risky pointer/array dereferencing operations, some =
+standard=20
+  library string/heap functions, and some other associated constructs =
+with=20
+  range/validity tests. Modules so instrumented should be immune to =
+buffer=20
+  overflows, invalid heap use, and some other classes of C/C++ =
+programming=20
+  errors. The instrumentation relies on a separate runtime library =
+(<SAMP><SPAN=20
+  class=3Dfile>libmudflap</SPAN></SAMP>), which will be linked into a =
+program if=20
+  <SAMP><SPAN class=3Doption>-fmudflap</SPAN></SAMP> is given at link =
+time.=20
+  Run-time behavior of the instrumented program is controlled by the =
+<SAMP><SPAN=20
+  class=3Denv>MUDFLAP_OPTIONS</SPAN></SAMP> environment variable. See =
+<CODE>env=20
+  MUDFLAP_OPTIONS=3D-help a.out</CODE> for its options.=20
+  <P>Use <SAMP><SPAN class=3Doption>-fmudflapth</SPAN></SAMP> instead of =
+
+  <SAMP><SPAN class=3Doption>-fmudflap</SPAN></SAMP> to compile and to =
+link if=20
+  your program is multi-threaded. Use <SAMP><SPAN=20
+  class=3Doption>-fmudflapir</SPAN></SAMP>, in addition to <SAMP><SPAN=20
+  class=3Doption>-fmudflap</SPAN></SAMP> or <SAMP><SPAN=20
+  class=3Doption>-fmudflapth</SPAN></SAMP>, if instrumentation should =
+ignore=20
+  pointer reads. This produces less instrumentation (and therefore =
+faster=20
+  execution) and still provides some protection against outright memory=20
+  corrupting writes, but allows erroneously read data to propagate =
+within a=20
+  program. <BR></P>
+  <DT><CODE>-fthread-jumps</CODE>
+  <DD><A name=3Dindex-fthread_002djumps-641></A>Perform optimizations =
+where we=20
+  check to see if a jump branches to a location where another comparison =
+
+  subsumed by the first is found. If so, the first branch is redirected =
+to=20
+  either the destination of the second branch or a point immediately =
+following=20
+  it, depending on whether the condition is known to be true or false.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fsplit-wide-types</CODE>
+  <DD><A name=3Dindex-fsplit_002dwide_002dtypes-642></A>When using a =
+type that=20
+  occupies multiple registers, such as <CODE>long long</CODE> on a =
+32-bit=20
+  system, split the registers apart and allocate them independently. =
+This=20
+  normally generates better code for those types, but may make debugging =
+more=20
+  difficult.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fcse-follow-jumps</CODE>
+  <DD><A name=3Dindex-fcse_002dfollow_002djumps-643></A>In common =
+subexpression=20
+  elimination (CSE), scan through jump instructions when the target of =
+the jump=20
+  is not reached by any other path. For example, when CSE encounters an=20
+  <CODE>if</CODE> statement with an <CODE>else</CODE> clause, CSE will =
+follow=20
+  the jump when the condition tested is false.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fcse-skip-blocks</CODE>
+  <DD><A name=3Dindex-fcse_002dskip_002dblocks-644></A>This is similar =
+to=20
+  <SAMP><SPAN class=3Doption>-fcse-follow-jumps</SPAN></SAMP>, but =
+causes CSE to=20
+  follow jumps which conditionally skip over blocks. When CSE encounters =
+a=20
+  simple <CODE>if</CODE> statement with no else clause, <SAMP><SPAN=20
+  class=3Doption>-fcse-skip-blocks</SPAN></SAMP> causes CSE to follow =
+the jump=20
+  around the body of the <CODE>if</CODE>.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-frerun-cse-after-loop</CODE>
+  <DD><A name=3Dindex-frerun_002dcse_002dafter_002dloop-645></A>Re-run =
+common=20
+  subexpression elimination after loop optimizations has been performed. =
+
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fgcse</CODE>
+  <DD><A name=3Dindex-fgcse-646></A>Perform a global common =
+subexpression=20
+  elimination pass. This pass also performs global constant and copy=20
+  propagation.=20
+  <P><EM>Note:</EM> When compiling a program using computed gotos, a GCC =
+
+  extension, you may get better runtime performance if you disable the =
+global=20
+  common subexpression elimination pass by adding <SAMP><SPAN=20
+  class=3Doption>-fno-gcse</SPAN></SAMP> to the command line.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fgcse-lm</CODE>
+  <DD><A name=3Dindex-fgcse_002dlm-647></A>When <SAMP><SPAN=20
+  class=3Doption>-fgcse-lm</SPAN></SAMP> is enabled, global common =
+subexpression=20
+  elimination will attempt to move loads which are only killed by stores =
+into=20
+  themselves. This allows a loop containing a load/store sequence to be =
+changed=20
+  to a load outside the loop, and a copy/store within the loop.=20
+  <P>Enabled by default when gcse is enabled. <BR></P>
+  <DT><CODE>-fgcse-sm</CODE>
+  <DD><A name=3Dindex-fgcse_002dsm-648></A>When <SAMP><SPAN=20
+  class=3Doption>-fgcse-sm</SPAN></SAMP> is enabled, a store motion pass =
+is run=20
+  after global common subexpression elimination. This pass will attempt =
+to move=20
+  stores out of loops. When used in conjunction with <SAMP><SPAN=20
+  class=3Doption>-fgcse-lm</SPAN></SAMP>, loops containing a load/store =
+sequence=20
+  can be changed to a load before the loop and a store after the loop.=20
+  <P>Not enabled at any optimization level. <BR></P>
+  <DT><CODE>-fgcse-las</CODE>
+  <DD><A name=3Dindex-fgcse_002dlas-649></A>When <SAMP><SPAN=20
+  class=3Doption>-fgcse-las</SPAN></SAMP> is enabled, the global common=20
+  subexpression elimination pass eliminates redundant loads that come =
+after=20
+  stores to the same memory location (both partial and full =
+redundancies).=20
+  <P>Not enabled at any optimization level. <BR></P>
+  <DT><CODE>-fgcse-after-reload</CODE>
+  <DD><A name=3Dindex-fgcse_002dafter_002dreload-650></A>When =
+<SAMP><SPAN=20
+  class=3Doption>-fgcse-after-reload</SPAN></SAMP> is enabled, a =
+redundant load=20
+  elimination pass is performed after reload. The purpose of this pass =
+is to=20
+  cleanup redundant spilling. <BR>
+  <DT><CODE>-funsafe-loop-optimizations</CODE>
+  <DD><A name=3Dindex-funsafe_002dloop_002doptimizations-651></A>If =
+given, the=20
+  loop optimizer will assume that loop indices do not overflow, and that =
+the=20
+  loops with nontrivial exit condition are not infinite. This enables a =
+wider=20
+  range of loop optimizations even if the loop optimizer itself cannot =
+prove=20
+  that these assumptions are valid. Using <SAMP><SPAN=20
+  class=3Doption>-Wunsafe-loop-optimizations</SPAN></SAMP>, the compiler =
+will warn=20
+  you if it finds this kind of loop. <BR>
+  <DT><CODE>-fcrossjumping</CODE>
+  <DD><A name=3Dindex-fcrossjumping-652></A>Perform cross-jumping =
+transformation.=20
+  This transformation unifies equivalent code and save code size. The =
+resulting=20
+  code may or may not perform better than without cross-jumping.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fauto-inc-dec</CODE>
+  <DD><A name=3Dindex-fauto_002dinc_002ddec-653></A>Combine increments =
+or=20
+  decrements of addresses with memory accesses. This pass is always =
+skipped on=20
+  architectures that do not have instructions to support this. Enabled =
+by=20
+  default at <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher on=20
+  architectures that support this. <BR>
+  <DT><CODE>-fdce</CODE>
+  <DD><A name=3Dindex-fdce-654></A>Perform dead code elimination (DCE) =
+on RTL.=20
+  Enabled by default at <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and =
+higher.=20
+  <BR>
+  <DT><CODE>-fdse</CODE>
+  <DD><A name=3Dindex-fdse-655></A>Perform dead store elimination (DSE) =
+on RTL.=20
+  Enabled by default at <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and =
+higher.=20
+  <BR>
+  <DT><CODE>-fif-conversion</CODE>
+  <DD><A name=3Dindex-fif_002dconversion-656></A>Attempt to transform =
+conditional=20
+  jumps into branch-less equivalents. This include use of conditional =
+moves,=20
+  min, max, set flags and abs instructions, and some tricks doable by =
+standard=20
+  arithmetics. The use of conditional execution on chips where it is =
+available=20
+  is controlled by <CODE>if-conversion2</CODE>.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fif-conversion2</CODE>
+  <DD><A name=3Dindex-fif_002dconversion2-657></A>Use conditional =
+execution (where=20
+  available) to transform conditional jumps into branch-less =
+equivalents.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fdelete-null-pointer-checks</CODE>
+  <DD><A =
+name=3Dindex-fdelete_002dnull_002dpointer_002dchecks-658></A>Use global=20
+  dataflow analysis to identify and eliminate useless checks for null =
+pointers.=20
+  The compiler assumes that dereferencing a null pointer would have =
+halted the=20
+  program. If a pointer is checked after it has already been =
+dereferenced, it=20
+  cannot be null.=20
+  <P>In some environments, this assumption is not true, and programs can =
+safely=20
+  dereference null pointers. Use <SAMP><SPAN=20
+  class=3Doption>-fno-delete-null-pointer-checks</SPAN></SAMP> to =
+disable this=20
+  optimization for programs which depend on that behavior.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fexpensive-optimizations</CODE>
+  <DD><A name=3Dindex-fexpensive_002doptimizations-659></A>Perform a =
+number of=20
+  minor optimizations that are relatively expensive.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-foptimize-register-move</CODE>
+  <DT><CODE>-fregmove</CODE>
+  <DD><A name=3Dindex-foptimize_002dregister_002dmove-660></A><A=20
+  name=3Dindex-fregmove-661></A>Attempt to reassign register numbers in =
+move=20
+  instructions and as operands of other simple instructions in order to =
+maximize=20
+  the amount of register tying. This is especially helpful on machines =
+with=20
+  two-operand instructions.=20
+  <P>Note <SAMP><SPAN class=3Doption>-fregmove</SPAN></SAMP> and =
+<SAMP><SPAN=20
+  class=3Doption>-foptimize-register-move</SPAN></SAMP> are the same =
+optimization.=20
+
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fdelayed-branch</CODE>
+  <DD><A name=3Dindex-fdelayed_002dbranch-662></A>If supported for the =
+target=20
+  machine, attempt to reorder instructions to exploit instruction slots=20
+  available after delayed branch instructions.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fschedule-insns</CODE>
+  <DD><A name=3Dindex-fschedule_002dinsns-663></A>If supported for the =
+target=20
+  machine, attempt to reorder instructions to eliminate execution stalls =
+due to=20
+  required data being unavailable. This helps machines that have slow =
+floating=20
+  point or memory load instructions by allowing other instructions to be =
+issued=20
+  until the result of the load or floating point instruction is =
+required.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fschedule-insns2</CODE>
+  <DD><A name=3Dindex-fschedule_002dinsns2-664></A>Similar to =
+<SAMP><SPAN=20
+  class=3Doption>-fschedule-insns</SPAN></SAMP>, but requests an =
+additional pass=20
+  of instruction scheduling after register allocation has been done. =
+This is=20
+  especially useful on machines with a relatively small number of =
+registers and=20
+  where memory load instructions take more than one cycle.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fno-sched-interblock</CODE>
+  <DD><A name=3Dindex-fno_002dsched_002dinterblock-665></A>Don't =
+schedule=20
+  instructions across basic blocks. This is normally enabled by default =
+when=20
+  scheduling before register allocation, i.e. with <SAMP><SPAN=20
+  class=3Doption>-fschedule-insns</SPAN></SAMP> or at <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> or higher. <BR>
+  <DT><CODE>-fno-sched-spec</CODE>
+  <DD><A name=3Dindex-fno_002dsched_002dspec-666></A>Don't allow =
+speculative=20
+  motion of non-load instructions. This is normally enabled by default =
+when=20
+  scheduling before register allocation, i.e. with <SAMP><SPAN=20
+  class=3Doption>-fschedule-insns</SPAN></SAMP> or at <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> or higher. <BR>
+  <DT><CODE>-fsched-spec-load</CODE>
+  <DD><A name=3Dindex-fsched_002dspec_002dload-667></A>Allow speculative =
+motion of=20
+  some load instructions. This only makes sense when scheduling before =
+register=20
+  allocation, i.e. with <SAMP><SPAN =
+class=3Doption>-fschedule-insns</SPAN></SAMP>=20
+  or at <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP> or higher. <BR>
+  <DT><CODE>-fsched-spec-load-dangerous</CODE>
+  <DD><A =
+name=3Dindex-fsched_002dspec_002dload_002ddangerous-668></A>Allow=20
+  speculative motion of more load instructions. This only makes sense =
+when=20
+  scheduling before register allocation, i.e. with <SAMP><SPAN=20
+  class=3Doption>-fschedule-insns</SPAN></SAMP> or at <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> or higher. <BR>
+  <DT><CODE>-fsched-stalled-insns</CODE>
+  <DT><CODE>-fsched-stalled-insns=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-fsched_002dstalled_002dinsns-669></A>Define how =
+many insns=20
+  (if any) can be moved prematurely from the queue of stalled insns into =
+the=20
+  ready list, during the second scheduling pass. <SAMP><SPAN=20
+  class=3Doption>-fno-sched-stalled-insns</SPAN></SAMP> means that no =
+insns will=20
+  be moved prematurely, <SAMP><SPAN=20
+  class=3Doption>-fsched-stalled-insns=3D0</SPAN></SAMP> means there is =
+no limit on=20
+  how many queued insns can be moved prematurely. <SAMP><SPAN=20
+  class=3Doption>-fsched-stalled-insns</SPAN></SAMP> without a value is =
+equivalent=20
+  to <SAMP><SPAN class=3Doption>-fsched-stalled-insns=3D1</SPAN></SAMP>. =
+<BR>
+  <DT><CODE>-fsched-stalled-insns-dep</CODE>
+  <DT><CODE>-fsched-stalled-insns-dep=3D</CODE><VAR>n</VAR>
+  <DD><A =
+name=3Dindex-fsched_002dstalled_002dinsns_002ddep-670></A>Define how =
+many=20
+  insn groups (cycles) will be examined for a dependency on a stalled =
+insn that=20
+  is candidate for premature removal from the queue of stalled insns. =
+This has=20
+  an effect only during the second scheduling pass, and only if =
+<SAMP><SPAN=20
+  class=3Doption>-fsched-stalled-insns</SPAN></SAMP> is used. =
+<SAMP><SPAN=20
+  class=3Doption>-fno-sched-stalled-insns-dep</SPAN></SAMP> is =
+equivalent to=20
+  <SAMP><SPAN =
+class=3Doption>-fsched-stalled-insns-dep=3D0</SPAN></SAMP>.=20
+  <SAMP><SPAN class=3Doption>-fsched-stalled-insns-dep</SPAN></SAMP> =
+without a=20
+  value is equivalent to <SAMP><SPAN=20
+  class=3Doption>-fsched-stalled-insns-dep=3D1</SPAN></SAMP>. <BR>
+  <DT><CODE>-fsched2-use-superblocks</CODE>
+  <DD><A name=3Dindex-fsched2_002duse_002dsuperblocks-671></A>When =
+scheduling=20
+  after register allocation, do use superblock scheduling algorithm. =
+Superblock=20
+  scheduling allows motion across basic block boundaries resulting on =
+faster=20
+  schedules. This option is experimental, as not all machine =
+descriptions used=20
+  by GCC model the CPU closely enough to avoid unreliable results from =
+the=20
+  algorithm.=20
+  <P>This only makes sense when scheduling after register allocation, =
+i.e. with=20
+  <SAMP><SPAN class=3Doption>-fschedule-insns2</SPAN></SAMP> or at =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> or higher. <BR></P>
+  <DT><CODE>-fsched2-use-traces</CODE>
+  <DD><A name=3Dindex-fsched2_002duse_002dtraces-672></A>Use <SAMP><SPAN =
+
+  class=3Doption>-fsched2-use-superblocks</SPAN></SAMP> algorithm when =
+scheduling=20
+  after register allocation and additionally perform code duplication in =
+order=20
+  to increase the size of superblocks using tracer pass. See <SAMP><SPAN =
+
+  class=3Doption>-ftracer</SPAN></SAMP> for details on trace formation.=20
+  <P>This mode should produce faster but significantly longer programs. =
+Also=20
+  without <SAMP><SPAN =
+class=3Doption>-fbranch-probabilities</SPAN></SAMP> the=20
+  traces constructed may not match the reality and hurt the performance. =
+This=20
+  only makes sense when scheduling after register allocation, i.e. with=20
+  <SAMP><SPAN class=3Doption>-fschedule-insns2</SPAN></SAMP> or at =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> or higher. <BR></P>
+  <DT><CODE>-fsee</CODE>
+  <DD><A name=3Dindex-fsee-673></A>Eliminate redundant sign extension =
+instructions=20
+  and move the non-redundant ones to optimal placement using lazy code =
+motion=20
+  (LCM). <BR>
+  <DT><CODE>-freschedule-modulo-scheduled-loops</CODE>
+  <DD><A =
+name=3Dindex-freschedule_002dmodulo_002dscheduled_002dloops-674></A>The=20
+  modulo scheduling comes before the traditional scheduling, if a loop =
+was=20
+  modulo scheduled we may want to prevent the later scheduling passes =
+from=20
+  changing its schedule, we use this option to control that. <BR>
+  <DT><CODE>-fcaller-saves</CODE>
+  <DD><A name=3Dindex-fcaller_002dsaves-675></A>Enable values to be =
+allocated in=20
+  registers that will be clobbered by function calls, by emitting extra=20
+  instructions to save and restore the registers around such calls. Such =
+
+  allocation is done only when it seems to result in better code than =
+would=20
+  otherwise be produced.=20
+  <P>This option is always enabled by default on certain machines, =
+usually those=20
+  which have no call-preserved registers to use instead.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-ftree-reassoc</CODE>
+  <DD><A name=3Dindex-ftree_002dreassoc-676></A>Perform reassociation on =
+trees.=20
+  This flag is enabled by default at <SAMP><SPAN =
+class=3Doption>-O</SPAN></SAMP>=20
+  and higher. <BR>
+  <DT><CODE>-ftree-pre</CODE>
+  <DD><A name=3Dindex-ftree_002dpre-677></A>Perform partial redundancy =
+elimination=20
+  (PRE) on trees. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> and <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>.=20
+  <BR>
+  <DT><CODE>-ftree-fre</CODE>
+  <DD><A name=3Dindex-ftree_002dfre-678></A>Perform full redundancy =
+elimination=20
+  (FRE) on trees. The difference between FRE and PRE is that FRE only =
+considers=20
+  expressions that are computed on all paths leading to the redundant=20
+  computation. This analysis is faster than PRE, though it exposes fewer =
+
+  redundancies. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-copy-prop</CODE>
+  <DD><A name=3Dindex-ftree_002dcopy_002dprop-679></A>Perform copy =
+propagation on=20
+  trees. This pass eliminates unnecessary copy operations. This flag is =
+enabled=20
+  by default at <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher. =
+<BR>
+  <DT><CODE>-ftree-salias</CODE>
+  <DD><A name=3Dindex-ftree_002dsalias-680></A>Perform structural alias =
+analysis=20
+  on trees. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-fipa-pure-const</CODE>
+  <DD><A name=3Dindex-fipa_002dpure_002dconst-681></A>Discover which =
+functions are=20
+  pure or constant. Enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-fipa-reference</CODE>
+  <DD><A name=3Dindex-fipa_002dreference-682></A>Discover which static =
+variables=20
+  do not escape cannot escape the compilation unit. Enabled by default =
+at=20
+  <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-fipa-struct-reorg</CODE>
+  <DD><A name=3Dindex-fipa_002dstruct_002dreorg-683></A>Perform =
+structure=20
+  reorganization optimization, that change C-like structures layout in =
+order to=20
+  better utilize spatial locality. This transformation is affective for =
+programs=20
+  containing arrays of structures. Available in two compilation modes:=20
+  profile-based (enabled with <SAMP><SPAN=20
+  class=3Doption>-fprofile-generate</SPAN></SAMP>) or static (which uses =
+built-in=20
+  heuristics). Require <SAMP><SPAN =
+class=3Doption>-fipa-type-escape</SPAN></SAMP>=20
+  to provide the safety of this transformation. It works only in whole =
+program=20
+  mode, so it requires <SAMP><SPAN =
+class=3Doption>-fwhole-program</SPAN></SAMP>=20
+  and <SAMP><SPAN class=3Doption>-combine</SPAN></SAMP> to be enabled. =
+Structures=20
+  considered `<SAMP><SPAN class=3Dsamp>cold</SPAN></SAMP>' by this =
+transformation=20
+  are not affected (see <SAMP><SPAN class=3Doption>--param=20
+  struct-reorg-cold-struct-ratio=3D</SPAN><VAR>value</VAR></SAMP>).=20
+  <P>With this flag, the program debug info reflects a new structure =
+layout.=20
+  <BR></P>
+  <DT><CODE>-fipa-pta</CODE>
+  <DD><A name=3Dindex-fipa_002dpta-684></A>Perform interprocedural =
+pointer=20
+  analysis. <BR>
+  <DT><CODE>-fipa-cp</CODE>
+  <DD><A name=3Dindex-fipa_002dcp-685></A>Perform interprocedural =
+constant=20
+  propagation. This optimization analyzes the program to determine when =
+values=20
+  passed to functions are constants and then optimizes accordingly. This =
+
+  optimization can substantially increase performance if the application =
+has=20
+  constants passed to functions, but because this optimization can =
+create=20
+  multiple copies of functions, it may significantly increase code size. =
+<BR>
+  <DT><CODE>-fipa-matrix-reorg</CODE>
+  <DD><A name=3Dindex-fipa_002dmatrix_002dreorg-686></A>Perform matrix =
+flattening=20
+  and transposing. Matrix flattening tries to replace a m-dimensional =
+matrix=20
+  with its equivalent n-dimensional matrix, where n &lt; m. This reduces =
+the=20
+  level of indirection needed for accessing the elements of the matrix. =
+The=20
+  second optimization is matrix transposing that attemps to change the =
+order of=20
+  the matrix's dimensions in order to improve cache locality. Both =
+optimizations=20
+  need fwhole-program flag. Transposing is enabled only if profiling =
+information=20
+  is avaliable. <BR>
+  <DT><CODE>-ftree-sink</CODE>
+  <DD><A name=3Dindex-ftree_002dsink-687></A>Perform forward store =
+motion on=20
+  trees. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-ccp</CODE>
+  <DD><A name=3Dindex-ftree_002dccp-688></A>Perform sparse conditional =
+constant=20
+  propagation (CCP) on trees. This pass only operates on local scalar =
+variables=20
+  and is enabled by default at <SAMP><SPAN =
+class=3Doption>-O</SPAN></SAMP> and=20
+  higher. <BR>
+  <DT><CODE>-ftree-store-ccp</CODE>
+  <DD><A name=3Dindex-ftree_002dstore_002dccp-689></A>Perform sparse =
+conditional=20
+  constant propagation (CCP) on trees. This pass operates on both local =
+scalar=20
+  variables and memory stores and loads (global variables, structures, =
+arrays,=20
+  etc). This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-dce</CODE>
+  <DD><A name=3Dindex-ftree_002ddce-690></A>Perform dead code =
+elimination (DCE) on=20
+  trees. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-dominator-opts</CODE>
+  <DD><A name=3Dindex-ftree_002ddominator_002dopts-691></A>Perform a =
+variety of=20
+  simple scalar cleanups (constant/copy propagation, redundancy =
+elimination,=20
+  range propagation and expression simplification) based on a dominator =
+tree=20
+  traversal. This also performs jump threading (to reduce jumps to =
+jumps). This=20
+  flag is enabled by default at <SAMP><SPAN =
+class=3Doption>-O</SPAN></SAMP> and=20
+  higher. <BR>
+  <DT><CODE>-ftree-dse</CODE>
+  <DD><A name=3Dindex-ftree_002ddse-692></A>Perform dead store =
+elimination (DSE)=20
+  on trees. A dead store is a store into a memory location which will =
+later be=20
+  overwritten by another store without any intervening loads. In this =
+case the=20
+  earlier store can be deleted. This flag is enabled by default at =
+<SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-ch</CODE>
+  <DD><A name=3Dindex-ftree_002dch-693></A>Perform loop header copying =
+on trees.=20
+  This is beneficial since it increases effectiveness of code motion=20
+  optimizations. It also saves one jump. This flag is enabled by default =
+at=20
+  <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher. It is not =
+enabled for=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>, since it usually =
+increases code=20
+  size. <BR>
+  <DT><CODE>-ftree-loop-optimize</CODE>
+  <DD><A name=3Dindex-ftree_002dloop_002doptimize-694></A>Perform loop=20
+  optimizations on trees. This flag is enabled by default at <SAMP><SPAN =
+
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-loop-linear</CODE>
+  <DD><A name=3Dindex-ftree_002dloop_002dlinear-695></A>Perform linear =
+loop=20
+  transformations on tree. This flag can improve cache performance and =
+allow=20
+  further loop optimizations to take place. <BR>
+  <DT><CODE>-fcheck-data-deps</CODE>
+  <DD><A name=3Dindex-fcheck_002ddata_002ddeps-696></A>Compare the =
+results of=20
+  several data dependence analyzers. This option is used for debugging =
+the data=20
+  dependence analyzers. <BR>
+  <DT><CODE>-ftree-loop-im</CODE>
+  <DD><A name=3Dindex-ftree_002dloop_002dim-697></A>Perform loop =
+invariant motion=20
+  on trees. This pass moves only invariants that would be hard to handle =
+at RTL=20
+  level (function calls, operations that expand to nontrivial sequences =
+of=20
+  insns). With <SAMP><SPAN class=3Doption>-funswitch-loops</SPAN></SAMP> =
+it also=20
+  moves operands of conditions that are invariant out of the loop, so =
+that we=20
+  can use just trivial invariantness analysis in loop unswitching. The =
+pass also=20
+  includes store motion. <BR>
+  <DT><CODE>-ftree-loop-ivcanon</CODE>
+  <DD><A name=3Dindex-ftree_002dloop_002divcanon-698></A>Create a =
+canonical=20
+  counter for number of iterations in the loop for that determining =
+number of=20
+  iterations requires complicated analysis. Later optimizations then may =
+
+  determine the number easily. Useful especially in connection with =
+unrolling.=20
+  <BR>
+  <DT><CODE>-fivopts</CODE>
+  <DD><A name=3Dindex-fivopts-699></A>Perform induction variable =
+optimizations=20
+  (strength reduction, induction variable merging and induction variable =
+
+  elimination) on trees. <BR>
+  <DT><CODE>-ftree-parallelize-loops=3Dn</CODE>
+  <DD><A =
+name=3Dindex-ftree_002dparallelize_002dloops-700></A>Parallelize loops,=20
+  i.e., split their iteration space to run in n threads. This is only =
+possible=20
+  for loops whose iterations are independent and can be arbitrarily =
+reordered.=20
+  The optimization is only profitable on multiprocessor machines, for =
+loops that=20
+  are CPU-intensive, rather than constrained e.g. by memory bandwidth. =
+This=20
+  option implies <SAMP><SPAN class=3Doption>-pthread</SPAN></SAMP>, and =
+thus is=20
+  only supported on targets that have support for <SAMP><SPAN=20
+  class=3Doption>-pthread</SPAN></SAMP>. <BR>
+  <DT><CODE>-ftree-sra</CODE>
+  <DD><A name=3Dindex-ftree_002dsra-701></A>Perform scalar replacement =
+of=20
+  aggregates. This pass replaces structure references with scalars to =
+prevent=20
+  committing structures to memory too early. This flag is enabled by =
+default at=20
+  <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-copyrename</CODE>
+  <DD><A name=3Dindex-ftree_002dcopyrename-702></A>Perform copy renaming =
+on trees.=20
+  This pass attempts to rename compiler temporaries to other variables =
+at copy=20
+  locations, usually resulting in variable names which more closely =
+resemble the=20
+  original variables. This flag is enabled by default at <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-ter</CODE>
+  <DD><A name=3Dindex-ftree_002dter-703></A>Perform temporary expression =
+
+  replacement during the SSA-&gt;normal phase. Single use/single def =
+temporaries=20
+  are replaced at their use location with their defining expression. =
+This=20
+  results in non-GIMPLE code, but gives the expanders much more complex =
+trees to=20
+  work on resulting in better RTL generation. This is enabled by default =
+at=20
+  <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> and higher. <BR>
+  <DT><CODE>-ftree-vectorize</CODE>
+  <DD><A name=3Dindex-ftree_002dvectorize-704></A>Perform loop =
+vectorization on=20
+  trees. <BR>
+  <DT><CODE>-ftree-vect-loop-version</CODE>
+  <DD><A =
+name=3Dindex-ftree_002dvect_002dloop_002dversion-705></A>Perform loop=20
+  versioning when doing loop vectorization on trees. When a loop appears =
+to be=20
+  vectorizable except that data alignment or data dependence cannot be=20
+  determined at compile time then vectorized and non-vectorized versions =
+of the=20
+  loop are generated along with runtime checks for alignment or =
+dependence to=20
+  control which version is executed. This option is enabled by default =
+except at=20
+  level <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP> where it is =
+disabled. <BR>
+  <DT><CODE>-fvect-cost-model</CODE>
+  <DD><A name=3Dindex-fvect_002dcost_002dmodel-706></A>Enable cost model =
+for=20
+  vectorization. <BR>
+  <DT><CODE>-ftree-vrp</CODE>
+  <DD><A name=3Dindex-ftree_002dvrp-707></A>Perform Value Range =
+Propagation on=20
+  trees. This is similar to the constant propagation pass, but instead =
+of=20
+  values, ranges of values are propagated. This allows the optimizers to =
+remove=20
+  unnecessary range checks like array bound checks and null pointer =
+checks. This=20
+  is enabled by default at <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP> =
+and=20
+  higher. Null pointer check elimination is only done if <SAMP><SPAN=20
+  class=3Doption>-fdelete-null-pointer-checks</SPAN></SAMP> is enabled. =
+<BR>
+  <DT><CODE>-ftracer</CODE>
+  <DD><A name=3Dindex-ftracer-708></A>Perform tail duplication to =
+enlarge=20
+  superblock size. This transformation simplifies the control flow of =
+the=20
+  function allowing other optimizations to do better job. <BR>
+  <DT><CODE>-funroll-loops</CODE>
+  <DD><A name=3Dindex-funroll_002dloops-709></A>Unroll loops whose =
+number of=20
+  iterations can be determined at compile time or upon entry to the =
+loop.=20
+  <SAMP><SPAN class=3Doption>-funroll-loops</SPAN></SAMP> implies =
+<SAMP><SPAN=20
+  class=3Doption>-frerun-cse-after-loop</SPAN></SAMP>. This option makes =
+code=20
+  larger, and may or may not make it run faster. <BR>
+  <DT><CODE>-funroll-all-loops</CODE>
+  <DD><A name=3Dindex-funroll_002dall_002dloops-710></A>Unroll all =
+loops, even if=20
+  their number of iterations is uncertain when the loop is entered. This =
+usually=20
+  makes programs run more slowly. <SAMP><SPAN=20
+  class=3Doption>-funroll-all-loops</SPAN></SAMP> implies the same =
+options as=20
+  <SAMP><SPAN class=3Doption>-funroll-loops</SPAN></SAMP>, <BR>
+  <DT><CODE>-fsplit-ivs-in-unroller</CODE>
+  <DD><A name=3Dindex-fsplit_002divs_002din_002dunroller-711></A>Enables =
+
+  expressing of values of induction variables in later iterations of the =
+
+  unrolled loop using the value in the first iteration. This breaks long =
+
+  dependency chains, thus improving efficiency of the scheduling passes. =
+
+  <P>Combination of <SAMP><SPAN class=3Doption>-fweb</SPAN></SAMP> and =
+CSE is=20
+  often sufficient to obtain the same effect. However in cases the loop =
+body is=20
+  more complicated than a single basic block, this is not reliable. It =
+also does=20
+  not work at all on some of the architectures due to restrictions in =
+the CSE=20
+  pass.=20
+  <P>This optimization is enabled by default. <BR></P>
+  <DT><CODE>-fvariable-expansion-in-unroller</CODE>
+  <DD><A =
+name=3Dindex-fvariable_002dexpansion_002din_002dunroller-712></A>With=20
+  this option, the compiler will create multiple copies of some local =
+variables=20
+  when unrolling a loop which can result in superior code. <BR>
+  <DT><CODE>-fpredictive-commoning</CODE>
+  <DD><A name=3Dindex-fpredictive_002dcommoning-713></A>Perform =
+predictive=20
+  commoning optimization, i.e., reusing computations (especially memory =
+loads=20
+  and stores) performed in previous iterations of loops.=20
+  <P>This option is enabled at level <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fprefetch-loop-arrays</CODE>
+  <DD><A name=3Dindex-fprefetch_002dloop_002darrays-714></A>If supported =
+by the=20
+  target machine, generate instructions to prefetch memory to improve =
+the=20
+  performance of loops that access large arrays.=20
+  <P>This option may generate better or worse code; results are highly =
+dependent=20
+  on the structure of loops within the source code.=20
+  <P>Disabled at level <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. =
+<BR></P>
+  <DT><CODE>-fno-peephole</CODE>
+  <DT><CODE>-fno-peephole2</CODE>
+  <DD><A name=3Dindex-fno_002dpeephole-715></A><A=20
+  name=3Dindex-fno_002dpeephole2-716></A>Disable any machine-specific =
+peephole=20
+  optimizations. The difference between <SAMP><SPAN=20
+  class=3Doption>-fno-peephole</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-fno-peephole2</SPAN></SAMP> is in how they are =
+implemented in=20
+  the compiler; some targets use one, some use the other, a few use =
+both.=20
+  <P><SAMP><SPAN class=3Doption>-fpeephole</SPAN></SAMP> is enabled by =
+default.=20
+  <SAMP><SPAN class=3Doption>-fpeephole2</SPAN></SAMP> enabled at levels =
+
+  <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fno-guess-branch-probability</CODE>
+  <DD><A =
+name=3Dindex-fno_002dguess_002dbranch_002dprobability-717></A>Do not=20
+  guess branch probabilities using heuristics.=20
+  <P>GCC will use heuristics to guess branch probabilities if they are =
+not=20
+  provided by profiling feedback (<SAMP><SPAN=20
+  class=3Doption>-fprofile-arcs</SPAN></SAMP>). These heuristics are =
+based on the=20
+  control flow graph. If some branch probabilities are specified by =
+`<SAMP><SPAN=20
+  class=3Dsamp>__builtin_expect</SPAN></SAMP>', then the heuristics will =
+be used=20
+  to guess branch probabilities for the rest of the control flow graph, =
+taking=20
+  the `<SAMP><SPAN class=3Dsamp>__builtin_expect</SPAN></SAMP>' info =
+into account.=20
+  The interactions between the heuristics and `<SAMP><SPAN=20
+  class=3Dsamp>__builtin_expect</SPAN></SAMP>' can be complex, and in =
+some cases,=20
+  it may be useful to disable the heuristics so that the effects of =
+`<SAMP><SPAN=20
+  class=3Dsamp>__builtin_expect</SPAN></SAMP>' are easier to understand. =
+
+  <P>The default is <SAMP><SPAN=20
+  class=3Doption>-fguess-branch-probability</SPAN></SAMP> at levels =
+<SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O2</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-freorder-blocks</CODE>
+  <DD><A name=3Dindex-freorder_002dblocks-718></A>Reorder basic blocks =
+in the=20
+  compiled function in order to reduce number of taken branches and =
+improve code=20
+  locality.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-freorder-blocks-and-partition</CODE>
+  <DD><A =
+name=3Dindex-freorder_002dblocks_002dand_002dpartition-719></A>In=20
+  addition to reordering basic blocks in the compiled function, in order =
+to=20
+  reduce number of taken branches, partitions hot and cold basic blocks =
+into=20
+  separate sections of the assembly and .o files, to improve paging and =
+cache=20
+  locality performance.=20
+  <P>This optimization is automatically turned off in the presence of =
+exception=20
+  handling, for linkonce sections, for functions with a user-defined =
+section=20
+  attribute and on any architecture that does not support named =
+sections.=20
+  <BR></P>
+  <DT><CODE>-freorder-functions</CODE>
+  <DD><A name=3Dindex-freorder_002dfunctions-720></A>Reorder functions =
+in the=20
+  object file in order to improve code locality. This is implemented by =
+using=20
+  special subsections <CODE>.text.hot</CODE> for most frequently =
+executed=20
+  functions and <CODE>.text.unlikely</CODE> for unlikely executed =
+functions.=20
+  Reordering is done by the linker so object file format must support =
+named=20
+  sections and linker must place them in a reasonable way.=20
+  <P>Also profile feedback must be available in to make this option =
+effective.=20
+  See <SAMP><SPAN class=3Doption>-fprofile-arcs</SPAN></SAMP> for =
+details.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fstrict-aliasing</CODE>
+  <DD><A name=3Dindex-fstrict_002daliasing-721></A>Allows the compiler =
+to assume=20
+  the strictest aliasing rules applicable to the language being =
+compiled. For C=20
+  (and C++), this activates optimizations based on the type of =
+expressions. In=20
+  particular, an object of one type is assumed never to reside at the =
+same=20
+  address as an object of a different type, unless the types are almost =
+the=20
+  same. For example, an <CODE>unsigned int</CODE> can alias an =
+<CODE>int</CODE>,=20
+  but not a <CODE>void*</CODE> or a <CODE>double</CODE>. A character =
+type may=20
+  alias any other type.=20
+  <P>Pay special attention to code like this: <PRE class=3Dsmallexample> =
+         union a_union {
+            int i;
+            double d;
+          };
+         =20
+          int f() {
+            a_union t;
+            t.d =3D 3.0;
+            return t.i;
+          }
+     </PRE>
+  <P>The practice of reading from a different union member than the one =
+most=20
+  recently written to (called =93type-punning=94) is common. Even with =
+<SAMP><SPAN=20
+  class=3Doption>-fstrict-aliasing</SPAN></SAMP>, type-punning is =
+allowed,=20
+  provided the memory is accessed through the union type. So, the code =
+above=20
+  will work as expected. However, this code might not: <PRE =
+class=3Dsmallexample>          int f() {
+            a_union t;
+            int* ip;
+            t.d =3D 3.0;
+            ip =3D &amp;t.i;
+            return *ip;
+          }
+     </PRE>
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fstrict-overflow</CODE>
+  <DD><A name=3Dindex-fstrict_002doverflow-722></A>Allow the compiler to =
+assume=20
+  strict signed overflow rules, depending on the language being =
+compiled. For C=20
+  (and C++) this means that overflow when doing arithmetic with signed =
+numbers=20
+  is undefined, which means that the compiler may assume that it will =
+not=20
+  happen. This permits various optimizations. For example, the compiler =
+will=20
+  assume that an expression like <CODE>i + 10 &gt; i</CODE> will always =
+be true=20
+  for signed <CODE>i</CODE>. This assumption is only valid if signed =
+overflow is=20
+  undefined, as the expression is false if <CODE>i + 10</CODE> overflows =
+when=20
+  using twos complement arithmetic. When this option is in effect any =
+attempt to=20
+  determine whether an operation on signed numbers will overflow must be =
+written=20
+  carefully to not actually involve overflow.=20
+  <P>See also the <SAMP><SPAN class=3Doption>-fwrapv</SPAN></SAMP> =
+option. Using=20
+  <SAMP><SPAN class=3Doption>-fwrapv</SPAN></SAMP> means that signed =
+overflow is=20
+  fully defined: it wraps. When <SAMP><SPAN =
+class=3Doption>-fwrapv</SPAN></SAMP>=20
+  is used, there is no difference between <SAMP><SPAN=20
+  class=3Doption>-fstrict-overflow</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-fno-strict-overflow</SPAN></SAMP>. With <SAMP><SPAN=20
+  class=3Doption>-fwrapv</SPAN></SAMP> certain types of overflow are =
+permitted.=20
+  For example, if the compiler gets an overflow when doing arithmetic on =
+
+  constants, the overflowed value can still be used with <SAMP><SPAN=20
+  class=3Doption>-fwrapv</SPAN></SAMP>, but not otherwise.=20
+  <P>The <SAMP><SPAN class=3Doption>-fstrict-overflow</SPAN></SAMP> =
+option is=20
+  enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-Os</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-falign-functions</CODE>
+  <DT><CODE>-falign-functions=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-falign_002dfunctions-723></A>Align the start of =
+functions to=20
+  the next power-of-two greater than <VAR>n</VAR>, skipping up to =
+<VAR>n</VAR>=20
+  bytes. For instance, <SAMP><SPAN=20
+  class=3Doption>-falign-functions=3D32</SPAN></SAMP> aligns functions =
+to the next=20
+  32-byte boundary, but <SAMP><SPAN=20
+  class=3Doption>-falign-functions=3D24</SPAN></SAMP> would align to the =
+next=20
+  32-byte boundary only if this can be done by skipping 23 bytes or =
+less.=20
+  <P><SAMP><SPAN class=3Doption>-fno-align-functions</SPAN></SAMP> and =
+<SAMP><SPAN=20
+  class=3Doption>-falign-functions=3D1</SPAN></SAMP> are equivalent and =
+mean that=20
+  functions will not be aligned.=20
+  <P>Some assemblers only support this flag when <VAR>n</VAR> is a power =
+of two;=20
+  in that case, it is rounded up.=20
+  <P>If <VAR>n</VAR> is not specified or is zero, use a =
+machine-dependent=20
+  default.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-falign-labels</CODE>
+  <DT><CODE>-falign-labels=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-falign_002dlabels-724></A>Align all branch targets =
+to a=20
+  power-of-two boundary, skipping up to <VAR>n</VAR> bytes like =
+<SAMP><SPAN=20
+  class=3Doption>-falign-functions</SPAN></SAMP>. This option can easily =
+make code=20
+  slower, because it must insert dummy operations for when the branch =
+target is=20
+  reached in the usual flow of the code.=20
+  <P><SAMP><SPAN class=3Doption>-fno-align-labels</SPAN></SAMP> and =
+<SAMP><SPAN=20
+  class=3Doption>-falign-labels=3D1</SPAN></SAMP> are equivalent and =
+mean that=20
+  labels will not be aligned.=20
+  <P>If <SAMP><SPAN class=3Doption>-falign-loops</SPAN></SAMP> or =
+<SAMP><SPAN=20
+  class=3Doption>-falign-jumps</SPAN></SAMP> are applicable and are =
+greater than=20
+  this value, then their values are used instead.=20
+  <P>If <VAR>n</VAR> is not specified or is zero, use a =
+machine-dependent=20
+  default which is very likely to be `<SAMP><SPAN =
+class=3Dsamp>1</SPAN></SAMP>',=20
+  meaning no alignment.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-falign-loops</CODE>
+  <DT><CODE>-falign-loops=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-falign_002dloops-725></A>Align loops to a =
+power-of-two=20
+  boundary, skipping up to <VAR>n</VAR> bytes like <SAMP><SPAN=20
+  class=3Doption>-falign-functions</SPAN></SAMP>. The hope is that the =
+loop will=20
+  be executed many times, which will make up for any execution of the =
+dummy=20
+  operations.=20
+  <P><SAMP><SPAN class=3Doption>-fno-align-loops</SPAN></SAMP> and =
+<SAMP><SPAN=20
+  class=3Doption>-falign-loops=3D1</SPAN></SAMP> are equivalent and mean =
+that loops=20
+  will not be aligned.=20
+  <P>If <VAR>n</VAR> is not specified or is zero, use a =
+machine-dependent=20
+  default.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-falign-jumps</CODE>
+  <DT><CODE>-falign-jumps=3D</CODE><VAR>n</VAR>
+  <DD><A name=3Dindex-falign_002djumps-726></A>Align branch targets to a =
+
+  power-of-two boundary, for branch targets where the targets can only =
+be=20
+  reached by jumping, skipping up to <VAR>n</VAR> bytes like <SAMP><SPAN =
+
+  class=3Doption>-falign-functions</SPAN></SAMP>. In this case, no dummy =
+
+  operations need be executed.=20
+  <P><SAMP><SPAN class=3Doption>-fno-align-jumps</SPAN></SAMP> and =
+<SAMP><SPAN=20
+  class=3Doption>-falign-jumps=3D1</SPAN></SAMP> are equivalent and mean =
+that loops=20
+  will not be aligned.=20
+  <P>If <VAR>n</VAR> is not specified or is zero, use a =
+machine-dependent=20
+  default.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O2</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O3</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-funit-at-a-time</CODE>
+  <DD><A name=3Dindex-funit_002dat_002da_002dtime-727></A>Parse the =
+whole=20
+  compilation unit before starting to produce code. This allows some =
+extra=20
+  optimizations to take place but consumes more memory (in general). =
+There are=20
+  some compatibility issues with <EM>unit-at-a-time</EM> mode:=20
+  <UL>
+    <LI>enabling <EM>unit-at-a-time</EM> mode may change the order in =
+which=20
+    functions, variables, and top-level <CODE>asm</CODE> statements are =
+emitted,=20
+    and will likely break code relying on some particular ordering. The =
+majority=20
+    of such top-level <CODE>asm</CODE> statements, though, can be =
+replaced by=20
+    <CODE>section</CODE> attributes. The <SAMP><SPAN=20
+    class=3Doption>fno-toplevel-reorder</SPAN></SAMP> option may be used =
+to keep=20
+    the ordering used in the input file, at the cost of some =
+optimizations.=20
+    <LI><EM>unit-at-a-time</EM> mode removes unreferenced static =
+variables and=20
+    functions. This may result in undefined references when an =
+<CODE>asm</CODE>=20
+    statement refers directly to variables or functions that are =
+otherwise=20
+    unused. In that case either the variable/function shall be listed as =
+an=20
+    operand of the <CODE>asm</CODE> statement operand or, in the case of =
+
+    top-level <CODE>asm</CODE> statements the attribute =
+<CODE>used</CODE> shall=20
+    be used on the declaration.=20
+    <LI>Static functions now can use non-standard passing conventions =
+that may=20
+    break <CODE>asm</CODE> statements calling functions directly. Again, =
+
+    attribute <CODE>used</CODE> will prevent this behavior. </LI></UL>
+  <P>As a temporary workaround, <SAMP><SPAN=20
+  class=3Doption>-fno-unit-at-a-time</SPAN></SAMP> can be used, but this =
+scheme=20
+  may not be supported by future releases of GCC.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fno-toplevel-reorder</CODE>
+  <DD><A name=3Dindex-fno_002dtoplevel_002dreorder-728></A>Do not =
+reorder=20
+  top-level functions, variables, and <CODE>asm</CODE> statements. =
+Output them=20
+  in the same order that they appear in the input file. When this option =
+is=20
+  used, unreferenced static variables will not be removed. This option =
+is=20
+  intended to support existing code which relies on a particular =
+ordering. For=20
+  new code, it is better to use attributes. <BR>
+  <DT><CODE>-fweb</CODE>
+  <DD><A name=3Dindex-fweb-729></A>Constructs webs as commonly used for =
+register=20
+  allocation purposes and assign each web individual pseudo register. =
+This=20
+  allows the register allocation pass to operate on pseudos directly, =
+but also=20
+  strengthens several other optimization passes, such as CSE, loop =
+optimizer and=20
+  trivial dead code remover. It can, however, make debugging impossible, =
+since=20
+  variables will no longer stay in a =93home register=94.=20
+  <P>Enabled by default with <SAMP><SPAN=20
+  class=3Doption>-funroll-loops</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fwhole-program</CODE>
+  <DD><A name=3Dindex-fwhole_002dprogram-730></A>Assume that the current =
+
+  compilation unit represents whole program being compiled. All public =
+functions=20
+  and variables with the exception of <CODE>main</CODE> and those merged =
+by=20
+  attribute <CODE>externally_visible</CODE> become static functions and =
+in a=20
+  affect gets more aggressively optimized by interprocedural optimizers. =
+While=20
+  this option is equivalent to proper use of <CODE>static</CODE> keyword =
+for=20
+  programs consisting of single file, in combination with option =
+<SAMP><SPAN=20
+  class=3Doption>--combine</SPAN></SAMP> this flag can be used to =
+compile most of=20
+  smaller scale C programs since the functions and variables become =
+local for=20
+  the whole combined compilation unit, not for the single source file =
+itself.=20
+  <P>This option is not supported for Fortran programs. <BR></P>
+  <DT><CODE>-fcprop-registers</CODE>
+  <DD><A name=3Dindex-fcprop_002dregisters-731></A>After register =
+allocation and=20
+  post-register allocation instruction splitting, we perform a =
+copy-propagation=20
+  pass to try to reduce scheduling dependencies and occasionally =
+eliminate the=20
+  copy.=20
+  <P>Enabled at levels <SAMP><SPAN class=3Doption>-O</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-O2</SPAN></SAMP>, <SAMP><SPAN =
+class=3Doption>-O3</SPAN></SAMP>,=20
+  <SAMP><SPAN class=3Doption>-Os</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fprofile-generate</CODE>
+  <DD><A name=3Dindex-fprofile_002dgenerate-732></A>Enable options =
+usually used=20
+  for instrumenting application to produce profile useful for later=20
+  recompilation with profile feedback based optimization. You must use=20
+  <SAMP><SPAN class=3Doption>-fprofile-generate</SPAN></SAMP> both when =
+compiling=20
+  and when linking your program.=20
+  <P>The following options are enabled: <CODE>-fprofile-arcs</CODE>,=20
+  <CODE>-fprofile-values</CODE>, <CODE>-fvpt</CODE>. <BR></P>
+  <DT><CODE>-fprofile-use</CODE>
+  <DD><A name=3Dindex-fprofile_002duse-733></A>Enable profile feedback =
+directed=20
+  optimizations, and optimizations generally profitable only with =
+profile=20
+  feedback available.=20
+  <P>The following options are enabled: =
+<CODE>-fbranch-probabilities</CODE>,=20
+  <CODE>-fvpt</CODE>, <CODE>-funroll-loops</CODE>, =
+<CODE>-fpeel-loops</CODE>,=20
+  <CODE>-ftracer</CODE>=20
+  <P>By default, GCC emits an error message if the feedback profiles do =
+not=20
+  match the source code. This error can be turned into a warning by =
+using=20
+  <SAMP><SPAN class=3Doption>-Wcoverage-mismatch</SPAN></SAMP>. Note =
+this may=20
+  result in poorly optimized code. </P></DD></DL>
+<P>The following options control compiler behavior regarding floating =
+point=20
+arithmetic. These options trade off between speed and correctness. All =
+must be=20
+specifically enabled.=20
+<DL>
+  <DT><CODE>-ffloat-store</CODE>
+  <DD><A name=3Dindex-ffloat_002dstore-734></A>Do not store floating =
+point=20
+  variables in registers, and inhibit other options that might change =
+whether a=20
+  floating point value is taken from a register or memory.=20
+  <P><A name=3Dindex-floating-point-precision-735></A>This option =
+prevents=20
+  undesirable excess precision on machines such as the 68000 where the =
+floating=20
+  registers (of the 68881) keep more precision than a =
+<CODE>double</CODE> is=20
+  supposed to have. Similarly for the x86 architecture. For most =
+programs, the=20
+  excess precision does only good, but a few programs rely on the =
+precise=20
+  definition of IEEE floating point. Use <SAMP><SPAN=20
+  class=3Doption>-ffloat-store</SPAN></SAMP> for such programs, after =
+modifying=20
+  them to store all pertinent intermediate computations into variables. =
+<BR></P>
+  <DT><CODE>-ffast-math</CODE>
+  <DD><A name=3Dindex-ffast_002dmath-736></A>Sets <SAMP><SPAN=20
+  class=3Doption>-fno-math-errno</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-funsafe-math-optimizations</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-ffinite-math-only</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-fno-rounding-math</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-fno-signaling-nans</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-fcx-limited-range</SPAN></SAMP>.=20
+  <P>This option causes the preprocessor macro =
+<CODE>__FAST_MATH__</CODE> to be=20
+  defined.=20
+  <P>This option is not turned on by any <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> option since it can result in =
+incorrect output=20
+  for programs which depend on an exact implementation of IEEE or ISO=20
+  rules/specifications for math functions. It may, however, yield faster =
+code=20
+  for programs that do not require the guarantees of these =
+specifications.=20
+  <BR></P>
+  <DT><CODE>-fno-math-errno</CODE>
+  <DD><A name=3Dindex-fno_002dmath_002derrno-737></A>Do not set ERRNO =
+after=20
+  calling math functions that are executed with a single instruction, =
+e.g.,=20
+  sqrt. A program that relies on IEEE exceptions for math error handling =
+may=20
+  want to use this flag for speed while maintaining IEEE arithmetic=20
+  compatibility.=20
+  <P>This option is not turned on by any <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> option since it can result in =
+incorrect output=20
+  for programs which depend on an exact implementation of IEEE or ISO=20
+  rules/specifications for math functions. It may, however, yield faster =
+code=20
+  for programs that do not require the guarantees of these =
+specifications.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fmath-errno</SPAN></SAMP>.=20
+  <P>On Darwin systems, the math library never sets <CODE>errno</CODE>. =
+There is=20
+  therefore no reason for the compiler to consider the possibility that =
+it=20
+  might, and <SAMP><SPAN class=3Doption>-fno-math-errno</SPAN></SAMP> is =
+the=20
+  default. <BR></P>
+  <DT><CODE>-funsafe-math-optimizations</CODE>
+  <DD><A name=3Dindex-funsafe_002dmath_002doptimizations-738></A>Allow=20
+  optimizations for floating-point arithmetic that (a) assume that =
+arguments and=20
+  results are valid and (b) may violate IEEE or ANSI standards. When =
+used at=20
+  link-time, it may include libraries or startup files that change the =
+default=20
+  FPU control word or other similar optimizations.=20
+  <P>This option is not turned on by any <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> option since it can result in =
+incorrect output=20
+  for programs which depend on an exact implementation of IEEE or ISO=20
+  rules/specifications for math functions. It may, however, yield faster =
+code=20
+  for programs that do not require the guarantees of these =
+specifications.=20
+  Enables <SAMP><SPAN class=3Doption>-fno-signed-zeros</SPAN></SAMP>, =
+<SAMP><SPAN=20
+  class=3Doption>-fno-trapping-math</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-fassociative-math</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-freciprocal-math</SPAN></SAMP>.=20
+  <P>The default is <SAMP><SPAN=20
+  class=3Doption>-fno-unsafe-math-optimizations</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fassociative-math</CODE>
+  <DD><A name=3Dindex-fassociative_002dmath-739></A>Allow re-association =
+of=20
+  operands in series of floating-point operations. This violates the ISO =
+C and=20
+  C++ language standard by possibly changing computation result. NOTE:=20
+  re-ordering may change the sign of zero as well as ignore NaNs and =
+inhibit or=20
+  create underflow or overflow (and thus cannot be used on a code which =
+relies=20
+  on rounding behavior like <CODE>(x + 2**52) - 2**52)</CODE>. May also =
+reorder=20
+  floating-point comparisons and thus may not be used when ordered =
+comparisons=20
+  are required. This option requires that both <SAMP><SPAN=20
+  class=3Doption>-fno-signed-zeros</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-fno-trapping-math</SPAN></SAMP> be in effect. =
+Moreover, it=20
+  doesn't make much sense with <SAMP><SPAN=20
+  class=3Doption>-frounding-math</SPAN></SAMP>.=20
+  <P>The default is <SAMP><SPAN=20
+  class=3Doption>-fno-associative-math</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-freciprocal-math</CODE>
+  <DD><A name=3Dindex-freciprocal_002dmath-740></A>Allow the reciprocal =
+of a value=20
+  to be used instead of dividing by the value if this enables =
+optimizations. For=20
+  example <CODE>x / y</CODE> can be replaced with <CODE>x * (1/y)</CODE> =
+which=20
+  is useful if <CODE>(1/y)</CODE> is subject to common subexpression=20
+  elimination. Note that this loses precision and increases the number =
+of flops=20
+  operating on the value.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fno-reciprocal-math</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-ffinite-math-only</CODE>
+  <DD><A name=3Dindex-ffinite_002dmath_002donly-741></A>Allow =
+optimizations for=20
+  floating-point arithmetic that assume that arguments and results are =
+not NaNs=20
+  or +-Infs.=20
+  <P>This option is not turned on by any <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> option since it can result in =
+incorrect output=20
+  for programs which depend on an exact implementation of IEEE or ISO=20
+  rules/specifications for math functions. It may, however, yield faster =
+code=20
+  for programs that do not require the guarantees of these =
+specifications.=20
+  <P>The default is <SAMP><SPAN=20
+  class=3Doption>-fno-finite-math-only</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fno-signed-zeros</CODE>
+  <DD><A name=3Dindex-fno_002dsigned_002dzeros-742></A>Allow =
+optimizations for=20
+  floating point arithmetic that ignore the signedness of zero. IEEE =
+arithmetic=20
+  specifies the behavior of distinct +0.0 and &#8722;0.0 values, which =
+then prohibits=20
+  simplification of expressions such as x+0.0 or 0.0*x (even with =
+<SAMP><SPAN=20
+  class=3Doption>-ffinite-math-only</SPAN></SAMP>). This option implies =
+that the=20
+  sign of a zero result isn't significant.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fsigned-zeros</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-fno-trapping-math</CODE>
+  <DD><A name=3Dindex-fno_002dtrapping_002dmath-743></A>Compile code =
+assuming that=20
+  floating-point operations cannot generate user-visible traps. These =
+traps=20
+  include division by zero, overflow, underflow, inexact result and =
+invalid=20
+  operation. This option requires that <SAMP><SPAN=20
+  class=3Doption>-fno-signaling-nans</SPAN></SAMP> be in effect. Setting =
+this=20
+  option may allow faster code if one relies on =93non-stop=94 IEEE =
+arithmetic, for=20
+  example.=20
+  <P>This option should never be turned on by any <SAMP><SPAN=20
+  class=3Doption>-O</SPAN></SAMP> option since it can result in =
+incorrect output=20
+  for programs which depend on an exact implementation of IEEE or ISO=20
+  rules/specifications for math functions.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-ftrapping-math</SPAN></SAMP>.=20
+  <BR></P>
+  <DT><CODE>-frounding-math</CODE>
+  <DD><A name=3Dindex-frounding_002dmath-744></A>Disable transformations =
+and=20
+  optimizations that assume default floating point rounding behavior. =
+This is=20
+  round-to-zero for all floating point to integer conversions, and=20
+  round-to-nearest for all other arithmetic truncations. This option =
+should be=20
+  specified for programs that change the FP rounding mode dynamically, =
+or that=20
+  may be executed with a non-default rounding mode. This option disables =
+
+  constant folding of floating point expressions at compile-time (which =
+may be=20
+  affected by rounding mode) and arithmetic transformations that are =
+unsafe in=20
+  the presence of sign-dependent rounding modes.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fno-rounding-math</SPAN></SAMP>.=20
+  <P>This option is experimental and does not currently guarantee to =
+disable all=20
+  GCC optimizations that are affected by rounding mode. Future versions =
+of GCC=20
+  may provide finer control of this setting using C99's =
+<CODE>FENV_ACCESS</CODE>=20
+  pragma. This command line option will be used to specify the default =
+state for=20
+  <CODE>FENV_ACCESS</CODE>. <BR></P>
+  <DT><CODE>-frtl-abstract-sequences</CODE>
+  <DD><A name=3Dindex-frtl_002dabstract_002dsequences-745></A>It is a =
+size=20
+  optimization method. This option is to find identical sequences of =
+code, which=20
+  can be turned into pseudo-procedures and then replace all occurrences =
+with=20
+  calls to the newly created subroutine. It is kind of an opposite of=20
+  <SAMP><SPAN class=3Doption>-finline-functions</SPAN></SAMP>. This =
+optimization=20
+  runs at RTL level. <BR>
+  <DT><CODE>-fsignaling-nans</CODE>
+  <DD><A name=3Dindex-fsignaling_002dnans-746></A>Compile code assuming =
+that IEEE=20
+  signaling NaNs may generate user-visible traps during floating-point=20
+  operations. Setting this option disables optimizations that may change =
+the=20
+  number of exceptions visible with signaling NaNs. This option implies=20
+  <SAMP><SPAN class=3Doption>-ftrapping-math</SPAN></SAMP>.=20
+  <P>This option causes the preprocessor macro =
+<CODE>__SUPPORT_SNAN__</CODE> to=20
+  be defined.=20
+  <P>The default is <SAMP><SPAN =
+class=3Doption>-fno-signaling-nans</SPAN></SAMP>.=20
+  <P>This option is experimental and does not currently guarantee to =
+disable all=20
+  GCC optimizations that affect signaling NaN behavior. <BR></P>
+  <DT><CODE>-fsingle-precision-constant</CODE>
+  <DD><A name=3Dindex-fsingle_002dprecision_002dconstant-747></A>Treat =
+floating=20
+  point constant as single precision constant instead of implicitly =
+converting=20
+  it to double precision constant. <BR>
+  <DT><CODE>-fcx-limited-range</CODE>
+  <DD><A name=3Dindex-fcx_002dlimited_002drange-748></A>When enabled, =
+this option=20
+  states that a range reduction step is not needed when performing =
+complex=20
+  division. The default is <SAMP><SPAN=20
+  class=3Doption>-fno-cx-limited-range</SPAN></SAMP>, but is enabled by=20
+  <SAMP><SPAN class=3Doption>-ffast-math</SPAN></SAMP>.=20
+  <P>This option controls the default setting of the ISO C99=20
+  <CODE>CX_LIMITED_RANGE</CODE> pragma. Nevertheless, the option applies =
+to all=20
+  languages. </P></DD></DL>
+<P>The following options control optimizations that may improve =
+performance, but=20
+are not enabled by any <SAMP><SPAN class=3Doption>-O</SPAN></SAMP> =
+options. This=20
+section includes experimental options that may produce broken code.=20
+<DL>
+  <DT><CODE>-fbranch-probabilities</CODE>
+  <DD><A name=3Dindex-fbranch_002dprobabilities-749></A>After running a =
+program=20
+  compiled with <SAMP><SPAN class=3Doption>-fprofile-arcs</SPAN></SAMP> =
+(see <A=20
+  =
+href=3D"http://gcc.gnu.org/onlinedocs/gcc-4.3.0/gcc/Debugging-Options.htm=
+l#Debugging-Options">Options=20
+  for Debugging Your Program or <SAMP><SPAN=20
+  class=3Dcommand>gcc</SPAN></SAMP></A>), you can compile it a second =
+time using=20
+  <SAMP><SPAN class=3Doption>-fbranch-probabilities</SPAN></SAMP>, to =
+improve=20
+  optimizations based on the number of times each branch was taken. When =
+the=20
+  program compiled with <SAMP><SPAN =
+class=3Doption>-fprofile-arcs</SPAN></SAMP>=20
+  exits it saves arc execution counts to a file called=20
+  <SAMP><VAR>sourcename</VAR><SPAN class=3Dfile>.gcda</SPAN></SAMP> for =
+each=20
+  source file. The information in this data file is very dependent on =
+the=20
+  structure of the generated code, so you must use the same source code =
+and the=20
+  same optimization options for both compilations.=20
+  <P>With <SAMP><SPAN =
+class=3Doption>-fbranch-probabilities</SPAN></SAMP>, GCC=20
+  puts a `<SAMP><SPAN class=3Dsamp>REG_BR_PROB</SPAN></SAMP>' note on =
+each=20
+  `<SAMP><SPAN class=3Dsamp>JUMP_INSN</SPAN></SAMP>' and `<SAMP><SPAN=20
+  class=3Dsamp>CALL_INSN</SPAN></SAMP>'. These can be used to improve=20
+  optimization. Currently, they are only used in one place: in =
+<SAMP><SPAN=20
+  class=3Dfile>reorg.c</SPAN></SAMP>, instead of guessing which path a =
+branch is=20
+  mostly to take, the `<SAMP><SPAN =
+class=3Dsamp>REG_BR_PROB</SPAN></SAMP>' values=20
+  are used to exactly determine which path is taken more often. <BR></P>
+  <DT><CODE>-fprofile-values</CODE>
+  <DD><A name=3Dindex-fprofile_002dvalues-750></A>If combined with =
+<SAMP><SPAN=20
+  class=3Doption>-fprofile-arcs</SPAN></SAMP>, it adds code so that some =
+data=20
+  about values of expressions in the program is gathered.=20
+  <P>With <SAMP><SPAN =
+class=3Doption>-fbranch-probabilities</SPAN></SAMP>, it=20
+  reads back the data gathered from profiling values of expressions and =
+adds=20
+  `<SAMP><SPAN class=3Dsamp>REG_VALUE_PROFILE</SPAN></SAMP>' notes to =
+instructions=20
+  for their later usage in optimizations.=20
+  <P>Enabled with <SAMP><SPAN =
+class=3Doption>-fprofile-generate</SPAN></SAMP> and=20
+  <SAMP><SPAN class=3Doption>-fprofile-use</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fvpt</CODE>
+  <DD><A name=3Dindex-fvpt-751></A>If combined with <SAMP><SPAN=20
+  class=3Doption>-fprofile-arcs</SPAN></SAMP>, it instructs the compiler =
+to add a=20
+  code to gather information about values of expressions.=20
+  <P>With <SAMP><SPAN =
+class=3Doption>-fbranch-probabilities</SPAN></SAMP>, it=20
+  reads back the data gathered and actually performs the optimizations =
+based on=20
+  them. Currently the optimizations include specialization of division =
+operation=20
+  using the knowledge about the value of the denominator. <BR></P>
+  <DT><CODE>-frename-registers</CODE>
+  <DD><A name=3Dindex-frename_002dregisters-752></A>Attempt to avoid =
+false=20
+  dependencies in scheduled code by making use of registers left over =
+after=20
+  register allocation. This optimization will most benefit processors =
+with lots=20
+  of registers. Depending on the debug information format adopted by the =
+target,=20
+  however, it can make debugging impossible, since variables will no =
+longer stay=20
+  in a =93home register=94.=20
+  <P>Enabled by default with <SAMP><SPAN=20
+  class=3Doption>-funroll-loops</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-ftracer</CODE>
+  <DD><A name=3Dindex-ftracer-753></A>Perform tail duplication to =
+enlarge=20
+  superblock size. This transformation simplifies the control flow of =
+the=20
+  function allowing other optimizations to do better job.=20
+  <P>Enabled with <SAMP><SPAN =
+class=3Doption>-fprofile-use</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-funroll-loops</CODE>
+  <DD><A name=3Dindex-funroll_002dloops-754></A>Unroll loops whose =
+number of=20
+  iterations can be determined at compile time or upon entry to the =
+loop.=20
+  <SAMP><SPAN class=3Doption>-funroll-loops</SPAN></SAMP> implies =
+<SAMP><SPAN=20
+  class=3Doption>-frerun-cse-after-loop</SPAN></SAMP>, <SAMP><SPAN=20
+  class=3Doption>-fweb</SPAN></SAMP> and <SAMP><SPAN=20
+  class=3Doption>-frename-registers</SPAN></SAMP>. It also turns on =
+complete loop=20
+  peeling (i.e. complete removal of loops with small constant number of=20
+  iterations). This option makes code larger, and may or may not make it =
+run=20
+  faster.=20
+  <P>Enabled with <SAMP><SPAN =
+class=3Doption>-fprofile-use</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-funroll-all-loops</CODE>
+  <DD><A name=3Dindex-funroll_002dall_002dloops-755></A>Unroll all =
+loops, even if=20
+  their number of iterations is uncertain when the loop is entered. This =
+usually=20
+  makes programs run more slowly. <SAMP><SPAN=20
+  class=3Doption>-funroll-all-loops</SPAN></SAMP> implies the same =
+options as=20
+  <SAMP><SPAN class=3Doption>-funroll-loops</SPAN></SAMP>. <BR>
+  <DT><CODE>-fpeel-loops</CODE>
+  <DD><A name=3Dindex-fpeel_002dloops-756></A>Peels the loops for that =
+there is=20
+  enough information that they do not roll much (from profile feedback). =
+It also=20
+  turns on complete loop peeling (i.e. complete removal of loops with =
+small=20
+  constant number of iterations).=20
+  <P>Enabled with <SAMP><SPAN =
+class=3Doption>-fprofile-use</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fmove-loop-invariants</CODE>
+  <DD><A name=3Dindex-fmove_002dloop_002dinvariants-757></A>Enables the =
+loop=20
+  invariant motion pass in the RTL loop optimizer. Enabled at level =
+<SAMP><SPAN=20
+  class=3Doption>-O1</SPAN></SAMP> <BR>
+  <DT><CODE>-funswitch-loops</CODE>
+  <DD><A name=3Dindex-funswitch_002dloops-758></A>Move branches with =
+loop=20
+  invariant conditions out of the loop, with duplicates of the loop on =
+both=20
+  branches (modified according to result of the condition). <BR>
+  <DT><CODE>-ffunction-sections</CODE>
+  <DT><CODE>-fdata-sections</CODE>
+  <DD><A name=3Dindex-ffunction_002dsections-759></A><A=20
+  name=3Dindex-fdata_002dsections-760></A>Place each function or data =
+item into=20
+  its own section in the output file if the target supports arbitrary =
+sections.=20
+  The name of the function or the name of the data item determines the =
+section's=20
+  name in the output file.=20
+  <P>Use these options on systems where the linker can perform =
+optimizations to=20
+  improve locality of reference in the instruction space. Most systems =
+using the=20
+  ELF object format and SPARC processors running Solaris 2 have linkers =
+with=20
+  such optimizations. AIX may have these optimizations in the future.=20
+  <P>Only use these options when there are significant benefits from =
+doing so.=20
+  When you specify these options, the assembler and linker will create =
+larger=20
+  object and executable files and will also be slower. You will not be =
+able to=20
+  use <CODE>gprof</CODE> on all systems if you specify this option and =
+you may=20
+  have problems with debugging if you specify both this option and =
+<SAMP><SPAN=20
+  class=3Doption>-g</SPAN></SAMP>. <BR></P>
+  <DT><CODE>-fbranch-target-load-optimize</CODE>
+  <DD><A =
+name=3Dindex-fbranch_002dtarget_002dload_002doptimize-761></A>Perform=20
+  branch target register load optimization before prologue / epilogue =
+threading.=20
+  The use of target registers can typically be exposed only during =
+reload, thus=20
+  hoisting loads out of loops and doing inter-block scheduling needs a =
+separate=20
+  optimization pass. <BR>
+  <DT><CODE>-fbranch-target-load-optimize2</CODE>
+  <DD><A =
+name=3Dindex-fbranch_002dtarget_002dload_002doptimize2-762></A>Perform=20
+  branch target register load optimization after prologue / epilogue =
+threading.=20
+  <BR>
+  <DT><CODE>-fbtr-bb-exclusive</CODE>
+  <DD><A name=3Dindex-fbtr_002dbb_002dexclusive-763></A>When performing =
+branch=20
+  target register load optimization, don't reuse branch target registers =
+in=20
+  within any basic block. <BR>
+  <DT><CODE>-fstack-protector</CODE>
+  <DD><A name=3Dindex-fstack_002dprotector-764></A>Emit extra code to =
+check for=20
+  buffer overflows, such as stack smashing attacks. This is done by =
+adding a=20
+  guard variable to functions with vulnerable objects. This includes =
+functions=20
+  that call alloca, and functions with buffers larger than 8 bytes. The =
+guards=20
+  are initialized when a function is entered and then checked when the =
+function=20
+  exits. If a guard check fails, an error message is printed and the =
+program=20
+  exits. <BR>
+  <DT><CODE>-fstack-protector-all</CODE>
+  <DD><A name=3Dindex-fstack_002dprotector_002dall-765></A>Like =
+<SAMP><SPAN=20
+  class=3Doption>-fstack-protector</SPAN></SAMP> except that all =
+functions are=20
+  protected. <BR>
+  <DT><CODE>-fsection-anchors</CODE>
+  <DD><A name=3Dindex-fsection_002danchors-766></A>Try to reduce the =
+number of=20
+  symbolic address calculations by using shared =93anchor=94 symbols to =
+address=20
+  nearby objects. This transformation can help to reduce the number of =
+GOT=20
+  entries and GOT accesses on some targets.=20
+  <P>For example, the implementation of the following function =
+<CODE>foo</CODE>:=20
+<PRE class=3Dsmallexample>          static int a, b, c;
+          int foo (void) { return a + b + c; }
+     </PRE>
+  <P>would usually calculate the addresses of all three variables, but =
+if you=20
+  compile it with <SAMP><SPAN =
+class=3Doption>-fsection-anchors</SPAN></SAMP>, it=20
+  will access the variables from a common anchor point instead. The =
+effect is=20
+  similar to the following pseudocode (which isn't valid C): <PRE =
+class=3Dsmallexample>          int foo (void)
+          {
+            register int *xr =3D &amp;x;
+            return xr[&amp;a - &amp;x] + xr[&amp;b - &amp;x] + xr[&amp;c =
+- &amp;x];
+          }
+     </PRE>
+  <P>Not all targets support this option. <BR></P>
+  <DT><CODE>--param =
+</CODE><VAR>name</VAR><CODE>=3D</CODE><VAR>value</VAR>
+  <DD><A name=3Dindex-param-767></A>In some places, GCC uses various =
+constants to=20
+  control the amount of optimization that is done. For example, GCC will =
+not=20
+  inline functions that contain more that a certain number of =
+instructions. You=20
+  can control some of these constants on the command-line using the =
+<SAMP><SPAN=20
+  class=3Doption>--param</SPAN></SAMP> option.=20
+  <P>The names of specific parameters, and the meaning of the values, =
+are tied=20
+  to the internals of the compiler, and are subject to change without =
+notice in=20
+  future releases.=20
+  <P>In each case, the <VAR>value</VAR> is an integer. The allowable =
+choices for=20
+  <VAR>name</VAR> are given in the following table:=20
+  <DL>
+    <DT><CODE>salias-max-implicit-fields</CODE>
+    <DD>The maximum number of fields in a variable without direct =
+structure=20
+    accesses for which structure aliasing will consider trying to track =
+each=20
+    field. The default is 5 <BR>
+    <DT><CODE>salias-max-array-elements</CODE>
+    <DD>The maximum number of elements an array can have and its =
+elements still=20
+    be tracked individually by structure aliasing. The default is 4 <BR>
+    <DT><CODE>sra-max-structure-size</CODE>
+    <DD>The maximum structure size, in bytes, at which the scalar =
+replacement of=20
+    aggregates (SRA) optimization will perform block copies. The default =
+value,=20
+    0, implies that GCC will select the most appropriate size itself. =
+<BR>
+    <DT><CODE>sra-field-structure-ratio</CODE>
+    <DD>The threshold ratio (as a percentage) between instantiated =
+fields and=20
+    the complete structure size. We say that if the ratio of the number =
+of bytes=20
+    in instantiated fields to the number of bytes in the complete =
+structure=20
+    exceeds this parameter, then block copies are not used. The default =
+is 75.=20
+    <BR>
+    <DT><CODE>struct-reorg-cold-struct-ratio</CODE>
+    <DD>The threshold ratio (as a percentage) between a structure =
+frequency and=20
+    the frequency of the hottest structure in the program. This =
+parameter is=20
+    used by struct-reorg optimization enabled by <SAMP><SPAN=20
+    class=3Doption>-fipa-struct-reorg</SPAN></SAMP>. We say that if the =
+ratio of a=20
+    structure frequency, calculated by profiling, to the hottest =
+structure=20
+    frequency in the program is less than this parameter, then structure =
+
+    reorganization is not applied to this structure. The default is 10. =
+<BR>
+    <DT><CODE>max-crossjump-edges</CODE>
+    <DD>The maximum number of incoming edges to consider for =
+crossjumping. The=20
+    algorithm used by <SAMP><SPAN =
+class=3Doption>-fcrossjumping</SPAN></SAMP> is=20
+    O(N^2) in the number of edges incoming to each block. Increasing =
+values mean=20
+    more aggressive optimization, making the compile time increase with =
+probably=20
+    small improvement in executable size. <BR>
+    <DT><CODE>min-crossjump-insns</CODE>
+    <DD>The minimum number of instructions which must be matched at the =
+end of=20
+    two blocks before crossjumping will be performed on them. This value =
+is=20
+    ignored in the case where all instructions in the block being =
+crossjumped=20
+    from are matched. The default value is 5. <BR>
+    <DT><CODE>max-grow-copy-bb-insns</CODE>
+    <DD>The maximum code size expansion factor when copying basic blocks =
+instead=20
+    of jumping. The expansion is relative to a jump instruction. The =
+default=20
+    value is 8. <BR>
+    <DT><CODE>max-goto-duplication-insns</CODE>
+    <DD>The maximum number of instructions to duplicate to a block that =
+jumps to=20
+    a computed goto. To avoid O(N^2) behavior in a number of passes, GCC =
+factors=20
+    computed gotos early in the compilation process, and unfactors them =
+as late=20
+    as possible. Only computed jumps at the end of a basic blocks with =
+no more=20
+    than max-goto-duplication-insns are unfactored. The default value is =
+8. <BR>
+    <DT><CODE>max-delay-slot-insn-search</CODE>
+    <DD>The maximum number of instructions to consider when looking for =
+an=20
+    instruction to fill a delay slot. If more than this arbitrary number =
+of=20
+    instructions is searched, the time savings from filling the delay =
+slot will=20
+    be minimal so stop searching. Increasing values mean more aggressive =
+
+    optimization, making the compile time increase with probably small=20
+    improvement in executable run time. <BR>
+    <DT><CODE>max-delay-slot-live-search</CODE>
+    <DD>When trying to fill delay slots, the maximum number of =
+instructions to=20
+    consider when searching for a block with valid live register =
+information.=20
+    Increasing this arbitrarily chosen value means more aggressive =
+optimization,=20
+    increasing the compile time. This parameter should be removed when =
+the delay=20
+    slot code is rewritten to maintain the control-flow graph. <BR>
+    <DT><CODE>max-gcse-memory</CODE>
+    <DD>The approximate maximum amount of memory that will be allocated =
+in order=20
+    to perform the global common subexpression elimination optimization. =
+If more=20
+    memory than specified is required, the optimization will not be =
+done. <BR>
+    <DT><CODE>max-gcse-passes</CODE>
+    <DD>The maximum number of passes of GCSE to run. The default is 1. =
+<BR>
+    <DT><CODE>max-pending-list-length</CODE>
+    <DD>The maximum number of pending dependencies scheduling will allow =
+before=20
+    flushing the current state and starting over. Large functions with =
+few=20
+    branches or calls can create excessively large lists which =
+needlessly=20
+    consume memory and resources. <BR>
+    <DT><CODE>max-inline-insns-single</CODE>
+    <DD>Several parameters control the tree inliner used in gcc. This =
+number=20
+    sets the maximum number of instructions (counted in GCC's internal=20
+    representation) in a single function that the tree inliner will =
+consider for=20
+    inlining. This only affects functions declared inline and methods=20
+    implemented in a class declaration (C++). The default value is 450. =
+<BR>
+    <DT><CODE>max-inline-insns-auto</CODE>
+    <DD>When you use <SAMP><SPAN =
+class=3Doption>-finline-functions</SPAN></SAMP>=20
+    (included in <SAMP><SPAN class=3Doption>-O3</SPAN></SAMP>), a lot of =
+functions=20
+    that would otherwise not be considered for inlining by the compiler =
+will be=20
+    investigated. To those functions, a different (more restrictive) =
+limit=20
+    compared to functions declared inline can be applied. The default =
+value is=20
+    90. <BR>
+    <DT><CODE>large-function-insns</CODE>
+    <DD>The limit specifying really large functions. For functions =
+larger than=20
+    this limit after inlining inlining is constrained by <SAMP><SPAN=20
+    class=3Doption>--param large-function-growth</SPAN></SAMP>. This =
+parameter is=20
+    useful primarily to avoid extreme compilation time caused by =
+non-linear=20
+    algorithms used by the backend. This parameter is ignored when =
+<SAMP><SPAN=20
+    class=3Doption>-funit-at-a-time</SPAN></SAMP> is not used. The =
+default value=20
+    is 2700. <BR>
+    <DT><CODE>large-function-growth</CODE>
+    <DD>Specifies maximal growth of large function caused by inlining in =
+
+    percents. This parameter is ignored when <SAMP><SPAN=20
+    class=3Doption>-funit-at-a-time</SPAN></SAMP> is not used. The =
+default value=20
+    is 100 which limits large function growth to 2.0 times the original =
+size.=20
+    <BR>
+    <DT><CODE>large-unit-insns</CODE>
+    <DD>The limit specifying large translation unit. Growth caused by =
+inlining=20
+    of units larger than this limit is limited by <SAMP><SPAN=20
+    class=3Doption>--param inline-unit-growth</SPAN></SAMP>. For small =
+units this=20
+    might be too tight (consider unit consisting of function A that is =
+inline=20
+    and B that just calls A three time. If B is small relative to A, the =
+growth=20
+    of unit is 300\% and yet such inlining is very sane. For very large =
+units=20
+    consisting of small inlineable functions however the overall unit =
+growth=20
+    limit is needed to avoid exponential explosion of code size. Thus =
+for=20
+    smaller units, the size is increased to <SAMP><SPAN =
+class=3Doption>--param=20
+    large-unit-insns</SPAN></SAMP> before applying <SAMP><SPAN=20
+    class=3Doption>--param inline-unit-growth</SPAN></SAMP>. The default =
+is 10000=20
+    <BR>
+    <DT><CODE>inline-unit-growth</CODE>
+    <DD>Specifies maximal overall growth of the compilation unit caused =
+by=20
+    inlining. This parameter is ignored when <SAMP><SPAN=20
+    class=3Doption>-funit-at-a-time</SPAN></SAMP> is not used. The =
+default value=20
+    is 30 which limits unit growth to 1.3 times the original size. <BR>
+    <DT><CODE>large-stack-frame</CODE>
+    <DD>The limit specifying large stack frames. While inlining the =
+algorithm is=20
+    trying to not grow past this limit too much. Default value is 256 =
+bytes.=20
+<BR>
+    <DT><CODE>large-stack-frame-growth</CODE>
+    <DD>Specifies maximal growth of large stack frames caused by =
+inlining in=20
+    percents. The default value is 1000 which limits large stack frame =
+growth to=20
+    11 times the original size. <BR>
+    <DT><CODE>max-inline-insns-recursive</CODE>
+    <DT><CODE>max-inline-insns-recursive-auto</CODE>
+    <DD>Specifies maximum number of instructions out-of-line copy of =
+self=20
+    recursive inline function can grow into by performing recursive =
+inlining.=20
+    <P>For functions declared inline <SAMP><SPAN class=3Doption>--param=20
+    max-inline-insns-recursive</SPAN></SAMP> is taken into account. For =
+function=20
+    not declared inline, recursive inlining happens only when =
+<SAMP><SPAN=20
+    class=3Doption>-finline-functions</SPAN></SAMP> (included in =
+<SAMP><SPAN=20
+    class=3Doption>-O3</SPAN></SAMP>) is enabled and <SAMP><SPAN=20
+    class=3Doption>--param max-inline-insns-recursive-auto</SPAN></SAMP> =
+is used.=20
+    The default value is 450. <BR></P>
+    <DT><CODE>max-inline-recursive-depth</CODE>
+    <DT><CODE>max-inline-recursive-depth-auto</CODE>
+    <DD>Specifies maximum recursion depth used by the recursive =
+inlining.=20
+    <P>For functions declared inline <SAMP><SPAN class=3Doption>--param=20
+    max-inline-recursive-depth</SPAN></SAMP> is taken into account. For =
+function=20
+    not declared inline, recursive inlining happens only when =
+<SAMP><SPAN=20
+    class=3Doption>-finline-functions</SPAN></SAMP> (included in =
+<SAMP><SPAN=20
+    class=3Doption>-O3</SPAN></SAMP>) is enabled and <SAMP><SPAN=20
+    class=3Doption>--param max-inline-recursive-depth-auto</SPAN></SAMP> =
+is used.=20
+    The default value is 8. <BR></P>
+    <DT><CODE>min-inline-recursive-probability</CODE>
+    <DD>Recursive inlining is profitable only for function having deep =
+recursion=20
+    in average and can hurt for function having little recursion depth =
+by=20
+    increasing the prologue size or complexity of function body to other =
+
+    optimizers.=20
+    <P>When profile feedback is available (see <SAMP><SPAN=20
+    class=3Doption>-fprofile-generate</SPAN></SAMP>) the actual =
+recursion depth=20
+    can be guessed from probability that function will recurse via given =
+call=20
+    expression. This parameter limits inlining only to call expression =
+whose=20
+    probability exceeds given threshold (in percents). The default value =
+is 10.=20
+    <BR></P>
+    <DT><CODE>inline-call-cost</CODE>
+    <DD>Specify cost of call instruction relative to simple arithmetics=20
+    operations (having cost of 1). Increasing this cost disqualifies =
+inlining of=20
+    non-leaf functions and at the same time increases size of leaf =
+function that=20
+    is believed to reduce function size by being inlined. In effect it =
+increases=20
+    amount of inlining for code having large abstraction penalty (many =
+functions=20
+    that just pass the arguments to other functions) and decrease =
+inlining for=20
+    code with low abstraction penalty. The default value is 12. <BR>
+    <DT><CODE>min-vect-loop-bound</CODE>
+    <DD>The minimum number of iterations under which a loop will not get =
+
+    vectorized when <SAMP><SPAN =
+class=3Doption>-ftree-vectorize</SPAN></SAMP> is=20
+    used. The number of iterations after vectorization needs to be =
+greater than=20
+    the value specified by this option to allow vectorization. The =
+default value=20
+    is 0. <BR>
+    <DT><CODE>max-unrolled-insns</CODE>
+    <DD>The maximum number of instructions that a loop should have if =
+that loop=20
+    is unrolled, and if the loop is unrolled, it determines how many =
+times the=20
+    loop code is unrolled. <BR>
+    <DT><CODE>max-average-unrolled-insns</CODE>
+    <DD>The maximum number of instructions biased by probabilities of =
+their=20
+    execution that a loop should have if that loop is unrolled, and if =
+the loop=20
+    is unrolled, it determines how many times the loop code is unrolled. =
+<BR>
+    <DT><CODE>max-unroll-times</CODE>
+    <DD>The maximum number of unrollings of a single loop. <BR>
+    <DT><CODE>max-peeled-insns</CODE>
+    <DD>The maximum number of instructions that a loop should have if =
+that loop=20
+    is peeled, and if the loop is peeled, it determines how many times =
+the loop=20
+    code is peeled. <BR>
+    <DT><CODE>max-peel-times</CODE>
+    <DD>The maximum number of peelings of a single loop. <BR>
+    <DT><CODE>max-completely-peeled-insns</CODE>
+    <DD>The maximum number of insns of a completely peeled loop. <BR>
+    <DT><CODE>max-completely-peel-times</CODE>
+    <DD>The maximum number of iterations of a loop to be suitable for =
+complete=20
+    peeling. <BR>
+    <DT><CODE>max-unswitch-insns</CODE>
+    <DD>The maximum number of insns of an unswitched loop. <BR>
+    <DT><CODE>max-unswitch-level</CODE>
+    <DD>The maximum number of branches unswitched in a single loop. <BR>
+    <DT><CODE>lim-expensive</CODE>
+    <DD>The minimum cost of an expensive expression in the loop =
+invariant=20
+    motion. <BR>
+    <DT><CODE>iv-consider-all-candidates-bound</CODE>
+    <DD>Bound on number of candidates for induction variables below that =
+all=20
+    candidates are considered for each use in induction variable =
+optimizations.=20
+    Only the most relevant candidates are considered if there are more=20
+    candidates, to avoid quadratic time complexity. <BR>
+    <DT><CODE>iv-max-considered-uses</CODE>
+    <DD>The induction variable optimizations give up on loops that =
+contain more=20
+    induction variable uses. <BR>
+    <DT><CODE>iv-always-prune-cand-set-bound</CODE>
+    <DD>If number of candidates in the set is smaller than this value, =
+we always=20
+    try to remove unnecessary ivs from the set during its optimization =
+when a=20
+    new iv is added to the set. <BR>
+    <DT><CODE>scev-max-expr-size</CODE>
+    <DD>Bound on size of expressions used in the scalar evolutions =
+analyzer.=20
+    Large expressions slow the analyzer. <BR>
+    <DT><CODE>omega-max-vars</CODE>
+    <DD>The maximum number of variables in an Omega constraint system. =
+The=20
+    default value is 128. <BR>
+    <DT><CODE>omega-max-geqs</CODE>
+    <DD>The maximum number of inequalities in an Omega constraint =
+system. The=20
+    default value is 256. <BR>
+    <DT><CODE>omega-max-eqs</CODE>
+    <DD>The maximum number of equalities in an Omega constraint system. =
+The=20
+    default value is 128. <BR>
+    <DT><CODE>omega-max-wild-cards</CODE>
+    <DD>The maximum number of wildcard variables that the Omega solver =
+will be=20
+    able to insert. The default value is 18. <BR>
+    <DT><CODE>omega-hash-table-size</CODE>
+    <DD>The size of the hash table in the Omega solver. The default =
+value is=20
+    550. <BR>
+    <DT><CODE>omega-max-keys</CODE>
+    <DD>The maximal number of keys used by the Omega solver. The default =
+value=20
+    is 500. <BR>
+    <DT><CODE>omega-eliminate-redundant-constraints</CODE>
+    <DD>When set to 1, use expensive methods to eliminate all redundant=20
+    constraints. The default value is 0. <BR>
+    <DT><CODE>vect-max-version-for-alignment-checks</CODE>
+    <DD>The maximum number of runtime checks that can be performed when =
+doing=20
+    loop versioning for alignment in the vectorizer. See option=20
+    ftree-vect-loop-version for more information. <BR>
+    <DT><CODE>vect-max-version-for-alias-checks</CODE>
+    <DD>The maximum number of runtime checks that can be performed when =
+doing=20
+    loop versioning for alias in the vectorizer. See option=20
+    ftree-vect-loop-version for more information. <BR>
+    <DT><CODE>max-iterations-to-track</CODE>
+    <DD>The maximum number of iterations of a loop the brute force =
+algorithm for=20
+    analysis of # of iterations of the loop tries to evaluate. <BR>
+    <DT><CODE>hot-bb-count-fraction</CODE>
+    <DD>Select fraction of the maximal count of repetitions of basic =
+block in=20
+    program given basic block needs to have to be considered hot. <BR>
+    <DT><CODE>hot-bb-frequency-fraction</CODE>
+    <DD>Select fraction of the maximal frequency of executions of basic =
+block in=20
+    function given basic block needs to have to be considered hot <BR>
+    <DT><CODE>max-predicted-iterations</CODE>
+    <DD>The maximum number of loop iterations we predict statically. =
+This is=20
+    useful in cases where function contain single loop with known bound =
+and=20
+    other loop with unknown. We predict the known number of iterations=20
+    correctly, while the unknown number of iterations average to roughly =
+10.=20
+    This means that the loop without bounds would appear artificially =
+cold=20
+    relative to the other one. <BR>
+    <DT><CODE>align-threshold</CODE>
+    <DD>Select fraction of the maximal frequency of executions of basic =
+block in=20
+    function given basic block will get aligned. <BR>
+    <DT><CODE>align-loop-iterations</CODE>
+    <DD>A loop expected to iterate at lest the selected number of =
+iterations=20
+    will get aligned. <BR>
+    <DT><CODE>tracer-dynamic-coverage</CODE>
+    <DT><CODE>tracer-dynamic-coverage-feedback</CODE>
+    <DD>This value is used to limit superblock formation once the given=20
+    percentage of executed instructions is covered. This limits =
+unnecessary code=20
+    size expansion.=20
+    <P>The <SAMP><SPAN=20
+    class=3Doption>tracer-dynamic-coverage-feedback</SPAN></SAMP> is =
+used only=20
+    when profile feedback is available. The real profiles (as opposed to =
+
+    statically estimated ones) are much less balanced allowing the =
+threshold to=20
+    be larger value. <BR></P>
+    <DT><CODE>tracer-max-code-growth</CODE>
+    <DD>Stop tail duplication once code growth has reached given =
+percentage.=20
+    This is rather hokey argument, as most of the duplicates will be =
+eliminated=20
+    later in cross jumping, so it may be set to much higher values than =
+is the=20
+    desired code growth. <BR>
+    <DT><CODE>tracer-min-branch-ratio</CODE>
+    <DD>Stop reverse growth when the reverse probability of best edge is =
+less=20
+    than this threshold (in percent). <BR>
+    <DT><CODE>tracer-min-branch-ratio</CODE>
+    <DT><CODE>tracer-min-branch-ratio-feedback</CODE>
+    <DD>Stop forward growth if the best edge do have probability lower =
+than this=20
+    threshold.=20
+    <P>Similarly to <SAMP><SPAN=20
+    class=3Doption>tracer-dynamic-coverage</SPAN></SAMP> two values are =
+present,=20
+    one for compilation for profile feedback and one for compilation =
+without.=20
+    The value for compilation with profile feedback needs to be more=20
+    conservative (higher) in order to make tracer effective. <BR></P>
+    <DT><CODE>max-cse-path-length</CODE>
+    <DD>Maximum number of basic blocks on path that cse considers. The =
+default=20
+    is 10. <BR>
+    <DT><CODE>max-cse-insns</CODE>
+    <DD>The maximum instructions CSE process before flushing. The =
+default is=20
+    1000. <BR>
+    <DT><CODE>max-aliased-vops</CODE>
+    <DD>Maximum number of virtual operands per function allowed to =
+represent=20
+    aliases before triggering the alias partitioning heuristic. Alias=20
+    partitioning reduces compile times and memory consumption needed for =
+
+    aliasing at the expense of precision loss in alias information. The =
+default=20
+    value for this parameter is 100 for -O1, 500 for -O2 and 1000 for =
+-O3.=20
+    <P>Notice that if a function contains more memory statements than =
+the value=20
+    of this parameter, it is not really possible to achieve this =
+reduction. In=20
+    this case, the compiler will use the number of memory statements as =
+the=20
+    value for <SAMP><SPAN class=3Doption>max-aliased-vops</SPAN></SAMP>. =
+<BR></P>
+    <DT><CODE>avg-aliased-vops</CODE>
+    <DD>Average number of virtual operands per statement allowed to =
+represent=20
+    aliases before triggering the alias partitioning heuristic. This =
+works in=20
+    conjunction with <SAMP><SPAN =
+class=3Doption>max-aliased-vops</SPAN></SAMP>. If=20
+    a function contains more than <SAMP><SPAN=20
+    class=3Doption>max-aliased-vops</SPAN></SAMP> virtual operators, =
+then memory=20
+    symbols will be grouped into memory partitions until either the =
+total number=20
+    of virtual operators is below <SAMP><SPAN=20
+    class=3Doption>max-aliased-vops</SPAN></SAMP> or the average number =
+of virtual=20
+    operators per memory statement is below <SAMP><SPAN=20
+    class=3Doption>avg-aliased-vops</SPAN></SAMP>. The default value for =
+this=20
+    parameter is 1 for -O1 and -O2, and 3 for -O3. <BR>
+    <DT><CODE>ggc-min-expand</CODE>
+    <DD>GCC uses a garbage collector to manage its own memory =
+allocation. This=20
+    parameter specifies the minimum percentage by which the garbage =
+collector's=20
+    heap should be allowed to expand between collections. Tuning this =
+may=20
+    improve compilation speed; it has no effect on code generation.=20
+    <P>The default is 30% + 70% * (RAM/1GB) with an upper bound of 100% =
+when RAM=20
+    &gt;=3D 1GB. If <CODE>getrlimit</CODE> is available, the notion of =
+"RAM" is=20
+    the smallest of actual RAM and <CODE>RLIMIT_DATA</CODE> or=20
+    <CODE>RLIMIT_AS</CODE>. If GCC is not able to calculate RAM on a =
+particular=20
+    platform, the lower bound of 30% is used. Setting this parameter and =
+
+    <SAMP><SPAN class=3Doption>ggc-min-heapsize</SPAN></SAMP> to zero =
+causes a=20
+    full collection to occur at every opportunity. This is extremely =
+slow, but=20
+    can be useful for debugging. <BR></P>
+    <DT><CODE>ggc-min-heapsize</CODE>
+    <DD>Minimum size of the garbage collector's heap before it begins =
+bothering=20
+    to collect garbage. The first collection occurs after the heap =
+expands by=20
+    <SAMP><SPAN class=3Doption>ggc-min-expand</SPAN></SAMP>% beyond =
+<SAMP><SPAN=20
+    class=3Doption>ggc-min-heapsize</SPAN></SAMP>. Again, tuning this =
+may improve=20
+    compilation speed, and has no effect on code generation.=20
+    <P>The default is the smaller of RAM/8, RLIMIT_RSS, or a limit which =
+tries=20
+    to ensure that RLIMIT_DATA or RLIMIT_AS are not exceeded, but with a =
+lower=20
+    bound of 4096 (four megabytes) and an upper bound of 131072 (128 =
+megabytes).=20
+    If GCC is not able to calculate RAM on a particular platform, the =
+lower=20
+    bound is used. Setting this parameter very large effectively =
+disables=20
+    garbage collection. Setting this parameter and <SAMP><SPAN=20
+    class=3Doption>ggc-min-expand</SPAN></SAMP> to zero causes a full =
+collection=20
+    to occur at every opportunity. <BR></P>
+    <DT><CODE>max-reload-search-insns</CODE>
+    <DD>The maximum number of instruction reload should look backward =
+for=20
+    equivalent register. Increasing values mean more aggressive =
+optimization,=20
+    making the compile time increase with probably slightly better =
+performance.=20
+    The default value is 100. <BR>
+    <DT><CODE>max-cselib-memory-locations</CODE>
+    <DD>The maximum number of memory locations cselib should take into =
+account.=20
+    Increasing values mean more aggressive optimization, making the =
+compile time=20
+    increase with probably slightly better performance. The default =
+value is=20
+    500. <BR>
+    <DT><CODE>max-flow-memory-locations</CODE>
+    <DD>Similar as <SAMP><SPAN=20
+    class=3Doption>max-cselib-memory-locations</SPAN></SAMP> but for =
+dataflow=20
+    liveness. The default value is 100. <BR>
+    <DT><CODE>reorder-blocks-duplicate</CODE>
+    <DT><CODE>reorder-blocks-duplicate-feedback</CODE>
+    <DD>Used by basic block reordering pass to decide whether to use=20
+    unconditional branch or duplicate the code on its destination. Code =
+is=20
+    duplicated when its estimated size is smaller than this value =
+multiplied by=20
+    the estimated size of unconditional jump in the hot spots of the =
+program.=20
+    <P>The <SAMP><SPAN=20
+    class=3Doption>reorder-block-duplicate-feedback</SPAN></SAMP> is =
+used only=20
+    when profile feedback is available and may be set to higher values =
+than=20
+    <SAMP><SPAN class=3Doption>reorder-block-duplicate</SPAN></SAMP> =
+since=20
+    information about the hot spots is more accurate. <BR></P>
+    <DT><CODE>max-sched-ready-insns</CODE>
+    <DD>The maximum number of instructions ready to be issued the =
+scheduler=20
+    should consider at any given time during the first scheduling pass.=20
+    Increasing values mean more thorough searches, making the =
+compilation time=20
+    increase with probably little benefit. The default value is 100. =
+<BR>
+    <DT><CODE>max-sched-region-blocks</CODE>
+    <DD>The maximum number of blocks in a region to be considered for =
+interblock=20
+    scheduling. The default value is 10. <BR>
+    <DT><CODE>max-sched-region-insns</CODE>
+    <DD>The maximum number of insns in a region to be considered for =
+interblock=20
+    scheduling. The default value is 100. <BR>
+    <DT><CODE>min-spec-prob</CODE>
+    <DD>The minimum probability (in percents) of reaching a source block =
+for=20
+    interblock speculative scheduling. The default value is 40. <BR>
+    <DT><CODE>max-sched-extend-regions-iters</CODE>
+    <DD>The maximum number of iterations through CFG to extend regions. =
+0 -=20
+    disable region extension, N - do at most N iterations. The default =
+value is=20
+    0. <BR>
+    <DT><CODE>max-sched-insn-conflict-delay</CODE>
+    <DD>The maximum conflict delay for an insn to be considered for =
+speculative=20
+    motion. The default value is 3. <BR>
+    <DT><CODE>sched-spec-prob-cutoff</CODE>
+    <DD>The minimal probability of speculation success (in percents), so =
+that=20
+    speculative insn will be scheduled. The default value is 40. <BR>
+    <DT><CODE>max-last-value-rtl</CODE>
+    <DD>The maximum size measured as number of RTLs that can be recorded =
+in an=20
+    expression in combiner for a pseudo register as last known value of =
+that=20
+    register. The default is 10000. <BR>
+    <DT><CODE>integer-share-limit</CODE>
+    <DD>Small integer constants can use a shared data structure, =
+reducing the=20
+    compiler's memory usage and increasing its speed. This sets the =
+maximum=20
+    value of a shared integer constant. The default value is 256. <BR>
+    <DT><CODE>min-virtual-mappings</CODE>
+    <DD>Specifies the minimum number of virtual mappings in the =
+incremental SSA=20
+    updater that should be registered to trigger the virtual mappings =
+heuristic=20
+    defined by virtual-mappings-ratio. The default value is 100. <BR>
+    <DT><CODE>virtual-mappings-ratio</CODE>
+    <DD>If the number of virtual mappings is virtual-mappings-ratio =
+bigger than=20
+    the number of virtual symbols to be updated, then the incremental =
+SSA=20
+    updater switches to a full update for those symbols. The default =
+ratio is 3.=20
+    <BR>
+    <DT><CODE>ssp-buffer-size</CODE>
+    <DD>The minimum size of buffers (i.e. arrays) that will receive =
+stack=20
+    smashing protection when <SAMP><SPAN=20
+    class=3Doption>-fstack-protection</SPAN></SAMP> is used. <BR>
+    <DT><CODE>max-jump-thread-duplication-stmts</CODE>
+    <DD>Maximum number of statements allowed in a block that needs to be =
+
+    duplicated when threading jumps. <BR>
+    <DT><CODE>max-fields-for-field-sensitive</CODE>
+    <DD>Maximum number of fields in a structure we will treat in a field =
+
+    sensitive manner during pointer analysis. <BR>
+    <DT><CODE>prefetch-latency</CODE>
+    <DD>Estimate on average number of instructions that are executed =
+before=20
+    prefetch finishes. The distance we prefetch ahead is proportional to =
+this=20
+    constant. Increasing this number may also lead to less streams being =
+
+    prefetched (see <SAMP><SPAN=20
+    class=3Doption>simultaneous-prefetches</SPAN></SAMP>). <BR>
+    <DT><CODE>simultaneous-prefetches</CODE>
+    <DD>Maximum number of prefetches that can run at the same time. <BR>
+    <DT><CODE>l1-cache-line-size</CODE>
+    <DD>The size of cache line in L1 cache, in bytes. <BR>
+    <DT><CODE>l1-cache-size</CODE>
+    <DD>The size of L1 cache, in kilobytes. <BR>
+    <DT><CODE>l2-cache-size</CODE>
+    <DD>The size of L2 cache, in kilobytes. <BR>
+    <DT><CODE>use-canonical-types</CODE>
+    <DD>Whether the compiler should use the =93canonical=94 type system. =
+By default,=20
+    this should always be 1, which uses a more efficient internal =
+mechanism for=20
+    comparing types in C++ and Objective-C++. However, if bugs in the =
+canonical=20
+    type system are causing compilation failures, set this value to 0 to =
+disable=20
+    canonical types. <BR>
+    <DT><CODE>max-partial-antic-length</CODE>
+    <DD>Maximum length of the partial antic set computed during the tree =
+partial=20
+    redundancy elimination optimization (<SAMP><SPAN=20
+    class=3Doption>-ftree-pre</SPAN></SAMP>) when optimizing at =
+<SAMP><SPAN=20
+    class=3Doption>-O3</SPAN></SAMP> and above. For some sorts of source =
+code the=20
+    enhanced partial redundancy elimination optimization can run away, =
+consuming=20
+    all of the memory available on the host machine. This parameter sets =
+a limit=20
+    on the length of the sets that are computed, which prevents the =
+runaway=20
+    behaviour. Setting a value of 0 for this paramter will allow an =
+unlimited=20
+    set length. <BR>
+    <DT><CODE>sccvn-max-scc-size</CODE>
+    <DD>Maximum size of a strongly connected component (SCC) during =
+SCCVN=20
+    processing. If this limit is hit, SCCVN processing for the whole =
+function=20
+    will not be done and optimizations depending on it will be disabled. =
+The=20
+    default maximum SCC size is 10000. =
+</DD></DL></DD></DL></BODY></HTML>

@@ -1,0 +1,2506 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Capacitor Design Data, and Decoupling Placement, How-To
+Date: Thu, 10 Jun 2010 11:18:08 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CB088E.9AF225D0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.interfacebus.com/Design_Capacitors.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>Capacitor =
+Design Data, and Decoupling Placement, How-To</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DAuthor content=3D"Leroy Davis">
+<META name=3Drating content=3Dgeneral>
+<META name=3Ddistribution content=3Dglobal>
+<META content=3Deng http-equiv=3Dlanguage>
+<META content=3Dus http-equiv=3Ddialect>
+<META name=3Dcopyright content=3D"2010, Leroy Davis">
+<META name=3Ddescription=20
+content=3D"Decoupling Capacitor placement, Dielectric Material =
+Description, Temperature Information">
+<META name=3Dkeywords=20
+content=3DEngineering,Termination,Components,circuit,Interface,Thevenin,A=
+C,Single,Film,Decouple,Design,Capacitor,Cap,Bypass,Listing,Company,Compan=
+ies,Index,Temperature,Material,Size,Dimensions,Decouple,Decoupling,Dielec=
+tric><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://www.interfacebus.com/Webstyle.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY><A id=3Dtop name=3Dtop></A>
+<CENTER>
+<H2><FONT size=3D5><B>Capacitor Data</B></FONT> </H2></CENTER>
+<P align=3Dcenter>- IC By-Pass Design Information - </P><BR><BR>
+<P align=3Dcenter>[<A=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#a"><B>Dielectr=
+ic</B></A>]=20
+[<A=20
+href=3D"http://www.interfacebus.com/Capacitance_Temperature_Change.html">=
+<B>Temperature</B></A>]=20
+[<A =
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#c"><B>Board=20
+Placement</B></A>]<BR>[<A=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#d"><B>IC =
+By-Pass=20
+Caps</B></A>] [<A=20
+href=3D"http://www.interfacebus.com/capacitor_equivalent_circuit.html"><B=
+>Equivalent=20
+Cap Circuit</B></A>]<BR>[<A=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#f"><B>Capacito=
+r=20
+Decoupling Value</B></A>] [<A=20
+href=3D"http://www.interfacebus.com/Engineering_Dictionary_Capacitors.htm=
+l"><B>Terms</B></A>]<BR>[<A=20
+title=3D"Surface Mount Chip Size"=20
+href=3D"http://www.interfacebus.com/Design_Capacitors_Size.html"><B>Surfa=
+ce Mount=20
+Chip Size</B></A>] [<A title=3D"Military Standards for Capacitors"=20
+href=3D"http://www.interfacebus.com/Design_Capacitors_MIL.html"><B>MIL=20
+Specs</B></A>]<BR>[<A title=3D"Capacitor Manufacturers Listing"=20
+href=3D"http://www.interfacebus.com/capacitor.html"><B>Capacitor=20
+Manufacturers</B></A>]<BR>[<A title=3D"Web Site Index Page"=20
+href=3D"http://www.interfacebus.com/"><B>Home</B></A>] </P>
+<CENTER>
+<FORM id=3Dcse-search-box action=3Dhttp://www.google.com/cse>
+<DIV><INPUT value=3Dpartner-pub-6145312984753354:0189641821 =
+type=3Dhidden name=3Dcx>=20
+<INPUT value=3DUTF-8 type=3Dhidden name=3Die> <INPUT size=3D45 =
+type=3Dtext name=3Dq> <INPUT value=3DSearch type=3Dsubmit name=3Dsa> =
+</DIV></FORM>
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.google.com/coop/cse/brand?form=3Dcse-search-box&amp;lan=
+g=3Den"></SCRIPT>
+</CENTER>
+<H3><A id=3Da name=3Da><FONT size=3D5><B>Dielectric =
+Material</B></FONT></A> </H3>
+<P>The different capacitor types only come in certain values; How ever =
+the=20
+application will push the design toward a particular type. </P>
+<TABLE class=3Dnorm border=3D1=20
+summary=3D"Capacitor Dielectric Operating Temperature Ranges" =
+align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD><B>Dielectric</B> </TD>
+    <TD><B>Paper</B> </TD>
+    <TD><B>Plastic Film</B> </TD>
+    <TD><B>Ceramic</B> </TD>
+    <TD><B>Electrolytic</B> </TD>
+    <TD><B>Mica</B> </TD></TR>
+  <TR>
+    <TD><B>Temp Range</B> </TD>
+    <TD>-55C to +125C </TD>
+    <TD>-55C to +125C </TD>
+    <TD>-55C to +125C </TD>
+    <TD>-55C to +125C </TD>
+    <TD>-60C to +125C </TD></TR>
+  <TR>
+    <TD><B>Bypass</B> </TD>
+    <TD>Large size </TD>
+    <TD>Yes </TD>
+    <TD>* Yes * </TD>
+    <TD>Low Freq </TD>
+    <TD>High cost </TD></TR>
+  <TR>
+    <TD><B>Value</B> </TD>
+    <TD>.001uF to 10uF </TD>
+    <TD>.001uF to 10uF </TD>
+    <TD>1pF to 10uF </TD>
+    <TD>1uF to 100(s)uF </TD>
+    <TD>1pF to 100000pF </TD></TR>
+  <TR>
+    <TD><B>MIL Spec</B> </TD>
+    <TD>MIL-C-18312 / MIL-C-39022 </TD>
+    <TD>TBD </TD>
+    <TD>MIL-C-11015 </TD>
+    <TD>MIL-C-62 </TD>
+    <TD>MIL-C-5 </TD></TR></TBODY></TABLE>
+<H2><FONT size=3D4><B>Dielectric Types</B></FONT> </H2>
+<UL>
+  <LI><B>PAPER</B> Dielectric Capacitors are used in High voltage =
+applications.=20
+  Paper devices should not be used in a high moisture environment unless =
+the=20
+  device is in a hermetic case, the capacitance will increase, the power =
+factor=20
+  - insulation resistance - dielectric strength - and life will degrade. =
+Paper=20
+  capacitors have near 10% tolerances. </LI>
+  <LI><B>Plastic FILM</B>=20
+  <UL>
+    <LI><B>Mylar:</B> has a wide temperature change of 20% over -55 to =
++125C.=20
+    Moisture absorption is half that of paper.<BR>Mylar is the same as=20
+    polyester. The term Mylar is a trade name. </LI>
+    <LI><B>Polycarbonate:</B> Out performs Mylar in all areas. Low Power =
+factor,=20
+    works best with AC. Polycarbonate has a low temperature drift (graph =
+below),=20
+    dissipation factor, and dielectric absorption. Use polyphenylene =
+sulfide as=20
+    a possible replacement. </LI>
+    <LI><B>Polyester:</B> Replaces paper for many applications, and =
+smaller in=20
+    size. Polyester does not have the moisture problem that paper does, =
+but does=20
+    have a worse tolerance, at 20% ~ over -55 to +125C. May also be =
+called PETE,=20
+    or PETP. The Polyester Dielectric has an Absorption of around 0.20%. =
+</LI>
+    <LI><B>Polypropylene:</B> It has negative temperature coefficient. =
+</LI>
+    <LI><B>Polysulfone:</B> Has a very high operating temperature of =
++170C.=20
+</LI>
+    <LI><B>Polystyrene:</B> Will only work to +65C. It has a flat to =
+negative=20
+    temperature coefficient. </LI>
+    <LI><B>Teflon:</B> Has a very high operating temperature of +170C.=20
+  </LI></UL></LI>
+  <LI><B>MICA</B> High Precession. The material is inert it will not =
+change over=20
+  time or temperature. </LI>
+  <LI><B>CERAMIC</B><BR>The standard By-pass capacitor resides with in =
+two main=20
+  classes, Type I and II; However the major distinction resides with the =
+
+  temperature and frequency characteristics. Normally the frequency=20
+  characteristics come first and then the temperature {It depends on the =
+design=20
+  application}.=20
+  <UL>
+    <LI>NPO (Type I) Stable over temperature [[CGO] EIA temperature =
+Coefficient=20
+    Designation] </LI>
+    <LI>X7R (Type II) 15% variation over temperature </LI>
+    <LI>Z5U General Purpose [EIA temperature characteristic code] </LI>
+    <LI>Y5V General Purpose [EIA temperature characteristic code]=20
+</LI></UL></LI></UL>
+<CENTER>
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-6145312984753354";=0A=
+/* Website 468x60, 5/4/08 */=0A=
+google_ad_slot =3D "3218184250";=0A=
+google_ad_width =3D 468;=0A=
+google_ad_height =3D 60;=0A=
+//-->=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">=0A=
+</SCRIPT>
+</CENTER>
+<TABLE class=3Dnorm border=3D1=20
+summary=3D"Capacitor Codes for Temperature Characteristic" =
+align=3Dcenter>
+  <CAPTION><B>Temperature Characteristic Code</B> </CAPTION>
+  <TBODY>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD colSpan=3D2>
+      <CENTER>Minimum Temperature </CENTER></TD>
+    <TD colSpan=3D2>
+      <CENTER>Maximum Temperature </CENTER></TD>
+    <TD colSpan=3D2>
+      <CENTER>Value Change over Temperature </CENTER></TD></TR>
+  <TR>
+    <TD><B>X</B> </TD>
+    <TD>-55<SUP>o</SUP>C </TD>
+    <TD><B>2</B> </TD>
+    <TD>+45<SUP>o</SUP>C </TD>
+    <TD><B>A</B> </TD>
+    <TD>+/- 1% </TD></TR>
+  <TR>
+    <TD><B>Y</B> </TD>
+    <TD>-30<SUP>o</SUP>C </TD>
+    <TD><B>4</B> </TD>
+    <TD>+65<SUP>o</SUP>C </TD>
+    <TD><B>B</B> </TD>
+    <TD>+/- 1.5% </TD></TR>
+  <TR>
+    <TD><B>Z</B> </TD>
+    <TD>+10<SUP>o</SUP>C </TD>
+    <TD><B>5</B> </TD>
+    <TD>+85<SUP>o</SUP>C </TD>
+    <TD><B>C</B> </TD>
+    <TD>+/- 2.2% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>6</B> </TD>
+    <TD>+105<SUP>o</SUP>C </TD>
+    <TD><B>D</B> </TD>
+    <TD>+/- 3.3% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>7</B> </TD>
+    <TD>+125<SUP>o</SUP>C </TD>
+    <TD><B>E</B> </TD>
+    <TD>+/- 4.7% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>F</B> </TD>
+    <TD>+/- 7.5% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>P</B> </TD>
+    <TD>+/- 10% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>R</B> </TD>
+    <TD>+/- 15% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>S</B> </TD>
+    <TD>+/- 22% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>T</B> </TD>
+    <TD>- 33%, + 22% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>U</B> </TD>
+    <TD>- 56%, + 22% </TD></TR>
+  <TR>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD>- </TD>
+    <TD><B>V</B> </TD>
+    <TD>- 82%, + 22% </TD></TR></TBODY></TABLE>
+<P align=3Dcenter><A =
+href=3D"http://www.niccomp.com/help/presentations.asp">Ceramic=20
+and Electrolytic Capacitor info</A> NIC Components </P>
+<P align=3Dcenter><A title=3D"How-To Design with Capacitors"=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#top"><B>{Back =
+to=20
+Electronic Capacitor Data Index}</B></A> </P>
+<HR width=3D"85%">
+
+<H3><A id=3Db name=3Db><FONT size=3D5><B>Value x =
+Temperature</B></FONT></A> </H3>
+<P>Normally capacitors have a stated value at some frequency [1KHz], and =
+some=20
+temperature [room temp]. However that capacitance value will change by =
+some=20
+percentage [depending on dielectric] over temperature. A chart depicting =
+the=20
+percentage change in capacitance depending on dielectric type versus =
+temperature=20
+change is listed on; <A=20
+href=3D"http://www.interfacebus.com/Capacitance_Temperature_Change.html">=
+Cap Value=20
+Change Over Temperature</A>. The chart provides data for Plastic Film =
+capacitor=20
+dielectrics.<BR><BR>Derating guide lines for capacitors is listed on the =
+<A=20
+title=3D"Guideline for Derating Electronic Components"=20
+href=3D"http://www.interfacebus.com/Component_Derating_Guide_line.html">C=
+omponent=20
+De-Rating</A> page. </P>
+<P align=3Dcenter><A title=3D"Top of How-To Design with Capacitors"=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#top"><B>{Elect=
+ronic=20
+Capacitor Data Index}</B></A> </P>
+<HR width=3D"85%">
+
+<H3><A id=3Dc name=3Dc><FONT size=3D5><B>Board Placement</B></FONT></A> =
+</H3>
+<CENTER>
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-6145312984753354";=0A=
+/* Website 468x60, 5/4/08 */=0A=
+google_ad_slot =3D "3218184250";=0A=
+google_ad_width =3D 468;=0A=
+google_ad_height =3D 60;=0A=
+//-->=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">=0A=
+</SCRIPT>
+</CENTER>
+<P><FONT size=3D4><B>Capacitor placement:</B></FONT> to Integrated =
+Circuits [ICs]=20
+</P>
+<P><FONT size=3D3>The Decoupling capacitor is used to decouple the IC =
+from the=20
+power source. The By-Pass capacitor reduces the trace length from the =
+power=20
+source to a trace length from the IC to the decoupling capacitor ~ a =
+reduction=20
+from many inches to less then an inch. A reduction of 20nH an inch in =
+trace=20
+inductance is achieved by introducing a decoupling capacitor in between =
+the IC=20
+and its power source. Assuming the power source is a regulator 12 inches =
+away,=20
+and the by-pass capacitor is placed within an inch of the IC, the trace=20
+inductance is reduced from 240nH to 20nH. The 20nH vaule is just an=20
+example.</FONT> </P>
+<CENTER><IMG title=3D"Capacitor placement to IC" alt=3D"Capacitor =
+Placement"=20
+src=3D"http://www.interfacebus.com/cap_place1.gif"><BR><B>How to Place a =
+By-Pass=20
+Capacitor</B> </CENTER>
+<P><FONT size=3D3>For a PWB with out a Ground plane, place the capacitor =
+equal=20
+distance between the Voltage and Ground pins. Or place the capacitor =
+near the=20
+Voltage pin. Run the remaining line directly to the ground trace. Try =
+not to=20
+pass into another layer with a via. Limit the number of vias (to zero), =
+each via=20
+acts like a low pass filter. Running a long trace between the by-pass =
+capacitor=20
+and the IC defeats the purpose of the by-pass cap. As the trace length=20
+increases, so does the trace inductance.</FONT> </P>
+<CENTER><IMG title=3D"Capacitor placement to IC with a ground plane"=20
+alt=3D"Placement to Trace vias"=20
+src=3D"http://www.interfacebus.com/cap_place2.gif"><BR><B>How to Place =
+By-Pass=20
+Capacitor vias</B> </CENTER>
+<P><FONT size=3D3>Things get better when you have a Ground plane. Place =
+the via on=20
+the far side of the connection between the capacitor and chip. This =
+insures the=20
+capacitor is not effected by the via [increased inductance]. Make the =
+traces as=20
+wide as possible. If you have a near-by island be sure it's stitched =
+with as=20
+many vias as possible so it represents a good power or ground =
+connection.</FONT>=20
+</P>
+<HR width=3D"50%">
+
+<H3><FONT size=3D5><B>Capacitor placement:</B></FONT> on the PWB </H3>
+<CENTER><IMG title=3D"Capacitor placement on PWB" alt=3DPWB=20
+src=3D"http://www.interfacebus.com/cap_pwb1.gif"><BR><B>How to Place =
+Ground=20
+Islands</B> </CENTER>
+<P>Place the capacitors near the body of the device, leaving the =
+shortest [and=20
+widest] possible trace. Additional larger tantalum capacitors may be =
+placed=20
+around the board. The tantalum help to reduce the over-all impedance of =
+the=20
+power plane. The larger value near-by tantalum also helps to re-charge =
+the=20
+ceramic, instead of taking the charge from the power supply source. =
+Placing=20
+Power planes adjacent to ground planes in the board stack-up also helps. =
+It=20
+doesn't hurt to embed signal layers between a ground layer in the =
+stack-up=20
+either, assuming you can add board layers. Refer to this page for a =
+graph=20
+showing the frequency response developed from placing two capacitors in =
+parallel=20
+<A=20
+href=3D"http://www.interfacebus.com/Compound_Capacitor_By-Passing.html">C=
+ompound=20
+Capacitor By-Passing</A> </P>
+<HR width=3D"50%">
+
+<H3><FONT size=3D5><B>Capacitor placement:</B></FONT> Cap to Cap </H3>
+<CENTER><B>Equivalent PWB Trace</B><BR><IMG=20
+title=3D"Equivalent Circut of a PWB Trace" alt=3D"PWB Trace"=20
+src=3D"http://www.interfacebus.com/PWB_Equivalent_Circut.gif"><BR><B>Equi=
+valent=20
+Circuit</B> </CENTER>
+<P>A capacitor only has an effect with in a certain distance from the =
+device.=20
+The more you move away from the capacitor, the less it does. The =
+Inductance, and=20
+Resistance (of the Trace) tend to increase. This is the reason the App =
+notes=20
+recommend placing capacitors on the reverse side off the board - over =
+the=20
+(power) pin. It's a trade-off between the (low Pass) filter effects of =
+passing=20
+through a via or an elongated trace. How ever these capacitors placed =
+out across=20
+the board do have an effect in reducing the impedance of the board ~ the =
+power=20
+and ground planes. Assuming most of the capacitors on the board are =
+0.1uF=20
+by-pass caps, then placing 2uF or 4uF around the board helps the =
+impedance. </P>
+<CENTER><IMG title=3D"Capacitor working area" alt=3D"Cap influance"=20
+src=3D"http://www.interfacebus.com/cap_near1.gif"><IMG=20
+title=3D"Capacitor near power and ground pins" alt=3D"Near Power"=20
+src=3D"http://www.interfacebus.com/cap_near2.gif"> </CENTER>
+<HR width=3D"85%">
+
+<H3><A id=3Dd name=3Dd><FONT size=3D5><B>By-Pass =
+Capacitors</B></FONT></A> </H3>
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-6145312984753354";=0A=
+google_alternate_color =3D "FFFFFF";=0A=
+google_ad_width =3D 728;=0A=
+google_ad_height =3D 15;=0A=
+google_ad_format =3D "728x15_0ads_al_s";=0A=
+//2006-12-20: Hardware=0A=
+google_ad_channel =3D "0244865189";=0A=
+google_color_border =3D "FFFFFF";=0A=
+google_color_bg =3D "FFFFFF";=0A=
+google_color_link =3D "3333FF";=0A=
+google_color_text =3D "000000";=0A=
+google_color_url =3D "0066FF";=0A=
+//--></SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">=0A=
+</SCRIPT>
+
+<P><B>The Classic approach.</B> The capacitor is equal distance between =
+both the=20
+positive and negative supply. </P>
+<CENTER><IMG title=3D"Capacitor placement on the PWB" alt=3D"Board =
+Placement"=20
+src=3D"http://www.interfacebus.com/cap_place1.gif"> </CENTER><BR>
+<P>-- Placement: Dont ask for it or, plan for it, or depend on it - it =
+just=20
+costs to much {hand routing}.<BR>The point is, know if the design can =
+handle=20
+another placement. This particular placement helps in noise =
+suppression,<BR>but=20
+hurts with critical signal routing. If this particular device needs =
+noise=20
+suppression more then signal routing, then pick the cap placement first, =
+
+otherwise let the computer pick the placement. The by-pass capacitor =
+stores an=20
+electrical charge that is released to the power line [to the IC], =
+whenever a=20
+transient voltage spike occurs. So by-pass capacitor provides a low =
+impedance=20
+supply, thereby minimizing the noise generated by the switching outputs =
+of the=20
+device.<BR>Because the capacitor is used to supply current to the IC it =
+wants to=20
+be close to the Vcc pin. The more current the device needs to supply - =
+the=20
+larger the cap [or increase the number of same value capacitors].<BR>If =
+this a=20
+clock driver - watch the length of the trace {another page}, then give =
+the Cap=20
+priority. </P>
+<P align=3Dcenter><A title=3D"How-To Design with Capacitors"=20
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#top"><B>{Elect=
+ronic=20
+Capacitor Index}</B></A> </P>
+<HR width=3D"85%">
+
+<H3><A id=3Df name=3Df><FONT size=3D5><B>Decoupling Capacitor =
+Value</B></FONT></A>=20
+</H3>
+<CENTER><IMG title=3D"Decoupling Capacitance based on load" =
+alt=3DCalculation=20
+src=3D"http://www.interfacebus.com/cap_value_selection.gif"><BR><B>How =
+to Place=20
+Dual By-Pass Capacitors, Compound Placement</B> </CENTER>
+<P>The value of the Decoupling Capacitor that should be used depends on =
+your=20
+load the IC has to drive. From the graphic above the load of device A =
+[the=20
+driver] is device B [the receiver]. If device A has to drive one input =
+at 3.3=20
+volts then the load depends on the load of both inputs, taking into=20
+consideration the rise time of the signal. The input capacitance for a =
+given=20
+device is parameter C<SUB>i</SUB> in the device data sheet. If the =
+receiver [B]=20
+has a load of 12pF [C<SUB>i</SUB>] and the output driver [A] has a rise =
+time of=20
+1nS then the current required is: I =3D dV / dt or I =3D =
+12pF*(3.3v)/1nS. The=20
+current required =3D 39.6mA. If we keep the voltage droop to 3.0 volts, =
+or a=20
+reduction of 300mV.<BR>The capacitor then equals: C =3D I * dt / dV. C =
+=3D 39.6mA *=20
+1nS/300mV =3D 22pF<BR>This is the value of the by-pass capacitor used =
+with IC 'A',=20
+The required by-pass capacitor value for IC 'B' would be calculated in =
+the same=20
+manner.<BR>Choose a capacitor whose resonant frequency is at least as =
+high as=20
+the corresponding edge rates of the switching signals,<BR>where =
+frequency=20
+response @ 1 / (3.5 =D7 T<SUB>rise, or fall</SUB>).<BR><B>Design =
+Note</B>; In=20
+basically every data sheet a 0.1uF is indicated as a general rule of =
+thumb. </P>
+<P>IC 'B' uses two By-pass capacitors, a small value ceramic [0.1uF] and =
+a=20
+larger value tantalum capacitor [2.2uF] for example, which is called <A=20
+href=3D"http://www.interfacebus.com/Compound_Capacitor_By-Passing.html"><=
+B>Compound=20
+By-passing</B></A></P>
+<CENTER>
+<SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-6145312984753354";=0A=
+/* web site 728x90, created 12/21/07 */=0A=
+google_ad_slot =3D "1132243392";=0A=
+google_ad_width =3D 728;=0A=
+google_ad_height =3D 90;=0A=
+//-->=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">=0A=
+</SCRIPT>
+</CENTER>
+<P><B>Design Hint;</B> Adjacent Power and Ground planes form a =
+capacitor. It is=20
+highly recommended to use the power planes as a low value, high speed, =
+bypass=20
+capacitor. This can be accomplished by reducing the thickness of the =
+core=20
+between power planes. So when determining the Printed Wiring Board [PWB] =
+
+stack-up try to place a power plane next to a ground plane to form a=20
+'board-wide' capacitor.</P>
+<P><A id=3De name=3De><B>Equivalent Capacitor Circuit</B></A>, was moved =
+to <A=20
+href=3D"http://www.interfacebus.com/capacitor_equivalent_circuit.html"><B=
+>Equivalent=20
+Capacitor Circuit</B></A></P>
+<P><B>Question;</B> which decoupling capacitors value to use? =
+<B>Answer;</B>=20
+refer to the equation above.</P>
+<TABLE border=3D1 summary=3D"Related pages" bgColor=3D#ddffff =
+align=3Dcenter>
+  <CAPTION><B>Related pages on this site:</B> </CAPTION>
+  <TBODY>
+  <TR>
+    <TD rowSpan=3D2><A title=3D"Common Capacitor Values"=20
+      =
+href=3D"http://www.interfacebus.com/Common_Capacitor_Values.html"><FONT=20
+      size=3D2>.Common Cap Values.</FONT></A> </TD>
+    <TD rowSpan=3D2><FONT size=3D2><B><A=20
+      =
+href=3D"http://www.interfacebus.com/Reference_PWB_Info.html">Printed =
+Wiring=20
+      Board Info</A></B></FONT> </TD>
+    <TD rowSpan=3D2><FONT size=3D2><B><A=20
+      =
+href=3D"http://www.interfacebus.com/Logic_Grounding.html">Ground/Power=20
+      Plane</A></B></FONT> </TD>
+    <TD rowSpan=3D2><FONT size=3D2><B><A=20
+      =
+href=3D"http://www.interfacebus.com/Design_Capacitors_Size.html">Componen=
+t=20
+      Chip Size</A></B></FONT> </TD>
+    <TD rowSpan=3D2><FONT size=3D2><B><A=20
+      =
+href=3D"http://www.interfacebus.com/Engineering_Dictionary_Capacitors.htm=
+l">Dictionary</A></B></FONT>=20
+    </TD>
+    <TD rowSpan=3D2><FONT size=3D2><B><A=20
+      =
+href=3D"http://www.interfacebus.com/Design_RC_Rising_Time_Constant_Graph.=
+html">RC=20
+      Time Constant</A></B></FONT> </TD></TR></TBODY></TABLE>
+<P align=3Dcenter><A title=3D"Top of How-To Design with Capacitors page" =
+
+href=3D"http://www.interfacebus.com/Design_Capacitors.html#top"><B>{Back =
+to=20
+Electronic Capacitor Data Index}</B></A> </P>
+<HR width=3D"85%">
+
+<TABLE=20
+summary=3D"Site Navigation for Engineering Tools and Manufacturing Links =
+on interfacebus.com"=20
+width=3D"95%" align=3Dcenter>
+  <TBODY>
+  <TR>
+    <TD colSpan=3D8 align=3Dmiddle><A title=3D"Web Site Index Page"=20
+      href=3D"http://www.interfacebus.com/"><IMG=20
+      title=3D"Leroy's Engineering Web Site Home Page" alt=3D"Leroy's =
+Web Page"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_PC_Motherboard.jpg"></A> =
+</TD></TR>
+  <TR>
+    <TD colSpan=3D8 align=3Dmiddle><A title=3D"Home Page"=20
+      href=3D"http://www.interfacebus.com/"><B>Home</B></A> </TD></TR>
+  <TR>
+    <TD colSpan=3D8 align=3Dmiddle><BR></TD></TR>
+  <TR>
+    <TD align=3Dmiddle><A=20
+      href=3D"http://www.interfacebus.com/Parts_Distributors.html"><IMG=20
+      title=3D"Electronic Component / Electronic Equipment Distributors. =
+Catalog Sites. Obsolete Part Distributors"=20
+      alt=3D"Electronic Parts and Equipment Distributors"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_Component_Distributors.jpg">=
+=20
+      </A></TD>
+    <TD align=3Dmiddle><A=20
+      href=3D"http://www.interfacebus.com/Components.html"><IMG=20
+      title=3D"Electronic Component Manufacturers. Semiconductor, =
+Passive, and Mechanical Components"=20
+      alt=3D"Electronic Component Manufacturers"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_Component_Manufacturers.jpg"=
+>=20
+      </A></TD>
+    <TD align=3Dmiddle><A=20
+      href=3D"http://www.interfacebus.com/OEM_Equipment.html"><IMG=20
+      title=3D"Electronic Equipment Manufacturers. Test Equipment, Power =
+Supplies, COTS Card, Chassis, Cases, Racks"=20
+      alt=3D"OEM Electronic Equipment Manufacturers"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_OEM_Equipment_Manufacturers.=
+jpg">=20
+      </A></TD>
+    <TD align=3Dmiddle><A =
+href=3D"http://www.interfacebus.com/Software.html"><IMG=20
+      title=3D"EDA Software Producers. CAD/CAE Software Companies, =
+Simulation, and PC/Embedded Operating Systems"=20
+      alt=3D"EDA Software Producers CAD/CAE Software"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_Software_Vendors.gif"> =
+</A></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.interfacebus.com/Standards_and_Publications.html"><IMG=
+=20
+      title=3D"Engineering Specifications, Electronic Standards, =
+Technical Books, Professional Publications"=20
+      alt=3D"Engineering Standards, Book Stores, and Publications"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_Electronic_Standards.jpg">=20
+    </A></TD>
+    <TD align=3Dmiddle><A=20
+      href=3D"http://www.interfacebus.com/Interface_Bus_Types.html"><IMG =
+
+      title=3D"Embedded Computer Bus Specifications. PC, Cable, =
+Backplane, Mezzanine, IC Bus, SoC Bus, Card Buses"=20
+      alt=3D"Interface/Embedded Computer Bus"=20
+      =
+src=3D"http://www.interfacebus.com/Web_Index_Electronic_Buses.jpg"> =
+</A></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.interfacebus.com/Logic_Design_Descriptions.html"><IMG =
+
+      title=3D"Electronic Design How-To, Logic Design Descriptions, =
+Design Pitfalls, and Passive Component Data"=20
+      alt=3D"Electronic Engineering Design Data"=20
+      src=3D"http://www.interfacebus.com/Web_Index_Logic_Design.jpg"> =
+</A></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.interfacebus.com/Reference_and_Information.html"><IMG =
+
+      title=3D"AWG Sizes, Conversion Tables, VHDL, Encyclopedia, =
+Glossaries, Dictionaries, PWB data."=20
+      alt=3D"Engineering Reference Information."=20
+      src=3D"http://www.interfacebus.com/Web_Index_Reference.jpg"> =
+</A></TD></TR>
+  <TR>
+    <TD align=3Dmiddle><A title=3D"Electronic Part Distributors"=20
+      =
+href=3D"http://www.interfacebus.com/Parts_Distributors.html">Distributors=
+</A>=20
+    </TD>
+    <TD align=3Dmiddle><A title=3D"Electronic Component Manufacturers"=20
+      =
+href=3D"http://www.interfacebus.com/Components.html">Components</A> =
+</TD>
+    <TD align=3Dmiddle><A title=3D"Electronic Equipment Manufacturers"=20
+      =
+href=3D"http://www.interfacebus.com/OEM_Equipment.html">Equipment</A> =
+</TD>
+    <TD align=3Dmiddle><A title=3D"EDA Software Vendors"=20
+      href=3D"http://www.interfacebus.com/Software.html">Software</A> =
+</TD>
+    <TD align=3Dmiddle><A title=3D"Engineering Standards"=20
+      =
+href=3D"http://www.interfacebus.com/Standards_and_Publications.html">Stan=
+dards</A>=20
+    </TD>
+    <TD align=3Dmiddle><A title=3D"Computer Buses"=20
+      =
+href=3D"http://www.interfacebus.com/Interface_Bus_Types.html">Buses</A> =
+</TD>
+    <TD align=3Dmiddle><A title=3D"Logic Design"=20
+      =
+href=3D"http://www.interfacebus.com/Logic_Design_Descriptions.html">Desig=
+n</A>=20
+    </TD>
+    <TD align=3Dmiddle><A title=3D"Electronic Engineering Data"=20
+      =
+href=3D"http://www.interfacebus.com/Reference_and_Information.html">Refer=
+ence</A>=20
+    </TD></TR></TBODY></TABLE><BR>
+<CENTER>Last Modified 4/6/10<BR>Copyright =A9 1998 - 2010 All rights =
+reserved=20
+Leroy Davis </CENTER>
+<SCRIPT type=3Dtext/javascript>=0A=
+var gaJsHost =3D (("https:" =3D=3D document.location.protocol) ? =
+"https://ssl." : "http://www.");=0A=
+document.write(unescape("%3Cscript src=3D'" + gaJsHost + =
+"google-analytics.com/ga.js' type=3D'text/javascript'%3E%3C/script%3E"));=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>=0A=
+var pageTracker =3D _gat._getTracker("UA-246755-1");=0A=
+pageTracker._initData();=0A=
+pageTracker._trackPageview();=0A=
+</SCRIPT>
+</BODY></HTML>
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_place1.gif
+
+R0lGODlh0AFtAPf/AAAAADNmM3tzBEJCQjN/mTOFsjOMzDOZ/8z/AMzMZv/MZv+ZzOPj4////wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtzBCH5BAEBAP8ALAAAAADQAW0A
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePEAEEGEmypMmTKFOqXMmypcuX
+MFMCSCgyps2bOHPqtDnzYM2dQIMKHXqyJ0iJP4muZMCUAYCnUKNKHUC1qtUBUrMCYIAAAQOlL436
+dNmUqVatV9NiPQu1bNe3b6MiAEtULMGkKssGYDtVrVW+T93ChUtyMEkFiBMrXqyA7ki7Rx3idYyy
+LODLUhGwLfuVsknIAyfHxEwaMFHOjFMn1nvScEnQ/0TDLE1ba1DVqlnOnR0ZqeebtZ9qrv37s0LZ
+PIMrL/5yd1iEyEcrD85cN8/eEaNXJ2k5+HDarOnC/44dlPP04OE9OwcOvXzTvefBv6++/jn2kCsb
+kNQfgH///SP5559N3V2mQAIIJpigAphxptR42sVkXnylpbdTV3W1N5ReFFY4H2X12XdfQxFuV1lT
+pB2ooIIMXmZhTuOR9xtmDURV41M3YqZTiA9q6FmHpKmnU4wj3hVUA/olCSBY8k2oo1AQ/uYkkHy9
+uMB3APDY41iecchXjgDkCGaDH144ZJEkmihUgaVh6WGZLsVYonsoUinVAgtE9aKJsM0JlJd2bgYn
+TFryhuZCfqY04H8B7iegSYuSVWebbpK2p0w0qVlUaXhOp+lrPn4KX6Bn4VSooYdmKhSSrAYY6YyZ
+kf/6FKpcilpSp7JK9Wmftn6Wa1aEQpnqcWC16miSrLaKZH+v3uTXs9BG21KU6sk1GFxs/hrYoFsa
+hJwBIxFAwEgHBACuueMSeu1b72kr1Yunjjasqr3WW5yc9uY7Y6j69ivsvAAHLPDABBds8MEIJzxR
+ojuVFe3DEFN1KXPUwhTxxc/6CxSvGt+EZbxqEpkqww/+2hVUvVac3GUPXxbTqajhxtieCCgYIsfA
+YdYyYBMHsG5TMs8s2LryGkzyaZMqV6mg3DJJLIHZatuzmiDvxa+kTI3q7lZN03ed0flGjdnSPHf9
+b61BbY2yrVUbh/bGah8tVNuggt3xY2+KXeqPT5ftfFaNgIeJo+CCjwnsb3SvhHNdcVONk8hoRvjq
+ssyWNGCzs2Gm4ooItmiaePRuqLesU1vn9Nt0fvV34YQHzrqLZu8I48Fymzi6VJtz7nmVsU/bN1hT
+uls6hvdeLXrWcXOd9VCJu11w7ZYvKz3layZNGtll946SytUlPxKe9S7efeNz7wR5kdAvKuCjjVpu
+fm3Y8zV76CFTiKv84Rs/vtpmmk/73TC5XZbil7c40W87wYPK/YBUugyhrjqA2loDm7c9hEHvJMkC
+EH82qKQN5sQtcXMQpvRXHPAl8FcN3NjVxFWSAhRAXDCkTPImRsEK/9oNgDiklbdyyEMRFeSCNqka
+xoZ4lZTUcIQKS6ISl8jEJjrxiVCMohSnSMUqWvGKFgFiD1NGk+R58YuYgQ4Yx0hGqCRMizEhohoH
+oC/ubfGNJBEfHN94vsjZznp8iRbslqcpfLGEM2skYgpxKMeT6CWQQxyeXPxVxxGh8XGk0SNbiCcq
+P7bkhGiRJO/4WJKPwSRoi0kbCU0SwTxqkmmdac1cKFkWUCpGhKK0YPhkVSlbuTFz/AtiSmLmSgXQ
+zGbO++GQyHeTVvbSlzQr2v9EJcDr7ZGTfBvlLptJpUG65JiNQUm8CvnHdoVQe0LSIcEeCTf4UYdP
+vwsgNRkITsT50P9IxfSm2qyplOY10pH2WmesiLOdW0Iyl72ypzRxubV6CVSWYcPj2NDTTvYMtJsK
+zRU9Zfe4hy5FnhJsKFAoeM/7kJNx5uRnNC160YiSTqO69N8DoYa8b0ITRBVdJkqSxUFk2ZSmOtGn
+8vQJy7OttJxaCZzrhko4toQzljsUDzGZU8OOYkc7GdTgf9ZnrHiaRXOcWxCZUKoSf35Qp/GZaGtO
+l9Tjqc6lqaRLU8/Ykqq6r33Miur7DJTVzj2pW2WV4ZcAx6owIcmvd80JJfEKzx8FlXU3IqrhbHPU
+r8kUgOvM3Yp2h0qk/rRhAvxrsvzK18AGa1+XHYr3HHNEqz12iyn/qmsCKHsWscYxnUrB5Elf6rNF
+Fi+0mG1pUPmq2d4WsHzzO21OPMg+v21Vnz4VJp+W+r0FVJKkUPobb3kL2CAxT6XCzSFYs6Scnr6z
+sFLabnDw5NrkhgaCGBUeV0dSWtNmNybKctWx4upWGIVUpA6Fbm6vSqUF6mm9lgVveHWbUdq2pL3u
+vSFOLkc54i7pwf9s03JiilvDjjdPpclfhfUKUI+pEKFHqqqIXSVXljplbATMXloVd0DmyFaBGA4r
+gCmsXDWVUmrgRHCCnzdHlkwyUMrcMPDY5F87lTe/NbZxenFs4E6aV2DkZB/mkMbfFMu4a5YUFfi0
+5q4+6tfCBXWJMY53PM5iYZBRHpzqn7xy4nleyqtze0tzSSne7s7YgCs9VwAKAK5xncuF1SOweg08
+Zqf/9uajPb6tkAVrW0M6DJEX696X++forEH6YhYaM5kHhuhEj3TRnrYXNxG3rlKb+tSoTvVgsYvF
+VkO5jLAGoxhjTeutufrWuM61rnfN6177+tfADrawa01sbQn72MjGdadDDboWM/tuo352vwwdmWVL
+W7SwvbbGoq1tDb/3N5eOWL6y3O1tT1pjhDE3W9HLX5ZB65m2dLZKwg2xcnP7JPR+2MsaPW6FWbvS
+bXb3s+C9K3mX5MVR2dkmV1wYORPyoYfMN7QUCRVNB5jHd2w3YE55FjYznGIGP/g6FV7Z1vCbJdi8
+uEDmdOOzkLy1TTE1e1cdgJQ3G8S7ctdwuEhShEPl/+VauVS682LMXgrd4cEUcEnPKvCBq1glQy+6
+K70b3G/vj1RuinfIu6ozjjM2WKaWOiiHNhhgJv28ETbluz8n5sEA7ZhUZ2+QMa6pOk9yaXF3DLml
+0+E/iT1ov0xQfe7N9b6rkynYjHviqH2Ufy+dSidD5cdvDmqfV/POJrG5Nk9FeJELmsmTb4nmjTh3
+utfdpNezct7JmteXWJ6dTf4UyDrveaYXOPReE2eZx600K68NnZN+fYeOTJSq0b72XAY92xxr9frd
+N8PAB7VMmBvQth0f+aMNKPMVLGrvnFPS596U4WVf+pWLlvqOKz+nE6pxZ9aG+D7Odtq1ZVAkK92+
+457fDkfXnU/U//j9mNdV8ud6dgeAsQcWNIdnrWdiyYdCAfhZ6hcwjnd4ASdhBoh7rLaAJlaBysdU
+ZyJ9dPZ5DniA9WR/pjdt3odfMrR1l1SATYKBQdFe13ciIihRD3hgJrh7HfOC/hcViqaBQCUVvTVd
+nNVZRlUcCah+iJZ9+peD6wdAPNh+ksd6SQZSqzM4UAEmi6UrjfWBQBiE9NeETv8IZfmxJMWVZoxi
+VRx4FkFzXDAYgcvGFkNYhHT4V0eoVtgGgnGCfqRFY9x3Zu0jZQ82ZY+HVXXFWkEHf6/FggTYg5dH
+gmJGhWgXaLY3aG8oWFV3gjO1iR0EYYQ4TVKoFZLFIm6Yh+FHg6E4W5cIdZR3fzm1ZIDVV5s1i1v4
+X5BoKpmog2W4iXCVhr44f2yoWoh4OIRVhamzhjZ4i9qkd6eIig2IhUUVjbX4LjfoZH6oidBmiFk1
+jFxYjJPIYXLYOohlXZi4gnpIUFlIXbToW2zXh9eoix0TWcJ4XE9mfvcCGIr1Oi6Di5/misbVZTD1
+jk+IQ/J4iPT4YecIUalIKin/ZHFIZIxm9YyqWHxe2Hzsh4xZMYpaRXAVCZFmhZEM2TRDB1pfmDoS
+GZLKaDoCSYY7IT3zpVQGIjOe1ZH+SIkgGSg0c3Kt+I100XJZKI5C9YLAtZISuCqNUlxW+EyOOCsq
+x5Owkn9bNpLmWJJMEo6JNY7Qd100OZBA4WC9uF/y4XE3aYspuYjNuDJhNmdaR5VVmX/8mItc2UPb
+5XvUiFJ7d49qQ16ryIwJCYy5opVwGZc8NJd2ZpeM6HdLOR24ooiBOYEB4JMTWY6ByZJwRJjft5KO
++ZguqBVFxphOmJmQiZJ7WRgIaZG7WDm9iJSf6GPPl5VjmJmamZiAUWRk+Vx9/ykhsJiMo+kzpfmH
+8KUSSpKG6jNXFqiCumePlXQetPl1tsmWYAaQbzmZRdmSkGKGwlmdJpaCF3icyJlztLGc+LOWHnl1
+0JlSGQiPw/VWvqiaOKFTdJkVKXSXA7aQUQGeBxl940kZoQlkHtab6DlH1PSeMAeJ8jmfIGmfQomf
+NamfuRmZOOif/+lpfCGg4fldTslu7YeghbmbWykjp1eDDroSOsZ4jWdvWRF5dgKHbQQAGnplHCqQ
+sBmCldiBItqUlHkk1rlcwkGh5Og7ZxkULQokXnab5+eWJlFo/qYUgoiaLilfX2UWKDqCTQZnJeRc
+ccSHU5mffYSl1gihgtmVgIdoLMRVX+oUpZY4eQVKGVsWm/RpZNX4kPenZy+0Z+YSAASgZ4g5o1JK
+evU4nUp6ZmnmlauJihI3cXuSphslF1Yqo2P5iC96nLKBp3daAHW6Z5RqkjPELZpGoh8RoyZSqBnD
+YodpKjo5EoAEqmrhmTYEhARwAATgQi70qnf6qpcKgTJ6kjg5KJtQmqTltoOjKlhIxxKoqhbg55wU
+2RLDmhas2Kd+2qvT9qvOCnJE+jI9tKv8F6399qPYaopauq395G/FFq6BAq3eypfGWq79mGzquq7s
+2q5MFBAAOw==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_place2.gif
+
+R0lGODlhFgJvAPf/AAAAAHtzBEJCQgCZABmZfx+ZnyaZvzOZ/8z/AMzMZv/MZuPj4////wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtzBCH5BAEBAP8ALAAAAAAWAm8A
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIENqBDCgpMmTKFOqXMmypcuX
+MGPKnBkTgEKSNHPq3Mmzp8+WNg/i/Em0qNGjOYOKnDh0AAOTT51CnSq1ZFSWC7IuGACgq9evXwWI
+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
+3brthuRd3uZ93uid3uq93uzd3gYREAA7
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_pwb1.gif
+
+R0lGODlhtAF3APf/AAAAADNmM3tzBEJCQv9mM8z/AP/MZv//ZpmymbLFsv+ZzMzYzOPj4////wAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtzBCH5BAEBAP8ALAAAAAC0AXcA
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3MixI0IAAUKKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3JkSgESQPIPWLEC0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLMyFQrTZ0SgXENG
+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
+ABmQAjmQBFmQBjkrAQEAOw==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/PWB_Equivalent_Circut.gif
+
+R0lGODlh1gBmAJEAAP////8zAAAAAADMmSwAAAAA1gBmAAAC/4SPqcvtD6OctNqLs968+w+G4kiW
+5omm6sq27gvH8kzX9o3n+s73/g8EBYbEoLFCDBwNQ6ZyCXU0odNp9JqwHpPYbva5bGq913FQDCaX
+wWlfVZlsq3vvOI+LB8jnungRHrXHt4UlOHi2ZnhIZ7bo+AgZKTlJmSJwiZmpucnZWanRGSoaeiIw
+cIqaqrrKuirwmWHaOkvrWlqLW/valVkimwusuusbXIw6HKJJ8nu5bGyMPPL7nBvtMW19nZrdMU2t
+Oxou/g0sbr657Xx8zn5JXn37riudTn/aDMANwe0tb2vSz1+9ZMx8YTqg7wE/gbMSdmPYymGsgywk
+MlgI8R+xjP/CFllcwK+dyFIi23nE8BGWSoQoV7qMkDJBzJeVZrKkiVOBTQM7cz7q2dPnyQtBG3Ch
+sKkbRZD4aAId0UhhvldFETS9+LEqj6ciou7TatXhVQdgdXAN4VWPoKbKpu6iuJQn1V5ymx20izdv
+XXxwx+I4K0RR1Kt28+01jDes3KmM+c4t3Hhx47uTt7bsygYpMsJt3XJenNixZ8WjJ7Ola/Yy2id+
+4KzdPCxv7GyiQ799DLuy6dk/AHtoDcg1U8enk5b2fFf2bePJkzKP+1c1CkVCZfg2Qb36inANRpUo
+on1GwGPdG4afNP5e+YjnJaUfoC992fY73sc3z8GPZtQT+Xf/n//CH+uxdxF++bGWHUuQbSCaQtYA
+iB2CA7JyH4EHOlGBXxNJZgGEJGhhiH0TdtTBUQp4VZxeda2IEHR99cKJW3stx2IKaVlFS4UU/ibc
+iSHmVhtVug0pG2KUQRZkYYnZmGA+OY440AZoOAHef6SNliJvWTKmG3G3HdfZCTci9GSBFkopYXAo
+5lbZaTp9yaWRMtrGZZEcrmBFiGWCZKAGeFSB4XDLDfrYYVh62dyLyCXqJQsm8tmnTJF2RR8MIpq5
+43djVirCpZBmyukhnuo0aahkjCrpmaaqgSqOqqIJiATGKSUkgx5WtCepr2bwxgRzGabUnSi9dUWr
+ZO56AYgZ/85HGAi3omAsT6UmK8emcSqzlKItCopatsqp2Ja2L0TrJLIWmGHtZ0HK6aZMhyH565fw
+gnbkr+PmmiqoaILC5qEtesutvTACOSi9W947bbn67suEWrKySaewHMabXJsEd4nbttbh6+rCsEr4
+VaPIyXicoYtuyei335rcArnevaRhJNyt+u+zQFxHsyM45yyqdDzr7PPPPROlaawwhTkWdL7SpjQk
+Owt4LsgPT/ygRExjBQvOvSKRRpNUk2X1slkHrSzXPh69bXMGr8hdXH55W2ixZHvNALoJtjvwofNG
+BuOV9JoGbBTXWWsUgoTj7ZwnGqf4poICwyk30V9QSXegU29+RTVn7UrGuEzyxjunzaUE7XDpUW8N
+drfnkBxjjDMSx3bMQTxdpdBQ7Gz7qaTnrrvkvA+C+++Rdyh8sUnvnnrxlt6zGfJmyq68OurdRLyv
+UUYP7TYlbZ+J9tir4M70FRX0Pfj+md90+eqvzz4QBQAAOw==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_near1.gif
+
+R0lGODlh7ACyAPcAAAAAADNmM3tzBEJCQv8A/8z/AP/MZv+ZzOPj4////wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtzBCH5BAEAAP8ALAAAAADsALIA
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLEwEE2Mixo8ePIEOKHEmy5EeNJlOqXMnSIwCM
+MCGibEmzps2NAAjonHmzp0+QL2MKXcjzZ8ecO4u2REpAaUimOncandoz6NCrBp2mBDCgq9evYMOK
+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
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_near2.gif
+
+R0lGODlh5gCtAPcAAAAAADNmM3tzBEJCQv8A/8z/AP/MZuPj4////wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHtzBCH5BAEAAP8ALAAAAADmAK0A
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLDwEE2Mixo8ePIEOKHEmypMmTKFOmBICxJUaN
+KmPKnMkRAEyVNkcCIMDzJs2SLF0Kpejz58kDSA8EGMC0qdOnUKNKZZr0wE6eWHNuvIo1a9evYHsa
+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
++tKb/vSnDwgAOw==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/cap_value_selection.gif
+
+R0lGODlh3QFyAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD/
+/////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBm
+AABmMwBmZgBmmQBmzABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/
+MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMzADMzMzMzZjMzmTMzzDMz/zNmADNmMzNm
+ZjNmmTNmzDNm/zOZADOZMzOZZjOZmTOZzDOZ/zPMADPMMzPMZjPMmTPMzDPM/zP/ADP/MzP/ZjP/
+mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YzAGYzM2YzZmYzmWYzzGYz/2ZmAGZmM2ZmZmZmmWZm
+zGZm/2aZAGaZM2aZZmaZmWaZzGaZ/2bMAGbMM2bMZmbMmWbMzGbM/2b/AGb/M2b/Zmb/mWb/zGb/
+/5kAAJkAM5kAZpkAmZkAzJkA/5kzAJkzM5kzZpkzmZkzzJkz/5lmAJlmM5lmZplmmZlmzJlm/5mZ
+AJmZM5mZZpmZmZmZzJmZ/5nMAJnMM5nMZpnMmZnMzJnM/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwA
+M8wAZswAmcwAzMwA/8wzAMwzM8wzZswzmcwzzMwz/8xmAMxmM8xmZsxmmcxmzMxm/8yZAMyZM8yZ
+ZsyZmcyZzMyZ/8zMAMzMM8zMZszMmczMzMzM/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8A
+mf8AzP8A//8zAP8zM/8zZv8zmf8zzP8z//9mAP9mM/9mZv9mmf9mzP9m//+ZAP+ZM/+ZZv+Zmf+Z
+zP+Z///MAP/MM//MZv/Mmf/MzP/M////AP//M///Zv//mf//zP///yH5BAEAABAALAAAAADdAXIA
+AAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1I4qvYMOK
+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
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_PC_Motherboard.jpg
+
+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
+244NmOFX5gZNUV6DAHxA69r5Xz3gFhkPn//Z
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Component_Distributors.jpg
+
+/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAArADkDASIA
+AhEBAxEB/8QAHAAAAQQDAQAAAAAAAAAAAAAABgABBAgCAwcF/8QAFwEBAQEBAAAAAAAAAAAAAAAA
+AgEAA//aAAwDAQACEAMQAAABtQkDGmsAKnjoa7BgjfPaklG4f3CosthZoS2peuVeYzY6UDm52UOY
+21YzTsjqAZh6COZslr//xAAgEAABBAICAwEAAAAAAAAAAAADAQIEBQAGECASExQR/9oACAEBAAEF
+AuPJExbCOisej06Wk57nxglMwUAYsEqAwb/NnN9ZgBsoWOTj6B+w1wGrFGkjlg43nX5tJbaveis6
+m1nP+yVJcSevskP1YEmND4lRRTI5daNqt6CplzMi6mJMjQARE/OitRydf//EABsRAAIBBQAAAAAA
+AAAAAAAAAAEREAACEiAx/9oACAEDAQE/AQHWNo6ZBUPb/8QAGREAAwEBAQAAAAAAAAAAAAAAAAER
+EAIh/9oACAECAQE/AW4Vix+kFxthc//EACwQAAIBAwEGBAcBAAAAAAAAAAECAwARIRIEEBMgIkEj
+MTJCBRRRYWJxgZH/2gAIAQEABj8C3HIxVuIKupuOVkhY9HrUedagWRWHkayxaujFA8miGXxlVTKg
+q5Oods7mj4i61yV7ig82rSTbAz/lLLEdSN5He3xKNjLFK5biHtf2monJCyJ0urHNbLLssxCx34kZ
+9Livm18KbRouhtcV7pGP9p450KLe6X3vDOgkicWZWoGPVJsE91Ru6/Y10xlV+rYq+0SF/wAVwKtF
+EqfrlyL83//EACQQAQACAgEDAwUAAAAAAAAAAAEAESExQRBRYXGR8CCBobHR/9oACAEBAAE/IdTi
+JlUbZ1DdpWsZIHC3Iw6sRVbn5CpXYZUoTyTaNuuJqdd7uADzLlxiL4YT0hCtctviBxHHgwTgdYgk
+M4LsufCVLXfQrEA7Q5Kv0e0AWuoq1iHfUGIk/fmKHc6zJvPeGmfdkzzcxudy/PR1uArEj6jI5TZ/
+eIio8aUjH4jA4nuM+/RXr79HUroDyQx9P//aAAwDAQACAAMAAAAQjm2wR2b681Xc/8QAGBEAAwEB
+AAAAAAAAAAAAAAAAAAERECH/2gAIAQMBAT8QvgyDST5lA32nRchM/8QAGhEBAAIDAQAAAAAAAAAA
+AAAAAQARECExQf/aAAgBAgEBPxChbBuES9wKVC+p6LHTWBiKcf/EACEQAQACAwACAgMBAAAAAAAA
+AAEAESExQVFxYYEQIJHB/9oACAEBAAE/ELBFGxHrkDRXt4jDpI4j5vVTPU4tEWP0WfAVsF4MpVVu
+XW4DcL4XHFZOCgYPjWJTjO2LB+nH8i4YFykp5i28l6pQEosQXq09Ymd3Inbt9EreYRWTWKNkDXns
+b2yMl01xglX9Hkbr+TD81AxdKInERH1MRVi/uG/yy2wVGOF4DpKcfqGHbpErOmmDDPpS4cpZxHaX
+isARBCtKY5UA2ToP9KYVPi0GFcLB+2W8PxbgWg2/XsycnliMMaVspro+ZyQBYPOcsaC7b/Idk9VA
+r4qnf2sv2ygr9ynn+n43QgPZAkE05mZDRoht/T//2Q==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Component_Manufacturers.jpg
+
+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
+4mY33FRYr/D/2Q==
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_OEM_Equipment_Manufacturers.jpg
+
+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
+dIXXzSCwHqALQSvPzP/Z
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Software_Vendors.gif
+
+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
+ADs=
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Electronic_Standards.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAArADkDASIA
+AhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABwEEBQYIAwAC/8QAFwEAAwEAAAAAAAAAAAAAAAAA
+AAECA//aAAwDAQACEAMQAAAB1PWneccyaPOEbhobTUKGUO3kUKxWSZAxIXDumGmTzeWaZGaXsWSB
+B1a6IvrTagkZEs8V7SbqK4SifNr/xAAfEAACAgEFAQEAAAAAAAAAAAADBQIEAQAGBxARIBP/2gAI
+AQEAAQUC07dVlFVHyTOEl7EDIPwxsTGPdqs084rezWOGKyaHkUFnIyRLDpvUOTQrA7enO1IEmeqa
+oeRxnxx7buiFVvDs56YqA34yKZfJgrAwC224ZfKpK2vLsb9rN3zswIWIWVZ1km7eB8pEdl3ZXrxL
+wfGdZogzOvXGDHX/xAAYEQADAQEAAAAAAAAAAAAAAAAAARARMf/aAAgBAwEBPwEVw0Q7yf/EAB0R
+AAEDBQEAAAAAAAAAAAAAAAABAhEQEiEiMUH/2gAIAQIBAT8BuzB7VWySrRXa4G8pBadP/8QALhAA
+AgECAwMLBQAAAAAAAAAAAQIDABEEMUESE0IQFCAhIiNRYXGhsQUkMlJT/9oACAEBAAY/AqZpsQsM
+jA7F87+lCL6jZ1yE6j5FbyCQOniOiUi/M8XhQk3RmXibipc5ItQM6n5l9vHe5izoQ48c3ky3nDQZ
+GDKesEcomwxtIunjRjkXdT6o2tGaBdib2NWmLRMuRFd8tm/oo+albavhL9SM2tFQbOOHl6+zIMnF
+brGLtR6S12gHU8VF47snlmK3sTHDvr+reRFTYmUsxfNj0CrqGFGTDd5DrGafDiGTYt2rD2q8pcx6
+s9CONbAdJjulufKrRoF9OX//xAAlEAEAAgEEAQMFAQAAAAAAAAABABEhMUFRYRAgcbGBkaHR4fD/
+2gAIAQEAAT8h2gOojmqYeUrrLgdnMBztuenBAH94VyzVVvMdN3bwfYy/uhtU+idTg1Jqe+IURbOx
+Jfiknd9DxH6emBMqVrH7IqJTqvs8R/cJ2vZBK2pd1uo2lcQ5WvipYRqMRIeyLGfMfUhdMrKNzm8g
+75hnhRmjcb6Q5IYnC9deTmLWOoy9Vcq09peqbthX4StlOZl/35gbga8+kWN5jWcMu6JwN7PP/9oA
+DAMBAAIAAwAAABCPGchW+A5ClQ//xAAZEQEAAwEBAAAAAAAAAAAAAAABABEhMRD/2gAIAQMBAT8Q
+sgXsqvG0EYw27MPiD2DTJ2f/xAAZEQEBAAMBAAAAAAAAAAAAAAABABARITH/2gAIAQIBAT8QQGaP
+DODgnszs7ZC4Q8YPIJ//xAAkEAEAAgICAgIBBQAAAAAAAAABABEhMUFRYXEQgZGxwdHh8P/aAAgB
+AQABPxBpUWx0RcqNgNLBbQ2TZgHjqPFRC0KME71BEsbPkcl+xTXJhy+I2Kq/+m6CV0qh21ro9zPh
+EVlRaWK5V2w1KUAfWbz7x6hGKAXtImyU7+KXRpV5tj94A3EIBXgUyPiUS0Oaez9W/dSuGJbNfQ8q
+fxEBEctHA7fO5aMVqk8tDTlxeIRIxYUHT68yvMwMUfUcd/C+KYlDEvqLx4vmXpeJXHWqquyneblN
+n41MXgYAc0Y2QNLEeareEoPlnhi6UGGBVDgaA0T2Pwfx8ClQwzoG4wC2WJ5/rCAQ2E5giPPJpzTV
+IoucsZwtFvbtZcwXWBBldsr5YBgDpiZwXC8uYhDrFUdS5//Z
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Electronic_Buses.jpg
+
+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
+vuBGPgAvarlfLbBX5f/Z
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Logic_Design.jpg
+
+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
+tbXazQ/H/9k=
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.interfacebus.com/Web_Index_Reference.jpg
+
+/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
+FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAApADUDASIA
+AhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAAECBQYHCAME/8QAGAEBAQEBAQAAAAAAAAAAAAAA
+AwIEAQD/2gAMAwEAAhADEAAAAekqT9mZKdvKKOd6sOSScVvwGZoDztdBqcwjIub2ho8llXSmZmDw
+bWu2JPcwCM6QRoynV1cdoKT3/8QAIxAAAQQCAQMFAAAAAAAAAAAAAwECBAUABhIQERYTFCAxNf/a
+AAgBAQABBQKfZx61JWx8pHkB88gPibDI7wtlAxgitMPcgRD17YgW16cM7MxGte49dC98BrWBu6p1
+qKFVCgVNlFbElpxXNYrQplhrhJdo1OLc3H84ERzZKhK5NcB6E3rdVq2Uawq5UErQTlysoTlcn10X
+F+P/xAAaEQEAAgMBAAAAAAAAAAAAAAABABACEiFR/9oACAEDAQE/AVZtBafaO24kOV//xAAdEQAC
+AQQDAAAAAAAAAAAAAAABAgADECExERJB/9oACAECAQE/AUA9nQRlFhnEGo/Km2oKhhYtu3//xAAw
+EAACAQIEAgcIAwAAAAAAAAABAgMAEQQSITEiQRQjMjVCUZIQEyAwNFJhYnGBgv/aAAgBAQAGPwJT
+O+QNtTHDzoIcosWHPnXeMHorvKD0V9fC34yU/SphnzaWHKlddVbUUBiYy5193bkahmw0TR4U8Gv3
+Deuy3prst6aChWzfxWGhxcTNNHxSeVjsKRU0UDSo1VwmU31romIZWQk3O1OiyLKN8ytuP6rcH/Ro
+YmR0ZvAuanxSyKAwAsaA9kY/emdbji3FWZiQajzDL1t9fgyqeNdVHmajjWEvdAzFVNgedC+FbYeE
+1BK/VoyZjcahvL5X/8QAIhABAAIBBAEFAQAAAAAAAAAAAQARIRAxQWFRcYGRofCx/9oACAEBAAE/
+IbDwrCLULEGrNv5M1fr7xyfj8ygp3ydQQvnxPGO3Ss6lppizh3YImFmaN9HiBl4NGrQQ4HfK6739
+lg7gqUoPBUunGkb4jhMKYZb5hZLhZ7Mt/M2AjqBTB4Snb3KPlobKJ1sVohRyYYprTFwTnFwsmZm6
+pXMHUwEtYYowRGc8Bt0sOK+5iItPHbVbbkJypfcnD0hoa7NRz66//9oADAMBAAIAAwAAABDPU/LV
+YjEcRAz/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREhEP/aAAgBAwEBPxBTEUNbyEG03hKclwoEiLn/
+xAAZEQEBAQADAAAAAAAAAAAAAAABABEQITH/2gAIAQIBAT8QVjMoZh7M1FKdvbsd4HWkMmN4f//E
+ACIQAQACAgEEAwEBAAAAAAAAAAEAESExUUFhcZEQgaHR8P/aAAgBAQABPxCwiTtrTLEK3jWIbo5R
+whgVZv38sYlC3U99fSEJJSblrR+4NeiXMB7biPg0FWtMuU86B3g6naJzYW4BeQuKQddbZjs9Sldm
+l0teCat8QRa4YaWL1X/Yij1FqTpNGlYiNIDFXFdCWZ5JlfgoWULQND+w2cILxzuO3fKl4rXsHU1Z
+8EUbPH7LhzXbwVKxEiBrm1obwS/MCAtF3jZKQaRcnqOJWioAzFXHWAl7H5pQLG2Ai6L6zBWdgj1C
+IZ20xLIeyFqRdky9ogM30Bi2XVBv8ikW0AuZ4jqbJt/uJ1+5rA2/H//Z
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.interfacebus.com/Webstyle.css
+
+A:link {
+	COLOR: #0066ff
+}
+A:visited {
+	COLOR: #6633cc
+}
+A:hover {
+	COLOR: #c00000
+}
+A:active {
+	COLOR: #208040
+}
+A IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: =
+medium none; BORDER-RIGHT: medium none
+}
+BODY {
+	FONT-FAMILY: "New Century Schoolbook", serif; BACKGROUND: white fixed; =
+COLOR: black
+}
+TABLE.Norm {
+	BORDER-BOTTOM-COLOR: #ff0000; BACKGROUND-COLOR: #ddffff; =
+BORDER-TOP-COLOR: #ff0000; BORDER-RIGHT-COLOR: #ff0000; =
+BORDER-LEFT-COLOR: #ff0000
+}
+FONT.red {
+	FONT-FAMILY: arial; COLOR: red; FONT-SIZE: 9pt
+}
+P {
+	FONT-FAMILY: Times New Roman; COLOR: #000000; FONT-SIZE: 11pt
+}
+P.top {
+	FONT-FAMILY: Times New Roman; BACKGROUND: white; COLOR: black; =
+FONT-SIZE: 15pt
+}
+H2.header {
+	FONT-SIZE: 20pt
+}
+#ad {
+	MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en
+
+=0A=
+(function() {=0A=
+var f =3D document.getElementById('cse-search-box');=0A=
+if (!f) {=0A=
+f =3D document.getElementById('searchbox_demo');=0A=
+}=0A=
+if (f && f.q) {=0A=
+var q =3D f.q;=0A=
+var n =3D navigator;=0A=
+var l =3D location;=0A=
+var su =3D function () {=0A=
+var u =3D document.createElement('input');=0A=
+var v =3D document.location.toString();=0A=
+var existingSiteurl =3D /(?:[?&]siteurl=3D)([^&#]*)/.exec(v);=0A=
+if (existingSiteurl) {=0A=
+v =3D decodeURI(existingSiteurl[1]);=0A=
+}=0A=
+var delimIndex =3D v.indexOf('://');=0A=
+if (delimIndex >=3D 0) {=0A=
+v =3D v.substring(delimIndex + '://'.length, v.length);=0A=
+}=0A=
+u.name =3D 'siteurl';=0A=
+u.value =3D v;=0A=
+u.type =3D 'hidden';=0A=
+f.appendChild(u);=0A=
+};=0A=
+if (n.appName =3D=3D 'Microsoft Internet Explorer') {=0A=
+var s =3D f.parentNode.childNodes;=0A=
+for (var i =3D 0; i < s.length; i++) {=0A=
+        if (s[i].nodeName =3D=3D 'SCRIPT' &&=0A=
+            s[i].attributes['src'] &&=0A=
+            s[i].attributes['src'].nodeValue =3D=3D =
+unescape('http:\x2F\x2Fwww.google.com\x2Fcoop\x2Fcse\x2Fbrand?form=3Dcse-=
+search-box\x26lang=3Den')) {=0A=
+          su();=0A=
+          break;=0A=
+        }=0A=
+      }=0A=
+    } else {=0A=
+      su();=0A=
+    }=0A=
+=0A=
+    =0A=
+    if (n.platform =3D=3D 'Win32') {=0A=
+      q.style.cssText =3D 'border: 1px solid #7e9db9; padding: 2px;';=0A=
+    }=0A=
+=0A=
+    =0A=
+    if (window.history.navigationMode) {=0A=
+      window.history.navigationMode =3D 'compatible';=0A=
+    }=0A=
+=0A=
+    var b =3D function() {=0A=
+      if (q.value =3D=3D '') {=0A=
+        q.style.background =3D '#FFFFFF =
+url(http:\x2F\x2Fwww.google.com\x2Fcse\x2Fintl\x2Fen\x2Fimages\x2Fgoogle_=
+custom_search_watermark.gif) left no-repeat';=0A=
+      }=0A=
+    };=0A=
+=0A=
+    var f =3D function() {=0A=
+      q.style.background =3D '#ffffff';=0A=
+    };=0A=
+=0A=
+    q.onfocus =3D f;=0A=
+    q.onblur =3D b;=0A=
+=0A=
+    =0A=
+    if (!/[&?]q=3D[^&]/.test(l.search)) {=0A=
+      b();=0A=
+    }=0A=
+  }=0A=
+})();=0A=
+
+------=_NextPart_000_0000_01CB088E.9AF225D0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+=0A=
+(function(){var h=3Dtrue,i=3Dnull,j=3Dfalse,k=3D(new =
+Date).getTime(),aa=3Dfunction(a){var b=3D(new =
+Date).getTime()-k;b=3D"&dtd=3D"+(b<1E4?b:"M");return a+b};var =
+l=3Dthis,ba=3Dfunction(a,b,c){a=3Da.split(".");c=3Dc||l;!(a[0]in =
+c)&&c.execScript&&c.execScript("var "+a[0]);for(var =
+d;a.length&&(d=3Da.shift());)if(!a.length&&b!=3D=3Dundefined)c[d]=3Db;els=
+e c=3Dc[d]?c[d]:(c[d]=3D{})},m=3Dfunction(a){var b=3Dtypeof =
+a;if(b=3D=3D"object")if(a){if(a instanceof Array||!(a instanceof =
+Object)&&Object.prototype.toString.call(a)=3D=3D"[object Array]"||typeof =
+a.length=3D=3D"number"&&typeof a.splice!=3D"undefined"&&typeof =
+a.propertyIsEnumerable!=3D"undefined"&&!a.propertyIsEnumerable("splice"))=
+return"array";=0A=
+if(!(a instanceof =
+Object)&&(Object.prototype.toString.call(a)=3D=3D"[object =
+Function]"||typeof a.call!=3D"undefined"&&typeof =
+a.propertyIsEnumerable!=3D"undefined"&&!a.propertyIsEnumerable("call")))r=
+eturn"function"}else return"null";else if(b=3D=3D"function"&&typeof =
+a.call=3D=3D"undefined")return"object";return b},n=3Dfunction(a){return =
+m(a)=3D=3D"array"},ca=3Dfunction(a){var b=3Dm(a);return =
+b=3D=3D"array"||b=3D=3D"object"&&typeof =
+a.length=3D=3D"number"},p=3Dfunction(a){return typeof =
+a=3D=3D"string"},da=3Dfunction(a){a=3Dm(a);return a=3D=3D"object"||=0A=
+a=3D=3D"array"||a=3D=3D"function"},q=3Dfunction(a,b){var =
+c=3Db||l;if(arguments.length>2){var =
+d=3DArray.prototype.slice.call(arguments,2);return function(){var =
+e=3DArray.prototype.slice.call(arguments);Array.prototype.unshift.apply(e=
+,d);return a.apply(c,e)}}else return function(){return =
+a.apply(c,arguments)}},r=3Dfunction(a,b,c){ba(a,b,c)},ea=3Dfunction(a,b,c=
+){a[b]=3Dc};var s=3Dfunction(a,b){var c=3DparseFloat(a);return =
+isNaN(c)||c>1||c<0?b:c},t=3Dfunction(a,b){if(a=3D=3D"true")return =
+h;if(a=3D=3D"false")return j;return =
+b},fa=3D/^([\w-]+\.)*([\w-]{2,})(\:[0-9]+)?$/,u=3Dfunction(a,b){if(!a)ret=
+urn b;var c=3Da.match(fa);return c?c[0]:b};var ga=3Dfunction(){return =
+u("","googleads.g.doubleclick.net")},ha=3Dfunction(){return =
+u("","pagead2.googlesyndication.com")},v=3Dfunction(){return =
+u("","pagead2.googlesyndication.com")};var =
+na=3Dfunction(a,b){if(b)return =
+a.replace(ia,"&amp;").replace(ja,"&lt;").replace(ka,"&gt;").replace(la,"&=
+quot;");else{if(!ma.test(a))return =
+a;if(a.indexOf("&")!=3D-1)a=3Da.replace(ia,"&amp;");if(a.indexOf("<")!=3D=
+-1)a=3Da.replace(ja,"&lt;");if(a.indexOf(">")!=3D-1)a=3Da.replace(ka,"&gt=
+;");if(a.indexOf('"')!=3D-1)a=3Da.replace(la,"&quot;");return =
+a}},ia=3D/&/g,ja=3D/</g,ka=3D/>/g,la=3D/\"/g,ma=3D/[&<>\"]/,qa=3Dfunction=
+(a){if(a.indexOf("&")!=3D-1)return"document"in =
+l&&a.indexOf("<")=3D=3D-1?oa(a):pa(a);return a},oa=3Dfunction(a){var b=3D=0A=
+l.document.createElement("a");b.innerHTML=3Da;b.normalize&&b.normalize();=
+a=3Db.firstChild.nodeValue;b.innerHTML=3D"";return =
+a},pa=3Dfunction(a){return =
+a.replace(/&([^;]+);/g,function(b,c){switch(c){case "amp":return"&";case =
+"lt":return"<";case "gt":return">";case =
+"quot":return'"';default:if(c.charAt(0)=3D=3D"#"){var =
+d=3DNumber("0"+c.substr(1));if(!isNaN(d))return =
+String.fromCharCode(d)}return b}})},ra=3Dfunction(a,b){for(var =
+c=3Db.length,d=3D0;d<c;d++){var =
+e=3Dc=3D=3D1?b:b.charAt(d);if(a.charAt(0)=3D=3De&&a.charAt(a.length-1)=3D=
+=3D=0A=
+e)return a.substring(1,a.length-1)}return a},ta=3Dfunction(a,b){for(var =
+c=3D0,d=3DString(a).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),e=3DS=
+tring(b).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),f=3DMath.max(d.l=
+ength,e.length),g=3D0;c=3D=3D0&&g<f;g++){var =
+o=3Dd[g]||"",P=3De[g]||"",G=3Dnew RegExp("(\\d*)(\\D*)","g"),Vb=3Dnew =
+RegExp("(\\d*)(\\D*)","g");do{var =
+Q=3DG.exec(o)||["","",""],R=3DVb.exec(P)||["","",""];if(Q[0].length=3D=3D=
+0&&R[0].length=3D=3D0)break;c=3DQ[1].length=3D=3D0?0:parseInt(Q[1],10);va=
+r Wb=3DR[1].length=3D=3D0?0:parseInt(R[1],=0A=
+10);c=3Dsa(c,Wb)||sa(Q[2].length=3D=3D0,R[2].length=3D=3D0)||sa(Q[2],R[2]=
+)}while(c=3D=3D0)}return c},sa=3Dfunction(a,b){if(a<b)return-1;else =
+if(a>b)return 1;return 0};var =
+w=3DArray.prototype,ua=3Dw.forEach?function(a,b,c){w.forEach.call(a,b,c)}=
+:function(a,b,c){for(var =
+d=3Da.length,e=3Dp(a)?a.split(""):a,f=3D0;f<d;f++)f in =
+e&&b.call(c,e[f],f,a)},va=3Dfunction(){return =
+w.concat.apply(w,arguments)},wa=3Dfunction(a){if(n(a))return =
+va(a);else{for(var b=3D[],c=3D0,d=3Da.length;c<d;c++)b[c]=3Da[c];return =
+b}};var =
+x=3Dfunction(a,b){this.width=3Da;this.height=3Db};x.prototype.ceil=3Dfunc=
+tion(){this.width=3DMath.ceil(this.width);this.height=3DMath.ceil(this.he=
+ight);return =
+this};x.prototype.floor=3Dfunction(){this.width=3DMath.floor(this.width);=
+this.height=3DMath.floor(this.height);return =
+this};x.prototype.round=3Dfunction(){this.width=3DMath.round(this.width);=
+this.height=3DMath.round(this.height);return =
+this};x.prototype.scale=3Dfunction(a){this.width*=3Da;this.height*=3Da;re=
+turn this};var xa=3Dfunction(a,b,c){for(var d in =
+a)b.call(c,a[d],d,a)},ya=3D["constructor","hasOwnProperty","isPrototypeOf=
+","propertyIsEnumerable","toLocaleString","toString","valueOf"],za=3Dfunc=
+tion(a){for(var b,c,d=3D1;d<arguments.length;d++){c=3Darguments[d];for(b =
+in c)a[b]=3Dc[b];for(var =
+e=3D0;e<ya.length;e++){b=3Dya[e];if(Object.prototype.hasOwnProperty.call(=
+c,b))a[b]=3Dc[b]}}};var y,Aa,Ba,Ca,Da,Ea,Fa,Ga,Ha,Ia=3Dfunction(){return =
+l.navigator?l.navigator.userAgent:i},Ja=3Dfunction(){return =
+l.navigator},Ka=3Dfunction(){Da=3DCa=3DBa=3DAa=3Dy=3Dj;var =
+a;if(a=3DIa()){var =
+b=3DJa();y=3Da.indexOf("Opera")=3D=3D0;Aa=3D!y&&a.indexOf("MSIE")!=3D-1;C=
+a=3D(Ba=3D!y&&a.indexOf("WebKit")!=3D-1)&&a.indexOf("Mobile")!=3D-1;Da=3D=
+!y&&!Ba&&b.product=3D=3D"Gecko"}};Ka();=0A=
+var La=3Dy,z=3DAa,Ma=3DDa,Na=3DBa,Oa=3DCa,Pa=3Dfunction(){var =
+a=3DJa();return =
+a&&a.platform||""},Qa=3DPa(),Ra=3Dfunction(){Ea=3DQa.indexOf("Mac")!=3D-1=
+;Fa=3DQa.indexOf("Win")!=3D-1;Ga=3DQa.indexOf("Linux")!=3D-1;Ha=3D!!Ja()&=
+&(Ja().appVersion||"").indexOf("X11")!=3D-1};Ra();=0A=
+var Sa=3DEa,Ta=3DFa,Ua=3DGa,Va=3Dfunction(){var =
+a=3D"",b;if(La&&l.opera){a=3Dl.opera.version;a=3Dtypeof =
+a=3D=3D"function"?a():a}else{if(Ma)b=3D/rv\:([^\);]+)(\)|;)/;else =
+if(z)b=3D/MSIE\s+([^\);]+)(\)|;)/;else =
+if(Na)b=3D/WebKit\/(\S+)/;if(b)a=3D(a=3Db.exec(Ia()))?a[1]:""}return =
+a},Wa=3DVa(),Xa=3D{},A=3Dfunction(a){return =
+Xa[a]||(Xa[a]=3Dta(Wa,a)>=3D0)};var Ya=3Dfunction(a){return =
+p(a)?document.getElementById(a):a},Za=3DYa,ab=3Dfunction(a,b){xa(b,functi=
+on(c,d){if(d=3D=3D"style")a.style.cssText=3Dc;else =
+if(d=3D=3D"class")a.className=3Dc;else =
+if(d=3D=3D"for")a.htmlFor=3Dc;else if(d in =
+$a)a.setAttribute($a[d],c);else =
+a[d]=3Dc})},$a=3D{cellpadding:"cellPadding",cellspacing:"cellSpacing",col=
+span:"colSpan",rowspan:"rowSpan",valign:"vAlign",height:"height",width:"w=
+idth",usemap:"useMap",frameborder:"frameBorder",type:"type"},bb=3Dfunctio=
+n(a){var b=3Da.document;if(Na&&!A("500")&&!Oa){if(typeof =
+a.innerHeight=3D=3D=0A=
+"undefined")a=3Dwindow;b=3Da.innerHeight;var =
+c=3Da.document.documentElement.scrollHeight;if(a=3D=3Da.top)if(c<b)b-=3D1=
+5;return new =
+x(a.innerWidth,b)}a=3Db.compatMode=3D=3D"CSS1Compat"&&(!La||La&&A("9.50")=
+)?b.documentElement:b.body;return new =
+x(a.clientWidth,a.clientHeight)},db=3Dfunction(){return =
+cb(document,arguments)},cb=3Dfunction(a,b){var =
+c=3Db[0],d=3Db[1];if(z&&d&&(d.name||d.type)){c=3D["<",c];d.name&&c.push('=
+ name=3D"',na(d.name),'"');if(d.type){c.push(' =
+type=3D"',na(d.type),'"');var e=3D{};za(e,d);d=3De;delete =
+d.type}c.push(">");=0A=
+c=3Dc.join("")}var =
+f=3Da.createElement(c);if(d)if(p(d))f.className=3Dd;else =
+ab(f,d);if(b.length>2){d=3Dfunction(g){if(g)f.appendChild(p(g)?a.createTe=
+xtNode(g):g)};for(c=3D2;c<b.length;c++){e=3Db[c];ca(e)&&!(da(e)&&e.nodeTy=
+pe>0)?ua(eb(e)?wa(e):e,d):d(e)}}return =
+f},fb=3Dfunction(a,b){a.appendChild(b)},eb=3Dfunction(a){if(a&&typeof =
+a.length=3D=3D"number")if(da(a))return typeof =
+a.item=3D=3D"function"||typeof a.item=3D=3D"string";else =
+if(m(a)=3D=3D"function")return typeof a.item=3D=3D"function";return =
+j};var gb=3Ddocument,B=3Dwindow,hb=3Dfunction(a){var =
+b=3Di;if((a=3Da.getElementsByTagName("script"))&&a.length){b=3Da[a.length=
+-1];b=3Db.parentNode}return b},ib=3Dhb(gb);v();=0A=
+var C=3Dfunction(a,b){for(var c in =
+a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(i,a[c],c,a)},jb=3Dfun=
+ction(a){return!!a&&typeof =
+a=3D=3D"function"&&!!a.call},kb=3Dfunction(a){return!!a&&(typeof =
+a=3D=3D"object"||typeof =
+a=3D=3D"function")},mb=3Dfunction(a,b){if(!a||!kb(a))return =
+h;return!lb(a,b.prototype)},lb=3Dfunction(a,b){if(!a)return j;var =
+c=3Dh;C(b,function(d,e){if(!c||!(e in a)||typeof d!=3Dtypeof =
+a[e])c=3Dj});return c},nb=3Dfunction(a){if(arguments.length<2)return =
+a.length;for(var =
+b=3D1,c=3Darguments.length;b<c;++b)a.push(arguments[b]);return a.length};=0A=
+function D(a){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent(a):escape(a)}functi=
+on ob(a,b,c){var =
+d=3Ddocument.createElement("script");d.type=3D"text/javascript";if(b)d.on=
+load=3Db;if(c)d.id=3Dc;d.src=3Da;var =
+e=3Ddocument.getElementsByTagName("head")[0];if(!e)return =
+j;window.setTimeout(function(){e.appendChild(d)},0);return h}function =
+pb(a,b){if(a.attachEvent){a.attachEvent("onload",b);return =
+h}if(a.addEventListener){a.addEventListener("load",b,j);return h}return =
+j}=0A=
+var qb=3Dfunction(a){if(!("google_onload_fired"in =
+a)){a.google_onload_fired=3Dj;pb(a,function(){a.google_onload_fired=3Dh})=
+}};function =
+rb(a,b){a.google_image_requests||(a.google_image_requests=3D[]);var =
+c=3Dnew Image;c.src=3Db;a.google_image_requests.push(c)}function =
+sb(a){if(a in tb)return tb[a];return =
+tb[a]=3Dnavigator.userAgent.toLowerCase().indexOf(a)!=3D-1}var tb=3D{};=0A=
+function ub(){if(navigator.plugins&&navigator.mimeTypes.length){var =
+a=3Dnavigator.plugins["Shockwave Flash"];if(a&&a.description)return =
+a.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s)+r/,".")}else =
+if(navigator.userAgent&&navigator.userAgent.indexOf("Windows =
+CE")>=3D0){a=3D3;for(var b=3D1;b;)try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash."+(a+1));a++}catch(c){b=3Di}=
+return a.toString()}else if(sb("msie")&&!window.opera){b=3Di;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.7")}catch(d){a=3D=0A=
+0;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");a=3D6;b.AllowScriptAcces=
+s=3D"always"}catch(e){if(a=3D=3D6)return a.toString()}try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(f){}}if(b){a=3Db.Get=
+Variable("$version").split(" ")[1];return =
+a.replace(/,/g,".")}}return"0"}function vb(a){var =
+b=3Da.google_ad_format;if(b)return b.indexOf("_0ads")>0;return =
+a.google_ad_output!=3D"html"&&a.google_num_radlinks>0}function =
+E(a){return!!a&&a.indexOf("_sdo")!=3D-1}=0A=
+function wb(a,b){if(!(Math.random()<1.0E-4)){var =
+c=3DMath.random();if(c<b){c=3DMath.floor(c/b*a.length);return =
+a[c]}}return""}=0A=
+var xb=3Dfunction(a){a.u_tz=3D-(new =
+Date).getTimezoneOffset();a.u_his=3Dwindow.history.length;a.u_java=3Dnavi=
+gator.javaEnabled();if(window.screen){a.u_h=3Dwindow.screen.height;a.u_w=3D=
+window.screen.width;a.u_ah=3Dwindow.screen.availHeight;a.u_aw=3Dwindow.sc=
+reen.availWidth;a.u_cd=3Dwindow.screen.colorDepth}if(navigator.plugins)a.=
+u_nplug=3Dnavigator.plugins.length;if(navigator.mimeTypes)a.u_nmime=3Dnav=
+igator.mimeTypes.length},yb=3Dfunction(a,b){var =
+c=3Db||B;if(a&&c.top!=3Dc)c=3Dc.top;try{return =
+c.document&&!c.document.body?new x(-1,=0A=
+-1):bb(c||window)}catch(d){return new =
+x(-12245933,-12245933)}},zb=3Dfunction(a,b){var =
+c=3Da.length;if(c=3D=3D0)return 0;for(var =
+d=3Db||305419896,e=3D0;e<c;e++){var =
+f=3Da.charCodeAt(e);d^=3D(d<<5)+(d>>2)+f&4294967295}return =
+d>0?d:4294967296+d},Ab=3Dfunction(a){if(a=3D=3Da.top)return 0;var =
+b=3D[];b.push(a.document.URL);a.name&&b.push(a.name);var =
+c=3Dh;a=3Dyb(!c,a);b.push(a.width.toString());b.push(a.height.toString())=
+;return zb(b.join(""))},Bb=3Dfunction(a){if(!a)return"";var =
+b=3D[],c=3D0;for(a=3Da;a&&c<25;a=3Da.parentNode,++c)b.push(a.id||=0A=
+"");return b.join()};var =
+Cb=3D{google_ad_channel:"channel",google_ad_host:"host",google_ad_host_ch=
+annel:"h_ch",google_ad_host_tier_id:"ht_id",google_ad_section:"region",go=
+ogle_ad_type:"ad_type",google_adtest:"adtest",google_allow_expandable_ads=
+:"ea",google_alternate_ad_url:"alternate_ad_url",google_alternate_color:"=
+alt_color",google_bid:"bid",google_city:"gcs",google_color_bg:"color_bg",=
+google_color_border:"color_border",google_color_line:"color_line",google_=
+color_link:"color_link",google_color_text:"color_text",google_color_url:"=
+color_url",=0A=
+google_contents:"contents",google_country:"gl",google_cpm:"cpm",google_cu=
+st_age:"cust_age",google_cust_ch:"cust_ch",google_cust_gender:"cust_gende=
+r",google_cust_id:"cust_id",google_cust_interests:"cust_interests",google=
+_cust_job:"cust_job",google_cust_l:"cust_l",google_cust_lh:"cust_lh",goog=
+le_cust_u_url:"cust_u_url",google_disable_video_autoplay:"disable_video_a=
+utoplay",google_ed:"ed",google_encoding:"oe",google_feedback:"feedback_li=
+nk",google_flash_version:"flash",google_font_face:"f",google_font_size:"f=
+s",=0A=
+google_hints:"hints",google_kw:"kw",google_kw_type:"kw_type",google_langu=
+age:"hl",google_page_url:"url",google_region:"gr",google_reuse_colors:"re=
+use_colors",google_safe:"adsafe",google_tag_info:"gut",google_targeting:"=
+targeting",google_targeting_video_doc_id:"tvdi",google_ui_features:"ui",g=
+oogle_ui_version:"uiv",google_video_doc_id:"video_doc_id",google_video_pr=
+oduct_type:"video_product_type"},Db=3D{google_ad_client:"client",google_a=
+d_format:"format",google_ad_output:"output",google_ad_callback:"callback"=
+,=0A=
+google_ad_height:"h",google_ad_override:"google_ad_override",google_ad_sl=
+ot:"slotname",google_ad_width:"w",google_ctr_threshold:"ctr_t",google_ima=
+ge_size:"image_size",google_last_modified_time:"lmt",google_max_num_ads:"=
+num_ads",google_max_radlink_len:"max_radlink_len",google_num_radlinks:"nu=
+m_radlinks",google_num_radlinks_per_unit:"num_radlinks_per_unit",google_o=
+nly_ads_with_video:"only_ads_with_video",google_rl_dest_url:"rl_dest_url"=
+,google_rl_filtering:"rl_filtering",google_rl_mode:"rl_mode",google_rt:"r=
+t",=0A=
+google_skip:"skip"},Eb=3D{google_only_pyv_ads:"pyv",google_with_pyv_ads:"=
+withpyv"};function Fb(a,b){try{return =
+a.top.document.URL=3D=3Db.URL}catch(c){}return j}function =
+Gb(a,b,c,d){c=3Dc||a.google_ad_width;d=3Dd||a.google_ad_height;if(Fb(a,b)=
+)return j;var e=3Db.documentElement;if(c&&d){var =
+f=3D1,g=3D1;if(a.innerHeight){f=3Da.innerWidth;g=3Da.innerHeight}else =
+if(e&&e.clientHeight){f=3De.clientWidth;g=3De.clientHeight}else =
+if(b.body){f=3Db.body.clientWidth;g=3Db.body.clientHeight}if(g>2*d||f>2*c=
+)return j}return h}function =
+Hb(a,b){C(b,function(c,d){a["google_"+d]=3Dc})}=0A=
+function Ib(a,b){if(!b)return a.URL;return a.referrer}function =
+Jb(a,b){if(!b&&a.google_referrer_url=3D=3Di)return"0";else =
+if(b&&a.google_referrer_url=3D=3Di)return"1";else =
+if(!b&&a.google_referrer_url!=3Di)return"2";else =
+if(b&&a.google_referrer_url!=3Di)return"3";return"4"}function =
+Kb(a,b,c,d){a.page_url=3DIb(c,d);a.page_location=3Di}function =
+Lb(a,b,c,d){a.page_url=3Db.google_page_url;a.page_location=3DIb(c,d)||"EM=
+PTY"}=0A=
+function Mb(a,b){var =
+c=3D{},d=3DGb(a,b,a.google_ad_width,a.google_ad_height);c.iframing=3DJb(a=
+,d);a.google_page_url?Lb(c,a,b,d):Kb(c,a,b,d);c.last_modified_time=3Db.UR=
+L=3D=3Dc.page_url?Date.parse(b.lastModified)/1E3:i;c.referrer_url=3Dd?a.g=
+oogle_referrer_url:a.google_page_url&&a.google_referrer_url?a.google_refe=
+rrer_url:b.referrer;return c}function Nb(a){var =
+b=3D{},c=3Da.URL.substring(a.URL.lastIndexOf("http"));b.iframing=3Di;b.pa=
+ge_url=3Dc;b.page_location=3Da.URL;b.last_modified_time=3Di;b.referrer_ur=
+l=3Dc;return b}=0A=
+function Ob(a,b){var c=3DPb(a,b);Hb(a,c)}function Pb(a,b){var c;return =
+c=3Da.google_page_url=3D=3Di&&Qb[b.domain]?Nb(b):Mb(a,b)}var =
+Qb=3D{};Qb["ad.yieldmanager.com"]=3Dh;var =
+Rb=3Ds("0",0),Sb=3Ds("0",0),Tb=3Ds("0.005",0),Ub=3Ds("1",0),Xb=3Ds("0.1",=
+0),Yb=3Ds("0.01",0),Zb=3Ds("0.01",0),$b=3Ds("0.008",0),ac=3Ds("0.01",0),b=
+c=3Ds("0",0);var =
+cc=3Dt("false",j),dc=3Dt("false",h),ec=3Dt("false",j),fc=3Dt("false",j);v=
+ar =
+gc=3Dfunction(a,b,c){b=3Dq(b,l,a);a=3Dwindow.onerror;window.onerror=3Db;t=
+ry{c()}catch(d){c=3Dd.toString();var =
+e=3D"";if(d.fileName)e=3Dd.fileName;var =
+f=3D-1;if(d.lineNumber)f=3Dd.lineNumber;b=3Db(c,e,f);if(!b)throw =
+d;}window.onerror=3Da};r("google_protectAndRun",gc);=0A=
+var ic=3Dfunction(a,b,c,d){if(Math.random()<0.01){var =
+e=3Dgb;a=3D["http://",ha(),"/pagead/gen_204","?id=3Djserror","&jscb=3D",c=
+c?1:0,"&jscd=3D",ec?1:0,"&context=3D",D(a),"&msg=3D",D(b),"&file=3D",D(c)=
+,"&line=3D",D(d.toString()),"&url=3D",D(e.URL.substring(0,512)),"&ref=3D"=
+,D(e.referrer.substring(0,512))];a.push(hc());rb(B,a.join(""))}return!fc}=
+;r("google_handleError",ic);=0A=
+var kc=3Dfunction(a){jc|=3Da},jc=3D0,hc=3Dfunction(){var =
+a=3D["&client=3D",D(B.google_ad_client),"&format=3D",D(B.google_ad_format=
+),"&slotname=3D",D(B.google_ad_slot),"&output=3D",D(B.google_ad_output),"=
+&ad_type=3D",D(B.google_ad_type)];return a.join("")};var =
+lc=3D"",oc=3Dfunction(){if(window.google_ad_frameborder=3D=3Di)window.goo=
+gle_ad_frameborder=3D0;if(window.google_ad_output=3D=3Di)window.google_ad=
+_output=3D"html";if(E(window.google_ad_format)){var =
+a=3Dwindow.google_ad_format.match(/^(\d+)x(\d+)_.*/);if(a){window.google_=
+ad_width=3DparseInt(a[1],10);window.google_ad_height=3DparseInt(a[2],10);=
+window.google_ad_output=3D"html"}}window.google_ad_format=3Dmc(window.goo=
+gle_ad_format,String(window.google_ad_output),Number(window.google_ad_wid=
+th),Number(window.google_ad_height),=0A=
+window.google_ad_slot,!!window.google_override_format);lc=3Dwindow.google=
+_ad_client||"";window.google_ad_client=3Dnc(window.google_ad_format,windo=
+w.google_ad_client);Ob(window,document);if(window.google_flash_version=3D=
+=3Di)window.google_flash_version=3Dub();window.google_ad_section=3Dwindow=
+.google_ad_section||window.google_ad_region||"";window.google_country=3Dw=
+indow.google_country||window.google_gl||"";a=3D(new =
+Date).getTime();if(n(window.google_color_bg))window.google_color_bg=3DF(w=
+indow.google_color_bg,a);if(n(window.google_color_text))window.google_col=
+or_text=3D=0A=
+F(window.google_color_text,a);if(n(window.google_color_link))window.googl=
+e_color_link=3DF(window.google_color_link,a);if(n(window.google_color_url=
+))window.google_color_url=3DF(window.google_color_url,a);if(n(window.goog=
+le_color_border))window.google_color_border=3DF(window.google_color_borde=
+r,a);if(n(window.google_color_line))window.google_color_line=3DF(window.g=
+oogle_color_line,a)},pc=3Dfunction(a){C(Cb,function(b,c){a[c]=3Di});C(Db,=
+function(b,c){a[c]=3Di});C(Eb,function(b,c){a[c]=3Di});a.google_container=
+_id=3Di;=0A=
+a.google_eids=3Di;a.google_page_location=3Di;a.google_referrer_url=3Di;a.=
+google_ad_region=3Di;a.google_gl=3Di},F=3Dfunction(a,b){kc(2);return =
+a[b%a.length]},nc=3Dfunction(a,b){if(!b)return"";b=3Db.toLowerCase();retu=
+rn =
+b=3DE(a)?qc(b):rc(b)},rc=3Dfunction(a){if(a&&a.substring(0,3)!=3D"ca-")a=3D=
+"ca-"+a;return =
+a},qc=3Dfunction(a){if(a&&a.substring(0,7)!=3D"ca-aff-")a=3D"ca-aff-"+a;r=
+eturn =
+a},mc=3Dfunction(a,b,c,d,e,f){if(!a&&b=3D=3D"html")a=3Dc+"x"+d;return =
+a=3Dsc(a,e,f)?a.toLowerCase():""},sc=3Dfunction(a,b,c){if(!a)return =
+j;if(!b)return h;return c};var H=3Ddocument,I=3Dnavigator,J=3Dwindow;=0A=
+function tc(){var a=3DH.cookie,b=3DMath.round((new =
+Date).getTime()/1E3),c=3DJ.google_analytics_domain_name;c=3Dtypeof =
+c=3D=3D"undefined"?uc("auto"):uc(c);var =
+d=3Da.indexOf("__utma=3D"+c+".")>-1,e=3Da.indexOf("__utmb=3D"+c)>-1,f=3Da=
+.indexOf("__utmc=3D"+c)>-1,g=3D{},o=3D!!J&&!!J.gaGlobal;if(d){a=3Da.split=
+("__utma=3D"+c+".")[1].split(";")[0].split(".");g.sid=3De&&f?a[3]+"":o&&J=
+.gaGlobal.sid?J.gaGlobal.sid:b+"";g.vid=3Da[0]+"."+a[1];g.from_cookie=3Dh=
+}else{g.sid=3Do&&J.gaGlobal.sid?J.gaGlobal.sid:b+"";g.vid=3Do&&J.gaGlobal=
+.vid?J.gaGlobal.vid:=0A=
+(Math.round(Math.random()*2147483647)^vc()&2147483647)+"."+b;g.from_cooki=
+e=3Dj}g.dh=3Dc;g.hid=3Do&&J.gaGlobal.hid?J.gaGlobal.hid:Math.round(Math.r=
+andom()*2147483647);return J.gaGlobal=3Dg}=0A=
+function vc(){var =
+a=3DH.cookie?H.cookie:"",b=3DJ.history.length,c,d=3D[I.appName,I.version,=
+I.language?I.language:I.browserLanguage,I.platform,I.userAgent,I.javaEnab=
+led()?1:0].join("");if(J.screen)d+=3DJ.screen.width+"x"+J.screen.height+J=
+.screen.colorDepth;else =
+if(J.java){c=3Djava.awt.Toolkit.getDefaultToolkit().getScreenSize();d+=3D=
+c.screen.width+"x"+c.screen.height}d+=3Da;d+=3DH.referrer?H.referrer:"";f=
+or(a=3Dd.length;b>0;)d+=3Db--^a++;return wc(d)}=0A=
+function wc(a){var =
+b=3D1,c=3D0,d;if(!(a=3D=3Dundefined||a=3D=3D"")){b=3D0;for(d=3Da.length-1=
+;d>=3D0;d--){c=3Da.charCodeAt(d);b=3D(b<<6&268435455)+c+(c<<14);c=3Db&266=
+338304;b=3Dc!=3D0?b^c>>21:b}}return b}function =
+uc(a){if(!a||a=3D=3D""||a=3D=3D"none")return =
+1;if("auto"=3D=3Da){a=3DH.domain;if("www."=3D=3Da.substring(0,4))a=3Da.su=
+bstring(4,a.length)}return wc(a.toLowerCase())};var xc=3Dfunction(a){var =
+b=3D"google_test";try{var =
+c=3Da[b];a[b]=3D!c;if(a[b]=3D=3D=3D!c){a[b]=3Dc;return =
+h}}catch(d){}return =
+j},yc=3Dfunction(a){for(;a!=3Da.parent&&xc(a.parent);)a=3Da.parent;return=
+ a},zc=3Di,Ac=3Dfunction(){zc||(zc=3Dyc(window));return =
+zc},Bc=3Dfunction(){Ac()!=3Dwindow&&kc(4)};var =
+Cc,K=3Dfunction(){this.p=3D[];this.P=3Dwindow;this.d=3D0},Dc=3Dfunction(a=
+,b){this.fn=3Da;this.win=3Db};K.prototype.enqueue=3Dfunction(a,b){this.p.=
+push(new =
+Dc(a,b||this.P));this.g()};K.prototype.o=3Dfunction(){this.d=3D1};K.proto=
+type.q=3Dfunction(){if(this.d=3D=3D1)this.d=3D0;this.g()};ea(K.prototype,=
+"nq",K.prototype.enqueue);ea(K.prototype,"al",K.prototype.o);ea(K.prototy=
+pe,"rl",K.prototype.q);K.prototype.g=3Dfunction(){this.P.setTimeout(q(thi=
+s.O,this),0)};=0A=
+K.prototype.O=3Dfunction(){if(this.d=3D=3D0&&this.p.length){var =
+a=3Dthis.p.shift();this.d=3D2;a.win.setTimeout(q(this.J,this,a),0);this.g=
+()}};K.prototype.J=3Dfunction(a){this.d=3D0;a.fn()};var =
+Ec=3Dfunction(a){return =
+kb(a)&&jb(a.nq)&&jb(a.al)&&jb(a.rl)},Fc=3Dfunction(){if(Cc)return Cc;var =
+a=3DAc(),b=3Da.google_jobrunner;if(Ec(b))return Cc=3Db;return =
+a.google_jobrunner=3DCc=3Dnew =
+K},Gc=3Dfunction(a,b){Fc().nq(a,b)},Hc=3Dfunction(){Fc().al()},Ic=3Dfunct=
+ion(){var a=3DAc().google_jobrunner;Ec(a)&&a.rl()};var =
+Jc,Kc,Lc,Mc,Nc,Oc,Pc,Qc=3Dfunction(){Pc=3DOc=3DNc=3DMc=3DLc=3DKc=3DJc=3Dj=
+;var a=3DIa();if(a)if(a.indexOf("Firefox")!=3D-1)Jc=3Dh;else =
+if(a.indexOf("Camino")!=3D-1)Kc=3Dh;else =
+if(a.indexOf("iPhone")!=3D-1||a.indexOf("iPod")!=3D-1)Lc=3Dh;else =
+if(a.indexOf("iPad")!=3D-1)Mc=3Dh;else =
+if(a.indexOf("Android")!=3D-1)Nc=3Dh;else =
+if(a.indexOf("Chrome")!=3D-1)Oc=3Dh;else =
+if(a.indexOf("Safari")!=3D-1)Pc=3Dh};Qc();var Rc=3DJc,Sc=3DOc;var =
+L=3D!!window.google_async_iframe_id,M=3DL&&window.parent||window,Tc=3Dfun=
+ction(a,b){for(var =
+c=3Da.document,d=3Db.id,e=3D0;!d||a.document.getElementById(d);)d=3D"aswi=
+ft_"+e++;b.id=3Dd;e=3D["<iframe"];for(var f in =
+b)nb(e,f,"=3D",b[f]);e.push("></iframe>");f=3De.join(" =
+");c.write(f);return =
+d},Uc=3Dfunction(a,b,c){a=3Da.document.getElementById(b).contentWindow.do=
+cument;a.open();a.write(c)},Vc=3Dfunction(a){if(L&&a!=3Da.parent){Ic();a.=
+setTimeout(function(){a.document.close()},0)}};var =
+N=3Dfunction(){this.defaultBucket=3D[];this.layers=3D{};for(var =
+a=3D0,b=3Darguments.length;a<b;++a)this.layers[arguments[a]]=3D""},Wc=3Df=
+unction(a){for(var b=3Dnew =
+N,c=3D0,d=3Da.defaultBucket.length;c<d;++c)b.defaultBucket.push(a.default=
+Bucket[c]);C(a.layers,q(N.prototype.k,b));return =
+b};N.prototype.k=3Dfunction(a,b){this.layers[b]=3Da};N.prototype.N=3Dfunc=
+tion(a,b){if(a=3D=3D"")return"";if(!b){this.defaultBucket.push(a);return =
+a}if(this.layers.hasOwnProperty(b))return this.layers[b]=3Da;return""};=0A=
+N.prototype.c=3Dfunction(a,b,c){if(this.A(c)&&!(Math.random()<1.0E-4)&&Ma=
+th.random()<b){b=3DMath.floor(Math.random()*a.length);return =
+this.N(a[b],c)}return""};N.prototype.A=3Dfunction(a){if(!a)return =
+h;return =
+this.layers.hasOwnProperty(a)&&this.layers[a]=3D=3D""};N.prototype.b=3Dfu=
+nction(a){if(this.layers.hasOwnProperty(a))return =
+this.layers[a];return""};=0A=
+N.prototype.z=3Dfunction(){var =
+a=3D[],b=3Dfunction(c){c!=3D""&&a.push(c)};C(this.layers,b);if(this.defau=
+ltBucket.length>0&&a.length>0)return =
+this.defaultBucket.join(",")+","+a.join(",");return =
+this.defaultBucket.join(",")+a.join(",")};var =
+Yc=3Dfunction(a){this.a=3Dthis.S=3Da;Xc(this)},Zc,O=3Dfunction(){if(Zc)re=
+turn Zc;if(L)var =
+a=3DM,b=3D"google_persistent_state_async",c=3D{};else{a=3Dwindow;b=3D"goo=
+gle_persistent_state";c=3Da}var d=3Da[b];if(typeof d!=3D"object"||typeof =
+d.S!=3D"object")return a[b]=3DZc=3Dnew Yc(c);return =
+Zc=3Dd},Xc=3Dfunction(a){S(a,1,j);S(a,2,j);S(a,3,i);S(a,4,0);S(a,5,0);S(a=
+,6,0);S(a,7,(new =
+Date).getTime());S(a,8,{});S(a,9,{});S(a,10,{});S(a,11,[]);S(a,12,0)},$c=3D=
+function(a){switch(a){case 1:return"google_new_domain_enabled";case =
+2:return"google_new_domain_checked";=0A=
+case 3:return"google_exp_persistent";case =
+4:return"google_num_sdo_slots";case 5:return"google_num_0ad_slots";case =
+6:return"google_num_ad_slots";case 7:return"google_correlator";case =
+8:return"google_prev_ad_formats_by_region";case =
+9:return"google_prev_ad_slotnames_by_region";case =
+10:return"google_num_slots_by_channel";case =
+11:return"google_viewed_host_channels";case =
+12:return"google_num_slot_to_show"}},T=3Dfunction(a,b){var =
+c=3D$c(b);return c=3Da.S[c]},U=3Dfunction(a,b,c){return =
+a.S[$c(b)]=3Dc},S=3Dfunction(a,=0A=
+b,c){a=3Da.S;b=3D$c(b);if(a[b]=3D=3D=3Dundefined)return a[b]=3Dc;return =
+a[b]},ad=3Dfunction(a){if(T(a,1))return h;return =
+U(a,1,!!window.google_new_domain_enabled)},bd=3Dfunction(a,b){return =
+U(a,3,b)};var cd,dd,V=3Dfunction(){if(cd)return cd;var =
+a=3DO(),b=3DT(a,3);if(mb(b,N))return cd=3Dbd(a,new N(1,2,3,4));return =
+cd=3Db},ed=3Dfunction(){dd||(dd=3DWc(V()));return =
+dd},fd=3D{CONTROL:"33895100",LOADER:"33895101",ASYNC_OK_ASYNC_LOADER:"338=
+95120",ASYNC_OK_BLOCKING_LOADER:"33895121",ASYNC_OK_NO_LOADER:"33895122",=
+NO_ASYNC_BLOCKING_LOADER:"33895123",NO_ASYNC_NO_LOADER:"33895124"};var =
+W=3Dfunction(){};W.prototype.serialize=3Dfunction(a){var =
+b=3D[];this.h(a,b);return =
+b.join("")};W.prototype.h=3Dfunction(a,b){switch(typeof a){case =
+"string":this.r(a,b);break;case "number":this.L(a,b);break;case =
+"boolean":b.push(a);break;case "undefined":b.push("null");break;case =
+"object":if(a=3D=3Di){b.push("null");break}if(n(a)){this.K(a,b);break}thi=
+s.M(a,b);break;case "function":break;default:throw Error("Unknown type: =
+"+typeof a);}};=0A=
+var =
+gd=3D{'"':'\\"',"\\":"\\\\","/":"\\/","\u0008":"\\b","\u000c":"\\f","\n":=
+"\\n","\r":"\\r","\t":"\\t","\u000b":"\\u000b"},hd=3D/\uffff/.test("\ufff=
+f")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\xff]/g;W.prototype=
+.r=3Dfunction(a,b){b.push('"',a.replace(hd,function(c){if(c in gd)return =
+gd[c];var d=3Dc.charCodeAt(0),e=3D"\\u";if(d<16)e+=3D"000";else =
+if(d<256)e+=3D"00";else if(d<4096)e+=3D"0";return =
+gd[c]=3De+d.toString(16)}),'"')};W.prototype.L=3Dfunction(a,b){b.push(isF=
+inite(a)&&!isNaN(a)?a:"null")};=0A=
+W.prototype.K=3Dfunction(a,b){var c=3Da.length;b.push("[");for(var =
+d=3D"",e=3D0;e<c;e++){b.push(d);this.h(a[e],b);d=3D","}b.push("]")};W.pro=
+totype.M=3Dfunction(a,b){b.push("{");var c=3D"";for(var d in =
+a)if(a.hasOwnProperty(d)){var e=3Da[d];if(typeof =
+e!=3D"function"){b.push(c);this.r(d,b);b.push(":");this.h(e,b);c=3D","}}b=
+.push("}")};var =
+id=3D["google_ad_channel","google_ad_client","google_ad_format","google_a=
+d_height","google_ad_host","google_ad_host_channel","google_ad_host_tier_=
+id","google_ad_output","google_ad_override","google_ad_region","google_ad=
+_section","google_ad_slot","google_ad_type","google_ad_width","google_adt=
+est","google_allow_expandable_ads","google_alternate_ad_url","google_alte=
+rnate_color","google_analytics_domain_name","google_analytics_uacct","goo=
+gle_bid","google_city","google_color_bg","google_color_border",=0A=
+"google_color_line","google_color_link","google_color_text","google_color=
+_url","google_container_id","google_contents","google_country","google_cp=
+m","google_ctr_threshold","google_cust_age","google_cust_ch","google_cust=
+_gender","google_cust_id","google_cust_interests","google_cust_job","goog=
+le_cust_l","google_cust_lh","google_cust_u_url","google_disable_video_aut=
+oplay","google_ed","google_eids","google_enable_osd","google_encoding","g=
+oogle_font_face","google_font_size","google_frame_id","google_gl",=0A=
+"google_hints","google_image_size","google_kw","google_kw_type","google_l=
+anguage","google_max_num_ads","google_max_radlink_len","google_num_radlin=
+ks","google_num_radlinks_per_unit","google_num_slots_to_rotate","google_o=
+nly_ads_with_video","google_only_pyv_ads","google_override_format","googl=
+e_page_url","google_referrer_url","google_region","google_reuse_colors","=
+google_rl_dest_url","google_rl_filtering","google_rl_mode","google_rt","g=
+oogle_safe","google_skip","google_tag_info","google_targeting",=0A=
+"google_ui_features","google_ui_version","google_video_doc_id","google_vi=
+deo_product_type","google_with_pyv_ads"],jd=3Dfunction(a){for(var =
+b=3D[],c=3D0,d=3Did.length;c<d;c++){var e=3Did[c];if(a[e]!=3Di){var =
+f;try{f=3D(new =
+W).serialize(a[e])}catch(g){}f&&b.push(e,"=3D",f,";")}}return =
+b.join("")},kd=3Dfunction(a){for(var b=3D0,c=3Did.length;b<c;b++){var =
+d=3Did[b];a[d]=3Di}};var ld=3Dfunction(a){var =
+b=3D"google_unique_id";if(a[b])++a[b];else a[b]=3D1;return =
+a[b]},md=3Dfunction(){var a=3D"script";return["<",a,' =
+src=3D"http://',v(),,'/pagead/js/r20100519/r20100526/show_ads_impl.js"></=
+',a,">"].join("")},nd=3Dfunction(){if(window.google_disable_async)return =
+j;return =
+gb.domain=3D=3DB.location.hostname&&(z||Sc||Rc&&!!window.document.body)&&=0A=
+!window.google_container_id&&(!window.google_ad_output||window.google_ad_=
+output=3D=3D"html")},od=3Dfunction(a){var =
+b=3D"script",c=3D{allowtransparency:'"true"',frameborder:'"'+(a.google_ad=
+_frameborder||0)+'"',height:'"'+a.google_ad_height+'"',hspace:'"0"',margi=
+nwidth:'"0"',marginheight:'"0"',name:'"google_ads_frame"',scrolling:'"no"=
+',vspace:'"0"',width:'"'+a.google_ad_width+'"'};a.google_ad_frameborder=3D=
+i;var d=3DTc(a,c);c=3Djd(a);kd(a);var e=3Dk,f=3D(new =
+Date).getTime(),g=3D["<!doctype =
+html><html><body><",b,">",c,"google_unique_id=3D",=0A=
+a.google_unique_id,';google_async_iframe_id=3D"',d,'";google_start_time=3D=
+',e,";google_bpp=3D",f>e?f-e:1,";</",b,">",md(),"</body></html>"].join(""=
+);Gc(function(){Hc();Uc(a,d,g)})},pd=3Dfunction(){var =
+a=3D[];a=3Dfd;a=3Dnd()?[a.ASYNC_OK_ASYNC_LOADER,a.ASYNC_OK_BLOCKING_LOADE=
+R,a.ASYNC_OK_NO_LOADER]:[a.NO_ASYNC_BLOCKING_LOADER,a.NO_ASYNC_NO_LOADER]=
+;V().c(a,Tb,3)},qd=3Dfunction(){var =
+a=3Dfd;V().c([a.ASYNC_OK_ASYNC_LOADER],1,3)},rd=3Dfunction(){var =
+a=3DV().b(3),b=3Dfd;return =
+a=3D=3Db.ASYNC_OK_ASYNC_LOADER},sd=3Dfunction(){var a=3DV().b(3),=0A=
+b=3Dfd;return =
+a=3D=3Db.ASYNC_OK_BLOCKING_LOADER||a=3D=3Db.NO_ASYNC_BLOCKING_LOADER};var=
+ =
+td=3D{google:1,googlegroups:1,gmail:1,googlemail:1,googleimages:1,googlep=
+rint:1};function =
+ud(a){a=3Da.google_page_location||a.google_page_url;if(!a)return =
+j;a=3Da.toString();if(a.indexOf("http://")=3D=3D0)a=3Da.substring(7,a.len=
+gth);else =
+if(a.indexOf("https://")=3D=3D0)a=3Da.substring(8,a.length);var =
+b=3Da.indexOf("/");if(b=3D=3D-1)b=3Da.length;a=3Da.substring(0,b);a=3Da.s=
+plit(".");b=3Dj;if(a.length>=3D3)b=3Da[a.length-3]in =
+td;if(a.length>=3D2)b=3Db||a[a.length-2]in td;return b}=0A=
+function vd(a,b,c){var =
+d=3DO();if(ud(a))return!U(d,2,h);if(!T(d,2)){a=3DMath.random();if(a<=3Dc)=
+{c=3D"http://"+ga()+"/pagead/test_domain.js";a=3D"script";b.write("<"+a+'=
+ src=3D"'+c+'"></'+a+">");return U(d,2,h)}}return j}var =
+wd=3Dfunction(a){var b=3DV();if(b.b(1)=3D=3D"44901228")return =
+j;if(b.b(1)=3D=3D"44901229"||Math.random()<Sb)return =
+1=3D=3DMath.floor(a/2)%2;return j};=0A=
+function xd(a,b){var c=3DO();if(!ud(a)&&ad(c))return =
+wd(b)?"http://"+u("","googleads2.g.doubleclick.net"):"http://"+ga();retur=
+n"http://"+ha()};var =
+X=3Dfunction(a){this.e=3Da;this.n=3D[];this.m=3D0;this.f=3D[];this.F=3D0;=
+this.i=3D[];this.C=3Dj;this.s=3Dthis.t=3D"";this.B=3Dj};X.prototype.H=3Df=
+unction(a,b){var =
+c=3Dthis.e[b],d=3Dthis.n;this.e[b]=3Dfunction(e){if(e&&e.length>0){var =
+f=3De.length>1?e[1].url:i;d.push([a,qa(e[0].url),f])}c(e)}};X.prototype.G=
+=3Dfunction(){this.m++};X.prototype.I=3Dfunction(a){this.f.push(a)};var =
+yd=3D"http://"+v()+"/pagead/osd.js";X.prototype.D=3Dfunction(){if(!this.C=
+){qb(M);ob(yd);this.C=3Dh}};=0A=
+X.prototype.u=3Dfunction(a){if(this.m>0)for(var =
+b=3Dthis.e.document.getElementsByTagName("iframe"),c=3Dthis.B?"google_ads=
+_iframe_":"google_ads_frame",d=3D0;d<b.length;d++){var =
+e=3Db.item(d);e.src&&e.name&&e.name.indexOf(c)=3D=3D0&&a(e,e.src)}};=0A=
+X.prototype.v=3Dfunction(a){var b=3Dthis.n;if(b.length>0)for(var =
+c=3Dthis.e.document.getElementsByTagName("a"),d=3D0;d<c.length;d++)for(va=
+r e=3D0;e<b.length;e++)if(c.item(d).href=3D=3Db[e][1]){var =
+f=3Dc.item(d).parentNode;if(b[e][2])for(var =
+g=3Df,o=3D0;o<4;o++){if(g.innerHTML.indexOf(b[e][2])>0){f=3Dg;break}g=3Dg=
+.parentNode}a(f,b[e][0]);b.splice(e,1);break}};X.prototype.w=3Dfunction(a=
+){for(var b=3D0;b<this.f.length;b++){var =
+c=3Dthis.f[b],d=3Dzd(c);if(d)(d=3Dthis.e.document.getElementById("google_=
+ads_div_"+d))&&a(d,c)}};=0A=
+X.prototype.j=3Dfunction(a){this.v(a);this.w(a);this.u(a)};X.prototype.se=
+tupOsd=3Dfunction(a,b,c){this.F=3Da;this.t=3Db;this.s=3Dc};X.prototype.ge=
+tOsdMode=3Dfunction(){return =
+this.F};X.prototype.getEid=3Dfunction(){return =
+this.t};X.prototype.getCorrelator=3Dfunction(){return =
+this.s};X.prototype.l=3Dfunction(){return =
+this.n.length+this.m+this.f.length};X.prototype.setValidOutputTypes=3Dfun=
+ction(a){this.i=3Da};=0A=
+X.prototype.registerAdBlockByType=3Dfunction(a,b,c){if(this.i.length>0){f=
+or(var =
+d=3D0;d<this.i.length;d++)if(this.i[d]=3D=3Da){this.B=3Dc;if(a=3D=3D"js")=
+this.H(b,"google_ad_request_done");else if(a=3D=3D"html")this.G();else =
+a=3D=3D"json_html"&&this.I(b)}this.D()}};var =
+zd=3Dfunction(a){if((a=3Da.match(/[&\?](?:slotname)=3D([^&]+)/))&&a.lengt=
+h=3D=3D2)return a[1];return""},Ad=3Dfunction(){var =
+a=3DM;a.__google_ad_urls||(a.__google_ad_urls=3Dnew X(a));return =
+a.__google_ad_urls};r("Goog_AdSense_getAdAdapterInstance",Ad);=0A=
+r("Goog_AdSense_OsdAdapter",X);r("Goog_AdSense_OsdAdapter.prototype.numBl=
+ocks",X.prototype.l);r("Goog_AdSense_OsdAdapter.prototype.findBlocks",X.p=
+rototype.j);r("Goog_AdSense_OsdAdapter.prototype.getOsdMode",X.prototype.=
+getOsdMode);r("Goog_AdSense_OsdAdapter.prototype.getEid",X.prototype.getE=
+id);r("Goog_AdSense_OsdAdapter.prototype.getCorrelator",X.prototype.getCo=
+rrelator);r("Goog_AdSense_OsdAdapter.prototype.setValidOutputTypes",X.pro=
+totype.setValidOutputTypes);=0A=
+r("Goog_AdSense_OsdAdapter.prototype.setupOsd",X.prototype.setupOsd);r("G=
+oog_AdSense_OsdAdapter.prototype.registerAdBlockByType",X.prototype.regis=
+terAdBlockByType);var Bd=3Dfunction(a,b){var =
+c=3Da.nodeType=3D=3D9?a:a.ownerDocument||a.document;if(c.defaultView&&c.d=
+efaultView.getComputedStyle)if(c=3Dc.defaultView.getComputedStyle(a,""))r=
+eturn c[b];return i},Cd=3Dfunction(a,b){return =
+Bd(a,b)||(a.currentStyle?a.currentStyle[b]:i)||a.style[b]},Dd=3Dfunction(=
+a,b,c,d){if(/^\d+px?$/.test(b))return parseInt(b,10);else{var =
+e=3Da.style[c],f=3Da.runtimeStyle[c];a.runtimeStyle[c]=3Da.currentStyle[c=
+];a.style[c]=3Db;b=3Da.style[d];a.style[c]=3De;a.runtimeStyle[c]=3Df;retu=
+rn b}},Ed=3Dfunction(a){var b=3D=0A=
+a.nodeType=3D=3D9?a:a.ownerDocument||a.document,c=3D"";if(b.createTextRan=
+ge){c=3Db.body.createTextRange();c.moveToElementText(a);c=3Dc.queryComman=
+dValue("FontName")}if(!c){c=3DCd(a,"fontFamily");if(La&&Ua)c=3Dc.replace(=
+/ \[[^\]]*\]/,"")}a=3Dc.split(",");if(a.length>1)c=3Da[0];return =
+ra(c,"\"'")},Fd=3D/[^\d]+$/,Gd=3Dfunction(a){return(a=3Da.match(Fd))&&a[0=
+]||i},Hd=3D{cm:1,"in":1,mm:1,pc:1,pt:1},Id=3D{em:1,ex:1},Jd=3Dfunction(a)=
+{var b=3DCd(a,"fontSize"),c=3DGd(b);if(b&&"px"=3D=3Dc)return =
+parseInt(b,10);if(z)if(c in Hd)return Dd(a,b,"left",=0A=
+"pixelLeft");else if(a.parentNode&&a.parentNode.nodeType=3D=3D1&&c in =
+Id){a=3Da.parentNode;c=3DCd(a,"fontSize");return =
+Dd(a,b=3D=3Dc?"1em":b,"left","pixelLeft")}c=3Ddb("span",{style:"visibilit=
+y:hidden;position:absolute;line-height:0;padding:0;margin:0;border:0;heig=
+ht:1em;"});fb(a,c);b=3Dc.offsetHeight;c&&c.parentNode&&c.parentNode.remov=
+eChild(c);return b};var Y=3D{};function Kd(a){if(a=3D=3D1)return =
+h;return!Y[a]}function =
+Ld(a,b){if(!(!a||a=3D=3D""))if(b=3D=3D1)if(Y[b])Y[b]+=3D","+a;else =
+Y[b]=3Da;else Y[b]=3Da}function Md(){var =
+a=3D[];C(Y,function(b){a.push(b)});return a.join(",")}function =
+Nd(a,b){if(n(a))for(var c=3D0;c<a.length;c++)p(a[c])&&Ld(a[c],b)}var =
+Od=3Dj;=0A=
+function Pd(a,b){var =
+c=3D"script";Od=3DQd(a,b);if(!Od)a.google_allow_expandable_ads=3Dj;var =
+d=3D!Rd();Od&&d&&b.write("<"+c+' =
+src=3D"http://'+v()+'/pagead/expansion_embed.js"></'+c+">");var =
+e=3Dvd(a,b,Ub);(d=3Dd||e)&&sb("msie")&&!window.opera?b.write("<"+c+' =
+src=3D"http://'+v()+'/pagead/render_ads.js"></'+c+">"):b.write("<"+c+'>go=
+ogle_protectAndRun("ads_core.google_render_ad", google_handleError, =
+google_render_ad);</'+c+">")}var =
+Z=3Dfunction(a){a=3Da.google_unique_id;if(typeof a=3D=3D"number")return =
+a;return 0};=0A=
+function $(a){return a!=3Di?'"'+a+'"':'""'}var Sd=3Dfunction(a,b){var =
+c=3Db.slice(-1),d=3Dc=3D=3D"?"||c=3D=3D"#"?"":"&",e=3D[b];c=3Dfunction(f,=
+g){if(f||f=3D=3D=3D0||f=3D=3D=3Dj){if(typeof =
+f=3D=3D"boolean")f=3Df?1:0;nb(e,d,g,"=3D",D(f));d=3D"&"}};C(a,c);return =
+e.join("")};function Td(){var =
+a=3Dz&&A("6"),b=3DMa&&A("1.8.1"),c=3DNa&&A("525");if(Ta&&(a||b||c))return=
+ h;else if(Sa&&(c||b))return h;else if(Ua&&b)return h;return j}=0A=
+function Rd(){return(typeof =
+ExpandableAdSlotFactory=3D=3D"function"||typeof =
+ExpandableAdSlotFactory=3D=3D"object")&&typeof =
+ExpandableAdSlotFactory.createIframe=3D=3D"function"}function =
+Qd(a,b){if(a.google_allow_expandable_ads=3D=3D=3Dj||!b.body||a.google_ad_=
+output!=3D"html"||Gb(a,b)||!Ud(a)||isNaN(a.google_ad_height)||isNaN(a.goo=
+gle_ad_width)||!Td()||b.domain!=3Da.location.hostname)return j;return =
+h}function Ud(a){var b=3Da.google_ad_format;if(E(b))return =
+j;if(vb(a)&&b!=3D"468x15_0ads_al")return j;return h}=0A=
+function Vd(){var =
+a;if(B.google_ad_output=3D=3D"html"&&!(vb(B)||E(B.google_ad_format))&&Kd(=
+0)){a=3D["6083035","6083034"];a=3Dwb(a,bc);Ld(a,0)}return =
+a=3D=3D"6083035"}function =
+Wd(a,b){if(!(L?Z(a)=3D=3D1:!Z(a))||E(a.google_ad_format))return"";var =
+c=3D"",d=3Dvb(a);if(b=3D=3D"html"||d)c=3Dwb(["36815001","36815002"],Yb);i=
+f(c=3D=3D""&&(b=3D=3D"js"||d))c=3Dwb(["36815003","36815004"],Zb);if(c=3D=3D=
+""&&(b=3D=3D"html"||b=3D=3D"js"))c=3Dwb(["36813005","36813006"],$b);retur=
+n c}=0A=
+function Xd(){if(L)return"";var =
+a=3DAd(),b=3Dwindow.google_enable_osd,c;if(b=3D=3D=3Dh){c=3D"36813006";Yd=
+(c,a)}else =
+if(b!=3D=3Dj&&Kd(0)){c=3Da.getEid();if(c=3D=3D"")(c=3DWd(window,String(wi=
+ndow.google_ad_output||"")))&&Yd(c,a);else =
+if(c!=3D"36815001"&&c!=3D"36815002"&&c!=3D"36815003"&&c!=3D"36815004"&&c!=
+=3D"36813005"&&c!=3D"36813006")c=3D""}if(c){Ld(c,0);return c}return""}=0A=
+function Yd(a,b){var c=3Db.getOsdMode(),d=3D[];switch(a){case =
+"36815004":c=3D1;d=3D["js"];break;case =
+"36815002":c=3D1;d=3D["html"];break;case =
+"36813006":c=3D0;d=3D["html","js"];break}d.length>0&&b.setValidOutputType=
+s(d);d=3DO();b.setupOsd(c,a,T(d,7).toString())}=0A=
+function Zd(a,b,c,d){L||ld(a);var =
+e=3DZ(a);c=3DSd({ifi:e},c);c=3Dc.substring(0,1991);c=3Dc.replace(/%\w?$/,=
+"");var =
+f=3D"script";if((a.google_ad_output=3D=3D"js"||a.google_ad_output=3D=3D"j=
+son_html")&&(a.google_ad_request_done||a.google_radlink_request_done))b.w=
+rite("<"+f+' language=3D"JavaScript1.1" =
+src=3D'+$(aa(c))+"></"+f+">");else =
+if(a.google_ad_output=3D=3D"html")if(Od&&Rd()){b=3Da.google_container_id|=
+|d||i;a["google_expandable_ad_slot"+e]=3DExpandableAdSlotFactory.createIf=
+rame("google_ads_frame"+e,aa(c),a.google_ad_width,=0A=
+a.google_ad_height,b)}else{e=3D'<iframe name=3D"google_ads_frame" =
+width=3D'+$(String(a.google_ad_width))+" =
+height=3D"+$(String(a.google_ad_height))+" =
+frameborder=3D"+$(String(a.google_ad_frameborder=3D=3Di?"":a.google_ad_fr=
+ameborder))+" src=3D"+$(aa(c))+' marginwidth=3D"0" marginheight=3D"0" =
+vspace=3D"0" hspace=3D"0" allowtransparency=3D"true" =
+scrolling=3D"no"></iframe>';a.google_container_id?$d(a.google_container_i=
+d,b,e):b.write(e)}return c}function ae(a){pc(a)}=0A=
+function be(a){var b=3Ded().b(2)=3D=3D"44901217";if(!ce(b))return =
+j;b=3DVd();var =
+c=3Dxd(window,Z(window));a=3Dde(a);b=3Dc+ee(a.google_ad_format,b);window.=
+google_ad_url=3DSd(a,b);return h}=0A=
+var =
+ie=3Dfunction(a){a.dt=3Dk;if(L&&window.google_bpp)a.bpp=3Dwindow.google_b=
+pp;a.shv=3D"r20100519";var =
+b=3DO(),c=3DT(b,8),d=3Dwindow.google_ad_section,e=3Dwindow.google_ad_form=
+at,f=3Dwindow.google_ad_slot;if(c[d])E(e)||(a.prev_fmts=3Dc[d]);var =
+g=3DT(b,9);if(g[d])a.prev_slotnames=3Dg[d].toLowerCase();if(e){if(!E(e))i=
+f(c[d])c[d]+=3D","+e;else c[d]=3De}else if(f)if(g[d])g[d]+=3D","+f;else =
+g[d]=3Df;a.correlator=3DT(b,7);if(T(b,2)&&!ad(b))a.dblk=3D1;if(window.goo=
+gle_ad_channel){c=3DT(b,10);d=3D"";e=3Dwindow.google_ad_channel.split(fe)=
+;=0A=
+for(f=3D0;f<e.length;f++){g=3De[f];if(c[g])d+=3Dg+"+";else =
+c[g]=3Dh}a.pv_ch=3Dd}if(window.google_ad_host_channel){b=3Dge(window.goog=
+le_ad_host_channel,T(b,11));a.pv_h_ch=3Db}if(cc)a.jscb=3D1;if(ec)a.jscd=3D=
+1;a.frm=3Dwindow.google_iframing;b=3Ded().b(4);if(b=3D=3D"36816001")a.adk=
+=3Dhe();b=3Dtc();a.ga_vid=3Db.vid;a.ga_sid=3Db.sid;a.ga_hid=3Db.hid;a.ga_=
+fc=3Db.from_cookie;a.ga_wpids=3Dwindow.google_analytics_uacct},je=3Dfunct=
+ion(a){var =
+b=3Dh;if(b=3Dyb(b)){a.biw=3Db.width;a.bih=3Db.height}},he=3Dfunction(){va=
+r a=3D[];nb(a,B.google_ad_slot,B.google_ad_format,=0A=
+B.google_ad_type,B.google_ad_width,B.google_ad_height);if(ib){var =
+b=3DBb(ib);b&&a.push(b)}b=3D0;if(a)b=3Dzb(a.join(":"));return =
+b.toString()},ke=3Dfunction(a){var =
+b=3DAb(M);if(b!=3D0)a.ifk=3Db.toString()};function ge(a,b){for(var =
+c=3Da.split("|"),d=3D-1,e=3D[],f=3D0;f<c.length;f++){var =
+g=3Dc[f].split(fe);b[f]||(b[f]=3D{});for(var =
+o=3D"",P=3D0;P<g.length;P++){var =
+G=3Dg[P];if(G!=3D"")if(b[f][G])o+=3D"+"+G;else =
+b[f][G]=3Dh}o=3Do.slice(1);e[f]=3Do;if(o!=3D"")d=3Df}c=3D"";if(d>-1){for(=
+f=3D0;f<d;f++)c+=3De[f]+"|";c+=3De[d]}return c}=0A=
+function le(){var =
+a=3D["44901228","44901229"];V().c(a,Rb,1);a=3D["44901218","44901217"];V()=
+.c(a,ac,2);a=3D["36816000","36816001"];V().c(a,Xb,4)}=0A=
+function me(){Bc();(L?Z(window)=3D=3D1:!Z(window))&&le();var =
+a=3DXd(),b=3Di,c=3D"",d=3DMath.random()<0.01;if(d)if(b=3Dwindow.google_as=
+ync_iframe_id)b=3DM.document.getElementById(b);else{c=3D"google_temp_span=
+";b=3Dne(c)}d=3Dbe(b);b&&b.id=3D=3Dc&&(b&&b.parentNode?b.parentNode.remov=
+eChild(b):i);if(d){c=3DZd(window,document,window.google_ad_url);if(a)Ad()=
+.registerAdBlockByType(String(window.google_ad_output||""),c,j);ae(window=
+)}Vc(window)}=0A=
+var =
+oe=3Dfunction(a){C(Db,function(b,c){a[b]=3Dwindow[c]});C(Cb,function(b,c)=
+{a[b]=3Dwindow[c]});C(Eb,function(b,c){a[b]=3Dwindow[c]})},pe=3Dfunction(=
+a){Nd(window.google_eids,1);a.eid=3DMd();var =
+b=3Ded().z();if(a.eid.length>0&&b.length>0)a.eid+=3D",";a.eid+=3Db};funct=
+ion qe(a,b,c,d){a=3Dic(a,b,c,d);Pd(window,document);return a}function =
+re(){oc()}=0A=
+function se(a){var =
+b=3D{};a=3Da.split("?");a=3Da[a.length-1].split("&");for(var =
+c=3D0;c<a.length;c++){var =
+d=3Da[c].split("=3D");if(d[0])try{b[d[0].toLowerCase()]=3Dd.length>1?wind=
+ow.decodeURIComponent?decodeURIComponent(d[1].replace(/\+/g," =
+")):unescape(d[1]):""}catch(e){}}return b}function te(){var =
+a=3Dwindow,b=3Dse(document.URL);if(b.google_ad_override){a.google_ad_over=
+ride=3Db.google_ad_override;a.google_adtest=3D"on"}}=0A=
+function =
+$d(a,b,c){if(a)if((a=3Db.getElementById(a))&&c&&c.length!=3D""){a.style.v=
+isibility=3D"visible";a.innerHTML=3Dc}}=0A=
+var ee=3Dfunction(a,b){var c;return =
+c=3DE(a)?"/pagead/sdo?":b?"/pagead/render_iframe_ads.html#":"/pagead/ads?=
+"},ue=3Dfunction(a,b){b.dff=3DEd(a);b.dfs=3DJd(a)},ve=3Dfunction(a){a.ref=
+=3Dwindow.google_referrer_url;a.loc=3Dwindow.google_page_location},ce=3Df=
+unction(a){var =
+b=3DO(),c=3DT(b,8),d=3DT(b,9),e=3Dwindow.google_ad_section;if(E(window.go=
+ogle_ad_format)){if(U(b,4,T(b,4)+1)>4&&!a)return j}else =
+if(vb(window)){if(U(b,5,T(b,5)+1)>3&&!a)return j}else{var =
+f=3DU(b,6,T(b,6)+1);if(window.google_num_slots_to_rotate){kc(1);c[e]=3D""=
+;=0A=
+d[e]=3D"";T(b,12)||U(b,12,(new =
+Date).getTime()%window.google_num_slots_to_rotate+1);if(T(b,12)!=3Df)retu=
+rn j}else if(!a&&f>6&&e=3D=3D"")return j}return h},de=3Dfunction(a){var =
+b=3D{};oe(b);ie(b);xb(b);a&&ue(a,b);je(b);ke(b);pe(b);ve(b);b.fu=3Djc;ret=
+urn b},ne=3Dfunction(a){var =
+b=3Dwindow.google_container_id,c=3Db&&Za(b)||Za(a);if(!c&&!b&&a){document=
+.write("<span id=3D"+a+"></span>");c=3DZa(a)}return c},fe=3D/[+, =
+]/;window.google_render_ad=3Dme;var we=3Dfunction(){te();L&&qd();var =
+a=3Dwindow.google_start_time;if(typeof =
+a=3D=3D"number"){k=3Da;window.google_start_time=3Di}gc("show_ads.google_i=
+nit_globals",qe,re);Pd(window,document)},xe=3Dfunction(){window.google_st=
+art_time=3Dk;document.write(md())},ye=3Dfunction(){ld(window);od(window)}=
+;function ze(){if(fc&&typeof =
+B.alternateShowAds=3D=3D"function")B.alternateShowAds.call(i);else =
+if(dc)we();else{Z(window)||pd();if(rd())ye();else =
+sd()?xe():we()}}gc("show_ads.main",ic,ze);})()=0A=
+
+------=_NextPart_000_0000_01CB088E.9AF225D0--

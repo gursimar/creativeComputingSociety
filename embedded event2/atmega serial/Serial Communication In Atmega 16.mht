@@ -1,0 +1,103 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: =?utf-8?Q?SlideShare_=C2=BB_503_Error?=
+Date: Sun, 8 Aug 2010 01:32:02 +0530
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.slideshare.net/embedautomation/serial-communication-in-atmega-16
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>SlideShare =C2=BB =
+503 Error</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css>* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: =
+0px; PADDING-TOP: 0px
+}
+BODY {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: =
+#333; FONT-SIZE: 0.8em; VERTICAL-ALIGN: middle
+}
+TD {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: =
+#333; FONT-SIZE: 0.8em; VERTICAL-ALIGN: middle
+}
+TH {
+	TEXT-ALIGN: center; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: =
+#333; FONT-SIZE: 0.8em; VERTICAL-ALIGN: middle
+}
+BODY {
+	BACKGROUND: url(http://public.slideshare.net/images/bg_error_page.gif) =
+#fff no-repeat center top
+}
+#container {
+	BORDER-BOTTOM: #e6ecea 1px solid; TEXT-ALIGN: left; BORDER-LEFT: =
+#e6ecea 1px solid; PADDING-BOTTOM: 24px; MARGIN: 156px auto 4px; =
+PADDING-LEFT: 24px; WIDTH: 424px; PADDING-RIGHT: 24px; BACKGROUND: =
+#f1faf5; BORDER-TOP: #e6ecea 1px solid; BORDER-RIGHT: #e6ecea 1px solid; =
+PADDING-TOP: 24px
+}
+H1 {
+	LETTER-SPACING: -0.5px; COLOR: #099; FONT-SIZE: 1.4em; FONT-WEIGHT: =
+normal
+}
+UL LI {
+	PADDING-BOTTOM: 10px; LIST-STYLE-TYPE: none; PADDING-LEFT: 12px; =
+PADDING-RIGHT: 0px; LIST-STYLE-IMAGE: none; PADDING-TOP: 0px
+}
+P {
+	MARGIN: 18px 0px
+}
+A:link {
+	COLOR: #4279cc; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #4279cc; TEXT-DECORATION: underline
+}
+A:hover {
+	BACKGROUND: #4279cc; COLOR: #fff; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #4279cc; TEXT-DECORATION: underline
+}
+.errorCode {
+	FONT-STYLE: italic; MARGIN: 0px -412px 0px 0px; COLOR: #777
+}
+.searchinput {
+	BORDER-BOTTOM: #94c5c6 1px solid; BORDER-LEFT: #94c5c6 1px solid; =
+BORDER-TOP: #94c5c6 1px solid; BORDER-RIGHT: #94c5c6 1px solid
+}
+.searchsubmit {
+	HEIGHT: 18px; FONT-SIZE: 11px
+}
+</STYLE>
+
+<SCRIPT type=3Dtext/javascript>
+var gaJsHost =3D (("https:" =3D=3D document.location.protocol) ? =
+"https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src=3D'" + gaJsHost + =
+"google-analytics.com/ga.js' =
+type=3D'text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript>
+var pageTracker =3D _gat._getTracker("UA-2330466-1");
+pageTracker._trackEvent('errors', '503');
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY>
+<DIV id=3Dcontainer>
+<H1>Something went wrong!</H1>
+<P>This is probably a temporary error.=20
+<UL>
+  <LI>- Try <A href=3D"javascript:location.reload(true)">refreshing</A> =
+the page=20
+  or</LI>
+  <LI>- <A href=3D"javascript:history.go(-1);">Go back</A> and try =
+again</LI></UL>
+<P></P></DIV><SPAN class=3DerrorCode>503 Error</SPAN> </BODY></HTML>

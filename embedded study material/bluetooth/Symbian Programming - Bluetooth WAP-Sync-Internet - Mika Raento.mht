@@ -1,0 +1,499 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Symbian Programming - Bluetooth WAP/Sync/Internet - Mika Raento
+Date: Sun, 30 May 2010 12:19:17 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CAFFF2.530FE6C0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CAFFF2.530FE6C0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://mikie.iki.fi/symbian/bt-ap.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Symbian Programming - Bluetooth WAP/Sync/Internet - =
+Mika Raento</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://mikie.iki.fi/symbian/symbian.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY>
+<P><A href=3D"http://mikie.iki.fi/symbian/index.html">Up to: Mika =
+Raento's Symbian=20
+Programming pages</A></P>
+<H1>Symbian Programming - Bluetooth WAP/Sync/Internet</H1>
+<H2>Update!</H2>
+<P>More user-friendly instructions and software is now available from <A =
+
+href=3D"http://gnubox.dnsalias.org/gnubox/">http://gnubox.dnsalias.org/gn=
+ubox/</A>.=20
+They even include support for the 6630 and 6680 via a ppp module copied =
+from a=20
+6682... Nokia: could you get out of bed with the operators, they'll die =
+in a=20
+couple of years anyway.</P>
+<H2>Note</H2>
+<P>This page is intended for people reasonably familiar with TCP/IP =
+routing=20
+(including concepts like PPP, proxy-arp, NAT, IP addresses, subnets). If =
+you=20
+don't think that you understand these concepts, please refer to a good =
+TCP/IP=20
+text first.</P>
+<P><B>Update: </B>Angad Singh noticed that if you use Internet Sharing =
+on=20
+Windows XP instead of NAT you can share a dialup connection with the =
+phone.</P>
+<P><B>Updated for 6600!</B> These instructions work on my phone with =
+software=20
+version 3.42.1. Reported working on 4.09.1 as well. </P>
+<P>It seems that you'll need a permanent Internet connection (LAN) to =
+make this=20
+work for the 6600. Windows XP/2000 Pro doesn't allow you to NAT to a =
+dialup :-(.=20
+Only 'demand-dial' interfaces are available in netsh, not normal =
+dialups, and=20
+those seem to be only available on Server. If anyone knows how to get =
+around=20
+this, please contact me. You could probably use a proxy instead of NAT =
+if you=20
+are satisfied with proxyable protocols (HTTP), like the one from <A=20
+href=3D"http://www.analogx.com/contents/download/network/proxy.htm">Analo=
+g</A>.</P>
+<H2>Intro</H2>
+<P>You've probably noticed that although you can use third-party =
+software over=20
+the <A=20
+href=3D"http://www.russellbeattie.com/notebook/1001649.html">MRouter-Blue=
+tooth</A>=20
+connection, you can't use Nokia's own software like the WAP browser or =
+Syncml.=20
+These require a functional Access point that is WAP-enabled. Nokia has=20
+(purposefully?) made this impossible to set up via the phone UI, but it =
+is quite=20
+possible to do programmatically.</P>
+<P>There is a piece of software called <A=20
+href=3D"http://www.symbianos.org/cgi-bin/viewcvs.cgi/gnubox/">gnubox</A> =
+that is=20
+supposed to be able to this. It probably is on some software versions, =
+but not=20
+all. I have modified the software to work on the newer software =
+versions. You=20
+can download the <A =
+href=3D"http://mikie.iki.fi/symbian/gnubox.zip">source</A> or=20
+just the <A href=3D"http://mikie.iki.fi/symbian/gnubox.SIS">phone =
+installation=20
+file (7650)</A>, <A=20
+href=3D"http://mikie.iki.fi/symbian/gnubox6600.SIS">6600</A>.</P>
+<P><EM>All that the gnubox does is modify the communications database=20
+settings.</EM> You need it because the user interface=20
+(Settings|Connection|Access points) doesn't allow you to specify the =
+right=20
+settings. No software is needed to run in the background for this to =
+work.</P>
+<P>On the 6600 it's been made even harder. The phone still has all the=20
+components needed for using the Internet (and WAP) over Bluetooth, but =
+it's been=20
+purposefully made so that it won't use the mRouter connection for this. =
+It all=20
+hangs on the IP it gets: if it's from the range mRouter hands out =
+(169.254.x.x)=20
+it won't route any traffic through the interface; if it's something else =
+
+everything works.</P>
+<H2>Instructions</H2>
+<H3>7650: On your PC (Windows)</H3>
+<P>First make sure that your PC Suite works with Bluetooth. TDK has <A=20
+href=3D"http://www.communica.se/tdk/support/How%20to%20Configure%20the%20=
+Nokia%20PC%20Suite.pdf">a=20
+nice set of instructions for this</A>.</P>
+<P>Install <A =
+href=3D"http://www.forum.nokia.com/main/1,6566,1_1_30,00.html">Nokia=20
+Gateway Simulator (part of the Nokia Mobile Internet Toolkit)</A>. When =
+you are=20
+ready to test WAP, run the WAP gateway console =
+(Start|Programs|Nokia|Nokia WAP=20
+Gateway Simulator|WAP Gateway Simulator 4.0 - Console). You can use some =
+other=20
+WAP gateway as well, e.g. Kannel.</P>
+<H3>6600: On your PC (Windows XP)</H3>
+<P>Check that your firewall isn't blocking the connection we want to =
+use.=20
+Probably best to disable it first, get these things running and then =
+enable it=20
+again, possibly changing some settings for it.</P>
+<P>Set up an Incoming Connection for Bluetooth as described by <A=20
+href=3D"http://members.chello.se/micce/Bluetooth-Setup.pdf">Troy =
+Fontaine</A>.=20
+Make sure PC-Suite/mRouter isn't enabled for the Bluetooth serial =
+port.</P>
+<P>If you are able to hand out real addresses on your local area =
+network, this=20
+is enough. If not, read further.</P>
+<P>Set the Incoming Connection to hand out addresses from a private =
+range, e.g.=20
+10.0.0.1-10.0.0.254. Remove Internet Connection Sharing from all =
+interfaces.=20
+Enable NAT on your Windows XP box by typing in a CMD window: <PRE>netsh =
+routing ip nat install
+netsh routing ip nat add interface "YOUR LAN INTERFACE NAME" full
+netsh routing ip nat add interface Internal private
+</PRE>Look up the interface name in the control panel network =
+connections. <B>A=20
+dialup connection won't work, use a proxy instead.</B> Note that the =
+'Internal'=20
+name will depend on the language of your Windows XP (e.g. in Finnish =
+it's=20
+'Sis=E4inen' instead). The first line enables network address =
+translation (NAT),=20
+the second adds your LAN connection as something to send NATted traffic=20
+<I>to</I> and the third your incoming connections (they all get attached =
+to the=20
+'Internal' interface) as sources for NATted traffic.
+<P></P>
+<P>I don't know about WAP on the 6600, since it's WAP 2.0 now. The Nokia =
+gateway=20
+might support it, or might not. I don't know how to tell the phone who =
+to=20
+connect.</P>
+<H3>On the phone</H3>
+<P><B>This will modify your communications settings. Back up your phone=20
+first!</B> If you are actually using GSM-data for something, this will =
+break it.=20
+You should be able to get the settings back by selecting Options|1Box =
+phone in=20
+Gnubox.</P>
+<P>You can also use Nokia PC Suite to set up the access point. You'll =
+have to=20
+set the password manually on the phone, though.</P>
+<UL>
+  <LI>Create a new Access Point on the phone (Setting|Connection|Access=20
+  points|New access point|Use default settings).=20
+  <LI>Use the following settings for it:=20
+  <UL>
+    <LI>Name: <TT>Bt</TT>. <B>The name is important, the software will =
+look for=20
+    it, and case matters.</B>=20
+    <LI>Data Bearer: <TT>GSM data</TT>=20
+    <LI>Dial-up number: e.g. <TT>2222</TT>. It doesn't matter what you =
+have here=20
+    as long as it's not empty=20
+    <LI><B>7650:</B>=20
+    <UL>
+      <LI>Username: <TT>RasUser</TT>. Note the uppercase and lowercase =
+letters.=20
+      <LI>Promp password: <TT>No</TT>=20
+      <LI>Password: <TT>pass</TT>.=20
+      <LI>Gateway IP Address: <TT>169.254.1.68</TT>=20
+      <LI>Homepage: <TT>http://www.google.com/wml</TT>. Any =
+<B>public</B> wap=20
+      site will do. </LI></UL>
+    <LI><B>6600:</B>=20
+    <UL>
+      <LI>Username: a username that can log in on your Windows box=20
+      <LI>Promp password: <TT>No</TT>=20
+      <LI>Password: password for the user on Windows=20
+      <LI>Authentication: <TT>Normal</TT>=20
+      <LI>Advanced Settings: Use Login Script <TT>Yes</TT>=20
+      <LI>Advanced Settings: Login Script <PRE>CHARMAP [windows-1252]
+LOOP 10
+{
+SEND "CLIENT"+&lt;0x0d&gt;
+WAIT 3
+{
+"SERVER" OK
+}
+}
+EXIT KErrNoAnswer$
+
+OK:
+EXIT
+</PRE>be careful that you get it exactly as show here, including=20
+      linebreaks. You could save it to a file, send to the phone and =
+copy-paste=20
+      to the settings.=20
+      <LI>Advanced Settings: Use PPP Compression <TT>Yes</TT> =
+</LI></UL></LI></UL>
+  <LI>Run gnubox and select Options|2box Direct|Bluetooth and select =
+your=20
+  laptop. It should list the new settings and switch to a light blue =
+background=20
+  if everyting works ok. The output should look like: <PRE>Bluetooth =
+settings...
+DialOutISP
+  Description: Direct 2box
+  DefaultTelNum:
+ModemBearer
+  PortName: BTCOMM::0
+  CSYName: BTCOMM
+  TSYName: PHONETSY
+</PRE>
+  <LI>Activate the WAP browser (Services). Change the default access =
+point to Bt=20
+  (Options|Settings|Default access points).=20
+  <LI>Now you should be able to surf to the <TT>Bt</TT> bookmark!=20
+  <LI>For sync set the sync profile to use the Bt access point. =
+</LI></UL>
+<H3>Linux</H3>
+<P>Leonard Penzer <A=20
+href=3D"http://www.unix-ag.uni-kl.de/~leonard/linux-n6600-howto.html">wro=
+te more=20
+step-by-step instructions for 6600, Bluetooth and Linux</A>.</P>
+<P>It's quite easy to use Linux as the Bluetooth access point instead of =
+Windows=20
+and mrouter. Basically you have to (these are written from memory, so =
+caveat=20
+emptor):=20
+<UL>
+  <LI>Have your Linux box configured as a router with NAT.=20
+  <LI>Install bluez, bluez-libs, bluez-sdp, bluez-pan, bluez-utils.=20
+  <LI>Get bluetooth working (test that you can see your phone with =
+<TT>sdptool=20
+  browse</TT>)=20
+  <LI>Run <TT>sdpd</TT>=20
+  <LI>Add the serial port to your services with <TT>sdptool add =
+--channel=3D3=20
+  SP</TT>=20
+  <LI>Run <TT>dund</TT> with something like <TT>dund --listen --channel =
+3=20
+  --msdun noauth 169.254.1.68:169.254.1.1 crtscts 115200 ms-dns =
+YOUR_DNS_SERVER=20
+  lock</TT>=20
+  <LI>Get and run kannel=20
+  <LI>The first time using this, to get the phone to connect to your =
+machine for=20
+  Bt serial:=20
+  <LI><TT>rfcomm bind 4 &lt;phone's Bt address&gt; &lt;phone's BT serial =
+port=20
+  service channel&gt;</TT>=20
+  <LI><TT>echo x &gt; /dev/rfcomm4</TT> </LI></UL>
+<P>Use the output from <TT>sdptool browse</TT> to figure out your =
+phone's=20
+address and the channel number for the serial port. By connecting =
+<B>to</B> the=20
+phone you trigger mrouter on it, which will try to connect back and =
+store the=20
+PC's Bluetooth address (and channel) as the preferred serial =
+connection</P>
+<P><B>6600:</B> change the addresses above to something else than =
+169.254.x.x.=20
+Don't set up a login script on the phone, since this is RAS =
+specific.</P>
+<P>If you are using Linux you don't have to set up the username and =
+password. It=20
+should work with them set as well, though. <B>Do not try to use =
+authentication=20
+with pppd</B>. It's very easy to crash the phone with it. It seems the =
+ppp stack=20
+is not very good at handling authentication options it doesn't =
+understand=20
+:-/.</P>
+<P>You can read <A href=3D"http://www.kevinboone.com/p800_linux.html">a=20
+description of setting up a P800 with linux</A> for a more in-depth =
+description=20
+of the issues involved. Note that we are not using the mrouter stuff =
+here, so we=20
+don't need any DNS records, and the phone initiates the connectionw =
+without=20
+having to send stuff to it's serial port.</P>
+<H3>Mac OS X</H3>
+<P>Marcus has written <A =
+href=3D"http://www.slamslash.com/nokia6600/">simple=20
+instructions for Mac OS X and a 6600</A>.</P>
+<P>I have zero experience of Max OS X, but from what I understand from =
+reading=20
+posts it should support the necessary components.=20
+<P><A=20
+href=3D"http://www.macosxhints.com/article.php?story=3D20031117142051675&=
+amp;mode=3Dprint">http://www.macosxhints.com/article.php?story=3D20031117=
+142051675&amp;mode=3Dprint</A>=20
+seems to have instructions for something like this. The site can be down =
+
+sometimes, use <A=20
+href=3D"http://www.google.com/search?q=3Dhttp%3A%2F%2Fwww.macosxhints.com=
+%2Farticle.php%3Fstory%3D20031117142051675%26mode%3Dprint">Google's=20
+cache</A> instead.</P>
+<P>Basically what you need on the Mac is:</P>
+<UL>
+  <LI>internet sharing by some means=20
+  <LI>a PPP-server (pppd) listening on a Bluetooth serial port, with =
+settings=20
+  like what I wrote for Linux </LI></UL>
+<P>and you'll need to make the phone connect to the Mac's Bt serial. =
+This can be=20
+done normally on a PC by:</P>
+<UL>
+  <LI>setting up a Bluetooth serial port service _on the PC_=20
+  <LI>trying to connect _from_ the PC to the _phone's_ Bt serial port. =
+This will=20
+  give an error=20
+  <LI>wait for the phone to connect to the PC's serial port=20
+  <LI>kill this connection from either the phone or the PC </LI></UL>
+<P>That uses the fact that the phone's mRouter software will connect =
+back to a=20
+device that tries to connect to the phone's serial port and will store =
+that=20
+device's address in the phone as the preferred bluetooth serial =
+connection. How=20
+this is done is undocumented, so I haven't been able to add it to the =
+gnubox=20
+software (well actually it's not too complicated, but I'm too lazy to do =
+it=20
+since it works anyway).</P>
+<H2>Typical problems</H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>Error message</TH>
+    <TH>cause/solution/notes</TH></TR>
+  <TR>
+    <TD>Invalid phone number</TD>
+    <TD>The gnubox software hasn't been run or didn't work correctly. =
+Rerun=20
+      it, select 1 box, select 2 box direct|bluetooth and make sure it =
+prints=20
+      the correct settings on a blue background</TD></TR>
+  <TR>
+    <TD>NAT must be installed first</TD>
+    <TD>Either you didn't run 'netsh routing ip nat install' or it =
+didn't=20
+      work. It won't work if you still have Internet Connection Sharing =
+active,=20
+      so disable that: Make sure none of your interfaces is set as =
+'shared' and=20
+      on XP SP2 stop the Windows Firewall/Internet Connection Sharing =
+service=20
+      (you'll need a third-party firewall in that case).</TD></TR>
+  <TR>
+    <TD>An interface with this name is not registered with the =
+router</TD>
+    <TD>You gave the wrong interface name in 'netsh add interface' or =
+you are=20
+      trying to use a dial-up interface.</TD></TR></TBODY></TABLE>
+<H2>Technical notes</H2>
+<H3>About the commdb</H3>
+<P>The <A =
+href=3D"http://mikie.iki.fi/symbian/commdb-before.txt">before</A> and <A =
+
+href=3D"http://mikie.iki.fi/symbian/commdb-after.txt">after</A> dumps of =
+the=20
+commdb (just the relevant bits) show the changes made. The important =
+bits=20
+are:</P>
+<UL>
+  <LI>The new access point is created in all the relevant tables.=20
+  <LI>Change the default modem to use the Bluetooth serial port, and =
+bluetooth=20
+  CSY.=20
+  <LI>The DialOutISP phone number is emptied so that it doesn't try to =
+call=20
+  anywhere. </LI></UL>
+<P>You can read the code for seeing how the changes are made. The =
+changes in the=20
+code compared to the stock gnubox are:</P>
+<UL>
+  <LI>Set commdb to show hidden records.=20
+  <LI>Search for specific rows instead of using the first one (Modem and =
+
+  DialOutISP). The first row is not the default one. </LI></UL>
+<P>The main differences for the 6600 are that the records are named a =
+bit=20
+differently and the MODEM table has become MODEMBEARER.</P>
+<H3>Debugging the connection</H3><A name=3Ddebug>
+<P>If something goes wrong with the commdb modifications in gnubox, =
+create the=20
+directory <TT>c:\logs\gnubox</TT> on the phone. Debug information will =
+appear=20
+there.</P>
+<P>Make sure the phone is using your PC for a Bt serial connection by =
+getting=20
+the mrouter connection up (enable mrouter on the bluetooth port, get =
+PC-Suite=20
+working, disable mrouter afterwards).</P>
+<P>It's actually possible to get quite a bit of logging out of Windows =
+for the=20
+RAS. The first thing to look at is=20
+<TT>c:\windows\ModemLog_CONNECTIONNAME.txt</TT> for the Bluetooth serial =
+
+connection.</P>
+<P>If the serial connection works, but RAS doesn't, enable tracing with=20
+<TT>netsh ras set tracing * enable</TT> and look in=20
+<TT>c:\windows\tracing</TT></P>
+<P>If RAS seems to be working but the connection still doesn't work, you =
+can=20
+have a look at the traffic on both the RAS interface and the LAN =
+interface with=20
+<A href=3D"http://http//windump.polito.it/">WinDump</A>.</P>
+<H3>Other technical notes</H3>
+<UL>
+  <LI>I had problems getting the NAT work if there were multiple network =
+
+  connections set up as FULL in netsh so I'm only got one now. I don't =
+know if=20
+  it's because of trying to use a Wi-Fi connection or because there were =
+two.=20
+  </LI></UL>
+<HR>
+
+<P align=3Dright><A href=3D"http://www.iki.fi/mikie/">Mika Raento</A>,=20
+mikie(at)iki.fi</P></BODY></HTML>
+
+------=_NextPart_000_0000_01CAFFF2.530FE6C0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+Content-Location: http://mikie.iki.fi/symbian/symbian.css
+
+BODY {
+	MARGIN: 20px; MAX-WIDTH: 50em
+}
+H1 {
+	BACKGROUND-COLOR: darkgray; FONT-FAMILY: sans-serif; COLOR: #404040
+}
+H2 {
+	BACKGROUND-COLOR: darkgray; FONT-FAMILY: sans-serif; COLOR: #404040
+}
+H3 {
+	FONT-FAMILY: sans-serif; COLOR: #404040
+}
+H4 {
+	FONT-FAMILY: sans-serif; COLOR: #404040
+}
+H1 {
+	FONT-SIZE: 150%
+}
+H2 {
+	FONT-SIZE: 130%
+}
+H3 {
+	FONT-SIZE: 110%
+}
+TT {
+	BACKGROUND-COLOR: #e0e0ff; FONT-FAMILY: monospace; WHITE-SPACE: pre
+}
+.tt {
+	BACKGROUND-COLOR: #e0e0ff; FONT-FAMILY: monospace; WHITE-SPACE: pre
+}
+PRE {
+	BACKGROUND-COLOR: #e0e0ff; FONT-FAMILY: monospace; WHITE-SPACE: pre
+}
+TH {
+	TEXT-ALIGN: left
+}
+TR {
+	VERTICAL-ALIGN: top
+}
+TH {
+	BACKGROUND: #f0f0f0
+}
+TD {
+	BACKGROUND: #f0f0f0
+}
+
+------=_NextPart_000_0000_01CAFFF2.530FE6C0--

@@ -1,0 +1,340 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Decoupling
+Date: Thu, 10 Jun 2010 11:33:44 +0530
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.hottconsultants.com/techtips/decoupling.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Decoupling</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3DAuthor content=3D"Henry Ott">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY aLink=3D#ff00ff link=3D#0000ff bgColor=3D#ffffc0 text=3D#000000 =
+vLink=3D#800080>
+<H1><U><FONT color=3D#3333ff>Henry Ott=20
+Consultants</FONT></U></H1><B>Electromagnetic Compatibility Consulting =
+and=20
+Training</B> <BR>
+<HR SIZE=3D5 width=3D"100%" noShade>
+
+<CENTER>
+<H1><U><FONT color=3D#cc0000>Decoupling</FONT></U></H1></CENTER>
+<CENTER>
+<P><BR><I><FONT color=3D#000000>Many people today are decoupling&nbsp; =
+digital=20
+logic ICs by placing a single 0.1 or 0.01 uF capacitor next to the=20
+IC.</FONT></I> <BR><I><FONT color=3D#000000>This is the same method that =
+has been=20
+used on digital logic ICs for the last forty plus years, so it still =
+must be=20
+the</FONT></I> <BR><I><FONT color=3D#000000>correct approach -- =
+right!&nbsp; After=20
+all how much has IC technology changed in the last forty years?&nbsp; I =
+think=20
+that it is</FONT></I> <BR><I><FONT color=3D#000000>interesting that this =
+method=20
+has worked for as many years as it has.&nbsp; No one should be surprised =
+that,=20
+possibly,</FONT></I> <BR><I><FONT color=3D#000000>we are now to the =
+point that a=20
+new approach to decoupling is required.</FONT></I></P></CENTER>
+<P><BR></P>
+<P></P>
+<HR SIZE=3D5 width=3D"100%" noShade>
+<BR>&nbsp;=20
+<P><FONT color=3D#000000>Decoupling is <B>not</B> the process of placing =
+a=20
+capacitor adjacent to the IC to supply the transient switching current, =
+rather=20
+it is the process of placing an L-C network adjacent to the IC to supply =
+the=20
+transient switching current.&nbsp; The inductance comes from the =
+capacitor=20
+itself (typically 1-2 nH for a SMT capacitor), the interconnecting =
+traces=20
+(typically 5 to 20 nH according to the layout), and the lead frame of =
+the=20
+IC&nbsp; (typically 4 to 15 nH according to the type of IC =
+package).&nbsp; From=20
+the above we see that the inductance can vary from a low of 10 nH to a =
+high of=20
+37 nH, all assuming a reasonably good layout.&nbsp; It is this =
+inductance that=20
+limits the effectiveness of the decoupling network. <B>It is very =
+important to=20
+remember this fact -- we are placing an L-C network between the power =
+and=20
+ground, not a capacitor!</B></FONT> <BR>&nbsp; </P>
+<H2><B><FONT color=3D#cc0000>&lt; 50 MHz</FONT></B></H2><FONT =
+color=3D#000000>Under=20
+50 MHz (don't forget to consider the harmonics of the clock) traditional =
+
+decoupling methods are effective.&nbsp; Use one or two decoupling =
+capacitors=20
+(often 0.1 or 0.01 uF) placed close to the IC power and ground =
+pins.&nbsp;=20
+Consider the loop area formed between the decoupling capacitor and the =
+IC, and=20
+place the capacitor for minimum loop area.</FONT> <BR>&nbsp;=20
+<H2><B><FONT color=3D#cc0000>50 to 500 MHz</FONT></B></H2>Above 50 MHz =
+discrete=20
+decoupling capacitors become very inefficient in providing effective=20
+decoupling.&nbsp; At these frequencies some form of distributed =
+decoupling=20
+capacitance is necessary.&nbsp; This can be achieved by using <B><U>many =
+
+small&nbsp; capacitors</U></B> spread out around the IC, or by taking =
+advantage=20
+of&nbsp; the <B><U><A=20
+href=3D"http://www.hottconsultants.com/techtips/decoupling.html#zycon">di=
+stributed=20
+interplane capacitance</A></U></B> between the power and ground =
+planes.&nbsp;=20
+The key to using multiple capacitors for high frequency decoupling is =
+to, (1)=20
+make them all the same value, and (2) spread them out around the IC -- =
+do not=20
+place them together.=20
+<P>The reason that this works is that when equal value L-C networks are =
+placed=20
+in parallel, the total capacitance is equal to NxC and the total =
+inductance is=20
+L/N where N is the number of capacitors used.&nbsp; In other words, for =
+parallel=20
+L-C networks the capacitance value multiples up by the number of =
+networks used=20
+and the inductance value divides down by the number of networks =
+used.&nbsp; Both=20
+of these effects are working in our favor.&nbsp; For a fixed value of=20
+inductance, the effectiveness of the high frequency decoupling network =
+is,=20
+therefore, solely dependent on the number of capacitors that you =
+use.&nbsp; The=20
+more capacitors the lower the total inductance, and the better the high=20
+frequency decoupling.&nbsp; I often recommend from 4 to 20 decoupling =
+capacitors=20
+according to the application.&nbsp; Intel, as an example,&nbsp; =
+recommends 41=20
+decoupling capacitors in order effectively decouple a Pentium=AE-2 =
+microprocessor=20
+(Intel Application Note AP-579).&nbsp; When a large number of capacitors =
+are=20
+use, there exact placement becomes less important than when only one or =
+two=20
+capacitors are used.&nbsp; Just spread them out around the IC, and try =
+to place=20
+them symmetrically (or evenly) with respect to the IC. </P>
+<P>There are a large number of people that use and/or recommend the use =
+of=20
+multiple capacitors of different values.&nbsp; My recommendation is =
+don't!&nbsp;=20
+The problem with this approach is that the different value capacitors =
+produce an=20
+anti-resonance, or cross-resonance (which produces an impedance =
+peak).&nbsp; Not=20
+a desirable result!&nbsp; For those still considering the use of =
+different value=20
+capacitors I would suggest that you look at the Bruce Archambeault and =
+Clayton=20
+Paul papers referenced below.&nbsp; The <A=20
+href=3D"http://www.interferencetechnology.com/ArchivedArticles/EMC_Design=
+_and_Software/Eliminating%20the%20myths%20about%20printed%20circuit%20boa=
+rd%20power--ground%20plane%20decoupling.pdf?regid=3D">Bruce=20
+Archambeault paper</A> in particular gives measured values of decoupling =
+
+effectiveness, using a network analyzer.&nbsp; For the case of multiple =
+value=20
+capacitors it concludes, "There is no noticeable improvement in the high =
+
+frequency decoupling performance when a second capacitor value is =
+added.&nbsp;=20
+In fact the decoupling performance is worse in a frequency range where =
+much of=20
+the typical noise energy exists (50-200 MHz)."&nbsp; Archambeault's data =
+shows=20
+that the noise increased by 25 dB (as a result&nbsp; of the =
+cross-resonance=20
+between the different value capacitors) between 50 and 200 MHz when two=20
+different capacitor values were used, as compared to the results when =
+all the=20
+capacitors were of the same value. </P>
+<P>Although the effectiveness of the decoupling at high frequency is =
+dependent=20
+on the number of capacitors used (since the inductance is reduced to =
+L/N), the=20
+effectiveness of the decoupling at low frequency has nothing to do with =
+the=20
+number of capacitors used.&nbsp; The low frequency decoupling =
+effectiveness is=20
+solely dependent upon the value of capacitance (CxN) that all the =
+capacitors add=20
+up to.&nbsp; The larger the value of CxN the lower the&nbsp; frequency =
+that the=20
+decoupling will still be&nbsp; effective. </P>
+<P><FONT color=3D#000000>If you work out the numbers, you will find that =
+even=20
+multiple discrete decoupling capacitors, regardless of how many you use =
+or where=20
+you place them, will only be effective up to about 500 MHz.</FONT> =
+<BR>&nbsp;=20
+</P>
+<H2><B><FONT color=3D#cc0000>500 MHz to 5 GHz</FONT></B></H2><A=20
+name=3Dzycon></A><FONT size=3D+0><B><FONT color=3D#cc0000>Embedded PCB =
+Capacitance:=20
+</FONT></B><FONT color=3D#000000>The limit to the concept of the use of =
+a large=20
+number of discrete decoupling capacitors is the use of distributed =
+decoupling=20
+capacitance, </FONT></FONT>by taking advantage of&nbsp; the distributed=20
+interplane capacitance between the power and ground planes of the =
+PCB.&nbsp;=20
+This amounts to an infinite number of infinitesimal capacitors.&nbsp; =
+The only=20
+way to get effective decoupling above 500 MHz is to use some form of =
+distributed=20
+interplane capacitance.&nbsp; This technique will also be effective down =
+to=20
+about 50 MHz.&nbsp; To be effective above 50 MHz a power ground plane=20
+capacitance of about 1000 pF/sq. in. is required.&nbsp; Standard layer =
+spacing=20
+of 5- to 10-mils provide capacitance that are 1/5 to 1/10 of this =
+required=20
+amount.=20
+<P>In 1989-1990 Zycon, (which then became Hadco and now is Sanmina), =
+developed a=20
+special PCB laminate with a 2-mil spacing between layers using standard =
+FR-4=20
+epoxy glass as the dielectric.&nbsp; This laminate known as=20
+<B>ZBC-2000</B>&nbsp; provides 500 pF/ sq. in. of interplane =
+capacitance.&nbsp;=20
+By using two sets of power and ground planes in a PCB, we can obtain the =
+desired=20
+1000 pF/sq. in. </P>
+<P>Although Zycon has <B>patents</B> on the 2-mil thick laminate =
+technology, it=20
+is available from many sources. Zycon refers to this technology as =
+<B>Buried=20
+Capacitance</B>. </P>
+<P>This&nbsp; <A=20
+href=3D"http://www.hottconsultants.com/pdf_files/zycon-bc.pdf">pdf =
+file</A> (~33.5=20
+KB) contains a listing of the printed circuit board fabricators that are =
+
+licensed to Zycon to manufacture PC boards using this technology.&nbsp; =
+As of=20
+1999,&nbsp; the date of the list, there were 35 printed circuit board=20
+fabricators licensed to Zycon to manufacture boards using this =
+technology, and=20
+14 fabricators licensed to produce the special&nbsp; ZBC-2000 laminate. =
+</P>
+<P>Although this technology has been available for ten years, it is just =
+now=20
+becoming popular.&nbsp; Conversion to a <B>Buried Capacitance </B>PCB is =
+very=20
+easy, since no new art work is required.&nbsp; Only the layer stack-up =
+is=20
+changed. The most common stack-up is as follows: </P>
+<CENTER>
+<P>-----------------------Signal </P>
+<P>&nbsp; -----------------------Power* <BR>&nbsp;&nbsp;=20
+-----------------------Ground* </P>
+<P>-----------------------Signal </P>
+<P>-----------------------Signal </P>
+<P>&nbsp;&nbsp; -----------------------Ground* <BR>&nbsp;&nbsp;=20
+-----------------------Power* </P>
+<P>-----------------------Signal </P>
+<P>*<B>Buried Capacitance</B> layers</P></CENTER>
+<P><BR><BR><BR><BR><BR><BR><BR><BR><BR></P>
+<P>Other layer stack-ups are also possible using the <B>Buried =
+Capacitance</B>=20
+approach. </P>
+<P>Since no new art work is required, it is very easy to try out this =
+technology=20
+by having two sets of prototype boards made, one&nbsp; the standard way =
+and the=20
+second using the <B>Buried Capacitance </B>layers.&nbsp; Then the =
+performance of=20
+the two can be directly compared. </P>
+<P>I am convinced that in the future we will all be using some form of=20
+distributed capacitance printed circuit boards.&nbsp; They will become =
+the=20
+standard way to provide effective decoupling at high-frequency.&nbsp; At =
+the=20
+present time the Zycon Buried Capacitance=FA technology is the best that =
+is=20
+readily available. <BR>&nbsp; </P>
+<H2><B><FONT color=3D#cc0000>&gt; 5 GHz</FONT></B></H2>There is no =
+reason to=20
+suspect that the Zycon&nbsp; <B>Buried Capacitance </B>technology (or =
+other=20
+similar interplane capacitance technology) will not also be effective =
+above 5=20
+GHz, however, I am not aware of anyone who has made any measurements of =
+its=20
+performance up at those frequencies. <BR>&nbsp;=20
+<P></P>
+<HR SIZE=3D5 width=3D"100%" noShade>
+
+<P>If you are interested in a more detailed discussion of decoupling and =
+the=20
+options available, you might want to consider having our one-day course =
+on <B><A=20
+href=3D"http://www.hottconsultants.com/outlines/decoupl.html">Decoupling =
+and=20
+Grounding of High-Speed Digital Circuits</A></B> presented at your =
+location.=20
+<BR>&nbsp; <BR>&nbsp; </P>
+<P><B>=A9 2001/2000 Henry W.=20
+Ott&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+Henry Ott Consultants,&nbsp; 48 Baker Road&nbsp; Livingston,&nbsp; =
+NJ&nbsp;=20
+07039&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;=20
+(973) 992-1793</B> </P>
+<P></P>
+<HR SIZE=3D4 width=3D"100%" noShade>
+
+<H2><B><U><FONT color=3D#cc0000>References on =
+Decoupling</FONT></U></B></H2>
+<BLOCKQUOTE><FONT color=3D#000000>Paul, Clayton R., </FONT><B><FONT=20
+  color=3D#cc0000>Effectiveness of Multiple Decoupling =
+Capacitors</FONT></B><FONT=20
+  color=3D#000000>, IEEE Transactions on EMC, May =
+1992.</FONT></BLOCKQUOTE>
+<BLOCKQUOTE><FONT color=3D#000000>Archambeault, Bruce, </FONT><A=20
+  =
+href=3D"http://www.interferencetechnology.com/ArchivedArticles/EMC_Design=
+_and_Software/Eliminating%20the%20myths%20about%20printed%20circuit%20boa=
+rd%20power--ground%20plane%20decoupling.pdf?regid=3D"><B><FONT=20
+  color=3D#cc0000>Eliminating the MYTHS About Printed Circuit Board =
+Power/Ground=20
+  Plane Decoupling</FONT></B></A><FONT color=3D#000000>, ITEM=20
+2001.</FONT></BLOCKQUOTE>
+<BLOCKQUOTE>Sisler, J., <B><FONT color=3D#cc0000>Eliminating Capacitors =
+From=20
+  Multilayer PCBs</FONT></B>, <I>Printed Circuit Design</I>, July=20
+1991.</BLOCKQUOTE>
+<HR SIZE=3D5 width=3D"100%" noShade>
+
+<P><B><A=20
+href=3D"http://www.hottconsultants.com/techtips/decoupling.html#top">Retu=
+rn to top=20
+of page.</A></B> </P>
+<P><B><A href=3D"http://www.hottconsultants.com/index.html">Return to =
+HOC home=20
+page.</A></B> </P>
+<P></P>
+<HR SIZE=3D5 width=3D"100%" noShade>
+
+<ADDRESS>Henry Ott Consultants</ADDRESS>
+<ADDRESS>48 Baker Road Livingston, NJ 07039</ADDRESS>
+<ADDRESS>Phone: 973-992-1793,&nbsp;&nbsp; FAX: 973-533-1442</ADDRESS>
+<ADDRESS><B><A href=3D"mailto:h.ott@att.net"><BR></A></B></ADDRESS>
+<ADDRESS>January 8, 2007</ADDRESS></BODY></HTML>

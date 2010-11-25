@@ -1,0 +1,447 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Bluetooth DialUp Connection to Internet from Linux :-( [Archive] - Ubuntu Forums
+Date: Mon, 24 May 2010 18:52:03 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0006_01CAFB72.3348E820"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0006_01CAFB72.3348E820
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://ubuntuforums.org/archive/index.php/t-110651.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML dir=3Dltr lang=3Den =
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><META=20
+content=3D"IE=3D7.0000" http-equiv=3D"X-UA-Compatible">
+<TITLE>Bluetooth DialUp Connection to Internet from Linux :-( [Archive] =
+- Ubuntu Forums</TITLE>
+<META content=3D"text/html; charset=3DISO-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3Dkeywords=20
+content=3D" Bluetooth DialUp Connection to Internet from Linux :-(, =
+ubuntu forums,ubuntu linux,ubuntu,linux forum,ubuntu forum,linux =
+ubuntu,ubuntu support,ubuntu help,ubuntu linux help">
+<META name=3Ddescription=20
+content=3D"[Archive]  Bluetooth DialUp Connection to Internet from Linux =
+:-( Hardware &amp; Laptops"><LINK=20
+rel=3Dstylesheet type=3Dtext/css =
+href=3D"http://ubuntuforums.org/archive/archive.css">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY>
+<DIV class=3Dpagebody>
+<DIV id=3Dnavbar><A =
+href=3D"http://ubuntuforums.org/archive/index.php">Ubuntu=20
+Forums</A> &gt; <A=20
+href=3D"http://ubuntuforums.org/archive/index.php/f-130.html">The Ubuntu =
+Forum=20
+Community</A> &gt; <A=20
+href=3D"http://ubuntuforums.org/archive/index.php/f-325.html">Forum =
+Archive</A>=20
+&gt; <A =
+href=3D"http://ubuntuforums.org/archive/index.php/f-173.html">Main =
+Support=20
+Categories</A> &gt; <A=20
+href=3D"http://ubuntuforums.org/archive/index.php/f-135.html">Hardware =
+&amp;=20
+Laptops</A> &gt; Bluetooth DialUp Connection to Internet from Linux =
+:-(</DIV>
+<HR>
+
+<DIV class=3Dpda><A=20
+href=3D"http://ubuntuforums.org/archive/index.php/t-110651.html?pda=3D1" =
+
+rel=3Dnofollow>PDA</A></DIV>
+<P class=3Dlargefont>View Full Version : <A=20
+href=3D"http://ubuntuforums.org/showthread.php?t=3D110651">Bluetooth =
+DialUp=20
+Connection to Internet from Linux :-(</A></P>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>arunbabu</DIV>
+<DIV class=3Ddate>December 31st, 2005, 10:13 AM</DIV></DIV>
+<DIV class=3Dposttext>Its now a long time since I am asking every person =
+I see and=20
+meet ... How to connect my bluetooth adapter (connected to my USB) =
+communicate=20
+with my mobile Nokia 6600. I just have the software given with the =
+hardware -=20
+Bluesoleil from IVT Corporation ... This made me switch to Windows Xp .. =
+Could=20
+some one pull me out ?<BR><BR>Hardware<BR><BR>1. Bluetooth adapter -=20
+Billionton<BR>2. Nokia 6600 mobile with Internet<BR>3. My Linux =
+Box<BR><BR>Can=20
+someone help me connect all three to connect INTERNET</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>arunbabu</DIV>
+<DIV class=3Ddate>December 31st, 2005, 12:55 PM</DIV></DIV>
+<DIV class=3Dposttext>help me please :(</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>emperon</DIV>
+<DIV class=3Ddate>December 31st, 2005, 01:10 PM</DIV></DIV>
+<DIV class=3Dposttext>Same here, this is the only reason i am using =
+windows. <BR>I=20
+am currently reading linux unwired which dedicates seperate chapters =
+each for=20
+bluetooth and GPRS topics though i am dubious if it could be helpful. =
+Please=20
+someone help us.</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>arunbabu</DIV>
+<DIV class=3Ddate>January 1st, 2006, 01:07 AM</DIV></DIV>
+<DIV class=3Dposttext>Why isnt any one replying ... hmmm ... it seems =
+I'll have to=20
+go the windows way, since its the only option ... Mandriva people too =
+are dumb=20
+!!!</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>emperon</DIV>
+<DIV class=3Ddate>January 2nd, 2006, 11:50 AM</DIV></DIV>
+<DIV class=3Dposttext>Hello, i have just succeeded to connect gprs via =
+bluetooth.=20
+Currently i am writing from there.<BR><BR>I have read wirless hacks of =
+oreilly=20
+and <BR>found the solution<BR><BR>1-) Make sure that you have the =
+appropriate=20
+hardware ready. (I tried same phone and notebook in windows it was=20
+working.)<BR><BR>2-) Makesure that bluez-utils is installed via package=20
+manager<BR><BR>3-)open a console and type hcitool scan this should give =
+you the=20
+BD address of your phone, take a note of this number<BR><BR>4-)type =
+sdptool=20
+search DUN from the out put take a note of channel number<BR><BR>5-)make =
+sure=20
+that you have written your pin number in /etc/bluetooth/pin (any 4 digit =
+number=20
+is ok , you will use the same number through the phone)<BR><BR>6-) type =
+# rfcomm=20
+bind /dev/rfcomm0 00:11:22:33:44:55:66 channel_number_noted [B] using =
+the=20
+channel number noted earlier<BR><BR>7-) test it by typing [B] rfcomm , =
+you=20
+should see the channel is clear or closed, both are ok e.g. rfcomm0:=20
+00:11:22:33:44:55 channel 1 clean<BR><BR>8-) create the following file =
+as root :=20
+/etc/ppp/peers/gprs<BR><BR>9-) Put the following=20
+inside:<BR><BR><BR>/dev/rfcomm0<BR>connect '/usr/sbin/chat -v -f=20
+/etc/ppp/peers/gprs.chat' <BR>noauth <BR>defaultroute <BR>usepeerdns=20
+<BR>lcp-echo-interval 65535 <BR>debug <BR><BR><BR>10-) Create the =
+following file=20
+as root: /etc/ppp/peers/gprs.chat' and put the following<BR><BR>TIMEOUT =
+15=20
+<BR>ECHO ON <BR>HANGUP ON <BR>'' AT <BR>OK ATZ <BR>OK ATD*99*# =
+<BR><BR>Here you=20
+may need to change *99*#, it should be the number you dial. In Turkey it =
+is=20
+that, in some countries it is *99# or *99***1#, consult your GSM=20
+provider.<BR><BR>11-) Go to your phone and initiate pairing by using the =
+same=20
+pin and confirm all things from phone<BR><BR>12-) type sudo pppd call =
+gprs and=20
+confirm the connection with your phone<BR><BR>That's it, your gprs =
+connections=20
+should be working now, enjoy surfing</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>emperon</DIV>
+<DIV class=3Ddate>January 2nd, 2006, 11:54 AM</DIV></DIV>
+<DIV class=3Dposttext>Hello, i have just succeeded to connect gprs via =
+bluetooth.=20
+Currently i am writing from there.<BR><BR>I have read wirless hacks of =
+oreilly=20
+and <BR>found the solution<BR><BR>1-) Make sure that you have the =
+appropriate=20
+hardware ready. (I tried same phone and notebook in windows it was=20
+working.)<BR><BR>2-) Makesure that bluez-utils is installed via package=20
+manager<BR><BR>3-)open a console and type hcitool scan this should give =
+you the=20
+BD address of your phone, take a note of this number<BR><BR>4-)type =
+sdptool=20
+search DUN from the out put take a note of channel number<BR><BR>5-)make =
+sure=20
+that you have written your pin number in /etc/bluetooth/pin (any 4 digit =
+number=20
+is ok , you will use the same number through the phone)<BR><BR>6-) type =
+rfcomm=20
+bind /dev/rfcomm0 00:11:22:33:44:55:66 channel_number_noted using the =
+channel=20
+number noted earlier<BR><BR>7-) test it by typing rfcomm you should see =
+the=20
+channel is clear or closed, both are ok e.g. rfcomm0: 00:11:22:33:44:55 =
+channel=20
+1 clean<BR><BR>8 -) create the following file as root :=20
+/etc/ppp/peers/gprs<BR><BR>9-) Put the following=20
+inside:<BR><BR><BR>/dev/rfcomm0<BR>connect '/usr/sbin/chat -v -f=20
+/etc/ppp/peers/gprs.chat' <BR>noauth <BR>defaultroute <BR>usepeerdns=20
+<BR>lcp-echo-interval 65535 <BR>debug <BR><BR><BR>10-) Create the =
+following file=20
+as root: /etc/ppp/peers/gprs.chat' and put the following<BR><BR>TIMEOUT =
+15=20
+<BR>ECHO ON <BR>HANGUP ON <BR>'' AT <BR>OK ATZ <BR>OK ATD*99*# =
+<BR><BR>Here you=20
+may need to change *99*#, it should be the number you dial. In Turkey it =
+is=20
+that, in some countries it is *99# or *99***1#, consult your GSM=20
+provider.<BR><BR>11-) Go to your phone and initiate pairing by using the =
+same=20
+pin and confirm all things from phone<BR><BR>12-) type sudo pppd call =
+gprs and=20
+confirm the connection with your phone<BR><BR>That's it, your gprs =
+connections=20
+should be working now, enjoy surfing</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>arunbabu</DIV>
+<DIV class=3Ddate>January 13th, 2006, 02:31 PM</DIV></DIV>
+<DIV class=3Dposttext>sorry ... i took so long to thank you ... actually =
+i forgot=20
+about the post :( and was into other ways to find a solution =
+...<BR><BR>Good=20
+work Emperon !!! and i am really thankfull to you !!!<BR><BR>i have =
+found some=20
+useful links too ... may be you will like them too=20
+<BR>http://www.cs.helsinki.fi/u/mraento/symbian/bt-ap.html<BR>http://www.=
+unix-ag.uni-kl.de/~leonard/linux-n6600-howto.html<BR>http://www.russellbe=
+attie.com/notebook/1001649.html<BR><BR>arun=20
+babu</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>arunbabu</DIV>
+<DIV class=3Ddate>January 13th, 2006, 03:42 PM</DIV></DIV>
+<DIV class=3Dposttext>Hey emperor it didnt work out for me !!! :( =
+<BR>&gt;12-)=20
+type sudo pppd call gprs and confirm ...<BR>I got stuck there ... it =
+shows=20
+"script failed" after a while ... everything about it works great ...=20
+<BR><BR>&gt;&gt;&gt;&gt;<BR>It's quite easy to use Linux as the =
+Bluetooth access=20
+point instead of Windows and mrouter. Basically you have to (these are =
+written=20
+from memory, so caveat emptor):<BR><BR>* Have your Linux box configured =
+as a=20
+router with NAT.<BR>* Install bluez, bluez-libs, bluez-sdp, bluez-pan,=20
+bluez-utils.<BR>* Get bluetooth working (test that you can see your =
+phone with=20
+sdptool browse)<BR>* Run sdpd<BR>* Add the serial port to your services =
+with=20
+sdptool add --channel=3D3 SP<BR>* Run dund with something like dund =
+--listen=20
+--channel 3 --msdun noauth 169.254.1.68:169.254.1.1 crtscts 115200 =
+ms-dns=20
+YOUR_DNS_SERVER lock<BR>* Get and run kannel<BR>* The first time using =
+this, to=20
+get the phone to connect to your machine for Bt serial:<BR>* rfcomm bind =
+4=20
+&lt;phone's Bt address&gt; &lt;phone's BT serial port service =
+channel&gt;<BR>*=20
+echo x &gt; /dev/rfcomm4<BR><BR>Use the output from sdptool browse to =
+figure out=20
+your phone's address and the channel number for the serial port. By =
+connecting=20
+to the phone you trigger mrouter on it, which will try to connect back =
+and store=20
+the PC's Bluetooth address (and channel) as the preferred serial=20
+connection<BR><BR>6600: change the addresses above to something else =
+than=20
+169.254.x.x. Don't set up a login script on the phone, since this is RAS =
+
+specific.<BR><BR>If you are using Linux you don't have to set up the =
+username=20
+and password. It should work with them set as well, though. Do not try =
+to use=20
+authentication with pppd. It's very easy to crash the phone with it. It =
+seems=20
+the ppp stack is not very good at handling authentication options it =
+doesn't=20
+understand :-/.<BR><BR>You can read a description of setting up a P800 =
+with=20
+linux for a more in-depth description of the issues involved. Note that =
+we are=20
+not using the mrouter stuff here, so we don't need any DNS records, and =
+the=20
+phone initiates the connectionw without having to send stuff to it's =
+serial=20
+port.<BR>&gt;&gt;&gt;&gt; from=20
+http://www.cs.helsinki.fi/u/mraento/symbian/index.html<BR><BR>lemme see =
+to=20
+figure out what the problem is ... pls help me if u have =
+time</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>emperon</DIV>
+<DIV class=3Ddate>January 17th, 2006, 11:24 PM</DIV></DIV>
+<DIV class=3Dposttext>Hey emperor it didnt work out for me !!! :( =
+<BR>&gt;12-)=20
+type sudo pppd call gprs and confirm ...<BR>I got stuck there ... it =
+shows=20
+"script failed" after a while ... everything about it works great ...=20
+<BR><BR><BR><BR>try this instead of step 12:<BR><BR>sudo pppd nomagic =
+call=20
+gprs<BR><BR>If still doesn't work, try to investigate your =
+var/log/messages and=20
+var/log/syslog they should identfy the problem</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>trompie</DIV>
+<DIV class=3Ddate>January 18th, 2006, 03:26 AM</DIV></DIV>
+<DIV class=3Dposttext>hey dude!<BR>i have the same problem as you, and =
+this other=20
+guy replied that u should go to the console and therefrom on...<BR>but =
+then it=20
+picks up the adapter but you need the bluesoleil to connect to the=20
+internet.<BR>That is same reason i'm also using XP.<BR>Why can't they =
+make the=20
+application compatible with Ubuntu???<BR>Linux is compatitble but not=20
+Ubuntu!<BR>What is that reason?</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>emperon</DIV>
+<DIV class=3Ddate>January 19th, 2006, 05:46 AM</DIV></DIV>
+<DIV class=3Dposttext>I don't know. But I can CLEARLY tell you that I =
+CAN CONNECT=20
+to Internet by only using the guide I post above and it works for me. My =
+phone=20
+is also nokia 6230. But i admit it took a few hard days to resolve my=20
+problems.</DIV></DIV>
+<HR>
+
+<DIV class=3Dpost>
+<DIV class=3Dposttop>
+<DIV class=3Dusername>Roner</DIV>
+<DIV class=3Ddate>May 28th, 2006, 04:20 PM</DIV></DIV>
+<DIV class=3Dposttext>See my post=20
+here<BR>http://www.ubuntuforums.org/showpost.php?p=3D1061836&amp;postcoun=
+t=3D26<BR><BR>For=20
+a less complex solution.</DIV></DIV>
+<HR>
+
+<DIV id=3Dcopyright>vBulletin=AE v3.8.4, Copyright =A92000-2010, Jelsoft =
+Enterprises=20
+Ltd.</DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0006_01CAFB72.3348E820
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://ubuntuforums.org/archive/archive.css
+
+BODY {
+	BACKGROUND: #eeeeee
+}
+BODY {
+	FONT: 11px verdana, arial, sans-serif
+}
+LI {
+	FONT: 11px verdana, arial, sans-serif
+}
+TD {
+	FONT: 11px verdana, arial, sans-serif
+}
+DIV {
+	FONT: 11px verdana, arial, sans-serif
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+LI {
+	FONT-SIZE: 10pt
+}
+I {
+	COLOR: silver
+}
+P.largefont {
+	TEXT-ALIGN: left; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+DIV.pagebody {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; =
+PADDING-BOTTOM: 16px; PADDING-LEFT: 16px; PADDING-RIGHT: 16px; =
+BACKGROUND: white; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver =
+1px solid; PADDING-TOP: 16px
+}
+DIV.pda {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: =
+#f9f9f9; FLOAT: right; BORDER-RIGHT: silver 1px solid; PADDING-TOP: 4px
+}
+DIV.post {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; =
+PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; =
+MARGIN-BOTTOM: 16px; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver =
+1px solid; PADDING-TOP: 1px
+}
+DIV.posttop {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: =
+#eeeeee; PADDING-TOP: 4px
+}
+DIV.username {
+	WIDTH: auto; FLOAT: left; FONT-WEIGHT: bold
+}
+DIV.date {
+	TEXT-ALIGN: right; WIDTH: auto
+}
+DIV.posttext {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: =
+#f9f9f9; PADDING-TOP: 4px
+}
+DIV.highlight {
+	PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: =
+#ffffcc; PADDING-TOP: 4px
+}
+SPAN.small {
+	FONT-SIZE: 10px
+}
+#content {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-LEFT: 24px; PADDING-RIGHT: 4px; =
+MARGIN-BOTTOM: 8px; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver =
+1px solid; PADDING-TOP: 4px
+}
+#navbar {
+	BORDER-BOTTOM: silver 1px solid; BORDER-LEFT: silver 1px solid; =
+PADDING-BOTTOM: 4px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: =
+#f9f9f9; BORDER-TOP: silver 1px solid; BORDER-RIGHT: silver 1px solid; =
+PADDING-TOP: 4px
+}
+#pagenumbers {
+	TEXT-ALIGN: center; MARGIN-BOTTOM: 4px
+}
+#copyright {
+	TEXT-ALIGN: center
+}
+HR {
+	DISPLAY: none; VISIBILITY: hidden
+}
+
+------=_NextPart_000_0006_01CAFB72.3348E820--

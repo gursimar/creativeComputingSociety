@@ -1,0 +1,23 @@
+CONCLUSION
+
+As a conclusion to this post,we see that the circuit the user a inductor and capacitor is more accurate as it forms a RLC circuit. This RLC circuit stablises the voltage source against the high switching noise that is produced by the random ON OFF circuits in the IC...
+This switching noise can also be reduced if a single capacitor is used as it has parastic resistance as well as paristic inductance so even without a L and (its R , inductor has a resistance also so a LC circuit is never possible so never analysed ) the circuit is LCR but using a small inductor as shown in the circuit is a move towards accuracy and reliability of the ADC ...
+
+
+
+
+But one point is still not clear > is the capacitor in series with RESET and VCC is an error or some improvment to the circuit .. that I posted earlier
+
+sorry for tha late post :((
+
+
+noise caused by the other elements of the PCB is shunted through the capacitor ( as capacitor shunts ac components( noise)) ..
+This noise is in the form of a AC signal superimposed on a DC signal..So we need a docoupling capacitor
+Another kind of decoupling is stopping a portion of a circuit from being affected by switching that happens in another portion
+
+http://www.hottconsultants.com/techtips/decoupling.html
+
+
+
+
+http://www.vlsichipdesign.com/index.php/Chip-Design-Articles/decoupling-capacitors.html

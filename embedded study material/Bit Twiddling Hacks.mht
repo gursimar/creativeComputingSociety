@@ -1,0 +1,530 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Bit Twiddling Hacks
+Date: Thu, 24 Jun 2010 00:19:23 +0530
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www-graphics.stanford.edu/~seander/bithacks.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Bit Twiddling Hacks</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY>
+<H2>Bit Twiddling Hacks </H2>
+<H3>By Sean Eron Anderson<BR>seander@cs.<!-- NO SPAM! -->stanford.edu=20
+</H3><SMALL>Individually, the <STRONG>code snippets here are in the =
+public=20
+domain</STRONG> (unless otherwise noted) =E2=80=94 feel free to use them =
+however you=20
+please. The aggregate collection and descriptions are =
+=C2=A9&nbsp;1997-2005 Sean Eron=20
+Anderson. The code and descriptions are distributed in the hope that =
+they will=20
+be useful, but <STRONG>WITHOUT ANY WARRANTY</STRONG> and without even =
+the=20
+implied warranty of merchantability or fitness for a particular purpose. =
+As of=20
+May 5, 2005, all the code has been tested thoroughly. Thousands of =
+people have=20
+read it. Moreover, <A =
+href=3D"http://www-2.cs.cmu.edu/~bryant/">Professor Randal=20
+Bryant</A>, the Dean of Computer Science at Carnegie Mellon University, =
+has=20
+personally tested almost everything with his <A=20
+href=3D"http://www-2.cs.cmu.edu/~uclid/">Uclid code verification =
+system</A>. What=20
+he hasn't tested, I have checked against all possible inputs on a 32-bit =
+
+machine. <STRONG>To the first person to inform me of a legitimate bug in =
+the=20
+code, I'll pay a bounty of US$10 (by check or Paypal)</STRONG>. If =
+directed to a=20
+charity, I'll pay US$20. </SMALL>
+<P>
+<P>
+<H3>Contents </H3>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Operation=
+Counting">About=20
+  the operation counting methodology</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CopyInteg=
+erSign">Compute=20
+  the sign of an integer</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#DetectOpp=
+ositeSigns">Detect=20
+  if two integers have opposite signs=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerAb=
+s">Compute=20
+  the integer absolute value (abs) without branching</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerMi=
+nOrMax">Compute=20
+  the minimum (min) or maximum (max) of two integers without =
+branching</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Determine=
+IfPowerOf2">Determining=20
+  if an integer is a power of 2</A>=20
+  <LI>Sign extending=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#FixedSign=
+Extend">Sign=20
+    extending from a constant bit-width</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#VariableS=
+ignExtend">Sign=20
+    extending from a variable bit-width</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#VariableS=
+ignExtendRisky">Sign=20
+    extending from a variable bit-width in 3 operations</A> </LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Condition=
+alSetOrClearBitsWithoutBranching">Conditionally=20
+  set or clear bits without branching</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Condition=
+alNegate">Conditionally=20
+  negate a value without branching</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#MaskedMer=
+ge">Merge=20
+  bits from two values according to a mask</A>=20
+  <LI>Counting bits set=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+SetNaive">Counting=20
+    bits set, naive way</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+SetTable">Counting=20
+    bits set by lookup table</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+SetKernighan">Counting=20
+    bits set, Brian Kernighan's way</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+Set64">Counting=20
+    bits set in 12, 24, or 32-bit words using 64-bit instructions</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+SetParallel">Counting=20
+    bits set, in parallel</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#CountBits=
+FromMSBToPos">Count=20
+    bits set (rank) from the most-significant bit upto a given =
+position</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#SelectPos=
+FromMSBRank">Select=20
+    the bit position (from the most-significant bit) with the given =
+count=20
+    (rank)</A> </LI></UL>
+  <LI>Computing parity (1 if an odd number of bits set, 0 otherwise)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ParityNai=
+ve">Compute=20
+    parity of a word the naive way</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ParityLoo=
+kupTable">Compute=20
+    parity by lookup table</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ParityWit=
+h64Bits">Compute=20
+    parity of a byte using 64-bit multiply and modulus division</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ParityMul=
+tiply">Compute=20
+    parity of word with a multiply</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ParityPar=
+allel">Compute=20
+    parity in parallel</A> </LI></UL>
+  <LI>Swapping Values=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#SwappingV=
+aluesSubAdd">Swapping=20
+    values with subtraction and addition</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#SwappingV=
+aluesXOR">Swapping=20
+    values with XOR</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#SwappingB=
+itsXOR">Swapping=20
+    individual bits with XOR</A> </LI></UL>
+  <LI>Reversing bit sequences=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#BitRevers=
+eObvious">Reverse=20
+    bits the obvious way</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#BitRevers=
+eTable">Reverse=20
+    bits in word by lookup table</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ReverseBy=
+teWith64BitsDiv">Reverse=20
+    the bits in a byte with 3 operations (64-bit multiply and modulus=20
+    division)</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ReverseBy=
+teWith64Bits">Reverse=20
+    the bits in a byte with 4 operations (64-bit multiply, no =
+division)</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ReverseBy=
+teWith32Bits">Reverse=20
+    the bits in a byte with 7 operations (no 64-bit, only 32)</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ReversePa=
+rallel">Reverse=20
+    an N-bit quantity in parallel with 5 * lg(N) operations</A> =
+</LI></UL>
+  <LI>Modulus division (aka computing <EM>remainders</EM>)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ModulusDi=
+visionEasy">Computing=20
+    modulus division by 1 &lt;&lt; s without a division operation =
+(obvious)</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ModulusDi=
+vision">Computing=20
+    modulus division by (1 &lt;&lt; s) - 1 without a division =
+operation</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ModulusDi=
+visionParallel">Computing=20
+    modulus division by (1 &lt;&lt; s) - 1 in parallel without a =
+division=20
+    operation</A> </LI></UL>
+  <LI>Finding integer log base 2 of an integer (aka the position of the =
+highest=20
+  bit set)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gObvious">Find=20
+    the log base 2 of an integer with the MSB N set in O(N) operations =
+(the=20
+    obvious way)</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gIEEE64Float">Find=20
+    the integer log base 2 of an integer with an 64-bit IEEE float</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gLookup">Find=20
+    the log base 2 of an integer with a lookup table</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+g">Find=20
+    the log base 2 of an N-bit integer in O(lg(N)) operations</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gDeBruijn">Find=20
+    the log base 2 of an N-bit integer in O(lg(N)) operations with =
+multiply and=20
+    lookup</A> </LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+g10">Find=20
+  integer log base 10 of an integer</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+g10Obvious">Find=20
+  integer log base 10 of an integer the obvious way</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gFloat">Find=20
+  integer log base 2 of a 32-bit IEEE float</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#IntegerLo=
+gRootFloat">Find=20
+  integer log base 2 of the pow(2, r)-root of a 32-bit IEEE float (for =
+unsigned=20
+  integer r)</A>=20
+  <LI>Counting consecutive trailing zero bits (or finding bit indices)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtLinear">Count=20
+    the consecutive zero bits (trailing) on the right linearly</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtParallel">Count=20
+    the consecutive zero bits (trailing) on the right in parallel</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtBinSearch">Count=20
+    the consecutive zero bits (trailing) on the right by binary =
+search</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtFloatCast">Count=20
+    the consecutive zero bits (trailing) on the right by casting to a =
+float</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtModLookup">Count=20
+    the consecutive zero bits (trailing) on the right with modulus =
+division and=20
+    lookup</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZerosOnRi=
+ghtMultLookup">Count=20
+    the consecutive zero bits (trailing) on the right with multiply and=20
+    lookup</A> </LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#RoundUpPo=
+werOf2Float">Round=20
+  up to the next highest power of 2 by float casting</A>=20
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#RoundUpPo=
+werOf2">Round=20
+  up to the next highest power of 2</A>=20
+  <LI>Interleaving bits (aka computing <EM>Morton Numbers</EM>)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Interleav=
+eTableObvious">Interleave=20
+    bits the obvious way</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Interleav=
+eTableLookup">Interleave=20
+    bits by table lookup</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Interleav=
+e64bitOps">Interleave=20
+    bits with 64-bit multiply</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#Interleav=
+eBMN">Interleave=20
+    bits by Binary Magic Numbers</A> </LI></UL>
+  <LI>Testing for ranges of bytes in a word (and counting occurances =
+found)=20
+  <UL>
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ZeroInWor=
+d">Determine=20
+    if a word has a zero byte</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#ValueInWo=
+rd">Determine=20
+    if a word has a byte equal to n</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#HasLessIn=
+Word">Determine=20
+    if a word has byte less than n</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#HasMoreIn=
+Word">Determine=20
+    if a word has a byte greater than n</A>=20
+    <LI><A=20
+    =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#HasBetwee=
+nInWord">Determine=20
+    if a word has a byte between m and n</A> </LI></UL>
+  <LI><A=20
+  =
+href=3D"http://www-graphics.stanford.edu/~seander/bithacks.html#NextBitPe=
+rmutation">Compute=20
+  the lexicographically next bit permutation</A> </LI></UL>
+<HR>
+
+<H3><A name=3DOperationCounting>About the operation counting methodology =
+
+</A></H3>When totaling the number of operations for algorithms here, any =
+C=20
+operator is counted as one operation. Intermediate assignments, which =
+need not=20
+be written to RAM, are not counted. Of course, this operation counting =
+approach=20
+only serves as an approximation of the actual number of machine =
+instructions and=20
+CPU time. All operations are assumed to take the same amount of time, =
+which is=20
+not true in reality, but CPUs have been heading increasingly in this =
+direction=20
+over time. There are many nuances that determine how fast a system will =
+run a=20
+given sample of code, such as cache sizes, memory bandwidths, =
+instruction sets,=20
+etc. In the end, benchmarking is the best way to determine whether one =
+method is=20
+really faster than another, so consider the techniques below as =
+possibilities to=20
+test on your target architecture.=20
+<P>
+<HR>
+
+<H3><A name=3DCopyIntegerSign>Compute the sign of an integer =
+</A></H3><PRE>int v;      // we want to find the sign of v
+int sign;   // the result goes here=20
+
+// CHAR_BIT is the number of bits per byte (normally 8).
+sign =3D -(v &lt; 0);  // if v &lt; 0 then -1, else 0.=20
+// or, to avoid branching on CPUs with flag registers (IA32):
+sign =3D -(int)((unsigned int)((int)v) &gt;&gt; (sizeof(int) * CHAR_BIT =
+- 1));
+// or, for one less instruction (but not portable):
+sign =3D v &gt;&gt; (sizeof(int) * CHAR_BIT - 1);=20
+</PRE>The last expression above evaluates to sign =3D v &gt;&gt; 31 for =
+32-bit=20
+integers. This is one operation faster than the obvious way, sign =3D =
+-(v &lt; 0).=20
+This trick works because when signed integers are shifted right, the =
+value of=20
+the far left bit is copied to the other bits. The far left bit is 1 when =
+the=20
+value is negative and 0 otherwise; all 1 bits gives -1. Unfortunately, =
+this=20
+behavior is architecture-specific.=20
+<P>Alternatively, if you prefer the result be either -1 or +1, then use: =
+<PRE>sign =3D +1 | (v &gt;&gt; (sizeof(int) * CHAR_BIT - 1));  // if v =
+&lt; 0 then -1, else +1
+</PRE>
+<P>On the other hand, if you prefer the result be either -1, 0, or +1, =
+then use:=20
+<PRE>sign =3D (v !=3D 0) | -(int)((unsigned int)((int)v) &gt;&gt; =
+(sizeof(int) * CHAR_BIT - 1));
+// Or, for more speed but less portability:
+sign =3D (v !=3D 0) | (v &gt;&gt; (sizeof(int) * CHAR_BIT - 1));  // -1, =
+0, or +1
+// Or, for portability, brevity, and (perhaps) speed:
+sign =3D (v &gt; 0) - (v &lt; 0); // -1, 0, or +1
+</PRE>If instead you want to know if something is non-negative, =
+resulting in +1=20
+or else 0, then use: <PRE>sign =3D 1 ^ ((unsigned int)v &gt;&gt; =
+(sizeof(int) * CHAR_BIT - 1)); // if v &lt; 0 then 0, else 1
+</PRE>Caveat: On March 7, 2003, Angus Duggan pointed out that the 1989 =
+ANSI C=20
+specification leaves the result of signed right-shift =
+implementation-defined, so=20
+on some systems this hack might not work. For greater portability, Toby =
+Speight=20
+suggested on September 28, 2005 that CHAR_BIT be used here and =
+throughout rather=20
+than assuming bytes were 8 bits long. Angus recommended the more =
+portable=20
+versions above, involving casting on March 4, 2006. <A=20
+href=3D"http://rpg-314.blogspot.com/">Rohit Garg</A> suggested the =
+version for=20
+non-negative integers on September 12, 2009.=20
+<P>
+<HR>
+
+<H3><A name=3DDetectOppositeSigns>Detect if two integers have opposite =
+signs=20
+</A></H3><PRE>int x, y;               // input values to compare signs
+
+bool f =3D ((x ^ y) &lt; 0); // true iff x and y have opposite signs
+</PRE>Manfred Weis suggested I add this entry on November 26, 2009.=20
+<P>
+<HR>
+
+<H3><A name=3DIntegerAbs>Compute the integer absolute value (abs) =
+without=20
+branching </A></H3><PRE>int v;           // we want to find the absolute =
+value of v
+unsigned int r;  // the result goes here=20
+int const mask =3D v &gt;&gt; sizeof(int) * CHAR_BIT - 1;
+
+r =3D (v + mask) ^ mask;
+</PRE>Patented variation: <PRE>r =3D (v ^ mask) - mask;
+</PRE>Some CPUs don't have an integer absolute value instruction (or the =
+
+compiler fails to use them). On machines where branching is expensive, =
+the above=20
+expression can be faster than the obvious approach, r =3D (v &lt; 0) ?=20
+-(unsigned)v : v, even though the number of operations is the same.=20
+<P>On March 7, 2003, Angus Duggan pointed out that the 1989 ANSI C =
+specification=20
+leaves the result of signed right-shift implementation-defined, so on =
+some=20
+systems this hack might not work. I've read that ANSI C does not require =
+values=20
+to be represented as two's complement, so it may not work for that =
+reason as=20
+well (on a diminishingly small number of old machines that still use =
+one's=20
+complement). On March 14, 2004, Keith H. Duggar sent me the patented =
+variation=20
+above; it is superior to the one I initially cam</P></BODY></HTML>

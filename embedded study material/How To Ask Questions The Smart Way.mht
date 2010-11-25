@@ -1,0 +1,2497 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: How To Ask Questions The Smart Way
+Date: Sat, 5 Jun 2010 12:10:41 +0530
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.catb.org/~esr/faqs/smart-questions.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>How To Ask =
+Questions The Smart Way</TITLE>
+<META description=3D"...and how not to ask stupid ones">
+<META content=3D"text/html; charset=3DUTF-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16490"></HEAD>
+<BODY>
+<DIV lang=3Den class=3Darticle xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 class=3Dtitle><A id=3Dindex></A>How To Ask Questions The Smart =
+Way</H2></DIV>
+<DIV>
+<DIV class=3Dauthor>
+<H3 class=3Dauthor><SPAN class=3Dfirstname>Eric</SPAN> <SPAN=20
+class=3Dothername>Steven</SPAN> <SPAN =
+class=3Dsurname>Raymond</SPAN></H3>
+<DIV class=3Daffiliation><SPAN class=3Dorgname><A class=3Dulink=20
+href=3D"http://www.catb.org/~esr/" target=3D_top>Thyrsus =
+Enterprises</A><BR></SPAN>
+<DIV class=3Daddress>
+<P><BR>&nbsp;&nbsp;&nbsp;&nbsp;<CODE class=3Demail>&lt;<A class=3Demail=20
+href=3D"mailto:esr@thyrsus.com">esr@thyrsus.com</A>&gt;</CODE><BR>&nbsp;&=
+nbsp;&nbsp;&nbsp;</P></DIV></DIV></DIV></DIV>
+<DIV>
+<DIV class=3Dauthor>
+<H3 class=3Dauthor><SPAN class=3Dfirstname>Rick</SPAN> <SPAN=20
+class=3Dsurname>Moen</SPAN></H3>
+<DIV class=3Daffiliation>
+<DIV class=3Daddress>
+<P><BR>&nbsp;&nbsp;&nbsp;&nbsp;<CODE class=3Demail>&lt;<A class=3Demail=20
+href=3D"mailto:respond-auto@linuxmafia.com">respond-auto@linuxmafia.com</=
+A>&gt;</CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;</P></DIV></DIV></DIV></DIV>
+<DIV>
+<P class=3Dcopyright>Copyright =C2=A9 2001,2006 Eric S. Raymond, Rick =
+Moen</P></DIV>
+<DIV>
+<DIV class=3Drevhistory>
+<TABLE border=3D1 summary=3D"Revision history" width=3D"100%">
+  <TBODY>
+  <TR>
+    <TH vAlign=3Dtop colSpan=3D3 align=3Dleft><B>Revision =
+History</B></TH></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.6</TD>
+    <TD align=3Dleft>19 Mar 2008</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Minor update and new links. </TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.5</TD>
+    <TD align=3Dleft>2 Jan 2008</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Typo fix and some translation links. =
+</TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.4</TD>
+    <TD align=3Dleft>24 Mar 2007</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>New section, "When asking about code". =
+</TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.3</TD>
+    <TD align=3Dleft>29 Sep 2006</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Folded in a good suggestion from Kai =
+Niggemann.=20
+    </TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.2</TD>
+    <TD align=3Dleft>10 Jan 2006</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Folded in edits from Rick Moen. =
+</TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.1</TD>
+    <TD align=3Dleft>28 Oct 2004</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Document 'Google is your friend!' =
+</TD></TR>
+  <TR>
+    <TD align=3Dleft>Revision 3.0</TD>
+    <TD align=3Dleft>2 Feb 2004</TD>
+    <TD align=3Dleft>esr</TD></TR>
+  <TR>
+    <TD colSpan=3D3 align=3Dleft>Major addition of stuff about proper =
+etiquette on=20
+      Web forums. </TD></TR></TBODY></TABLE></DIV></DIV></DIV>
+<HR>
+</DIV>
+<DIV class=3Dtoc>
+<P><B>Table of Contents</B></P>
+<DL>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#translations">=
+Translations</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#disclaimer">Di=
+sclaimer</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#intro">Introdu=
+ction</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#before">Before=
+ You=20
+  Ask</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#asking">When =
+You=20
+  Ask</A></SPAN></DT>
+  <DD>
+  <DL>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#forum">Choose =
+your=20
+    forum carefully</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#usefora">Web =
+and=20
+    IRC forums directed towards newbies often give the quickest=20
+    response</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#uselists">As =
+a=20
+    second step, use project mailing lists</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#bespecific">Us=
+e=20
+    meaningful, specific subject headers</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#easyreply">Mak=
+e it=20
+    easy to reply</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#writewell">Wri=
+te in=20
+    clear, grammatical, correctly-spelled language</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#formats">Send =
+
+    questions in accessible, standard formats</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#beprecise">Be =
+
+    precise and informative about your problem</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#volume">Volume=
+ is=20
+    not precision</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id382249">Don'=
+t=20
+    rush to claim that you have found a bug</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id382403">Grov=
+elling=20
+    is not a substitute for doing your homework</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#symptoms">Desc=
+ribe=20
+    the problem's symptoms, not your guesses</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#chronology">De=
+scribe=20
+    your problem's symptoms in chronological order</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#goal">Describe=
+ the=20
+    goal, not the step</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#noprivate">Don=
+'t=20
+    ask people to reply by private e-mail</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#explicit">Be=20
+    explicit about your question</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#code">When =
+asking=20
+    about code</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#homework">Don'=
+t=20
+    post homework questions</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#prune">Prune=20
+    pointless queries</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#urgent">Don't =
+flag=20
+    your question as =E2=80=9C<SPAN =
+class=3Dquote>Urgent</SPAN>=E2=80=9D, even if it is for=20
+    you</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#courtesy">Cour=
+tesy=20
+    never hurts, and sometimes helps</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#followup">Foll=
+ow up=20
+    with a brief note on the solution</A></SPAN></DT></DL></DD>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#answers">How =
+To=20
+  Interpret Answers</A></SPAN></DT>
+  <DD>
+  <DL>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#rtfm">RTFM =
+and=20
+    STFW: How To Tell You've Seriously Screwed Up</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#lesser">If =
+you=20
+    don't understand...</A></SPAN></DT>
+    <DT><SPAN class=3Dsect2><A=20
+    =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#keepcool">Deal=
+ing=20
+    with rudeness</A></SPAN></DT></DL></DD>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#not_losing">On=
+ Not=20
+  Reacting Like A Loser</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#classic">Quest=
+ions=20
+  Not To Ask</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#examples">Good=
+ and=20
+  Bad Questions</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383575">If =
+You=20
+  Can't Get An Answer</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383614">How =
+To=20
+  Answer Questions in a Helpful Way</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383684">Rela=
+ted=20
+  Resources</A></SPAN></DT>
+  <DT><SPAN class=3Dsect1><A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383711">Ackn=
+owledgements</A></SPAN></DT></DL></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A=20
+id=3Dtranslations></A>Translations</H2></DIV></DIV></DIV>
+<P>Translations: <A class=3Dulink =
+href=3D"http://bulsara.host.sk/index.php?p=3D2005"=20
+target=3D_top>Bahasa Indonesian</A> <A class=3Dulink=20
+href=3D"http://www.istf.com.br/perguntas/" =
+target=3D_top>Brazilo-Portuguese</A> <A=20
+class=3Dulink href=3D"http://www.lat30n.cn/doc/oss/smart-questions.html" =
+
+target=3D_top>Chinese</A> <A class=3Dulink =
+href=3D"http://www.stare.cz/otazky.html"=20
+target=3D_top>Czech</A> <A class=3Dulink=20
+href=3D"http://www.usenet.dk/netikette/udvdebatteknik.html" =
+target=3D_top>Danish</A>=20
+<A class=3Dulink href=3D"http://docs.jaspervries.nl/smart-questions/"=20
+target=3D_top>Dutch</A> <A class=3Dulink=20
+href=3D"http://linux.ee/~kala/smart-questions.html" =
+target=3D_top>Estonian</A> <A=20
+class=3Dulink href=3D"http://lumpio.no-ip.com/fiksut-kysymykset.html"=20
+target=3D_top>Finnish</A> <A class=3Dulink=20
+href=3D"http://www.gnurou.org/documents/smart-questions-fr.html"=20
+target=3D_top>French</A> <A class=3Dulink=20
+href=3D"http://maxo127.narod.ru/Geo/Articles/smart-questions_ge.html"=20
+target=3D_top>Georgian</A> <A class=3Dulink=20
+href=3D"http://www.tty1.net/smart-questions_de.html" =
+target=3D_top>German</A> <A=20
+class=3Dulink href=3D"http://www.dionyziz.com/howto-smart-questions-gr/" =
+
+target=3D_top>Greek</A> <A class=3Dulink=20
+href=3D"http://www.penguin.org.il/essays/smart-questions-he.html"=20
+target=3D_top>Hebrew</A> <A class=3Dulink=20
+href=3D"http://www.no.info.hu/~kryss/gnu/esr/smart-questions_hu.html"=20
+target=3D_top>Hungarian</A> <A class=3Dulink=20
+href=3D"http://xoomer.virgilio.it/army1987k" target=3D_top>Italian</A> =
+<A=20
+class=3Dulink =
+href=3D"http://www.ranvis.com/articles/smart-questions.ja.html"=20
+target=3D_top>Japanese</A> <A class=3Dulink=20
+href=3D"http://wiki.limnux.org/wiki/SmartQuestions" =
+target=3D_top>Mongolian</A> <A=20
+class=3Dulink href=3D"http://rtfm.killfile.pl/" target=3D_top>Polish</A> =
+<A=20
+class=3Dulink =
+href=3D"http://www.celiojunior.com.br/comofazerperguntas.htm"=20
+target=3D_top>Portuguese</A> <A class=3Dulink=20
+href=3D"http://wiki.lug.ro/mediawiki/index.php/Cum_se_pun_%C3%AEntreb%C4%=
+83ri_%C3%AEn_mod_inteligent"=20
+target=3D_top>Romanian</A> <A class=3Dulink=20
+href=3D"http://www.linuxrsp.ru/artic/smart-questions-ru.html"=20
+target=3D_top>Russian</A> <A class=3Dulink=20
+href=3D"http://solair.eunet.yu/~fangorn/smart_questions/smart-questions.s=
+r.html"=20
+target=3D_top>Serbian</A> <A class=3Dulink=20
+href=3D"http://www.sindominio.net/ayuda/preguntas-inteligentes.html"=20
+target=3D_top>Spanish</A> <A class=3Dulink=20
+href=3D"http://se.linux.org/dokumentation/artiklar/kunskap/smartafragor" =
+
+target=3D_top>Swedish</A> <A class=3Dulink=20
+href=3D"http://wiki.opentle.org/Smart-questions" target=3D_top>Thai</A> =
+<A=20
+class=3Dulink href=3D"http://belgeler.org/howto/smart-questions.html"=20
+target=3D_top>Turkish</A>. If you want to copy, mirror, translate, or =
+excerpt this=20
+document, please see my <A class=3Dulink=20
+href=3D"http://www.catb.org/~esr/copying.html" target=3D_top>copying=20
+policy</A>.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A=20
+id=3Ddisclaimer></A>Disclaimer</H2></DIV></DIV></DIV>
+<P>Many project websites link to this document in their sections on how =
+to get=20
+help. That's fine, it's the use we intended =E2=80=94 but if you are a =
+webmaster=20
+creating such a link for your project page, please display prominently =
+near the=20
+link notice that <SPAN class=3Demphasis><EM>we are not a help desk for =
+your=20
+project!</EM></SPAN></P>
+<P>We have learned the hard way that without such a notice, we will =
+repeatedly=20
+be pestered by idiots who think having published this document makes it =
+our job=20
+to solve all the world's technical problems.</P>
+<P>If you're reading this document because you need help, and you walk =
+away with=20
+the impression you can get it directly from the authors of this =
+document, <SPAN=20
+class=3Demphasis><EM>you</EM></SPAN> are one of the idiots we are =
+talking about.=20
+Don't ask <SPAN class=3Demphasis><EM>us</EM></SPAN> questions. We'll =
+just ignore=20
+you. We are here to show you how to get help from people who actually =
+know about=20
+the software or hardware you're dealing with, but 99.9% of the time that =
+will=20
+not be us. Unless you know for <SPAN =
+class=3Demphasis><EM>certain</EM></SPAN> that=20
+one of the authors is an expert on what you're dealing with, leave us =
+alone and=20
+everybody will be happier.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A=20
+id=3Dintro></A>Introduction</H2></DIV></DIV></DIV>
+<P>In the world of <A class=3Dulink=20
+href=3D"http://www.catb.org/~esr/faqs/hacker-howto.html" =
+target=3D_top>hackers</A>,=20
+the kind of answers you get to your technical questions depends as much =
+on the=20
+way you ask the questions as on the difficulty of developing the answer. =
+This=20
+guide will teach you how to ask questions in a way more likely to get =
+you a=20
+satisfactory answer.</P>
+<P>Now that use of open source has become widespread, you can often get =
+as good=20
+answers from other, more experienced users as from hackers. This is a =
+Good=20
+Thing; users tend to be just a little bit more tolerant of the kind of =
+failures=20
+newbies often have. Still, treating experienced users like hackers in =
+the ways=20
+we recommend here will generally be the most effective way to get useful =
+answers=20
+out of them, too.</P>
+<P>The first thing to understand is that hackers actually like hard =
+problems and=20
+good, thought-provoking questions about them. If we didn't, we wouldn't =
+be here.=20
+If you give us an interesting question to chew on we'll be grateful to =
+you; good=20
+questions are a stimulus and a gift. Good questions help us develop our=20
+understanding, and often reveal problems we might not have noticed or =
+thought=20
+about otherwise. Among hackers, =E2=80=9C<SPAN class=3Dquote>Good =
+question!</SPAN>=E2=80=9D is a=20
+strong and sincere compliment.</P>
+<P>Despite this, hackers have a reputation for meeting simple questions =
+with=20
+what looks like hostility or arrogance. It sometimes looks like we're=20
+reflexively rude to newbies and the ignorant. But this isn't really =
+true.</P>
+<P>What we are, unapologetically, is hostile to people who seem to be =
+unwilling=20
+to think or to do their own homework before asking questions. People =
+like that=20
+are time sinks =E2=80=94 they take without giving back, and they waste =
+time we could=20
+have spent on another question more interesting and another person more =
+worthy=20
+of an answer. We call people like this =E2=80=9C<SPAN =
+class=3Dquote>losers</SPAN>=E2=80=9D (and=20
+for historical reasons we sometimes spell it =E2=80=9C<SPAN=20
+class=3Dquote>lusers</SPAN>=E2=80=9D).</P>
+<P>We realize that there are many people who just want to use the =
+software we=20
+write, and who have no interest in learning technical details. For most =
+people,=20
+a computer is merely a tool, a means to an end; they have more important =
+things=20
+to do and lives to live. We acknowledge that, and don't expect everyone =
+to take=20
+an interest in the technical matters that fascinate us. Nevertheless, =
+our style=20
+of answering questions is tuned for people who <SPAN=20
+class=3Demphasis><EM>do</EM></SPAN> take such an interest and are =
+willing to be=20
+active participants in problem-solving. That's not going to change. Nor =
+should=20
+it; if it did, we would become less effective at the things we do =
+best.</P>
+<P>We're (largely) volunteers. We take time out of busy lives to answer=20
+questions, and at times we're overwhelmed with them. So we filter =
+ruthlessly. In=20
+particular, we throw away questions from people who appear to be losers =
+in order=20
+to spend our question-answering time more efficiently, on winners.</P>
+<P>If you find this attitude obnoxious, condescending, or arrogant, =
+check your=20
+assumptions. We're not asking you to genuflect to us =E2=80=94 in fact, =
+most of us would=20
+love nothing more than to deal with you as an equal and welcome you into =
+our=20
+culture, if you put in the effort required to make that possible. But =
+it's=20
+simply not efficient for us to try to help people who are not willing to =
+help=20
+themselves. It's OK to be ignorant; it's not OK to play stupid.</P>
+<P>So, while it isn't necessary to already be technically competent to =
+get=20
+attention from us, it <SPAN class=3Demphasis><EM>is</EM></SPAN> =
+necessary to=20
+demonstrate the kind of attitude that leads to competence =E2=80=94 =
+alert, thoughtful,=20
+observant, willing to be an active partner in developing a solution. If =
+you=20
+can't live with this sort of discrimination, we suggest you pay somebody =
+for a=20
+commercial support contract instead of asking hackers to personally =
+donate help=20
+to you.</P>
+<P>If you decide to come to us for help, you don't want to be one of the =
+losers.=20
+You don't want to seem like one, either. The best way to get a rapid and =
+
+responsive answer is to ask it like a person with smarts, confidence, =
+and clues=20
+who just happens to need help on one particular problem.</P>
+<P>(Improvements to this guide are welcome. You can mail suggestions to =
+<A=20
+class=3Dulink href=3D"mailto:esr@thyrsus.com" =
+target=3D_top>esr@thyrsus.com</A> or <A=20
+class=3Dulink =
+href=3D"http://www.catb.org/~esr/faqs/respond-auto@linuxmafia.com"=20
+target=3D_top>http://www.catb.org/~esr/faqs/respond-auto@linuxmafia.com</=
+A>. Note=20
+however that this document is not intended to be a general guide to <A=20
+class=3Dulink href=3D"http://www.dtcc.edu/cs/rfc1855.html"=20
+target=3D_top>netiquette</A>, and we will generally reject suggestions =
+that are=20
+not specifically related to eliciting useful answers in a technical=20
+forum.)</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Dbefore></A>Before You=20
+Ask</H2></DIV></DIV></DIV>
+<P>Before asking a technical question by e-mail, or in a newsgroup, or =
+on a=20
+website chat board, do the following:</P>
+<DIV class=3Dprocedure>
+<OL type=3D1>
+  <LI>
+  <P>Try to find an answer by searching the archives of the forum you =
+plan to=20
+  post to.</P></LI>
+  <LI>
+  <P>Try to find an answer by searching the Web.</P></LI>
+  <LI>
+  <P>Try to find an answer by reading the manual.</P></LI>
+  <LI>
+  <P>Try to find an answer by reading a FAQ.</P></LI>
+  <LI>
+  <P>Try to find an answer by inspection or experimentation.</P></LI>
+  <LI>
+  <P>Try to find an answer by asking a skilled friend.</P></LI>
+  <LI>
+  <P>If you're a programmer, try to find an answer by reading the source =
+
+  code.</P></LI></OL></DIV>
+<P>When you ask your question, display the fact that you have done these =
+things=20
+first; this will help establish that you're not being a lazy sponge and =
+wasting=20
+people's time. Better yet, display what you have <SPAN=20
+class=3Demphasis><EM>learned</EM></SPAN> from doing these things. We =
+like=20
+answering questions for people who have demonstrated they can learn from =
+the=20
+answers.</P>
+<P>Use tactics like doing a Google search on the text of whatever error =
+message=20
+you get (searching <A class=3Dulink href=3D"http://groups.google.com/"=20
+target=3D_top>Google groups</A> as well as Web pages). This might well =
+take you=20
+straight to fix documentation or a mailing list thread answering your =
+question.=20
+Even if it doesn't, saying =E2=80=9C<SPAN class=3Dquote>I googled on the =
+following phrase=20
+but didn't get anything that looked promising</SPAN>=E2=80=9D is a good =
+thing to do in=20
+e-mail or news postings requesting help, if only because it records what =
+
+searches won't help. It will also help to direct other people with =
+similar=20
+problems to your thread by linking the search terms to what will =
+hopefully be=20
+your problem and resolution thread.</P>
+<P>Take your time. Do not expect to be able to solve a complicated =
+problem with=20
+a few seconds of Googling. Read and understand the FAQs, sit back, relax =
+and=20
+give the problem some thought before approaching experts. Trust us, they =
+will be=20
+able to tell from your questions how much reading and thinking you did, =
+and will=20
+be more willing to help if you come prepared. Don't instantly fire your =
+whole=20
+arsenal of questions just because your first search turned up no answers =
+(or too=20
+many).</P>
+<P>Prepare your question. Think it through. Hasty-sounding questions get =
+hasty=20
+answers, or none at all. The more you do to demonstrate that having put =
+thought=20
+and effort into solving your problem before seeking help, the more =
+likely you=20
+are to actually get help.</P>
+<P>Beware of asking the wrong question. If you ask one that is based on =
+faulty=20
+assumptions, J. Random Hacker is quite likely to reply with a uselessly =
+literal=20
+answer while thinking =E2=80=9C<SPAN class=3Dquote>Stupid =
+question...</SPAN>=E2=80=9D, and hoping=20
+the experience of getting what you asked for rather than what you needed =
+will=20
+teach you a lesson.</P>
+<P>Never assume you are <SPAN class=3Demphasis><EM>entitled</EM></SPAN> =
+to an=20
+answer. You are not; you aren't, after all, paying for the service. You =
+will=20
+earn an answer, if you earn it, by asking a substantial, interesting, =
+and=20
+thought-provoking question =E2=80=94 one that implicitly contributes to =
+the experience=20
+of the community rather than merely passively demanding knowledge from=20
+others.</P>
+<P>On the other hand, making it clear that you are able and willing to =
+help in=20
+the process of developing the solution is a very good start. =
+=E2=80=9C<SPAN=20
+class=3Dquote>Would someone provide a pointer?</SPAN>=E2=80=9D, =
+=E2=80=9C<SPAN class=3Dquote>What is=20
+my example missing?</SPAN>=E2=80=9D, and =E2=80=9C<SPAN =
+class=3Dquote>What site should I have=20
+checked?</SPAN>=E2=80=9D are more likely to get answered than =
+=E2=80=9C<SPAN class=3Dquote>Please=20
+post the exact procedure I should use.</SPAN>=E2=80=9D because you're =
+making it clear=20
+that you're truly willing to complete the process if someone can just =
+point you=20
+in the right direction.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Dasking></A>When You=20
+Ask</H2></DIV></DIV></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dforum></A>Choose your forum=20
+carefully</H3></DIV></DIV></DIV>
+<P>Be sensitive in choosing where you ask your question. You are likely =
+to be=20
+ignored, or written off as a loser, if you:</P>
+<DIV class=3Ditemizedlist>
+<UL type=3Ddisc>
+  <LI>
+  <P>post your question to a forum where it's off topic</P></LI>
+  <LI>
+  <P>post a very elementary question to a forum where advanced technical =
+
+  questions are expected, or vice-versa</P></LI>
+  <LI>
+  <P>cross-post to too many different newsgroups</P></LI>
+  <LI>
+  <P>post a personal e-mail to somebody who is neither an acquaintance =
+of yours=20
+  nor personally responsible for solving your =
+problem</P></LI></UL></DIV>
+<P>Hackers blow off questions that are inappropriately targeted in order =
+to try=20
+to protect their communications channels from being drowned in =
+irrelevance. You=20
+don't want this to happen to you.</P>
+<P>The first step, therefore, is to find the right forum. Again, Google =
+and=20
+other Web-searching methods are your friend. Use them to find the =
+project=20
+webpage most closely associated with the hardware or software giving you =
+
+difficulties. Usually it will have links to a FAQ (Frequently Asked =
+Questions)=20
+list, and to project mailing lists and their archives. These mailing =
+lists are=20
+the final places to go for help, if your own efforts (including <SPAN=20
+class=3Demphasis><EM>reading</EM></SPAN> those FAQs you found) do not =
+find you a=20
+solution. The project page may also describe a bug-reporting procedure, =
+or have=20
+a link to one; if so, follow it.</P>
+<P>Shooting off an e-mail to a person or forum which you are not =
+familiar with=20
+is risky at best. For example, do not assume that the author of an =
+informative=20
+webpage wants to be your free consultant. Do not make optimistic guesses =
+about=20
+whether your question will be welcome =E2=80=94 if you're unsure, send =
+it elsewhere, or=20
+refrain from sending it at all.</P>
+<P>When selecting a Web forum, newsgroup or mailing list, don't trust =
+the name=20
+by itself too far; look for a FAQ or charter to verify your question is=20
+on-topic. Read some of the back traffic before posting so you'll get a =
+feel for=20
+how things are done there. In fact, it's a very good idea to do a =
+keyword search=20
+for words relating to your problem on the newsgroup or mailing list =
+archives=20
+before you post. It may find you an answer, and if not it will help you=20
+formulate a better question.</P>
+<P>Don't shotgun-blast all the available help channels at once, that's =
+like=20
+yelling and irritates people. Step through them softly.</P>
+<P>Know what your topic is! One of the classic mistakes is asking =
+questions=20
+about the Unix or Windows programming interface in a forum devoted to a =
+language=20
+or library or tool portable across both. If you don't understand why =
+this is a=20
+blunder, you'd be best off not asking any questions at all until you get =
+it.</P>
+<P>In general, questions to a well-selected public forum are more likely =
+to get=20
+useful answers than equivalent questions to a private one. There are =
+multiple=20
+reasons for this. One is simply the size of the pool of potential =
+respondents.=20
+Another is the size of the audience; hackers would rather answer =
+questions that=20
+educate many people than questions serving only a few.</P>
+<P>Understandably, skilled hackers and authors of popular software are =
+already=20
+receiving more than their fair share of mis-targeted messages. By adding =
+to the=20
+flood, you could in extreme cases even be the straw that breaks the =
+camel's back=20
+=E2=80=94 quite a few times, contributors to popular projects have =
+withdrawn their=20
+support because collateral damage in the form of useless e-mail traffic =
+to their=20
+personal accounts became unbearable.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dusefora></A>Web and IRC forums directed =
+towards newbies=20
+often give the quickest response</H3></DIV></DIV></DIV>
+<P>Your local user group, or your Linux distribution, may advertise a =
+Web forum=20
+or IRC channel where newbies can get help. (In non-English-speaking =
+countries=20
+newbie forums are still more likely to be mailing lists.) These are good =
+first=20
+places to ask, especially if you think you may have tripped over a =
+relatively=20
+simple or common problem. An advertised IRC channel is an open =
+invitation to ask=20
+questions there and often get answers in real time.</P>
+<P>In fact, if you got the program that is giving you problems from a =
+Linux=20
+distribution (as is common today), it may be better to ask in the =
+distro's=20
+forum/list before trying the program's project forum/list. The project's =
+hackers=20
+may just say, =E2=80=9C<SPAN class=3Dquote>use <SPAN =
+class=3Demphasis><EM>our</EM></SPAN>=20
+build</SPAN>=E2=80=9D.</P>
+<P>Before posting to any Web forum, check if it has a Search feature. If =
+it=20
+does, try a couple of keyword searches for something like your problem; =
+it just=20
+might help. If you did a general Web search before (as you should have), =
+search=20
+the forum anyway; your Web-wide search engine might not have all of this =
+forum=20
+indexed recently.</P>
+<P>There is an increasing tendency for projects to do user support over =
+a Web=20
+forum or IRC channel, with e-mail reserved more for development traffic. =
+So look=20
+for those channels first when seeking project-specific help.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Duselists></A>As a second step, use project =
+mailing=20
+lists</H3></DIV></DIV></DIV>
+<P>When a project has a development mailing list, write to the mailing =
+list, not=20
+to individual developers, even if you believe you know who can best =
+answer your=20
+question. Check the documentation of the project and its homepage for =
+the=20
+address of a project mailing list, and use it. There are several good =
+reasons=20
+for this policy:</P>
+<DIV class=3Ditemizedlist>
+<UL type=3Ddisc>
+  <LI>
+  <P>Any question good enough to be asked of one developer will also be =
+of value=20
+  to the whole group. Contrariwise, if you suspect your question is too =
+dumb for=20
+  a mailing list, it's not an excuse to harass individual =
+developers.</P></LI>
+  <LI>
+  <P>Asking questions on the list distributes load among developers. The =
+
+  individual developer (especially if he's the project leader) may be =
+too busy=20
+  to answer your questions.</P></LI>
+  <LI>
+  <P>Most mailing lists are archived and the archives are indexed by =
+search=20
+  engines. If you ask your question on-list and it is answered, a future =
+querent=20
+  could find your question and the answer on the Web instead of asking =
+it=20
+  again.</P></LI>
+  <LI>
+  <P>If certain questions are seen to be asked often, developers can use =
+that=20
+  information to improve the documentation or the software itself to be =
+less=20
+  confusing. But if those questions are asked in private, nobody has the =
+
+  complete picture of what questions are asked most =
+often.</P></LI></UL></DIV>
+<P>If a project has both a =E2=80=9C<SPAN =
+class=3Dquote>user</SPAN>=E2=80=9D and a =E2=80=9C<SPAN=20
+class=3Dquote>developer</SPAN>=E2=80=9D (or =E2=80=9C<SPAN =
+class=3Dquote>hacker</SPAN>=E2=80=9D) mailing=20
+list or Web forum, and you are not hacking on the code, ask in the =
+=E2=80=9C<SPAN=20
+class=3Dquote>user</SPAN>=E2=80=9D list/forum. Do not assume that you =
+will be welcome on=20
+the developer list, where they're likely to experience your question as =
+noise=20
+disrupting their developer traffic.</P>
+<P>However, if you are <SPAN class=3Demphasis><EM>sure</EM></SPAN> your =
+question=20
+is non-trivial, and you get no answer in the =E2=80=9C<SPAN =
+class=3Dquote>user</SPAN>=E2=80=9D=20
+list/forum for several days, try the =E2=80=9C<SPAN =
+class=3Dquote>developer</SPAN>=E2=80=9D one.=20
+You would be well advised to lurk there for a few days before posting to =
+learn=20
+the local folkways (actually this is good advice on any private or =
+semi-private=20
+list).</P>
+<P>If you cannot find a project's mailing list address, but only see the =
+address=20
+of the maintainer of the project, go ahead and write to the maintainer. =
+But even=20
+in that case, don't assume that the mailing list doesn't exist. Mention =
+in your=20
+e-mail that you tried and could not find the appropriate mailing list. =
+Also=20
+mention that you don't object to having your message forwarded to other =
+people.=20
+(Many people believe that private e-mail should remain private, even if =
+there is=20
+nothing secret in it. By allowing your message to be forwarded you give =
+your=20
+correspondent a choice about how to handle your e-mail.)</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dbespecific></A>Use meaningful, specific =
+subject=20
+headers</H3></DIV></DIV></DIV>
+<P>On mailing lists, newsgroups or Web forums, the subject header is =
+your golden=20
+opportunity to attract qualified experts' attention in around 50 =
+characters or=20
+fewer. Don't waste it on babble like =E2=80=9C<SPAN class=3Dquote>Please =
+help me</SPAN>=E2=80=9D=20
+(let alone =E2=80=9C<SPAN class=3Dquote>PLEASE HELP =
+ME!!!!</SPAN>=E2=80=9D; messages with subjects=20
+like that get discarded by reflex). Don't try to impress us with the =
+depth of=20
+your anguish; use the space for a super-concise problem description =
+instead.</P>
+<P>One good convention for subject headers, used by many tech support=20
+organizations, is =E2=80=9C<SPAN class=3Dquote>object - =
+deviation</SPAN>=E2=80=9D. The =E2=80=9C<SPAN=20
+class=3Dquote>object</SPAN>=E2=80=9D part specifies what thing or group =
+of things is=20
+having a problem, and the =E2=80=9C<SPAN =
+class=3Dquote>deviation</SPAN>=E2=80=9D part describes=20
+the deviation from expected behavior.</P>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN>=20
+  </SPAN></DT>
+  <DD>
+  <P>HELP! Video doesn't work properly on my laptop!</P></DD>
+  <DT><SPAN class=3Dterm><SPAN=20
+  class=3Dstrong><STRONG>Smart:</STRONG></SPAN></SPAN></DT>
+  <DD>
+  <P>X.org 6.8.1 misshapen mouse cursor, Fooware MV1005 vid. =
+chipset</P></DD>
+  <DT><SPAN class=3Dterm><SPAN=20
+  class=3Dstrong><STRONG>Smarter:</STRONG></SPAN></SPAN></DT>
+  <DD>
+  <P>X.org 6.8.1 mouse cursor on Fooware MV1005 vid. chipset - is=20
+  misshapen</P></DD></DL></DIV>
+<P>The process of writing an =E2=80=9C<SPAN =
+class=3Dquote>object-deviation</SPAN>=E2=80=9D=20
+description will help you organize your thinking about the problem in =
+more=20
+detail. What is affected? Just the mouse cursor or other graphics too? =
+Is this=20
+specific to the X.org version of X? To version 6.8.1? Is this specific =
+to=20
+Fooware video chipsets? To model MV1005? A hacker who sees the result =
+can=20
+immediately understand what it is that you are having a problem with =
+<SPAN=20
+class=3Demphasis><EM>and</EM></SPAN> the problem you are having, at a =
+glance.</P>
+<P>More generally, imagine looking at the index of an archive of =
+questions, with=20
+just the subject lines showing. Make your subject line reflect your =
+question=20
+well enough that the next guy searching the archive with a question =
+similar to=20
+yours will be able to follow the thread to an answer rather than posting =
+the=20
+question again.</P>
+<P>If you ask a question in a reply, be sure to change the subject line =
+to=20
+indicate that you're asking a question. A Subject line that looks like =
+=E2=80=9C<SPAN=20
+class=3Dquote>Re: test</SPAN>=E2=80=9D or =E2=80=9C<SPAN =
+class=3Dquote>Re: new bug</SPAN>=E2=80=9D is less=20
+likely to attract useful amounts of attention. Also, pare quotation of =
+previous=20
+messages to the minimum consistent with cluing in new readers.</P>
+<P>Do not simply hit reply to a list message in order to start an =
+entirely new=20
+thread. This will limit your audience. Some mail readers, like mutt, =
+allow the=20
+user to sort by thread and then hide messages in a thread by folding the =
+thread.=20
+Folks who do that will never see your message.</P>
+<P>Changing the subject is not sufficient. Mutt, and probably other mail =
+
+readers, looks at other information in the e-mail's headers to assign it =
+to a=20
+thread, not the subject line. Instead start an entirely new e-mail.</P>
+<P>On Web forums the rules of good practice are slightly different, =
+because=20
+messages are usually much more tightly bound to specific discussion =
+threads and=20
+often invisible outside those threads. Changing the subject when asking =
+a=20
+question in reply is not essential. Not all forums even allow separate =
+subject=20
+lines on replies, and nearly nobody reads them when they do. However, =
+asking a=20
+question in a reply is a dubious practice in itself, because it will =
+only be=20
+seen by those who are watching this thread. So, unless you are sure you =
+<SPAN=20
+class=3Demphasis><EM>want</EM></SPAN> to ask only the people currently =
+active in=20
+the thread, start a new one.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Deasyreply></A>Make it easy to =
+reply</H3></DIV></DIV></DIV>
+<P>Finishing your query with =E2=80=9C<SPAN class=3Dquote>Please send =
+your reply to...=20
+</SPAN>=E2=80=9D makes it quite unlikely you will get an answer. If you =
+can't be=20
+bothered to take even the few seconds required to set up a correct =
+Reply-To=20
+header in your mail agent, we can't be bothered to take even a few =
+seconds to=20
+think about your problem. If your mail program doesn't permit this, <A=20
+class=3Dulink href=3D"http://linuxmafia.com/faq/Mail/muas.html" =
+target=3D_top>get a=20
+better mail program</A>. If your operating system doesn't support any =
+e-mail=20
+programs that permit this, get a better operating system.</P>
+<P>In Web forums, asking for a reply by e-mail is outright rude, unless =
+you=20
+believe the information may be sensitive (and somebody will, for some =
+unknown=20
+reason, let you but not the whole forum know it). If you want an e-mail =
+copy=20
+when somebody replies in the thread, request that the Web forum send it; =
+this=20
+feature is supported almost everywhere under options like =E2=80=9C<SPAN =
+
+class=3Dquote>watch this thread</SPAN>=E2=80=9D, =E2=80=9C<SPAN =
+class=3Dquote>send e-mail on=20
+answers</SPAN>=E2=80=9D, etc.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dwritewell></A>Write in clear, grammatical,=20
+correctly-spelled language</H3></DIV></DIV></DIV>
+<P>We've found by experience that people who are careless and sloppy =
+writers are=20
+usually also careless and sloppy at thinking and coding (often enough to =
+bet on,=20
+anyway). Answering questions for careless and sloppy thinkers is not =
+rewarding;=20
+we'd rather spend our time elsewhere.</P>
+<P>So expressing your question clearly and well is important. If you =
+can't be=20
+bothered to do that, we can't be bothered to pay attention. Spend the =
+extra=20
+effort to polish your language. It doesn't have to be stiff or formal =
+=E2=80=94 in fact,=20
+hacker culture values informal, slangy and humorous language used with=20
+precision. But it has to <SPAN class=3Demphasis><EM>be</EM></SPAN> =
+precise; there=20
+has to be some indication that you're thinking and paying attention.</P>
+<P>Spell, punctuate, and capitalize correctly. Don't confuse =
+=E2=80=9C<SPAN=20
+class=3Dquote>its</SPAN>=E2=80=9D with =E2=80=9C<SPAN =
+class=3Dquote>it's</SPAN>=E2=80=9D, =E2=80=9C<SPAN=20
+class=3Dquote>loose</SPAN>=E2=80=9D with =E2=80=9C<SPAN =
+class=3Dquote>lose</SPAN>=E2=80=9D, or =E2=80=9C<SPAN=20
+class=3Dquote>discrete</SPAN>=E2=80=9D with =E2=80=9C<SPAN =
+class=3Dquote>discreet</SPAN>=E2=80=9D. Don't=20
+TYPE IN ALL CAPS; this is read as shouting and considered rude. =
+(All-smalls is=20
+only slightly less annoying, as it's difficult to read. Alan Cox can get =
+away=20
+with it, but you can't.)</P>
+<P>More generally, if you write like a semi-literate boob you will very =
+likely=20
+be ignored. So don't use instant-messaging shortcuts. Spelling "you" as =
+"u"=20
+makes you look like a semi-literate boob to save two entire keystrokes. =
+Worse:=20
+writing like a l33t script kiddie hax0r is the absolute kiss of death =
+and=20
+guarantees you will receive nothing but stony silence (or, at best, a =
+heaping=20
+helping of scorn and sarcasm) in return.</P>
+<P>If you are asking questions in a forum that does not use your native=20
+language, you will get a limited amount of slack for spelling and =
+grammar errors=20
+=E2=80=94 but no extra slack at all for laziness (and yes, we can =
+usually spot that=20
+difference). Also, unless you know what your respondent's languages are, =
+write=20
+in English. Busy hackers tend to simply flush questions in languages =
+they don't=20
+understand, and English is the working language of the Internet. By =
+writing in=20
+English you minimize your chances that your question will be discarded=20
+unread.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dformats></A>Send questions in accessible, =
+standard=20
+formats</H3></DIV></DIV></DIV>
+<P>If you make your question artificially hard to read, it is more =
+likely to be=20
+passed over in favor of one that isn't. So:</P>
+<DIV class=3Ditemizedlist>
+<UL type=3Ddisc>
+  <LI>
+  <P>Send plain text mail, not HTML. (It's not hard to <A class=3Dulink=20
+  href=3D"http://expita.com/nomime.html" target=3D_top>turn off =
+HTML</A>.)</P></LI>
+  <LI>
+  <P>MIME attachments are usually OK, but only if they are real content =
+(such as=20
+  an attached source file or patch), and not merely boilerplate =
+generated by=20
+  your mail client (such as another copy of your message).</P></LI>
+  <LI>
+  <P>Don't send e-mail in which entire paragraphs are single =
+multiply-wrapped=20
+  lines. (This makes it too difficult to reply to just part of the =
+message.)=20
+  Assume that your respondents will be reading mail on 80-character-wide =
+text=20
+  displays and set your line wrap accordingly, to something less than=20
+  80.</P></LI>
+  <LI>
+  <P>However, do <SPAN class=3Demphasis><EM>not</EM></SPAN> wrap data =
+(such as log=20
+  file dumps or session transcripts) at any fixed column width. Data =
+should be=20
+  included as-is, so respondents can have confidence that they are =
+seeing what=20
+  you saw.</P></LI>
+  <LI>
+  <P>Don't send MIME Quoted-Printable encoding to an English-language =
+forum.=20
+  This encoding can be necessary when you're posting in a language ASCII =
+doesn't=20
+  cover, but many e-mail agents don't support it. When they break, all =
+those =3D20=20
+  glyphs scattered through the text are ugly and distracting =E2=80=94 =
+or may actively=20
+  sabotage the semantics of your text.</P></LI>
+  <LI>
+  <P>Never, <SPAN class=3Demphasis><EM>ever</EM></SPAN> expect hackers =
+to be able=20
+  to read closed proprietary document formats like Microsoft Word or =
+Excel. Most=20
+  hackers react to these about as well as you would to having a pile of =
+steaming=20
+  pig manure dumped on your doorstep. Even when they can cope, they =
+resent=20
+  having to do so.</P></LI>
+  <LI>
+  <P>If you're sending e-mail from a Windows machine, turn off =
+Microsoft's=20
+  stupid =E2=80=9C<SPAN class=3Dquote>Smart Quotes</SPAN>=E2=80=9D =
+feature. This is so you'll=20
+  avoid sprinkling garbage characters through your mail. </P></LI>
+  <LI>
+  <P>In Web forums, do not abuse =E2=80=9C<SPAN =
+class=3Dquote>smiley</SPAN>=E2=80=9D and =E2=80=9C<SPAN=20
+  class=3Dquote>HTML</SPAN>=E2=80=9D features (when they are present). A =
+smiley or two is=20
+  usually OK, but colored fancy text tends to make people think you are =
+lame.=20
+  Seriously overusing smileys and color and fonts will make you come off =
+like a=20
+  giggly teenage girl, which is not generally a good idea unless you are =
+more=20
+  interested in sex than answers.</P></LI></UL></DIV>
+<P>If you're using a graphical-user-interface mail client such as =
+Netscape=20
+Messenger, MS Outlook, or their ilk, beware that it may violate these =
+rules when=20
+used with its default settings. Most such clients have a menu-based =
+=E2=80=9C<SPAN=20
+class=3Dquote>View Source</SPAN>=E2=80=9D command. Use this on something =
+in your sent-mail=20
+folder, verifying sending of plain text without unnecessary attached=20
+crud.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dbeprecise></A>Be precise and informative about =
+your=20
+problem</H3></DIV></DIV></DIV>
+<DIV class=3Ditemizedlist>
+<UL type=3Ddisc>
+  <LI>
+  <P>Describe the symptoms of your problem or bug carefully and clearly. =
+
+  </P></LI>
+  <LI>
+  <P>Describe the environment in which it occurs (machine, OS, =
+application,=20
+  whatever). Provide your vendor's distribution and release level (e.g.: =
+=E2=80=9C<SPAN=20
+  class=3Dquote>Fedora Core 7</SPAN>=E2=80=9D, =E2=80=9C<SPAN =
+class=3Dquote>Slackware 9.1</SPAN>=E2=80=9D,=20
+  etc.). </P></LI>
+  <LI>
+  <P>Describe the research you did to try and understand the problem =
+before you=20
+  asked the question. </P></LI>
+  <LI>
+  <P>Describe the diagnostic steps you took to try and pin down the =
+problem=20
+  yourself before you asked the question. </P></LI>
+  <LI>
+  <P>Describe any possibly relevant recent changes in your computer or =
+software=20
+  configuration. </P></LI>
+  <LI>
+  <P>If at all possible, provide a way to <SPAN =
+class=3Demphasis><EM>reproduce the=20
+  problem in a controlled environment</EM></SPAN>. </P></LI></UL></DIV>
+<P>Do the best you can to anticipate the questions a hacker will ask, =
+and answer=20
+them in advance in your request for help.</P>
+<P>Giving hackers the ability to reproduce the problem in a controlled=20
+environment is especially important if you are reporting something you =
+think is=20
+a bug in code. When you do this, your odds of getting a useful answer =
+and the=20
+speed with which you are likely to get that answer both improve=20
+tremendously.</P>
+<P>Simon Tatham has written an excellent essay entitled <A class=3Dulink =
+
+href=3D"http://www.chiark.greenend.org.uk/~sgtatham/bugs.html" =
+target=3D_top>How to=20
+Report Bugs Effectively</A>. I strongly recommend that you read =
+it.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dvolume></A>Volume is not =
+precision</H3></DIV></DIV></DIV>
+<P>You need to be precise and informative. This end is not served by =
+simply=20
+dumping huge volumes of code or data into a help request. If you have a =
+large,=20
+complicated test case that is breaking a program, try to trim it and =
+make it as=20
+small as possible.</P>
+<P>This is useful for at least three reasons. One: being seen to invest =
+effort=20
+in simplifying the question makes it more likely you'll get an answer, =
+Two:=20
+simplifying the question makes it more likely you'll get a <SPAN=20
+class=3Demphasis><EM>useful</EM></SPAN> answer. Three: In the process of =
+refining=20
+your bug report, you may develop a fix or workaround yourself.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Did382249></A>Don't rush to claim that you have =
+found a=20
+bug</H3></DIV></DIV></DIV>
+<P>When you are having problems with a piece of software, don't claim =
+you have=20
+found a bug unless you are very, <SPAN =
+class=3Demphasis><EM>very</EM></SPAN> sure=20
+of your ground. Hint: unless you can provide a source-code patch that =
+fixes the=20
+problem, or a regression test against a previous version that =
+demonstrates=20
+incorrect behavior, you are probably not sure enough. This applies to =
+webpages=20
+and documentation, too; if you have found a documentation =E2=80=9C<SPAN =
+
+class=3Dquote>bug</SPAN>=E2=80=9D, you should supply replacement text =
+and which pages it=20
+should go on.</P>
+<P>Remember, there are many other users that are not experiencing your =
+problem.=20
+Otherwise you would have learned about it while reading the =
+documentation and=20
+searching the Web (you did do that before complaining, <A class=3Dlink=20
+title=3D"Before You Ask"=20
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#before">didn't=
+=20
+you</A>?). This means that very probably it is you who are doing =
+something=20
+wrong, not the software.</P>
+<P>The people who wrote the software work very hard to make it work as =
+well as=20
+possible. If you claim you have found a bug, you'll be impugning their=20
+competence, which may offend some of them even if you are correct. It's=20
+especially undiplomatic to yell =E2=80=9C<SPAN =
+class=3Dquote>bug</SPAN>=E2=80=9D in the Subject=20
+line.</P>
+<P>When asking your question, it is best to write as though you assume =
+<SPAN=20
+class=3Demphasis><EM>you</EM></SPAN> are doing something wrong, even if =
+you are=20
+privately pretty sure you have found an actual bug. If there really is a =
+bug,=20
+you will hear about it in the answer. Play it so the maintainers will =
+want to=20
+apologize to you if the bug is real, rather than so that you will owe =
+them an=20
+apology if you have messed up.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Did382403></A>Grovelling is not a substitute =
+for doing your=20
+homework</H3></DIV></DIV></DIV>
+<P>Some people who get that they shouldn't behave rudely or arrogantly,=20
+demanding an answer, retreat to the opposite extreme of grovelling. =
+=E2=80=9C<SPAN=20
+class=3Dquote>I know I'm just a pathetic newbie loser, =
+but...</SPAN>=E2=80=9D. This is=20
+distracting and unhelpful. It's especially annoying when it's coupled =
+with=20
+vagueness about the actual problem.</P>
+<P>Don't waste your time, or ours, on crude primate politics. Instead, =
+present=20
+the background facts and your question as clearly as you can. That is a =
+better=20
+way to position yourself than by grovelling.</P>
+<P>Sometimes Web forums have separate places for newbie questions. If =
+you feel=20
+you do have a newbie question, just go there. But don't grovel there=20
+either.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dsymptoms></A>Describe the problem's symptoms, =
+not your=20
+guesses</H3></DIV></DIV></DIV>
+<P>It's not useful to tell hackers what you think is causing your =
+problem. (If=20
+your diagnostic theories were such hot stuff, would you be consulting =
+others for=20
+help?) So, make sure you're telling them the raw symptoms of what goes =
+wrong,=20
+rather than your interpretations and theories. Let them do the =
+interpretation=20
+and diagnosis. If you feel it's important to state your guess, clearly =
+label it=20
+as such and describe why that answer isn't working for you.</P>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN>=20
+  </SPAN></DT>
+  <DD>
+  <P>I'm getting back-to-back SIG11 errors on kernel compiles, and =
+suspect a=20
+  hairline crack on one of the motherboard traces. What's the best way =
+to check=20
+  for those?</P></DD>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Smart:</STRONG></SPAN>=20
+  </SPAN></DT>
+  <DD>
+  <P>My home-built K6/233 on an FIC-PA2007 motherboard (VIA Apollo VP2 =
+chipset)=20
+  with 256MB Corsair PC133 SDRAM starts getting frequent SIG11 errors =
+about 20=20
+  minutes after power-on during the course of kernel compiles, but never =
+in the=20
+  first 20 minutes. Rebooting doesn't restart the clock, but powering =
+down=20
+  overnight does. Swapping out all RAM didn't help. The relevant part of =
+a=20
+  typical compile session log follows.</P></DD></DL></DIV>
+<P>Since the preceding point seems to be a tough one for many people to =
+grasp,=20
+here's a phrase to remind you: "All diagnosticians are from Missouri." =
+That US=20
+state's official motto is "Show me" (earned in 1899, when Congressman =
+Willard D.=20
+Vandiver said "I come from a country that raises corn and cotton and =
+cockleburs=20
+and Democrats, and frothy eloquence neither convinces nor satisfies me. =
+I'm from=20
+Missouri. You've got to show me.") In diagnosticians' case, it's not a =
+matter of=20
+skepticism, but rather a literal, functional need to see whatever is as =
+close as=20
+possible to the same raw evidence that you see, rather than your =
+surmises and=20
+summaries. Show us.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dchronology></A>Describe your problem's =
+symptoms in=20
+chronological order</H3></DIV></DIV></DIV>
+<P>The clues most useful in figuring out something that went wrong often =
+lie in=20
+the events immediately prior. So, your account should describe precisely =
+what=20
+you did, and what the machine and software did, leading up to the =
+blowup. In the=20
+case of command-line processes, having a session log (e.g., using the =
+script=20
+utility) and quoting the relevant twenty or so lines is very useful.</P>
+<P>If the program that blew up on you has diagnostic options (such as -v =
+for=20
+verbose), try to select options that will add useful debugging =
+information to=20
+the transcript. Remember that more is not necessarily better; try to =
+choose a=20
+debug level that will inform rather than drowning the reader in =
+junk.</P>
+<P>If your account ends up being long (more than about four paragraphs), =
+it=20
+might be useful to succinctly state the problem up top, then follow with =
+the=20
+chronological tale. That way, hackers will know what to watch for in =
+reading=20
+your account.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dgoal></A>Describe the goal, not the=20
+step</H3></DIV></DIV></DIV>
+<P>If you are trying to find out how to do something (as opposed to =
+reporting a=20
+bug), begin by describing the goal. Only then describe the particular =
+step=20
+towards it that you are blocked on.</P>
+<P>Often, people who need technical help have a high-level goal in mind =
+and get=20
+stuck on what they think is one particular path towards the goal. They =
+come for=20
+help with the step, but don't realize that the path is wrong. It can =
+take=20
+substantial effort to get past this.</P>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN>=20
+  </SPAN></DT>
+  <DD>
+  <P>How do I get the color-picker on the FooDraw program to take a =
+hexadecimal=20
+  RGB value?</P></DD>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Smart:</STRONG></SPAN>=20
+  </SPAN></DT>
+  <DD>
+  <P>I'm trying to replace the color table on an image with values of my =
+
+  choosing. Right now the only way I can see to do this is by editing =
+each table=20
+  slot, but I can't get FooDraw's color picker to take a hexadecimal RGB =
+
+  value.</P></DD></DL></DIV>
+<P>The second version of the question is smart. It allows an answer that =
+
+suggests a tool better suited to the task.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dnoprivate></A>Don't ask people to reply by =
+private=20
+e-mail</H3></DIV></DIV></DIV>
+<P>Hackers believe solving problems should be a public, transparent =
+process=20
+during which a first try at an answer can and should be corrected if =
+someone=20
+more knowledgeable notices that it is incomplete or incorrect. Also, =
+helpers get=20
+some of their reward for being respondents from being seen to be =
+competent and=20
+knowledgeable by their peers.</P>
+<P>When you ask for a private reply, you are disrupting both the process =
+and the=20
+reward. Don't do this. It's the <SPAN=20
+class=3Demphasis><EM>respondent's</EM></SPAN> choice whether to reply =
+privately =E2=80=94=20
+and if he does, it's usually because he thinks the question is too =
+ill-formed or=20
+obvious to be interesting to others.</P>
+<P>There is one limited exception to this rule. If you think the =
+question is=20
+such that you are likely to get many answers that are all closely =
+similar, then=20
+the magic words are =E2=80=9C<SPAN class=3Dquote>e-mail me and I'll =
+summarize the answers=20
+for the group</SPAN>=E2=80=9D. It is courteous to try and save the =
+mailing list or=20
+newsgroup a flood of substantially identical postings =E2=80=94 but you =
+have to keep the=20
+promise to summarize.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dexplicit></A>Be explicit about your=20
+question</H3></DIV></DIV></DIV>
+<P>Open-ended questions tend to be perceived as open-ended time sinks. =
+Those=20
+people most likely to be able to give you a useful answer are also the =
+busiest=20
+people (if only because they take on the most work themselves). People =
+like that=20
+are allergic to open-ended time sinks, thus they tend to be allergic to=20
+open-ended questions.</P>
+<P>You are more likely to get a useful response if you are explicit =
+about what=20
+you want respondents to do (provide pointers, send code, check your =
+patch,=20
+whatever). This will focus their effort and implicitly put an upper =
+bound on the=20
+time and energy a respondent must allocate to helping you. This is =
+good.</P>
+<P>To understand the world the experts live in, think of expertise as an =
+
+abundant resource and time to respond as a scarce one. The less of a =
+time=20
+commitment you implicitly ask for, the more likely you are to get an =
+answer from=20
+someone really good and really busy.</P>
+<P>So it is useful to frame your question to minimize the time =
+commitment=20
+required for an expert to field it =E2=80=94 but this is often not the =
+same thing as=20
+simplifying the question. Thus, for example, =E2=80=9C<SPAN =
+class=3Dquote>Would you give=20
+me a pointer to a good explanation of X?</SPAN>=E2=80=9D is usually a =
+smarter question=20
+than =E2=80=9C<SPAN class=3Dquote>Would you explain X, =
+please?</SPAN>=E2=80=9D. If you have some=20
+malfunctioning code, it is usually smarter to ask for someone to explain =
+what's=20
+wrong with it than it is to ask someone to fix it.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dcode></A>When asking about =
+code</H3></DIV></DIV></DIV>
+<P>Don't ask others to debug your broken code without giving a hint what =
+sort of=20
+problem they should be searching for. Posting a few hundred lines of =
+code,=20
+saying "it doesn't work", will get you ignored. Posting a dozen lines of =
+code,=20
+saying "after line 7 I was expecting to see &lt;x&gt;, but &lt;y&gt; =
+occurred=20
+instead" is much more likely to get you a response.</P>
+<P>The most effective way to be precise about a code problem is to =
+provide a=20
+minimal bug-demonstrating test case. What's a minimal test case? It's an =
+
+illustration of the problem; just enough code to exhibit the undesirable =
+
+behavior and no more. How do you make a minimal test case? If you know =
+what line=20
+or section of code is producing the problematic behavior, make a copy of =
+it and=20
+add just enough supporting code to produce a complete example (i.e. =
+enough that=20
+the source is acceptable to the compiler/interpreter/whatever =
+application=20
+processes it). If you can't narrow it down to a particular section, make =
+a copy=20
+of the source and start removing chunks that don't affect the =
+problematic=20
+behavior. The smaller your minimal test case is, the better (see <A =
+class=3Dxref=20
+title=3D"Volume is not precision"=20
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#volume">the =
+section=20
+called =E2=80=9CVolume is not precision=E2=80=9D</A>).</P>
+<P>Generating a really small minimal test case will not always be =
+possible, but=20
+trying to is good discipline. It may help you learn what you need to =
+solve the=20
+problem on your own =E2=80=94 and even when it doesn't, hackers like to =
+see that you=20
+have tried. It will make them more cooperative.</P>
+<P>If you simply want a code review, say as much up front, and be sure =
+to=20
+mention what areas you think might particularly need review and =
+why.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dhomework></A>Don't post homework=20
+questions</H3></DIV></DIV></DIV>
+<P>Hackers are good at spotting homework questions; most of us have done =
+them=20
+ourselves. Those questions are for <SPAN =
+class=3Demphasis><EM>you</EM></SPAN> to=20
+work out, so that you will learn from the experience. It is OK to ask =
+for hints,=20
+but not for entire solutions.</P>
+<P>If you suspect you have been passed a homework question, but can't =
+solve it=20
+anyway, try asking in a user group forum or (as a last resort) in a =
+=E2=80=9C<SPAN=20
+class=3Dquote>user</SPAN>=E2=80=9D list/forum of a project. While the =
+hackers <SPAN=20
+class=3Demphasis><EM>will</EM></SPAN> spot it, some of the advanced =
+users may at=20
+least give you a hint.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dprune></A>Prune pointless =
+queries</H3></DIV></DIV></DIV>
+<P>Resist the temptation to close your request for help with =
+semantically-null=20
+questions like =E2=80=9C<SPAN class=3Dquote>Can anyone help =
+me?</SPAN>=E2=80=9D or =E2=80=9C<SPAN=20
+class=3Dquote>Is there an answer?</SPAN>=E2=80=9D First: if you've =
+written your problem=20
+description halfway competently, such tacked-on questions are at best=20
+superfluous. Second: because they are superfluous, hackers find them =
+annoying =E2=80=94=20
+and are likely to return logically impeccable but dismissive answers =
+like =E2=80=9C<SPAN=20
+class=3Dquote>Yes, you can be helped</SPAN>=E2=80=9D and =E2=80=9C<SPAN =
+class=3Dquote>No, there is=20
+no help for you.</SPAN>=E2=80=9D</P>
+<P>In general, asking yes-or-no questions is a good thing to avoid =
+unless you=20
+want a <A class=3Dulink=20
+href=3D"http://homepages.tesco.net/~J.deBoynePollard/FGA/questions-with-y=
+es-or-no-answers.html"=20
+target=3D_top>yes-or-no answer</A>.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Durgent></A>Don't flag your question as =
+=E2=80=9C<SPAN=20
+class=3Dquote>Urgent</SPAN>=E2=80=9D, even if it is for =
+you</H3></DIV></DIV></DIV>
+<P>That's your problem, not ours. Claiming urgency is very likely to be=20
+counter-productive: most hackers will simply delete such messages as =
+rude and=20
+selfish attempts to elicit immediate and special attention.</P>
+<P>There is one semi-exception. It can be worth mentioning if you're =
+using the=20
+program in some high-profile place, one that the hackers will get =
+excited about;=20
+in such a case, if you're under time pressure, and you say so politely, =
+people=20
+may get interested enough to answer faster.</P>
+<P>This is a very risky thing to do, however, because the hackers' =
+metric for=20
+what is exciting probably differs from yours. Posting from the =
+International=20
+Space Station would qualify, for example, but posting on behalf of a =
+feel-good=20
+charitable or political cause would almost certainly not. In fact, =
+posting=20
+=E2=80=9C<SPAN class=3Dquote>Urgent: Help me save the fuzzy baby =
+seals!</SPAN>=E2=80=9D will=20
+reliably get you shunned or flamed even by hackers who think fuzzy baby =
+seals=20
+are important.</P>
+<P>If you find this mysterious, re-read the rest of this how-to =
+repeatedly until=20
+you understand it before posting anything at all.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dcourtesy></A>Courtesy never hurts, and =
+sometimes=20
+helps</H3></DIV></DIV></DIV>
+<P>Be courteous. Use =E2=80=9C<SPAN class=3Dquote>Please</SPAN>=E2=80=9D =
+and =E2=80=9C<SPAN=20
+class=3Dquote>Thanks for your attention</SPAN>=E2=80=9D or =
+=E2=80=9C<SPAN class=3Dquote>Thanks for=20
+your consideration</SPAN>=E2=80=9D. Make it clear you appreciate the =
+time people spend=20
+helping you for free.</P>
+<P>To be honest, this isn't as important as (and cannot substitute for) =
+being=20
+grammatical, clear, precise and descriptive, avoiding proprietary =
+formats etc.;=20
+hackers in general would rather get somewhat brusque but technically =
+sharp bug=20
+reports than polite vagueness. (If this puzzles you, remember that we =
+value a=20
+question by what it teaches us.)</P>
+<P>However, if you've got your technical ducks in a row, politeness does =
+
+increase your chances of getting a useful answer.</P>
+<P>(We must note that the only serious objection we've received from =
+veteran=20
+hackers to this HOWTO is with respect to our previous recommendation to =
+use=20
+=E2=80=9C<SPAN class=3Dquote>Thanks in advance</SPAN>=E2=80=9D. Some =
+hackers feel this connotes an=20
+intention not to thank anybody afterwards. Our recommendation is to =
+either say=20
+=E2=80=9C<SPAN class=3Dquote>Thanks in advance</SPAN>=E2=80=9D first =
+<SPAN=20
+class=3Demphasis><EM>and</EM></SPAN> thank respondents afterwards, or =
+express=20
+courtesy in a different way, such as by saying =E2=80=9C<SPAN =
+class=3Dquote>Thanks for=20
+your attention</SPAN>=E2=80=9D or =E2=80=9C<SPAN class=3Dquote>Thanks =
+for your=20
+consideration</SPAN>=E2=80=9D.)</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dfollowup></A>Follow up with a brief note on =
+the=20
+solution</H3></DIV></DIV></DIV>
+<P>Send a note after the problem has been solved to all who helped you; =
+let them=20
+know how it came out and thank them again for their help. If the problem =
+
+attracted general interest in a mailing list or newsgroup, it's =
+appropriate to=20
+post the followup there.</P>
+<P>Optimally, the reply should be to the thread started by the original =
+question=20
+posting, and should have =E2=80=98FIXED=E2=80=99, =
+=E2=80=98RESOLVED=E2=80=99 or an equally obvious tag in the=20
+subject line. On mailing lists with fast turnaround, a potential =
+respondent who=20
+sees a thread about =E2=80=9C<SPAN class=3Dquote>Problem =
+X</SPAN>=E2=80=9D ending with =E2=80=9C<SPAN=20
+class=3Dquote>Problem X - FIXED</SPAN>=E2=80=9D knows not to waste =
+his/her time even=20
+reading the thread (unless (s)he) personally finds Problem X =
+interesting) and=20
+can therefore use that time solving a different problem.</P>
+<P>Your followup doesn't have to be long and involved; a simple =
+=E2=80=9C<SPAN=20
+class=3Dquote>Howdy =E2=80=94 it was a failed network cable! Thanks, =
+everyone. -=20
+Bill</SPAN>=E2=80=9D would be better than nothing. In fact, a short and =
+sweet summary is=20
+better than a long dissertation unless the solution has real technical =
+depth.=20
+Say what action solved the problem, but you need not replay the whole=20
+troubleshooting sequence.</P>
+<P>For problems with some depth, it is appropriate to post a summary of =
+the=20
+troubleshooting history. Describe your final problem statement. Describe =
+what=20
+worked as a solution, and indicate avoidable blind alleys <SPAN=20
+class=3Demphasis><EM>after that</EM></SPAN>. The blind alleys should =
+come after=20
+the correct solution and other summary material, rather than turning the =
+
+follow-up into a detective story. Name the names of people who helped =
+you;=20
+you'll make friends that way.</P>
+<P>Besides being courteous and informative, this sort of followup will =
+help=20
+others searching the archive of the mailing-list/newsgroup/forum to know =
+exactly=20
+which solution helped you and thus may also help them.</P>
+<P>Last, and not least, this sort of followup helps everybody who =
+assisted feel=20
+a satisfying sense of closure about the problem. If you are not a techie =
+or=20
+hacker yourself, trust us that this feeling is very important to the =
+gurus and=20
+experts you tapped for help. Problem narratives that trail off into =
+unresolved=20
+nothingness are frustrating things; hackers itch to see them resolved. =
+The=20
+goodwill that scratching that itch earns you will be very, very helpful =
+to you=20
+next time you need to pose a question. </P>
+<P>Consider how you might be able to prevent others from having the same =
+problem=20
+in the future. Ask yourself if a documentation or FAQ patch would help, =
+and if=20
+the answer is yes send that patch to the maintainer.</P>
+<P>Among hackers, this sort of good followup behavior is actually more =
+important=20
+than conventional politeness. It's how you get a reputation for playing =
+well=20
+with others, which can be a very valuable asset.</P></DIV></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Danswers></A>How To =
+Interpret=20
+Answers</H2></DIV></DIV></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Drtfm></A>RTFM and STFW: How To Tell You've =
+Seriously=20
+Screwed Up</H3></DIV></DIV></DIV>
+<P>There is an ancient and hallowed tradition: if you get a reply that =
+reads=20
+=E2=80=9C<SPAN class=3Dquote>RTFM</SPAN>=E2=80=9D, the person who sent =
+it thinks you should have=20
+Read The Fucking Manual. He or she is almost certainly right. Go read =
+it.</P>
+<P>RTFM has a younger relative. If you get a reply that reads =
+=E2=80=9C<SPAN=20
+class=3Dquote>STFW</SPAN>=E2=80=9D, the person who sent it thinks you =
+should have Searched=20
+The Fucking Web. He or she is almost certainly right. Go search it. (The =
+milder=20
+version of this is when you are told =E2=80=9C<SPAN class=3Dquote>Google =
+is your=20
+friend!</SPAN>=E2=80=9D)</P>
+<P>In Web forums, you may also be told to search the forum archives. In =
+fact,=20
+someone may even be so kind as to provide a pointer to the previous =
+thread where=20
+this problem was solved. But do not rely on this consideration; do your=20
+archive-searching before asking.</P>
+<P>Often, the person telling you to do a search has the manual or the =
+web page=20
+with the information you need open, and is looking at it as he or she =
+types.=20
+These replies mean that he thinks (a) the information you need is easy =
+to find,=20
+and (b) you will learn more if you seek out the information than if you =
+have it=20
+spoon-fed to you.</P>
+<P>You shouldn't be offended by this; by hacker standards, your =
+respondent is=20
+showing you a rough kind of respect simply by not ignoring you. You =
+should=20
+instead be thankful for this grandmotherly kindness.</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dlesser></A>If you don't=20
+understand...</H3></DIV></DIV></DIV>
+<P>If you don't understand the answer, do not immediately bounce back a =
+demand=20
+for clarification. Use the same tools that you used to try and answer =
+your=20
+original question (manuals, FAQs, the Web, skilled friends) to =
+understand the=20
+answer. Then, if you still need to ask for clarification, exhibit what =
+you have=20
+learned.</P>
+<P>For example, suppose I tell you: =E2=80=9C<SPAN class=3Dquote>It =
+sounds like you've got=20
+a stuck zentry; you'll need to clear it.</SPAN>=E2=80=9D Then: here's a =
+<SPAN=20
+class=3Demphasis><EM>bad</EM></SPAN> followup question: =E2=80=9C<SPAN =
+class=3Dquote>What's=20
+a zentry?</SPAN>=E2=80=9D Here's a <SPAN =
+class=3Demphasis><EM>good</EM></SPAN> followup=20
+question: =E2=80=9C<SPAN class=3Dquote>OK, I read the man page and =
+zentries are only=20
+mentioned under the -z and -p switches. Neither of them says anything =
+about=20
+clearing zentries. Is it one of these or am I missing something=20
+here?</SPAN>=E2=80=9D</P></DIV>
+<DIV lang=3Den class=3Dsect2 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H3 class=3Dtitle><A id=3Dkeepcool></A>Dealing with =
+rudeness</H3></DIV></DIV></DIV>
+<P>Much of what looks like rudeness in hacker circles is not intended to =
+give=20
+offense. Rather, it's the product of the direct, =
+cut-through-the-bullshit=20
+communications style that is natural to people who are more concerned =
+about=20
+solving problems than making others feel warm and fuzzy.</P>
+<P>When you perceive rudeness, try to react calmly. If someone is really =
+acting=20
+out, it is very likely a senior person on the list or newsgroup or forum =
+will=20
+call him or her on it. If that <SPAN =
+class=3Demphasis><EM>doesn't</EM></SPAN>=20
+happen and you lose your temper, it is likely that the person you lose =
+it at was=20
+behaving within the hacker community's norms and <SPAN=20
+class=3Demphasis><EM>you</EM></SPAN> will be considered at fault. This =
+will hurt=20
+your chances of getting the information or help you want.</P>
+<P>On the other hand, you will occasionally run across rudeness and =
+posturing=20
+that is quite gratuitous. The flip-side of the above is that it is =
+acceptable=20
+form to slam real offenders quite hard, dissecting their misbehavior =
+with a=20
+sharp verbal scalpel. Be very, very sure of your ground before you try =
+this,=20
+however. The line between correcting an incivility and starting a =
+pointless=20
+flamewar is thin enough that hackers themselves not infrequently blunder =
+across=20
+it; if you are a newbie or an outsider, your chances of avoiding such a =
+blunder=20
+are low. If you're after information rather than entertainment, it's =
+better to=20
+keep your fingers off the keyboard than to risk this.</P>
+<P>(Some people assert that many hackers have a mild form of autism or=20
+Asperger's Syndrome, and are actually missing some of the brain =
+circuitry that=20
+lubricates =E2=80=9C<SPAN class=3Dquote>normal</SPAN>=E2=80=9D human =
+social interaction. This may=20
+or may not be true. If you are not a hacker yourself, it may help you =
+cope with=20
+our eccentricities if you think of us as being brain-damaged. Go right =
+ahead. We=20
+won't care; we <SPAN class=3Demphasis><EM>like</EM></SPAN> being =
+whatever it is we=20
+are, and generally have a healthy skepticism about clinical labels.)</P>
+<P>In the next section, we'll talk about a different issue; the kind of =
+=E2=80=9C<SPAN=20
+class=3Dquote>rudeness</SPAN>=E2=80=9D you'll see when <SPAN=20
+class=3Demphasis><EM>you</EM></SPAN> misbehave.</P></DIV></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Dnot_losing></A>On Not =
+Reacting Like A=20
+Loser</H2></DIV></DIV></DIV>
+<P>Odds are you'll screw up a few times on hacker community forums =
+=E2=80=94 in ways=20
+detailed in this article, or similar. And you'll be told exactly how you =
+screwed=20
+up, possibly with colourful asides. In public.</P>
+<P>When this happens, the worst thing you can do is whine about the =
+experience,=20
+claim to have been verbally assaulted, demand apologies, scream, hold =
+your=20
+breath, threaten lawsuits, complain to people's employers, leave the =
+toilet seat=20
+up, etc. Instead, here's what you do:</P>
+<P>Get over it. It's normal. In fact, it's healthy and appropriate.</P>
+<P>Community standards do not maintain themselves: They're maintained by =
+people=20
+actively applying them, visibly, <SPAN class=3Demphasis><EM>in =
+public</EM></SPAN>.=20
+Don't whine that all criticism should have been conveyed via private =
+e-mail:=20
+That's not how it works. Nor is it useful to insist you've been =
+personally=20
+insulted when someone comments that one of your claims was wrong, or =
+that his=20
+views differ. Those are loser attitudes.</P>
+<P>There have been hacker forums where, out of some misguided sense of=20
+hyper-courtesy, participants are banned from posting any fault-finding =
+with=20
+another's posts, and told =E2=80=9C<SPAN class=3Dquote>Don't say =
+anything if you're=20
+unwilling to help the user.</SPAN>=E2=80=9D The resulting departure of =
+clueful=20
+participants to elsewhere causes them to descend into meaningless babble =
+and=20
+become useless as technical forums.</P>
+<P>Exaggeratedly =E2=80=9C<SPAN class=3Dquote>friendly</SPAN>=E2=80=9D =
+(in that fashion) or=20
+useful: Pick one.</P>
+<P>Remember: When that hacker tells you that you've screwed up, and (no =
+matter=20
+how gruffly) tells you not to do it again, he's acting out of concern =
+for (1)=20
+you and (2) his community. It would be much easier for him to ignore you =
+and=20
+filter you out of his life. If you can't manage to be grateful, at least =
+have a=20
+little dignity, don't whine, and don't expect to be treated like a =
+fragile doll=20
+just because you're a newcomer with a theatrically hypersensitive soul =
+and=20
+delusions of entitlement.</P>
+<P>Sometimes people will attack you personally, flame without an =
+apparent=20
+reason, etc., even if you don't screw up (or have only screwed up in =
+their=20
+imagination). In this case, complaining is the way to <SPAN=20
+class=3Demphasis><EM>really</EM></SPAN> screw up.</P>
+<P>These flamers are either lamers who don't have a clue but believe =
+themselves=20
+to be experts, or would-be psychologists testing whether you'll screw =
+up. The=20
+other readers either ignore them, or find ways to deal with them on =
+their own.=20
+The flamers' behavior creates problems for themselves, which don't have =
+to=20
+concern you.</P>
+<P>Don't let yourself be drawn into a flamewar, either. Most flames are =
+best=20
+ignored =E2=80=94 after you've checked whether they are really flames, =
+not pointers to=20
+the ways in which you have screwed up, and not cleverly ciphered answers =
+to your=20
+real question (this happens as well).</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Dclassic></A>Questions =
+Not To=20
+Ask</H2></DIV></DIV></DIV>
+<P>Here are some classic stupid questions, and what hackers are thinking =
+when=20
+they don't answer them.</P>
+<DIV class=3Dqandaset>
+<DL>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383166">Wher=
+e can I=20
+  find program or resource X?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383188">How =
+can I=20
+  use X to do Y?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383207">How =
+can I=20
+  configure my shell prompt?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383229">Can =
+I=20
+  convert an AcmeCorp document into a TeX file using the Bass-o-matic =
+file=20
+  converter?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383250">My=20
+  {program, configuration, SQL statement} doesn't work</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383284">I'm =
+having=20
+  problems with my Windows machine. Can you help?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383310">My =
+program=20
+  doesn't work. I think system facility X is broken.</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383330">I'm =
+having=20
+  problems installing Linux or X. Can you help?</A></DT>
+  <DT>Q: <A=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#id383366">How =
+can I=20
+  crack root/steal channel-ops privileges/read someone's =
+e-mail?</A></DT></DL>
+<TABLE border=3D0 summary=3D"Q and A Set">
+  <COLGROUP>
+  <COL align=3Dleft width=3D"1%">
+  <TBODY>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383166></A><A =
+id=3Did383168></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>Where can I find program or resource X?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>The same place I'd find it, fool =E2=80=94 at the other end of =
+a web search.=20
+      Ghod, doesn't everybody know how to use <A class=3Dulink=20
+      href=3D"http://www.google.com/" target=3D_top>Google</A> =
+yet?</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383188></A><A =
+id=3Did383190></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>How can I use X to do Y?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>If what you want is to do Y, you should ask that question =
+without=20
+      pre-supposing the use of a method that may not be appropriate. =
+Questions=20
+      of this form often indicate a person who is not merely ignorant =
+about X,=20
+      but confused about what problem Y they are solving and too fixated =
+on the=20
+      details of their particular situation. It is generally best to =
+ignore such=20
+      people until they define their problem better.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383207></A><A =
+id=3Did383210></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>How can I configure my shell prompt?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>If you're smart enough to ask this question, you're smart =
+enough to <A=20
+      class=3Dlink title=3D"RTFM and STFW: How To Tell You've Seriously =
+Screwed Up"=20
+      =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#rtfm">RTFM</A>=
+=20
+      and find out yourself.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383229></A><A =
+id=3Did383231></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>Can I convert an AcmeCorp document into a TeX file using the=20
+      Bass-o-matic file converter?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>Try it and see. If you did that, you'd (a) learn the answer, =
+and (b)=20
+      stop wasting my time.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383250></A><A =
+id=3Did383252></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>My {program, configuration, SQL statement} doesn't =
+work</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>This is not a question, and I'm not interested in playing =
+Twenty=20
+      Questions to pry your actual question out of you =E2=80=94 I have =
+better things to=20
+      do. On seeing something like this, my reaction is normally of one =
+of the=20
+      following:</P>
+      <DIV class=3Ditemizedlist>
+      <UL type=3Ddisc>
+        <LI>
+        <P>do you have anything else to add to that?</P></LI>
+        <LI>
+        <P>oh, that's too bad, I hope you get it fixed.</P></LI>
+        <LI>
+        <P>and this has exactly what to do with =
+me?</P></LI></UL></DIV></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383284></A><A =
+id=3Did383286></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>I'm having problems with my Windows machine. Can you =
+help?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>Yes. Throw out that Microsoft trash and install an open-source=20
+      operating system like Linux or BSD.</P>
+      <P>Note: you <SPAN class=3Demphasis><EM>can</EM></SPAN> ask =
+questions=20
+      related to Windows machines if they are about a program that does =
+have an=20
+      official Windows build, or interacts with Windows machines (i.e., =
+Samba).=20
+      Just don't be surprised by the reply that the problem is with =
+Windows and=20
+      not the program, because Windows is so broken in general that this =
+is very=20
+      often the case.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383310></A><A =
+id=3Did383312></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>My program doesn't work. I think system facility X is =
+broken.</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>While it is possible that you are the first person to notice an =
+obvious=20
+      deficiency in system calls and libraries heavily used by hundreds =
+or=20
+      thousands of people, it is rather more likely that you are utterly =
+
+      clueless. Extraordinary claims require extraordinary evidence; =
+when you=20
+      make a claim like this one, you must back it up with clear and =
+exhaustive=20
+      documentation of the failure case.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383330></A><A =
+id=3Did383332></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>I'm having problems installing Linux or X. Can you =
+help?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>No. I'd need hands-on access to your machine to troubleshoot =
+this. Go=20
+      ask your local Linux user group for hands-on help. (You can find a =
+list of=20
+      user groups <A class=3Dulink =
+href=3D"http://www.linux.org/groups/index.html"=20
+      target=3D_top>here</A>.)</P>
+      <P>Note: questions about installing Linux may be appropriate if =
+you're on=20
+      a forum or mailing list about a particular distribution, and the =
+problem=20
+      is with <SPAN class=3Demphasis><EM>that</EM></SPAN> distro; or on =
+local user=20
+      groups forums. In this case, be sure to describe the exact details =
+of the=20
+      failure. But do careful searching first, with "linux" and <SPAN=20
+      class=3Demphasis><EM>all</EM></SPAN> suspicious pieces of=20
+hardware.</P></TD></TR>
+  <TR class=3Dquestion>
+    <TD vAlign=3Dtop align=3Dleft><A id=3Did383366></A><A =
+id=3Did383368></A>
+      <P><B>Q:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>How can I crack root/steal channel-ops privileges/read =
+someone's=20
+      e-mail?</P></TD></TR>
+  <TR class=3Danswer>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P><B>A:</B></P></TD>
+    <TD vAlign=3Dtop align=3Dleft>
+      <P>You're a lowlife for wanting to do such things and a moron for =
+asking a=20
+      hacker to help you.</P></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Dexamples></A>Good and =
+Bad=20
+Questions</H2></DIV></DIV></DIV>
+<P>Finally, I'm going to illustrate how to ask questions in a smart way =
+by=20
+example; pairs of questions about the same problem, one asked in a =
+stupid way=20
+and one in a smart way.</P>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN> Where=20
+  can I find out stuff about the Foonly Flurbamatic? </SPAN></DT>
+  <DD>
+  <P>This question just begs for <A class=3Dlink=20
+  title=3D"RTFM and STFW: How To Tell You've Seriously Screwed Up"=20
+  =
+href=3D"http://www.catb.org/~esr/faqs/smart-questions.html#rtfm">"STFW"</=
+A> as a=20
+  reply.</P></DD>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Smart:</STRONG></SPAN> I used=20
+  Google to try to find =E2=80=9C<SPAN class=3Dquote>Foonly Flurbamatic =
+2600</SPAN>=E2=80=9D on=20
+  the Web, but I got no useful hits. Can I get a pointer to programming=20
+  information on this device? </SPAN></DT>
+  <DD>
+  <P>This one has already STFWed, and sounds like he might have a real=20
+  problem.</P></DD></DL></DIV>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN> I=20
+  can't get the code from project foo to compile. Why is it broken? =
+</SPAN></DT>
+  <DD>
+  <P>The querent assumes that somebody else screwed up. Arrogant =
+git...</P></DD>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Smart:</STRONG></SPAN> The=20
+  code from project foo doesn't compile under Nulix version 6.2. I've =
+read the=20
+  FAQ, but it doesn't have anything in it about Nulix-related problems. =
+Here's a=20
+  transcript of my compilation attempt; is it something I did? =
+</SPAN></DT>
+  <DD>
+  <P>The querent has specified the environment, read the FAQ, is showing =
+the=20
+  error, and is not assuming his problems are someone else's fault. This =
+one=20
+  might be worth some attention.</P></DD></DL></DIV>
+<DIV class=3Dvariablelist>
+<DL>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Stupid:</STRONG></SPAN> I'm=20
+  having problems with my motherboard. Can anybody help? </SPAN></DT>
+  <DD>
+  <P>J. Random Hacker's response to this is likely to be =E2=80=9C<SPAN=20
+  class=3Dquote>Right. Do you need burping and diapering, =
+too?</SPAN>=E2=80=9D followed by=20
+  a punch of the delete key.</P></DD>
+  <DT><SPAN class=3Dterm><SPAN =
+class=3Dstrong><STRONG>Smart:</STRONG></SPAN> I tried=20
+  X, Y, and Z on the S2464 motherboard. When that didn't work, I tried =
+A, B, and=20
+  C. Note the curious symptom when I tried C. Obviously the florbish is=20
+  grommicking, but the results aren't what one might expect. What are =
+the usual=20
+  causes of grommicking on Athlon MP motherboards? Anybody got ideas for =
+more=20
+  tests I can run to pin down the problem?</SPAN></DT>
+  <DD>
+  <P>This person, on the other hand, seems worthy of an answer. He/she =
+has=20
+  exhibited problem-solving intelligence rather than passively waiting =
+for an=20
+  answer to drop from on high.</P></DD></DL></DIV>
+<P>In the last question, notice the subtle but important difference =
+between=20
+demanding =E2=80=9C<SPAN class=3Dquote>Give me an answer</SPAN>=E2=80=9D =
+and =E2=80=9C<SPAN=20
+class=3Dquote>Please help me figure out what additional diagnostics I =
+can run to=20
+achieve enlightenment.</SPAN>=E2=80=9D</P>
+<P>In fact, the form of that last question is closely based on a real =
+incident=20
+that happened in August 2001 on the linux-kernel mailing list (lkml). I =
+(Eric)=20
+was the one asking the question that time. I was seeing mysterious =
+lockups on a=20
+Tyan S2462 motherboard. The list members supplied the critical =
+information I=20
+needed to solve them.</P>
+<P>By asking the question in the way I did, I gave people something to =
+chew on;=20
+I made it easy and attractive for them to get involved. I demonstrated =
+respect=20
+for my peers' ability and invited them to consult with me as a peer. I =
+also=20
+demonstrated respect for the value of their time by telling them the =
+blind=20
+alleys I had already run down.</P>
+<P>Afterwards, when I thanked everyone and remarked how well the process =
+had=20
+worked, an lkml member observed that he thought it had worked not =
+because I'm a=20
+=E2=80=9C<SPAN class=3Dquote>name</SPAN>=E2=80=9D on that list, but =
+because I asked the question=20
+in the proper form.</P>
+<P>Hackers are in some ways a very ruthless meritocracy; I'm certain he =
+was=20
+right, and that if I <SPAN class=3Demphasis><EM>had</EM></SPAN> behaved =
+like a=20
+sponge I would have been flamed or ignored no matter who I was. His =
+suggestion=20
+that I write up the whole incident as instruction to others led directly =
+to the=20
+composition of this guide.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Did383575></A>If You =
+Can't Get An=20
+Answer</H2></DIV></DIV></DIV>
+<P>If you can't get an answer, please don't take it personally that we =
+don't=20
+feel we can help you. Sometimes the members of the asked group may =
+simply not=20
+know the answer. No response is not the same as being ignored, though =
+admittedly=20
+it's hard to spot the difference from outside.</P>
+<P>In general, simply re-posting your question is a bad idea. This will =
+be seen=20
+as pointlessly annoying. Have patience: the person with your answer may =
+be in a=20
+different time-zone and asleep. Or it may be that your question wasn't=20
+well-formed to begin with.</P>
+<P>There are other sources of help you can go to, often sources better =
+adapted=20
+to a novice's needs.</P>
+<P>There are many online and local user groups who are enthusiasts about =
+the=20
+software, even though they may never have written any software =
+themselves. These=20
+groups often form so that people can help each other and help new =
+users.</P>
+<P>There are also plenty of commercial companies you can contract with =
+for help,=20
+both large and small (Red Hat and SpikeSource are two of the best known; =
+there=20
+are many others). Don't be dismayed at the idea of having to pay for a =
+bit of=20
+help! After all, if your car engine blows a head gasket, chances are you =
+would=20
+take it to a repair shop and pay to get it fixed. Even if the software =
+didn't=20
+cost you anything, you can't expect that support to always come for =
+free.</P>
+<P>For popular software like Linux, there are at least 10,000 users per=20
+developer. It's just not possible for one person to handle the support =
+calls=20
+from over 10,000 users. Remember that even if you have to pay for =
+support, you=20
+are still paying much less than if you had to buy the software as well =
+(and=20
+support for closed-source software is usually more expensive and less =
+competent=20
+than support for open-source software).</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Did383614></A>How To =
+Answer Questions=20
+in a Helpful Way</H2></DIV></DIV></DIV>
+<P><SPAN class=3Demphasis><EM>Be gentle.</EM></SPAN> Problem-related =
+stress can=20
+make people seem rude or stupid even when they're not.</P>
+<P><SPAN class=3Demphasis><EM>Reply to a first offender =
+off-line.</EM></SPAN>=20
+There is no need of public humiliation for someone who may have made an =
+honest=20
+mistake. A real newbie may not know how to search archives or where the =
+FAQ is=20
+stored or posted.</P>
+<P><SPAN class=3Demphasis><EM>If you don't know for sure, say =
+so!</EM></SPAN> A=20
+wrong but authoritative-sounding answer is worse than none at all. Don't =
+point=20
+anyone down a wrong path simply because it's fun to sound like an =
+expert. Be=20
+humble and honest; set a good example for both the querent and your =
+peers.</P>
+<P><SPAN class=3Demphasis><EM>If you can't help, don't =
+hinder.</EM></SPAN> Don't=20
+make jokes about procedures that could trash the user's setup =E2=80=94 =
+the poor sap=20
+might interpret these as instructions.</P>
+<P><SPAN class=3Demphasis><EM>Ask probing questions to elicit more=20
+details.</EM></SPAN> If you're good at this, the querent will learn =
+something =E2=80=94=20
+and so might you. Try to turn the bad question into a good one; remember =
+we were=20
+all newbies once.</P>
+<P>While muttering RTFM is sometimes justified when replying to someone =
+who is=20
+just a lazy slob, a pointer to documentation (even if it's just a =
+suggestion to=20
+google for a key phrase) is better.</P>
+<P><SPAN class=3Demphasis><EM>If you're going to answer the question at =
+all, give=20
+good value.</EM></SPAN> Don't suggest kludgy workarounds when somebody =
+is using=20
+the wrong tool or approach. Suggest good tools. Reframe the =
+question.</P>
+<P><SPAN class=3Demphasis><EM>Help your community learn from the=20
+question.</EM></SPAN> When you field a good question, ask yourself =
+=E2=80=9C<SPAN=20
+class=3Dquote>How would the relevant documentation or FAQ have to change =
+so that=20
+nobody has to answer this again?</SPAN>=E2=80=9D Then send a patch to =
+the document=20
+maintainer.</P>
+<P>If you did research to answer the question, <SPAN=20
+class=3Demphasis><EM>demonstrate your skills rather than writing as =
+though you=20
+pulled the answer out of your butt.</EM></SPAN> Answering one good =
+question is=20
+like feeding a hungry person one meal, but teaching them research skills =
+by=20
+example is showing them how to grow food for a lifetime.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A id=3Did383684></A>Related=20
+Resources</H2></DIV></DIV></DIV>
+<P>If you need instruction in the basics of how personal computers, =
+Unix, and=20
+the Internet work, see <A class=3Dulink=20
+href=3D"http://en.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/"=20
+target=3D_top>The Unix and Internet Fundamentals HOWTO</A>. </P>
+<P>When you release software or write patches for software, try to =
+follow the=20
+guidelines in the <A class=3Dulink=20
+href=3D"http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.ht=
+ml"=20
+target=3D_top>Software Release Practice HOWTO</A>.</P></DIV>
+<DIV lang=3Den class=3Dsect1 xml:lang=3D"en">
+<DIV class=3Dtitlepage>
+<DIV>
+<DIV>
+<H2 style=3D"CLEAR: both" class=3Dtitle><A=20
+id=3Did383711></A>Acknowledgements</H2></DIV></DIV></DIV>
+<P>Evelyn Mitchell contributed some example stupid questions and =
+inspired the=20
+=E2=80=9C<SPAN class=3Dquote>How To Give A Good Answer</SPAN>=E2=80=9D =
+section. Mikhail Ramendik=20
+contributed some particularly valuable suggestions for=20
+improvements.</P></DIV></DIV></BODY></HTML>
