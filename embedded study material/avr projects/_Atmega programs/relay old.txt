@@ -1,0 +1,45 @@
+
+
+
+/*
+	while(1)
+	{
+		roomside=PINC & 0b0001000;	//PC3
+		doorside=PINC & 0b0010000;	//PC4
+		
+		if(roomside!=0)	//input from the sensor
+		{
+			sen_roomside=1;			
+		}
+
+		if(doorside!=0)	//input from the sensor
+		{
+			sen_doorside=1;			
+		}
+
+		if(sen_roomside==1 && sen_doorside==1)	//person is leaving
+		{
+			ppl--;
+			sen_roomside=0;
+			sen_doorside=0;
+		}
+		else
+		{
+			sen_doorside=1;	//set the flag of sensor1 wait for sensor 2
+		}
+	
+			//drive the relay
+			PORTD=0b00000001;	//LEDS
+			PORTB=0b00000001;	//MOTOR
+		}
+		
+		else
+		{
+			PORTD=0b00000000;
+			PORTB=0b00000000;
+		}
+		
+	}
+	
+*/	
+
