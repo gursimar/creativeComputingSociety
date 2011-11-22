@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Accounts version="1.036">
+  <Account>
+    <Nick>simar</Nick>
+    <Pass>funcf525</Pass>
+    <Profile>Security</Profile>
+    <IPPattern/>
+    <Owner>CaptainCrunch</Owner>
+    <Created>2011-07-30 07:42:52</Created>
+    <CreatedBy>YnHub GUI</CreatedBy>
+    <OnJoin>hello ..</OnJoin>
+    <ExpireDate enable="true">2011-08-02 16:01:28</ExpireDate>
+    <LastChanged>2011-07-30 07:42:52</LastChanged>
+    <LastChangedBy>YnHub GUI</LastChangedBy>
+    <LastUsed>2011-07-30 13:37:20</LastUsed>
+    <LastSpoke>2011-07-30 07:45:13</LastSpoke>
+    <ShareHidden enable="false"/>
+    <UserHidden enable="false"/>
+    <Comment/>
+    <AccountStats>
+      <FirstUse>2011-07-30 07:43:09</FirstUse>
+      <Uptime>5751773</Uptime>
+      <Kicks>0</Kicks>
+      <Bans>0</Bans>
+      <TimeBans>0</TimeBans>
+      <Redirects>0</Redirects>
+    </AccountStats>
+  </Account>
+</Accounts>

@@ -1,0 +1,54 @@
+﻿DESCRIPTION TO LOGO’S :
+
+
+1. ACM (association for computer machines): worlds first scientific and educational computing society founded in 1947
+
+
+2. Red Hat Linux:linux version
+
+
+
+
+3. Jollicloud: Computing platform for cloud computing founded in paris 2009
+
+
+4. OPEN-GL (open graphics library) : api for 3D and 2D computer  graphics
+
+
+5. torque game engine : it is a 3D computer game engine for developing games 
+
+
+6. physX : physics simulisation engine developed by ageia now proprietary of nvidia  who used it in games like nfs shift,batman arkum asylum also called as PPU upcoming games with physX Mafia 2 nvidia use it for GPGPU (genral purpose comuting on graphics processing unit)
+
+
+
+
+7. Nokia Memo Mobile OS developed by Intel and Nokia
+
+
+
+
+8. Google Nexus Phones developed by google
+
+
+
+
+9. freescale semiconductors one of the largest chip manufacturer
+
+
+
+
+
+
+10. SAP :computer software company hq: in walldorf germany
+ 
+ranked 6th by forbes in top 200 softaware and services companies
+   
+
+
+11. Computer Science Corporation: Major American IT Company for it services and consultancy,HQ:Falls church ,virginia,USA.
+
+
+
+
+12. Computer Association Inc. : mainly known for mainframe computers and distributed computing HQ:New York

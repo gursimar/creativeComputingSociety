@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Chatrooms version="1.036">
+  <ChatRoom>
+    <Name>#public</Name>
+    <Feed enable="true"/>
+    <Locked enable="false"/>
+    <IsOperator enable="true"/>
+    <WelcomeMessage>&lt;nick&gt; has joined #public</WelcomeMessage>
+    <Comment/>
+    <Visibles/>
+    <MayJoins/>
+    <AutoJoins>
+      <Profile>Registered</Profile>
+      <Profile>Regular</Profile>
+    </AutoJoins>
+    <Admins/>
+  </ChatRoom>
+  <ChatRoom>
+    <Name>[aaaaaa]</Name>
+    <Feed enable="false"/>
+    <Locked enable="false"/>
+    <IsOperator enable="false"/>
+    <WelcomeMessage>hello ...</WelcomeMessage>
+    <Comment/>
+    <Visibles/>
+    <MayJoins>
+      <Profile>Registered</Profile>
+      <Profile>Regular</Profile>
+    </MayJoins>
+    <AutoJoins/>
+    <Admins/>
+  </ChatRoom>
+</Chatrooms>

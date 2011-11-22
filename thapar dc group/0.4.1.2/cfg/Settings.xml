@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1252" standalone="yes" ?>
+<PtokaX Version="0.4.1.2">
+    <Booleans>
+        <Bool Name="AutoRegister">0</Bool>
+        <Bool Name="ReplyToHubCommandsAsPm">1</Bool>
+    </Booleans>
+    <Integers>
+        <Integer Name="MaxUsers">1000</Integer>
+        <Integer Name="GetNickListMessages">4</Integer>
+        <Integer Name="GetNickListAction">2</Integer>
+        <Integer Name="MaxUsersPeak">71</Integer>
+    </Integers>
+    <Strings>
+        <String Name="HubName">Thapar University - HUB</String>
+        <String Name="AdminNick">FBI</String>
+        <String Name="HubAddress">172.31.47.48</String>
+        <String Name="TCPPorts">411</String>
+        <String Name="HubDescription">For data sharing in Thapar University</String>
+        <String Name="HubTopic">Thapar University - HUB</String>
+        <String Name="BotNick">CaptainCrunch</String>
+        <String Name="BotDescription">Hub Security - Captain</String>
+        <String Name="OpChatNick">#SecurityRoom</String>
+        <String Name="OpChatDescription">Discussing place for HUB security personals</String>
+        <String Name="HubOwnerEmail">simar.i3r@gmail.com</String>
+    </Strings>
+</PtokaX>
