@@ -1,0 +1,6 @@
+static arp...
+arp -s 172.31.47.1 qwe:we:we:we:We:we
+
+arp -s 192.168.10.1 00-0d-ed-a1-53-c1
+
+arp -s 192.168.20.1 00-0d-ed-a1-53-c2

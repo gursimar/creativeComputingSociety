@@ -1,0 +1,524 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0222)http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&arnumber=901282&queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All -->
+<HTML lang=en><HEAD><TITLE>IEEE Xplore - Abstract Page</TITLE>
+<SCRIPT type=text/javascript>
+function getAbstractURL(articleNumber) {
+	var url_string = '/search/srchabstract.jsp?' + document.getElementById("oqs").value +'&'+ 'arnumber'+'='+articleNumber;
+	url_string = url_string + '&resultAction=ABSTRACT';
+	url_string = encodeURI(url_string);
+	return url_string;
+}
+
+function showAbstract(articleNumber, abstractType) 
+{
+	
+	var url_string;
+	//alert(abstractType);
+	if (abstractType == 'FULL'){
+		 url_string = '/search/srchabstract.jsp?'
+	} else {
+		 url_string = '/search/freesrchabstract.jsp?'
+	}
+	url_string = '/search/srchabstract.jsp?'+ document.getElementById("oqs").value +'&'+ 'arnumber'+'='+articleNumber;
+	url_string = url_string + '&resultAction=ABSTRACT';
+	url_string = encodeURI(url_string);
+	window.location = url_string;
+	
+}
+
+function searchresults(articleNumber, submitUrl) 
+{
+	var oqs = document.getElementById("oqs").value;
+	oqs = oqs.replace(/&arnumber=\w+&/, "&");
+	var url_string = '/search/searchresult.jsp?' + oqs;
+	url_string = url_string + '&resultAction=ABSTRACT';
+	url_string = encodeURI(url_string);
+//	alert(url_string);
+	window.location = url_string;
+	
+}
+
+function BackToSearchresults(articleNumber, submitUrl) 
+{
+	var oqs = document.getElementById("oqs").value;
+	oqs = oqs.replace(/&arnumber=\w+&/, "&");
+	var url_string = '/search/searchresult.jsp?' + oqs;
+	url_string = url_string + '&resultAction=ABSTRACT';
+	url_string = encodeURI(url_string);
+	//alert(url_string);
+	window.location = url_string;
+	
+}
+
+function loginRedirect() {
+    var url_string = '/Xplore/login.jsp';
+    window.location = url_string;
+}
+
+function sendLoginRedirect() {
+	var location_url = location.href;
+	//location_url = location_url.replace('freesrchabstract','srchabstract');
+    //var url_string = '/Xplore/login.jsp?url='+ encodeURI(location_url);
+    //var url_string = '/Xplore/login.jsp?url='+ location_url;
+    //By Swati, added fromgateway to the url to send it login.jsp correctly from searchabstract page
+    var url_string = '/Xplore/login.jsp?url='+ location_url+'&fromGateway=true';
+     
+    window.location = encodeURI(url_string);
+    
+}
+
+function checkFormSubmit()
+{   
+   
+   if( (document.forms.loginForm.username.value.length > 0) && (document.forms.loginForm.password.value.length > 0) )
+   {
+       return true;
+   } 
+   else
+   {   
+       alert("Please enter username and password.")
+       return false;       
+   }
+   //return ( (document.forms.frm1.id.value.length > 0) && (document.forms.frm1.password.value.length > 0) );
+    
+}
+
+
+</SCRIPT>
+
+<META http-equiv=Content-Type content="text/html; charset=utf-8"><LINK 
+media=print href="IEEE Xplore - Abstract Page_files/print.css" type=text/css 
+rel=stylesheet>
+<STYLE type=text/css media="screen, print">@import url( /assets/css/master.css );
+@import url( /assets/css/endeca.css );
+</STYLE>
+
+<SCRIPT type=text/javascript>
+	var ASSETS_RELATIVE_PATH = '/assets';
+	var SPECIAL_CHARACTER_MAPS = '&:.AND.,=:.EQ.,+:.PLS.,#:.HSH.,(:.LB.,):.RB.,":.QT.';
+	var SPECIAL_CHARACTERS = new Array();
+	var SPECIAL_CHARACTER_REPLACEMENTS = new Array();
+	var characterMaps = SPECIAL_CHARACTER_MAPS.split(",");
+	for (var i = 0; i < characterMaps.length; i++) {
+		parts = characterMaps[i].split(":");
+		SPECIAL_CHARACTERS[i] = parts[0];
+		SPECIAL_CHARACTER_REPLACEMENTS[i] = parts[1];
+	}
+	
+</SCRIPT>
+
+<SCRIPT src="IEEE Xplore - Abstract Page_files/lib.min.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="IEEE Xplore - Abstract Page_files/site.new.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="IEEE Xplore - Abstract Page_files/search.new.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.3698" name=GENERATOR></HEAD>
+<BODY>
+<P class=JumpLink id=PageTop><A 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#Body"><BR></A></P>
+<P class=JumpLink id=PageTop><A 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#Body">Skip 
+to Main Content</A></P><!-- BEGIN: LayoutWrapper -->
+<DIV id=LayoutWrapper><!-- BEGIN: HeaderWrapper -->
+<DIV id=UtilityNav>
+<P class=links><A id=u-home href="http://www.ieee.org/" 
+target=_blank>IEEE.org</A> &nbsp;|&nbsp; <SPAN>IEEE <EM>Xplore</EM> Digital 
+Library</SPAN> &nbsp;|&nbsp; <A id=u-standards href="http://standards.ieee.org/" 
+target=_blank>IEEE Standards Association</A> &nbsp;|&nbsp; <A id=u-spectrum 
+href="http://spectrum.ieee.org/" target=_blank>Spectrum Online</A> &nbsp;|&nbsp; 
+<A id=u-more href="http://www.ieee.org/web/services/general/sitemap.html" 
+target=_blank>More IEEE Sites</A> </P></DIV>
+<DIV id=HeaderWrapper><!-- BEGIN: HeaderWrapper -->
+<DIV id=HeaderMetaNavigation></DIV>
+<DIV id=Header>
+<DIV id=logo-xplore><A href="http://ieeexplore.ieee.org/"><IMG height=45 
+alt="IEEE Xplore Digital Library" 
+src="IEEE Xplore - Abstract Page_files/logo.xplore.gif" width=230></A> </DIV>
+<DIV id=logo-ieee><IMG alt=IEEE 
+src="IEEE Xplore - Abstract Page_files/logo.ieee.gif"> </DIV>
+<DIV id=search-field>
+<SCRIPT src="IEEE Xplore - Abstract Page_files/Xplore.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT>
+
+  function loginRedirect() {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }
+  function showHideDiv(div,show) {
+	    var url_string = '/Xplore/login.jsp';
+	    window.location = url_string;
+  }  
+  function addFilter(filter,checked) { 
+	  if(checked)
+	  {
+		  document.getElementById("newsearch").value="partialPref"
+	  	  document.getElementById("filter").value=filter;
+		// put a large number so that it would not hit the server
+		  acompleter.options.minChars=3000;
+		  document.getElementById('search_suggestions').style.visibility = 'hidden';
+	  }
+	  else
+	  {
+		  document.getElementById("filter").value="";
+		  acompleter.options.minChars=3;
+		  document.getElementById('search_suggestions').style.visibility = 'visible';
+	  }
+  }
+	function submitForm() {
+		document.forms["search_form"].submit();
+	}  
+</SCRIPT>
+
+<FORM id=search_form name=search_form 
+onsubmit="return filterQuery('queryText');" action=/search/searchresult.jsp 
+method=get>
+<FIELDSET id=search-fieldset>
+<DIV class=field><LABEL class=superfluous for=search-query>Search 
+Term(s)</LABEL> <SPAN class=input-wrap><INPUT id=newsearch type=hidden 
+value=true name=newsearch> <INPUT id=queryText name=queryText> </SPAN>
+<DIV class=autocomplete id=search_suggestions>
+<SCRIPT>
+    	var acompleter=new Ajax.Autocompleter('queryText', 'search_suggestions', '/search/typeahead',
+    		{ paramName: 'searchRefinementTerm', frequency: '0.8', minChars: 3, method: 'get',
+					parameters: 'searchRefinementMaxResults=20', 
+					afterUpdateElement: "return filterQuery('queryText')"
+    		});
+    </SCRIPT>
+</DIV><INPUT class=form-action type=image alt=Search 
+src="IEEE Xplore - Abstract Page_files/btn.search.gif" name=""></DIV>
+<DIV class=tools><A 
+href="http://ieeexplore.ieee.org/search/advsearch.jsp">Advanced Search</A> 
+&nbsp;|&nbsp; <A onclick=loginRedirect() 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#">Preferences</A>&nbsp;|&nbsp; 
+<SPAN id=search-tips-popup>Search Tips</SPAN> &nbsp; </DIV></FIELDSET> 
+</FORM></DIV></DIV></DIV><!-- END: HeaderWrapper --><!-- END: HeaderWrapper --><!-- BEGIN: ToolBarWrapper -->
+<DIV id=ToolBarWrapper>
+<DIV id=ToolBar>
+<DIV class=DHTMLMenu id=Browse>
+<DIV id=browse-content>
+<H3><A href="http://ieeexplore.ieee.org/xpl/browseHome.jsp">Browse</A></H3>
+<DIV class=SubMenu>
+<UL class=button id=browse-revealed-menu>
+  <LI><A href="http://ieeexplore.ieee.org/xpl/periodicals.jsp">Journals &amp; 
+  Magazines</A> 
+  <LI><A href="http://ieeexplore.ieee.org/xpl/conferences.jsp">Conference 
+  Proceedings</A> 
+  <LI><A href="http://ieeexplore.ieee.org/xpl/standards.jsp">Standards</A> 
+  <LI><A href="http://ieeexplore.ieee.org/xpl/bkBrowse.jsp">Books</A> 
+  <LI><A href="http://ieeexplore.ieee.org/xpl/modulebrowse.jsp">Educational 
+  Courses</A> 
+  <LI><A 
+  href="http://ieeexplore.ieee.org/techsurvey/jsp/ts_browse.jsp">Technology 
+  Surveys</A> </LI></UL></DIV></DIV></DIV>
+<UL class=DHTMLMenu id=UserTools>
+  <LI id=my-account><SPAN>My Settings</SPAN> 
+  <DIV class=SubMenu>
+  <UL>
+    <LI><A href="http://ieeexplore.ieee.org/xpl/tocalerts_list.jsp">Alerts</A> 
+    </LI>
+    <LI><A 
+    href="http://ieeexplore.ieee.org/articleSale/purchaseHistory.jsp">Purchase 
+    History</A> </LI>
+    <LI><A 
+    href="http://ieeexplore.ieee.org/Xplore/login.jsp?url=search/savedsearches">Saved 
+    Searches</A> </LI>
+    <LI><A 
+    href="http://ieeexplore.ieee.org/Xplore/login.jsp?tp=&amp;fromGateway=true&amp;">Sign 
+    In</A> </LI>
+    <LI><A href="http://ieeexplore.ieee.org/Xplore/accessinfo.jsp">What can I 
+    access?</A> </LI></UL></DIV></LI>
+  <LI id=cart><A 
+  href="http://sbwsweb.ieee.org/ecustomercme_enu/start.swe?SWECmd=InvokeMethod&amp;SWEService=IEEEAddToCartService&amp;SWEMethod=GoToView&amp;mem_type=Customer&amp;Join=y&amp;src=0&amp;HideNew=N&amp;SessionId=Rc8nM2hJQ5y5gSmFyN1qT61Pqc20pyMLHGQSWvGJpzX511Gk9bw8!-1079424719!1282808615445" 
+  target=cartwindow>Cart</A> </LI></UL>
+<DIV class=support><A 
+href="http://ieeexplore.ieee.org/xpl/termsOfUse.jsp"><SPAN>Terms of 
+Use</SPAN></A>&nbsp;| <A 
+href="http://ieeexplore.ieee.org/xpl/feedback.jsp"><SPAN>Feedback</SPAN></A>&nbsp;&nbsp; 
+<A><IMG class=icon height=20 alt="" 
+src="IEEE Xplore - Abstract Page_files/icon.support.gif" width=24> <A 
+href="http://ieeexplore.ieee.org/Xplorehelp/Help_start.html" 
+target=blank><SPAN>Help</SPAN></A> </A></DIV>
+<TABLE style="FLOAT: right; POSITION: relative" cellSpacing=0 cellPadding=0 
+border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV class=DHTMLMenu id=SignIn><A 
+      href="http://ieeexplore.ieee.org/servlet/Login?logout=/Xplore/guesthome.jsp" 
+      border="0">
+      <H3><FONT color=white>Sign 
+Out</FONT></H3></A></DIV></TD></TR></TBODY></TABLE></DIV></DIV><!-- END: ToolBarWrapper -->
+<HR>
+<!-- BEGIN: BodyWrapper --><INPUT id=oqs type=hidden 
+value="queryText=development of an adaptive framewor fpr the control of upper limb myoelectric prosthesis&amp;openedRefinements=*&amp;arnumber=901282&amp;searchField=Search All" 
+name=oqs> <!-- 				
+	
+		
+		
+		
+			
+			
+		
+	
+	 -->
+<DIV class=Layout-Column-3 id=BodyWrapper>
+<DIV id=Body>
+<DIV class=column-main id=abstractPage><!-- breadcrumb-wrap coming from srchabstractBreadcrumb.jsp -->
+<DIV class=breadcrumb-wrap>
+<P class=breadcrumb><A 
+href="http://ieeexplore.ieee.org/xpl/browseHome.jsp">Browse</A> &gt; <A 
+href="http://ieeexplore.ieee.org/xpl/conferences.jsp">Conferences</A>&gt; <A 
+href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=7218">Engineering 
+in Medicine and B</A> </P>
+<P class=links><A onclick="javascript:BackToSearchresults('901282','')" 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#">Back 
+to Results</A> | <SPAN class=more><A 
+onclick="javascript:showAbstract('1159778','FULL')" 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#">Next 
+<SPAN>»</SPAN></A> </SPAN></P></DIV><!-- End breadcrumb-wrap--><!-- Main-Content coming from srchabstractMainContent.jsp -->
+<SCRIPT type=text/javascript>
+function rightsLinkPopUp()
+	{
+		var pubTitle='Engineering in Medicine and Biology Society, 2000. Proceedings of the 22nd Annual International Conference of the IEEE';
+		var artTitle='Development of an adaptive framework for the control of upper limb myoelectric prosthesis';
+		var date='2000';
+		var author='Fermo, C.P.; De Vincenzo, C.V.; Bastos-Filho, T.F.; Dynnikov, V.I.';
+		var arNumber='901282';
+	    var url = "https://s100.copyright.com/servlet/DispatchServlet?";
+	    
+			pubTitle='IEEE Conference Proceedings';
+		
+	    var location = url + "PublisherName=IEEE"
+	        +"&Publication=" + escape(pubTitle)
+	        +"&Title=" + escape(artTitle) 
+	        +"&PublicationDate=" + escape(date) 
+	        +"&Author =" + escape( author )
+	        +"&Install=S" 
+	        +"&ContentID="+escape(arNumber);
+	       // alert(location);
+	    PopUp = window.open( location,  'Rightslink', 'location=no,toolbar=no,directories=no,status=no, menubar=no,scrollbars=yes,resizable=yes,width=650,height=550');
+	}
+
+function ibmRightsLinkPopUp(){
+	PopUp = window.open( 'http://www.research.ibm.com/journal/rdauth.html',  'Rightslink', 'location=no,toolbar=no,directories=no,status=no, menubar=no,scrollbars=yes,resizable=yes,width=650,height=550');
+}
+</SCRIPT>
+
+<SCRIPT>
+function authorLink(authorTerm) {
+	var filteredtTerm = getFilteredTerms('"' + authorTerm + '"');
+	var link = '<a href="/search/searchresult.jsp?searchWithin=Authors:'
+	 + filteredtTerm + '&newsearch=partialPref">' ;
+	document.writeln(link);
+}
+</SCRIPT>
+
+<DIV class=MainContent>
+<DIV class=contentheader><A 
+href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=901282"><IMG 
+class=button height=50 alt="PDF - Access Full Text" 
+src="IEEE Xplore - Abstract Page_files/btn.pdf-access-full-text.gif" 
+width=95></A> 
+<H1>Development of an adaptive framework for the control of upper limb 
+myoelectric prosthesis</H1>
+<DIV align=right></DIV></DIV>
+<DIV class=page-tools>
+<UL><SPAN class=userPrefDlCitation style="DISPLAY: none"></SPAN><SPAN 
+  class=userPrefDlFormat style="DISPLAY: none"></SPAN><SPAN id=recordId 
+  style="DISPLAY: none">901282</SPAN> <SPAN id=fromPage 
+  style="DISPLAY: none">searchabstract</SPAN> 
+  <LI><IMG class=button id=popup-download-document-citations height=25 
+  alt="Download Citations" 
+  src="IEEE Xplore - Abstract Page_files/btn.dl-citation.gif" width=80> </LI>
+  <LI><IMG class=button id=popup-email-document height=25 alt=Email 
+  src="IEEE Xplore - Abstract Page_files/btn.email.gif" width=60> </LI>
+  <LI><IMG class=button onclick="window.print();return false;" height=25 
+  alt=Print src="IEEE Xplore - Abstract Page_files/btn.print.gif" width=60> 
+</LI>
+  <LI><A onclick=javascript:rightsLinkPopUp(); 
+  href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#"><IMG 
+  class=button alt="Rights And Permissions" 
+  src="IEEE Xplore - Abstract Page_files/btn.rights-and-permissions.gif"> 
+  </A></LI></UL></DIV>
+<DIV class=abstract>
+<P>
+<SCRIPT> authorLink("Fermo, C.P.");</SCRIPT>
+Fermo, C.P.</A> ;
+<SCRIPT> authorLink(" De Vincenzo, C.V.");</SCRIPT>
+ De Vincenzo, C.V.</A> ;
+<SCRIPT> authorLink(" Bastos-Filho, T.F.");</SCRIPT>
+ Bastos-Filho, T.F.</A> ;
+<SCRIPT> authorLink(" Dynnikov, V.I.");</SCRIPT>
+ Dynnikov, V.I.</A> ; <BR>Dept. de Engenharia Eletrica, Univ. Fed. do Espirito 
+Santo, Vitoria </P>
+<P><BR><B>This paper appears in:</B>&nbsp; <A 
+href="http://ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=7218">Engineering 
+in Medicine and Biology Society, 2000. Proceedings of the 22nd Annual 
+International Conference of the IEEE</A> <!-- 	
+             				
+             				
+								
+								<br/> <b>Issue Date : </b>&nbsp;2000
+								
+             				
+             				--><BR><B>Issue Date : </B>&nbsp;2000 <BR><B>Volume : 
+</B>&nbsp;4 <BR><B>On page(s):</B>&nbsp;2402 - 2405 vol.4 
+<BR><B>Location:</B>&nbsp;Chicago, IL <BR><B>Meeting Date : </B>&nbsp;23 Jul 
+2000-28 Jul 2000 <BR><B>Print ISBN:</B>&nbsp;0-7803-6465-1 <BR><B>References 
+Cited:</B>&nbsp;14 <BR><B>INSPEC Accession Number:</B>&nbsp;6991213 
+<BR><B>Digital Object Identifier : </B>&nbsp;<A 
+href="http://dx.doi.org/10.1109/IEMBS.2000.901282" 
+target=blank>10.1109/IEMBS.2000.901282</A> <BR><B>Date of Current Version : 
+</B>&nbsp; 06 August 2002 </P><!-- get the abstract from verity so as to highlight the key term -->
+<DIV class=body-text><A name=Abstract>
+<H2>Abstract</H2></A>
+<P>This work presents <SPAN class=snippet>the</SPAN> <SPAN 
+class=snippet>development</SPAN> <SPAN class=snippet>of</SPAN> a sensor for 
+detecting human muscle contraction, which captures myoelectric signals (EMG), in 
+order to <SPAN class=snippet>control</SPAN> a myoelectric prosthesis <SPAN 
+class=snippet>of</SPAN> superior limb. <SPAN class=snippet>The</SPAN> analysis 
+<SPAN class=snippet>of</SPAN> <SPAN class=snippet>the</SPAN> signal is carried 
+out through software running in a microcontroller that decides how to open or 
+close <SPAN class=snippet>the</SPAN> artificial hand. <SPAN 
+class=snippet>The</SPAN> facilities in changing <SPAN class=snippet>the</SPAN> 
+acting form by software makes its use attractive for <SPAN 
+class=snippet>the</SPAN> patient. New state functions (for example, if <SPAN 
+class=snippet>the</SPAN> hand is open, closed, semi-closed, etc.) can be easily 
+added to <SPAN class=snippet>the</SPAN> prosthesis with a simple alteration in 
+<SPAN class=snippet>the</SPAN> microcontroller program, without any hardware 
+alteration. <SPAN class=snippet>The</SPAN> authors propose a strategy for <SPAN 
+class=snippet>controlling</SPAN> <SPAN class=snippet>the</SPAN> artificial hand, 
+based on <SPAN class=snippet>the</SPAN> myoelectric signal, and using a 
+servomotor that drives <SPAN class=snippet>the</SPAN> prosthesis mechanisms. 
+This way, <SPAN class=snippet>the</SPAN> patient has a more accurate and easier 
+<SPAN class=snippet>control</SPAN> <SPAN class=snippet>of</SPAN> <SPAN 
+class=snippet>the</SPAN> movement <SPAN class=snippet>of</SPAN> <SPAN 
+class=snippet>the</SPAN> prosthetic device, thus leading to a faster adaptation. 
+Through a proposed <SPAN class=snippet>control</SPAN> strategy, a method to 
+analyze <SPAN class=snippet>the</SPAN> pattern <SPAN class=snippet>of</SPAN> 
+<SPAN class=snippet>the</SPAN> myoelectric signal can be defined. Thus, several 
+kinds <SPAN class=snippet>of</SPAN> actuating <SPAN class=snippet>of</SPAN> 
+<SPAN class=snippet>the</SPAN> artificial hand can be obtained by a simple 
+binary signal or through <SPAN class=snippet>the</SPAN> analysis <SPAN 
+class=snippet>of</SPAN> <SPAN class=snippet>the</SPAN> myoelectric signal 
+pattern</P></DIV></DIV>
+<DIV class=body-text></DIV><!-- INDEX TERMS coming from indexterms.jsp -->
+<SCRIPT>
+function writeLink(authorTerm) {
+	var filteredTerm = getFilteredTerms('"' + authorTerm + '"');
+	var link = '<a href="/search/searchresult.jsp?'
+		+ 'searchWithin=Search Index Terms:'
+		+ filteredTerm + '&newsearch=partialPref">';
+		document.writeln(link);
+	}
+</SCRIPT>
+
+<DIV class=section>
+<P>
+<DIV class=header><A name="Index Terms">
+<H2>Index Terms</H2></A></DIV>
+<UL class=no-bullets>
+  <LI><B>INSPEC</B> 
+  <UL>
+    <LI><B>Controlled Indexing</B><BR>
+    <P>
+    <SCRIPT>writeLink("adaptive control");</SCRIPT>
+    <SPAN class=snippet>adaptive</SPAN> <SPAN class=snippet>control</SPAN> </A>,
+    <SCRIPT>writeLink("artificial limbs");</SCRIPT>
+     artificial limbs </A>,
+    <SCRIPT>writeLink("biocontrol");</SCRIPT>
+     biocontrol </A>,
+    <SCRIPT>writeLink("electromyography");</SCRIPT>
+     electromyography </A>,
+    <SCRIPT>writeLink("microcontrollers");</SCRIPT>
+     microcontrollers </A></P>
+    <LI><B>Non Controlled Indexing</B><BR>
+    <P>
+    <SCRIPT>writeLink("adaptative framework");</SCRIPT>
+    adaptative framework </A>,
+    <SCRIPT>
+	writeLink("artificial hand closing");
+</SCRIPT>
+     artificial hand closing </A>,
+    <SCRIPT>
+	writeLink("artificial hand opening");
+</SCRIPT>
+     artificial hand opening </A>,
+    <SCRIPT>
+	writeLink("control strategy");
+</SCRIPT>
+     <SPAN class=snippet>control</SPAN> strategy </A>,
+    <SCRIPT>
+	writeLink("myoelectric signal pattern analysis");
+</SCRIPT>
+     myoelectric signal pattern analysis </A>,
+    <SCRIPT>
+	writeLink("servomotor");
+</SCRIPT>
+     servomotor </A>,
+    <SCRIPT>
+	writeLink("simple binary signal");
+</SCRIPT>
+     simple binary signal </A>,
+    <SCRIPT>
+	writeLink("state functions");
+</SCRIPT>
+     state functions </A>,
+    <SCRIPT>
+	writeLink("upper limb myoelectric prosthesis control");
+</SCRIPT>
+     <SPAN class=snippet>upper</SPAN> limb myoelectric prosthesis <SPAN 
+    class=snippet>control</SPAN> </A></P></LI></UL></LI></UL>
+<P></P></DIV><!-- End index terms --><!-- STANDARDS Version coming from references.jsp --><!-- End STANDARDS Version --><!-- REFERENCES coming from references.jsp --><!-- End references --><!-- CITING DOCUMENTS coming from citations.jsp --><!-- End citations --></DIV><!-- END Main Content --><!-- End Main-Content--></DIV><!-- END: column-main --><!-- column-side-left coming from srchabstractLeftColumn.jsp -->
+<DIV class="column-side column-side-left">
+<DIV class=box>
+<DIV class=header>
+<H3>ON THIS PAGE</H3></DIV>
+<DIV class=section>
+<UL class=button>
+  <LI><A 
+  href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#Abstract">Abstract</A> 
+
+  <LI><A 
+  href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#Index Terms">Index 
+  Terms</A> </LI></UL></DIV></DIV></DIV><!-- End column-side-left-->
+<DIV class="column-side column-side-right">
+<DIV class="box box-style-2">
+<DIV class=header>
+<H3>Brought to you by</H3></DIV>
+<DIV class=section>
+<H4>THAPAR UNIVERSITY</H4>
+<UL>
+  <LI>Your institute subscribes to: 
+  <LI><B>IEEE/IET Electronic Library (IEL)</B> 
+  <LI><A href="http://ieeexplore.ieee.org/Xplore/accessinfo.jsp">What can I 
+  access?</A> </LI></UL></DIV>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+href="http://ieeexplore.ieee.org/xpl/jsp/common/termsOfUse.jsp">Terms of Use</A> 
+</DIV><BR></DIV></DIV><!-- END: Body --></DIV><!-- END: BodyWrapper -->
+<HR>
+<!-- BEGIN: FooterWrapper --><!-- BEGIN: FooterWrapper -->
+<DIV id=FooterWrapper>
+<DIV id=logo-inspec><IMG height=45 alt="Indexed by Inspec" 
+src="IEEE Xplore - Abstract Page_files/logo.inspec.gif" width=95> </DIV>
+<P class=links><A 
+href="http://ieeexplore.ieee.org/Xplorehelp/Help_Welcome_to_IEEE_Xplore.html" 
+target=blank>Help</A> | <A 
+href="http://ieeexplore.ieee.org/xpl/techform.jsp">Contact Us</A> | <A 
+href="http://www.ieee.org/portal/site/mainsite/menuitem.818c0c39e85ef176fb2275875bac26c8/index.jsp?&amp;pName=corp_level1&amp;path=about/documentation/copyright&amp;file=privacy.xml&amp;xsl=generic.xsl" 
+target=blank>Privacy &amp; Security</A> | <A 
+href="http://ieeexplore.ieee.org/xpl/sitemap.jsp">Site Map</A> | <A 
+href="http://www.ieee.org/" target=blank>IEEE.org</A> | <A 
+href="http://www.ieee.org/web/aboutus/whatis/policies/p9-26.html" 
+target=blank>Nondiscrimination Policy</A> | <A 
+href="http://ieeexplore.ieee.org/xpl/jsp/common/termsOfUse.jsp" 
+target=blank>Terms of Use</A></P>
+<P>© Copyright 2010 IEEE – All Rights Reserved</P></DIV><!-- END: FooterWrapper --><!-- END: FooterWrapper --></DIV><!-- END: LayoutWrapper -->
+<P class=JumpLink><A 
+href="http://ieeexplore.ieee.org/search/srchabstract.jsp?tp=&amp;arnumber=901282&amp;queryText%3Ddevelopment+of+an+adaptive+framewor+fpr+the+control+of+upper+limb+myoelectric+prosthesis%26openedRefinements%3D*%26searchField%3DSearch+All#PageTop">Back 
+to Top</A></P></BODY></HTML>

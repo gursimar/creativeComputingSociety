@@ -1,0 +1,297 @@
+ {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+A {
+	COLOR: #333! important; TEXT-DECORATION: none! important
+}
+#LayoutWrapper {
+	min-width: 0
+}
+#ToolBarWrapper {
+	DISPLAY: none
+}
+#Header {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: auto
+}
+#Body {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: auto
+}
+#FooterWrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; WIDTH: auto
+}
+.column-side {
+	DISPLAY: none! important
+}
+.column-main {
+	FLOAT: none; MARGIN: 0px; WIDTH: auto! important
+}
+.InnerLayout-Col-3-bdr {
+	MARGIN: 0px
+}
+.InnerLayout-Col-3-bdr .column {
+	BORDER-RIGHT: #c2c2c2 1px dotted; PADDING-RIGHT: 2%; PADDING-LEFT: 2%; PADDING-BOTTOM: 0px; WIDTH: 30%; PADDING-TOP: 0px
+}
+ HTML .InnerLayout-Col-3-bdr .column {
+	BORDER-RIGHT: #e1e1e1 1px solid
+}
+.InnerLayout-Col-3-bdr .column-1 {
+	PADDING-LEFT: 0px
+}
+.InnerLayout-Col-3-bdr .column-3 {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+UL.bullet {
+	PADDING-LEFT: 0.9em; MARGIN-LEFT: 0.9em; LIST-STYLE-TYPE: square
+}
+UL.bullet LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+LI.PDF {
+	PADDING-LEFT: 0px; MIN-HEIGHT: 0px; PADDING-TOP: 0px; HEIGHT: auto! important
+}
+LI.print {
+	PADDING-LEFT: 0px; MIN-HEIGHT: 0px; PADDING-TOP: 0px; HEIGHT: auto! important
+}
+LI.download {
+	PADDING-LEFT: 0px; MIN-HEIGHT: 0px; PADDING-TOP: 0px; HEIGHT: auto! important
+}
+.box {
+	BORDER-RIGHT: #509bc2 1px solid; BORDER-TOP: #509bc2 1px solid; BORDER-LEFT: #509bc2 1px solid; BORDER-BOTTOM: #509bc2 1px solid
+}
+.page-tools {
+	DISPLAY: none! important
+}
+IMG.button {
+	DISPLAY: none! important
+}
+.results-actions {
+	DISPLAY: none! important
+}
+.results-controls {
+	DISPLAY: none! important
+}
+.results-pagination {
+	DISPLAY: none! important
+}
+.more {
+	DISPLAY: none! important
+}
+P.links {
+	DISPLAY: none! important
+}
+.support {
+	DISPLAY: none! important
+}
+#popup-search-preferences {
+	DISPLAY: none! important
+}
+#access-full-txt {
+	DISPLAY: none! important
+}
+#Header #search-field {
+	DISPLAY: none
+}
+#search-field FIELDSET  {
+	DISPLAY: none
+}
+.Home .column-main #search-field FIELDSET.search-field {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#search-field FIELDSET P.lead {
+	DISPLAY: block
+}
+#search-field FIELDSET P.lead STRONG {
+	DISPLAY: inline
+}
+UL.tab-menu {
+	MARGIN: 0px
+}
+.MainContent UL.tab-menu {
+	BORDER-BOTTOM: #cde2ee 1px solid
+}
+UL.tab-menu LI A {
+	DISPLAY: none
+}
+UL.tab-menu LI.selected A {
+	DISPLAY: block
+}
+UL.tab-menu LI.selected A SPAN {
+	BORDER-RIGHT: #cde2ee 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #cde2ee 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cde2ee 1px solid; PADDING-TOP: 6px; BORDER-BOTTOM: #cde2ee 0px solid
+}
+UL.tab-menu-style-2 LI.selected A SPAN {
+	BORDER-LEFT-COLOR: #fdd28e; BORDER-BOTTOM-COLOR: #fdd28e; BORDER-TOP-COLOR: #fdd28e; BORDER-RIGHT-COLOR: #fdd28e
+}
+.MainContent .contentheader-tabbed {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+UL.listview LI {
+	PADDING-RIGHT: 15px! important; PADDING-LEFT: 15px! important; PADDING-BOTTOM: 5px! important; PADDING-TOP: 10px! important
+}
+UL.listview .content {
+	FLOAT: none! important; WIDTH: auto! important
+}
+UL.listview .select {
+	DISPLAY: none
+}
+UL.listview .tools {
+	DISPLAY: none
+}
+#results-hdr {
+	BORDER-RIGHT: #509bc2 1px solid; BORDER-TOP: #509bc2 1px solid; BORDER-LEFT: #509bc2 1px solid; BORDER-BOTTOM: #509bc2 1px solid
+}
+UL.Results .select {
+	DISPLAY: none
+}
+UL.Results .tools {
+	DISPLAY: none
+}
+UL.Results .detail {
+	FLOAT: none; WIDTH: auto
+}
+UL.Results .abstract {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#browse-title-hdr {
+	DISPLAY: none
+}
+#browse-subject-hdr {
+	DISPLAY: none
+}
+.browse-results-bar P.links {
+	DISPLAY: none
+}
+#browse-society-hdr .column {
+	WIDTH: 45%
+}
+UL.Browsing .header {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px
+}
+UL.Browsing .summary {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px
+}
+UL.Browsing .detail {
+	FLOAT: none; WIDTH: auto
+}
+UL.Browsing .tools {
+	DISPLAY: none
+}
+#adv-search-nav {
+	MARGIN: 0px
+}
+#AdvancedSearchPage .contentheader H2 {
+	PADDING-LEFT: 0px
+}
+.advanced-search .primary-fields P.field-group {
+	WHITE-SPACE: nowrap
+}
+.advanced-search FIELDSET.primary-fields {
+	WIDTH: auto
+}
+.advanced-search FIELDSET.refine-search {
+	WIDTH: auto
+}
+.expert-search .column-1 {
+	FLOAT: none; WIDTH: auto
+}
+.expert-search .column-2 {
+	DISPLAY: none
+}
+.crossref-search .section .column {
+	FLOAT: none; WIDTH: auto
+}
+#RegisterPage .column {
+	FLOAT: none; WIDTH: auto
+}
+#favorite-titles .column {
+	PADDING-RIGHT: 3%; PADDING-LEFT: 3%; WIDTH: 44%
+}
+.Home .column-main .box-wrap {
+	MARGIN-LEFT: 0px
+}
+.Home .column-main .box-wrap .box {
+	MARGIN: 0px 2%; WIDTH: 29%
+}
+ HTML .Home .column-main .box-wrap {
+	WIDTH: auto
+}
+#file-cabinet-hdr .content {
+	BORDER-RIGHT: #c2c2c2 1px dotted; PADDING-RIGHT: 3%; WIDTH: 64%
+}
+#project-hdr .content {
+	BORDER-RIGHT: #c2c2c2 1px dotted; PADDING-RIGHT: 3%; WIDTH: 64%
+}
+ HTML #file-cabinet-hdr .content {
+	BORDER-RIGHT: #e1e1e1 1px solid
+}
+ HTML #project-hdr .content {
+	BORDER-RIGHT: #e1e1e1 1px solid
+}
+#file-cabinet-hdr .auxcontent {
+	WIDTH: 30%
+}
+#project-hdr .auxcontent {
+	WIDTH: 30%
+}
+#project-hdr .auxcontent A {
+	DISPLAY: none
+}
+.featured-profile {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 4%; PADDING-LEFT: 4%; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.featured-profile .column-1 {
+	WIDTH: 56%
+}
+.featured-profile .column-2 {
+	WIDTH: 31%
+}
+.ContributorsArea .section .header {
+	BORDER-BOTTOM: #c2c2c2 1px dotted
+}
+ HTML .ContributorsArea .section .header {
+	BORDER-BOTTOM: #e1e1e1 1px solid
+}
+.ContributorsArea TR {
+	BORDER-BOTTOM: #f0f0f0 1px solid
+}
+.ContributorsArea #help-with-project {
+	DISPLAY: none
+}
+#alertsfeeds-hdr A {
+	DISPLAY: none
+}
+#alertsfeeds-hdr IMG.icon {
+	DISPLAY: none
+}
+UL.AlertsFeeds UL {
+	DISPLAY: none
+}
+UL.AlertsFeeds .select {
+	DISPLAY: none
+}
+UL.Searches UL {
+	DISPLAY: none
+}
+UL.Searches .select {
+	DISPLAY: none
+}
+#browse-home-hdr {
+	PADDING-RIGHT: 3%; PADDING-LEFT: 3%
+}
+#browse-home-hdr .content {
+	BORDER-RIGHT: #c2c2c2 1px dotted; PADDING-RIGHT: 2%; WIDTH: 63%
+}
+#browse-home-hdr .auxcontent {
+	WIDTH: 31%
+}
+#browse-home-hdr .content UL.list-1 {
+	WIDTH: 55%
+}
+#browse-home-hdr .content UL.list-2 {
+	WIDTH: 31%
+}
+#BrowseHomePage .col-3-wrap .column {
+	MARGIN: 0px 2%; WIDTH: 29%
+}
+.listview-col-hdr {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}

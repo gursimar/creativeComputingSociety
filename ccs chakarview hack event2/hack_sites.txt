@@ -1,0 +1,14 @@
+http://lifehacker.com/5853483/a-guide-to-sniffing-out-passwords-and-cookies-and-how-to-protect-yourself-against-it
+
+http://www.hackavision.com/2011/07/sniffing-passwords-over-wifi-connection.html
+
+http://passwordcrackers.blogspot.com/
+
+
+
+http://extremefx.wordpress.com/2008/07/02/hack-remote-computer-windows/
+
+http://www.petri.co.il/whats_port_445_in_w2k_xp_2003.htm
+
+TCP view
+nmap

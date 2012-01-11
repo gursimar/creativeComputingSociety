@@ -1,0 +1,240 @@
+#results-hdr {
+	BORDER-BOTTOM: #c2c2c2 1px dotted
+}
+ HTML #results-hdr {
+	BORDER-BOTTOM: #e1e1e1 1px solid
+}
+#results-hdr H2 {
+	PADDING-RIGHT: 14px; PADDING-LEFT: 14px; FONT-SIZE: 0.91em; BACKGROUND: url(../../assets/img/bg.box.530.blue.hdr.gif) no-repeat; PADDING-BOTTOM: 9px; MARGIN: 0px; TEXT-TRANSFORM: uppercase; COLOR: #fff; PADDING-TOP: 9px; BORDER-BOTTOM: #7eb1cb 1px solid
+}
+#results-hdr P {
+	MARGIN-BOTTOM: 0.25em; COLOR: black
+}
+#results-hdr SPAN.search-refine {
+	FONT-WEIGHT: bold; COLOR: #e37222; WHITE-SPACE: nowrap
+}
+#results-hdr SPAN.search-refine IMG.remove-refine {
+	CURSOR: pointer
+}
+#results-hdr .content {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; BACKGROUND: #e9f1f5; PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.75em
+}
+#results-hdr .content A {
+	TEXT-DECORATION: none
+}
+.column-side-left .box FIELDSET {
+	BORDER-TOP: #ddd 1px solid; MARGIN: 0px 1px; PADDING-TOP: 1em
+}
+.column-side-left .box {
+	PADDING-BOTTOM: 2em
+}
+.column-side-left .box LABEL {
+	FONT-SIZE: 0.8em; COLOR: #666; FONT-STYLE: italic
+}
+FIELDSET.search-within-results {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 1.25em; PADDING-BOTTOM: 0.75em; PADDING-TOP: 0.5em
+}
+INPUT#swr_query {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; WIDTH: 130px; PADDING-TOP: 0.2em
+}
+ HTML INPUT#swr_query {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; WIDTH: 125px; PADDING-TOP: 0.2em
+}
+#search_within_suggestions {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; Z-INDEX: 999999; BACKGROUND: white; BORDER-LEFT: #ddd 1px solid; BORDER-BOTTOM: #ddd 1px solid
+}
+FIELDSET.search-refine {
+	PADDING-RIGHT: 1.25em; PADDING-LEFT: 1.25em; PADDING-BOTTOM: 1.25em; PADDING-TOP: 0px; POSITION: relative
+}
+ HTML FIELDSET.search-refine {
+	PADDING-RIGHT: 1.2em; PADDING-LEFT: 1.2em; PADDING-BOTTOM: 1.25em; PADDING-TOP: 0px
+}
+FIELDSET.search-refine LEGEND {
+	FONT-WEIGHT: bold; PADDING-BOTTOM: 0.25em
+}
+FIELDSET.search-refine UL.Inputs {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 0.5em; MARGIN: 0px; OVERFLOW: auto; BORDER-LEFT: #999 1px solid; WIDTH: 170px; PADDING-TOP: 0px; BORDER-BOTTOM: #999 1px solid
+}
+FIELDSET.search-refine UL.Inputs LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; TEXT-INDENT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -0.5em; WIDTH: 90%; TEXT-INDENT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+ HTML FIELDSET.search-refine UL.Inputs LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -0.5em; WIDTH: 90%; TEXT-INDENT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+FIELDSET.search-refine H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 1.15em; PADDING-BOTTOM: 0px; PADDING-TOP: 0.5em
+}
+FIELDSET.search-refine .autocomplete-field-container {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; MARGIN: 0px 0px 2px; BORDER-LEFT: #999 1px solid; WIDTH: 172px; BORDER-BOTTOM: #999 1px solid; POSITION: relative
+}
+ HTML FIELDSET.search-refine .autocomplete-field-container {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+FIELDSET.search-refine .autocomplete-field-container INPUT.autocomplete-field {
+	PADDING-RIGHT: 20px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; WIDTH: 150px; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 15px; BORDER-BOTTOM-STYLE: none
+}
+ HTML FIELDSET.search-refine .autocomplete-field-container INPUT.autocomplete-field {
+	WIDTH: 148px
+}
+FIELDSET.search-refine .autocomplete-field-container A.clear-button {
+	DISPLAY: block; RIGHT: 4px; CURSOR: pointer; POSITION: absolute; TOP: 4px
+}
+ HTML FIELDSET.search-refine .autocomplete-field-container A.clear-button {
+	RIGHT: 7px; TOP: 7px
+}
+FIELDSET.search-refine UL.Inputs DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FIELDSET.search-refine UL.Inputs LABEL {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px; CURSOR: pointer; PADDING-TOP: 0px; FONT-STYLE: normal
+}
+ HTML FIELDSET.search-refine UL.Inputs LABEL {
+	CURSOR: default
+}
+FIELDSET.search-refine UL.Inputs .refinement-selector {
+	CLEAR: left; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0.1em 0px; PADDING-TOP: 0px
+}
+UNKNOWN {
+	CLEAR: left; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px -0.25em; PADDING-TOP: 0px
+}
+ HTML FIELDSET.search-refine UL.Inputs .refinement-selector {
+	CLEAR: left; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px -0.25em; PADDING-TOP: 0px
+}
+FIELDSET.search-refine UL.Inputs .refinement {
+	PADDING-RIGHT: 0.25em; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 1.25em; PADDING-TOP: 0.25em; max-width: 85%
+}
+UNKNOWN {
+	PADDING-RIGHT: 0.25em; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px; LINE-HEIGHT: 1.25em; PADDING-TOP: 0px; max-width: 85%
+}
+ HTML FIELDSET.search-refine UL.Inputs .refinement {
+	PADDING-RIGHT: 0.25em; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px; LINE-HEIGHT: 1.25em; PADDING-TOP: 0px; max-width: 85%
+}
+FIELDSET.search-refine UL.Inputs .refinement-count {
+	COLOR: black
+}
+FIELDSET.search-refine .year-input {
+	WIDTH: 100%
+}
+ HTML FIELDSET.search-refine .year-input {
+	WIDTH: auto! important
+}
+FIELDSET.search-refine .year-input LABEL {
+	PADDING-RIGHT: 0.5em; MARGIN-TOP: 0.1em; DISPLAY: block; FLOAT: left; WIDTH: 5em; TEXT-ALIGN: right
+}
+ HTML FIELDSET.search-refine .year-input LABEL {
+	WIDTH: 6em
+}
+FIELDSET.search-refine .year-input .TextInput {
+	FLOAT: left; MARGIN: 0px 0px 0.5em; WIDTH: 35%
+}
+FIELDSET.search-refine TABLE {
+	WIDTH: 100%
+}
+FIELDSET.search-refine .date-boundary {
+	FONT-SIZE: 0.8em; VERTICAL-ALIGN: middle; WIDTH: 1em; TEXT-ALIGN: center
+}
+FIELDSET.search-refine .update-button {
+	MARGIN: 1em 0px 0px
+}
+FIELDSET.search-refine H5 {
+	MARGIN: 0.5em 0px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -0.5em; TEXT-INDENT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+ HTML FIELDSET.search-refine UL.Selections LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px -0.5em; TEXT-INDENT: 0px; LINE-HEIGHT: 0; PADDING-TOP: 0px
+}
+FIELDSET.search-refine UL.Selections LABEL {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-SIZE: 1em; PADDING-BOTTOM: 0px; MARGIN: 0px; CURSOR: pointer; PADDING-TOP: 0px; FONT-STYLE: normal
+}
+ HTML FIELDSET.search-refine UL.Selections LABEL {
+	CURSOR: default
+}
+FIELDSET.search-refine UL.Selections .refinement-selector {
+	CLEAR: left; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.1em 0.1em 0px 0px; PADDING-TOP: 0px
+}
+FIELDSET.search-refine UL.Selections .refinement {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 85%; LINE-HEIGHT: 1.25em; PADDING-TOP: 0px
+}
+UNKNOWN {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px 0px; WIDTH: 85%; LINE-HEIGHT: 1.25em; PADDING-TOP: 0px
+}
+ HTML FIELDSET.search-refine UL.Selections .refinement {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0.25em; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0.25em 0px 0px; WIDTH: 85%; LINE-HEIGHT: 1.25em; PADDING-TOP: 0px
+}
+FIELDSET.search-refine UL.Selections .refinement-count {
+	COLOR: black
+}
+.box FIELDSET.slider-refine LABEL {
+	FONT-SIZE: 1em; COLOR: black; FONT-STYLE: normal
+}
+.box FIELDSET.slider-refine LABEL SPAN {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.box FIELDSET.slider-refine INPUT {
+	MARGIN-TOP: 0.5em
+}
+.box FIELDSET.slider-refine .update-button {
+	MARGIN: 0.5em 0px 0px
+}
+.box FIELDSET.slider-refine INPUT.selection-type-button {
+	MARGIN: 0px
+}
+.box FIELDSET.slider-refine TABLE {
+	WIDTH: 172px
+}
+DIV.handle {
+	WIDTH: 12px; CURSOR: move; POSITION: absolute; HEIGHT: 22px
+}
+#narrow-by-date .layout .fields {
+	PADDING-TOP: 5px
+}
+#narrow-by-date .layout .fields .TextInput {
+	FONT-WEIGHT: bold; BACKGROUND: #fff; WIDTH: 80px; CURSOR: default; COLOR: #000; MARGIN-RIGHT: 15px; TEXT-ALIGN: center
+}
+#narrow-by-date .layout .fields #end-date {
+	MARGIN-RIGHT: 15px
+}
+#start-date-slider {
+	CURSOR: w-resize; TOP: -14px
+}
+#end-date-slider {
+	CURSOR: e-resize; TOP: 9px
+}
+#start-date-slider1 {
+	BACKGROUND: url(img/icon.narrow-arrow-left.gif) no-repeat 0px 10px; MARGIN-LEFT: -12px
+}
+#end-date-slider1 {
+	PADDING-LEFT: 24px; BACKGROUND: url(img/icon.narrow-arrow-right.gif) no-repeat 1px 10px; WIDTH: 0px! important
+}
+DIV.slider {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.slider-bar {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.slider-handle {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.slider-bar {
+	BORDER-RIGHT: #666 2px solid; BORDER-TOP: #666 0px solid; BACKGROUND: #ddd; MARGIN: 2em auto; BORDER-LEFT: #666 2px solid; WIDTH: 85%; BORDER-BOTTOM: #666 0px solid; POSITION: relative; HEIGHT: 10px
+}
+DIV.slider-handle {
+	MARGIN-LEFT: -7px; WIDTH: 12px; CURSOR: move; POSITION: absolute; HEIGHT: 15px
+}
+DIV.slider-bar DIV.slider-value-marker {
+	BACKGROUND: #666; OVERFLOW: hidden; WIDTH: 2px; POSITION: absolute; TOP: 0px; HEIGHT: 100%
+}
+P.year {
+	MARGIN-TOP: 5px; FONT-WEIGHT: bold; FONT-SIZE: 100%; FONT-FAMILY: arial
+}
+#start-year {
+	PADDING-TOP: 0.6em; TEXT-ALIGN: center
+}
+#end-year {
+	MARGIN-LEFT: 15px; TEXT-ALIGN: left
+}

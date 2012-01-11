@@ -1,0 +1,1527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0083)http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">(function() { var a=window;function c(b){this.t={};this.tick=function(b,i,d){d=d!=void 0?d:(new Date).getTime();this.t[b]=[d,i]};this.tick("start",null,b)}var e=new c;a.jstiming={Timer:c,load:e};try{var g=null;a.chrome&&a.chrome.csi&&(g=Math.floor(a.chrome.csi().pageT));g==null&&a.gtbExternal&&(g=a.gtbExternal.pageT());g==null&&a.external&&(g=a.external.pageT);g&&(a.jstiming.pt=g)}catch(h){};a.tickAboveFold=function(b){var f=0;if(b.offsetParent){do f+=b.offsetTop;while(b=b.offsetParent)}b=f;b<=750&&a.jstiming.load.tick("aft")};var j=false;function k(){j||(j=true,a.jstiming.load.tick("firstScrollTime"))}a.addEventListener?a.addEventListener("scroll",k,false):a.attachEvent("onscroll",k);
+ })();</script>
+<meta content="true" name="MSSmartTagsPreventParsing">
+<meta content="blogger" name="generator">
+<link href="http://prashanth-cpp.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/Prash's Tech Blog  Setting up HTTP Basic authentication with Apache.htm" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Prash&#39;s Tech Blog - Atom" href="http://prashanth-cpp.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Prash&#39;s Tech Blog - RSS" href="http://prashanth-cpp.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Prash&#39;s Tech Blog - Atom" href="http://www.blogger.com/feeds/5883865168597393160/posts/default">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=5883865168597393160">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Prash's Tech Blog: Setting up HTTP Basic authentication with Apache</title>
+<link type="text/css" rel="stylesheet" href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/1690079772-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/authorization.css">
+<style type="text/css">
+#navbar-iframe { display:block }
+</style>
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Rounders 3
+Date:     27 Feb 2004
+Updated by: Blogger Team
+----------------------------------------------- */
+/* Variable definitions
+====================
+<Variable name="mainBgColor" description="Main Background Color"
+type="color" default="#eec">
+<Variable name="mainTextColor" description="Text Color" type="color"
+default="#333">
+<Variable name="postTitleColor" description="Post Title Color" type="color"
+default="#333">
+<Variable name="dateHeaderColor" description="Date Header Color"
+type="color" default="#586">
+<Variable name="borderColor" description="Post Border Color" type="color"
+default="#bbb">
+<Variable name="mainLinkColor" description="Link Color" type="color"
+default="#456">
+<Variable name="mainVisitedLinkColor" description="Visited Link Color"
+type="color" default="#234">
+<Variable name="titleBgColor" description="Page Header Background Color"
+type="color" default="#357">
+<Variable name="titleTextColor" description="Blog Title Color"
+type="color" default="#fff">
+<Variable name="topSidebarHeaderColor"
+description="Top Sidebar Title Color"
+type="color" default="#fff">
+<Variable name="topSidebarBgColor"
+description="Top Sidebar Background Color"
+type="color" default="#586">
+<Variable name="topSidebarTextColor" description="Top Sidebar Text Color"
+type="color" default="#fff">
+<Variable name="topSidebarLinkColor" description="Top Sidebar Link Color"
+type="color" default="#fff">
+<Variable name="topSidebarVisitedLinkColor"
+description="Top Sidebar Visited Link Color"
+type="color" default="#fff">
+<Variable name="bottomSidebarHeaderColor"
+description="Bottom Sidebar Title Color"
+type="color" default="#abc">
+<Variable name="bottomSidebarLinkColor"
+description="Bottom Sidebar Link Color"
+type="color" default="#99ddbb">
+<Variable name="bottomSidebarVisitedLinkColor"
+description="Bottom Sidebar Visited Link Color"
+type="color" default="#ffffff">
+<Variable name="bodyFont" description="Text Font" type="font"
+default="normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="pageTitleFont" description="Blog Title Font" type="font"
+default="normal bold 200% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="descriptionFont" description="Blog Description Font" type="font"
+default="normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="headerFont" description="Sidebar Title Font" type="font"
+default="normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="postTitleFont" description="Post Title Font" type="font"
+default="normal bold 135% 'Trebuchet MS',Verdana,Arial,Sans-serif">
+<Variable name="startSide" description="Start side in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="End side in blog language"
+type="automatic" default="right">
+*/
+body {
+background:#123;
+margin:0;
+text-align:center;
+line-height: 1.5em;
+font: x-small Trebuchet MS, Verdana, Arial, Sans-serif;
+color:#333333;
+font-size/* */:/**/small;
+font-size: /**/small;
+}
+/* Page Structure
+----------------------------------------------- */
+/* The images which help create rounded corners depend on the
+following widths and measurements. If you want to change
+these measurements, the images will also need to change.
+*/
+#outer-wrapper {
+width:740px;
+margin:0 auto;
+text-align:left;
+font: normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+#main-wrap1 {
+width:485px;
+float:left;
+background:#eeeecc url("http://www1.blogblog.com/rounders3/corners_main_bot.gif") no-repeat left bottom;
+margin:15px 0 0;
+padding:0 0 10px;
+color:#333333;
+font-size:97%;
+line-height:1.5em;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+#main-wrap2 {
+float:left;
+width:100%;
+background:url("http://www1.blogblog.com/rounders3/corners_main_top.gif") no-repeat left top;
+padding:10px 0 0;
+}
+#main {
+background:url("http://www.blogblog.com/rounders3/rails_main.gif") repeat-y left;
+padding:0;
+width:485px;
+}
+#sidebar-wrap {
+width:240px;
+float:right;
+margin:15px 0 0;
+font-size:97%;
+line-height:1.5em;
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;     /* fix for long non-text content breaking IE sidebar float */
+}
+.main .widget {
+margin-top: 4px;
+width: 468px;
+padding: 0 13px;
+}
+.main .Blog {
+margin: 0;
+padding: 0;
+width: 484px;
+}
+/* Links
+----------------------------------------------- */
+a:link {
+color: #445566;
+}
+a:visited {
+color: #223344;
+}
+a:hover {
+color: #223344;
+}
+a img {
+border-width:0;
+}
+/* Blog Header
+----------------------------------------------- */
+#header-wrapper {
+background:#335577 url("http://www2.blogblog.com/rounders3/corners_cap_top.gif") no-repeat left top;
+margin-top:22px;
+margin-right:0;
+margin-bottom:0;
+margin-left:0;
+padding-top:8px;
+padding-right:0;
+padding-bottom:0;
+padding-left:0;
+color:#ffffff;
+}
+#header {
+background:url("http://www.blogblog.com/rounders3/corners_cap_bot.gif") no-repeat left bottom;
+padding:0 15px 8px;
+}
+#header h1 {
+margin:0;
+padding:10px 30px 5px;
+line-height:1.2em;
+font: normal bold 200% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+#header a,
+#header a:visited {
+text-decoration:none;
+color: #ffffff;
+}
+#header .description {
+margin:0;
+padding:5px 30px 10px;
+line-height:1.5em;
+font: normal normal 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+/* Posts
+----------------------------------------------- */
+h2.date-header {
+margin-top:0;
+margin-right:28px;
+margin-bottom:0;
+margin-left:43px;
+font-size:85%;
+line-height:2em;
+text-transform:uppercase;
+letter-spacing:.2em;
+color:#558866;
+}
+.post {
+margin:.3em 0 25px;
+padding:0 13px;
+border:1px dotted #bbbbbb;
+border-width:1px 0;
+}
+.post h3 {
+margin:0;
+line-height:1.5em;
+background:url("http://www2.blogblog.com/rounders3/icon_arrow.gif") no-repeat 10px .5em;
+display:block;
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+padding-top:2px;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+color: #333333;
+font: normal bold 135% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+.post h3 a, .post h3 a:visited {
+text-decoration:none;
+color: #333333;
+}
+a.title-link:hover {
+background-color: #bbbbbb;
+color: #333333;
+}
+.post-body {
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+border-bottom-color:#eeeecc;
+padding-top:10px;
+padding-right:14px;
+padding-bottom:1px;
+padding-left:29px;
+}
+html>body .post-body {
+border-bottom-width:0;
+}
+.post-body {
+margin:0 0 .75em;
+}
+.post-body blockquote {
+line-height:1.3em;
+}
+.post-footer {
+background: #ffffff;
+margin:0;
+padding-top:2px;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+border:1px dotted #bbbbbb;
+border-width:1px;
+font-size:100%;
+line-height:1.5em;
+color: #666666;
+}
+/*
+The first line of the post footer might only have floated text, so we need to give it a height.
+The height comes from the post-footer line-height
+*/
+.post-footer-line-1 {
+min-height:1.5em;
+_height:1.5em;
+}
+.post-footer p {
+margin: 0;
+}
+html>body .post-footer {
+border-bottom-color:transparent;
+}
+.uncustomized-post-template .post-footer {
+text-align: right;
+}
+.uncustomized-post-template .post-author,
+.uncustomized-post-template .post-timestamp {
+display: block;
+float: left;
+text-align:left;
+margin-right: 4px;
+}
+.post-footer a {
+color: #456;
+}
+.post-footer a:hover {
+color: #234;
+}
+a.comment-link {
+/* IE5.0/Win doesn't apply padding to inline elements,
+so we hide these two declarations from it */
+background/* */:/**/url("http://www.blogblog.com/rounders/icon_comment_left.gif") no-repeat left 45%;
+padding-left:14px;
+}
+html>body a.comment-link {
+/* Respecified, for IE5/Mac's benefit */
+background:url("http://www.blogblog.com/rounders3/icon_comment_left.gif") no-repeat left 45%;
+padding-left:14px;
+}
+.post img, table.tr-caption-container {
+margin-top:0;
+margin-right:0;
+margin-bottom:5px;
+margin-left:0;
+padding:4px;
+border:1px solid #bbbbbb;
+}
+.tr-caption-container img {
+border: none;
+margin: 0;
+padding: 0;
+}
+blockquote {
+margin:.75em 0;
+border:1px dotted #bbbbbb;
+border-width:1px 0;
+padding:5px 15px;
+color: #558866;
+}
+.post blockquote p {
+margin:.5em 0;
+}
+#blog-pager-newer-link {
+float: left;
+margin-left: 13px;
+}
+#blog-pager-older-link {
+float: right;
+margin-right: 13px;
+}
+#blog-pager {
+text-align: center;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+margin-left: 13px;
+}
+/* Comments
+----------------------------------------------- */
+#comments {
+margin:-25px 13px 0;
+border:1px dotted #bbbbbb;
+border-width:0 1px 1px;
+padding-top:20px;
+padding-right:0;
+padding-bottom:15px;
+padding-left:0;
+}
+#comments h4 {
+margin:0 0 10px;
+padding-top:0;
+padding-right:14px;
+padding-bottom:2px;
+padding-left:29px;
+border-bottom:1px dotted #bbbbbb;
+font-size:120%;
+line-height:1.4em;
+color:#333333;
+}
+#comments-block {
+margin-top:0;
+margin-right:15px;
+margin-bottom:0;
+margin-left:9px;
+}
+.comment-author {
+background:url("http://www.blogblog.com/rounders3/icon_comment_left.gif") no-repeat 2px .3em;
+margin:.5em 0;
+padding-top:0;
+padding-right:0;
+padding-bottom:0;
+padding-left:20px;
+font-weight:bold;
+}
+.comment-body {
+margin:0 0 1.25em;
+padding-top:0;
+padding-right:0;
+padding-bottom:0;
+padding-left:20px;
+}
+.comment-body p {
+margin:0 0 .5em;
+}
+.comment-footer {
+margin:0 0 .5em;
+padding-top:0;
+padding-right:0;
+padding-bottom:.75em;
+padding-left:20px;
+}
+.comment-footer a:link {
+color: #333;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+.comment-form {
+padding-left:20px;
+padding-right:5px;
+}
+#comments .comment-form h4 {
+padding-left:0px;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin-top: 5px;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+border: 4px solid #ffffff;
+}
+.profile-datablock {
+margin-top:0;
+margin-right:15px;
+margin-bottom:.5em;
+margin-left:0;
+padding-top:8px;
+}
+.profile-link {
+background:url("http://www.blogblog.com/rounders3/icon_profile_left.gif") no-repeat left .1em;
+padding-left:15px;
+font-weight:bold;
+}
+.profile-textblock {
+clear: both;
+margin: 0;
+}
+.sidebar .clear, .main .widget .clear {
+clear: both;
+}
+#sidebartop-wrap {
+background:#558866 url("http://www.blogblog.com/rounders3/corners_prof_bot.gif") no-repeat left bottom;
+margin:0px 0px 15px;
+padding:0px 0px 10px;
+color:#ffffff;
+}
+#sidebartop-wrap2 {
+background:url("http://www2.blogblog.com/rounders3/corners_prof_top.gif") no-repeat left top;
+padding: 10px 0 0;
+margin:0;
+border-width:0;
+}
+#sidebartop h2 {
+line-height:1.5em;
+color:#ffffff;
+border-bottom: 1px dotted #ffffff;
+font: normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+margin-bottom: 0.5em;
+}
+#sidebartop a {
+color: #ffffff;
+}
+#sidebartop a:hover {
+color: #ffffff;
+}
+#sidebartop a:visited {
+color: #ffffff;
+}
+#sidebar a {
+color: #99ddbb;
+}
+#sidebar a:hover,
+#sidebar a:visited {
+color: #ffffff;
+}
+/* Sidebar Boxes
+----------------------------------------------- */
+.sidebar .widget {
+margin:.5em 13px 1.25em;
+padding:0 0px;
+}
+.widget-content {
+margin-top: 0.5em;
+}
+#sidebarbottom-wrap1 {
+background:#335577 url("http://www.blogblog.com/rounders3/corners_side_top.gif") no-repeat left top;
+margin:0 0 15px;
+padding:10px 0 0;
+color: #ffffff;
+}
+#sidebarbottom-wrap2 {
+background:url("http://www1.blogblog.com/rounders3/corners_side_bot.gif") no-repeat left bottom;
+padding:0 0 8px;
+}
+.sidebar h2 {
+margin-top:0;
+margin-right:0;
+margin-bottom:.5em;
+margin-left:0;
+padding:0 0 .2em;
+line-height:1.5em;
+font:normal bold 100% 'Trebuchet MS',Verdana,Arial,Sans-serif;
+}
+.sidebar ul {
+list-style:none;
+margin:0 0 1.25em;
+padding:0;
+}
+.sidebar ul li {
+background:url("http://www2.blogblog.com/rounders3/icon_arrow_sm.gif") no-repeat 2px .25em;
+margin:0;
+padding-top:0;
+padding-right:0;
+padding-bottom:3px;
+padding-left:16px;
+margin-bottom:3px;
+border-bottom:1px dotted #bbbbbb;
+line-height:1.4em;
+}
+.sidebar p {
+margin:0 0 .6em;
+}
+#sidebar h2 {
+color: #aabbcc;
+border-bottom: 1px dotted #aabbcc;
+}
+/* Footer
+----------------------------------------------- */
+#footer-wrap1 {
+clear:both;
+margin:0 0 10px;
+padding:15px 0 0;
+}
+#footer-wrap2 {
+background:#335577 url("http://www2.blogblog.com/rounders3/corners_cap_top.gif") no-repeat left top;
+color:#ffffff;
+}
+#footer {
+background:url("http://www.blogblog.com/rounders3/corners_cap_bot.gif") no-repeat left bottom;
+padding:8px 15px;
+}
+#footer hr {display:none;}
+#footer p {margin:0;}
+#footer a {color:#ffffff;}
+#footer .widget-content {
+margin:0;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout #main-wrap1,
+body#layout #sidebar-wrap,
+body#layout #header-wrapper {
+margin-top: 0;
+}
+body#layout #header, body#layout #header-wrapper,
+body#layout #outer-wrapper {
+margin-left:0,
+margin-right: 0;
+padding: 0;
+}
+body#layout #outer-wrapper {
+width: 730px;
+}
+body#layout #footer-wrap1 {
+padding-top: 0;
+}
+
+--></style>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class="navbar section" id="navbar"><div class="widget Navbar" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener("load",
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<iframe src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/navbar.htm" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="30px" width="100%" id="navbar-iframe" allowtransparency="true" title="Blogger Navigation and Search"></iframe>
+<div></div></div></div>
+<div id="outer-wrapper">
+<div id="header-wrapper">
+<div class="header section" id="header"><div class="widget Header" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="http://prashanth-cpp.blogspot.com/">Prash's Tech Blog</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>Let's Geek!</span></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="crosscol-wrapper" style="text-align:center">
+<div class="crosscol section" id="crosscol"></div>
+</div>
+<div id="main-wrap1"><div id="main-wrap2">
+<div class="main section" id="main"><div class="widget Blog" id="Blog1">
+<div class="blog-posts hfeed">
+<!-- google_ad_section_start(name=default) -->
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>Sunday 31 May 2009</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post">
+<a name="7944002644306223515"></a>
+<h3 class="post-title">
+<a href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/Prash's Tech Blog  Setting up HTTP Basic authentication with Apache.htm">Setting up HTTP Basic authentication with Apache</a>
+</h3>
+<div class="post-header-line-1"></div>
+<div class="post-body">
+<p></p><p>Last week, I had a chance to setup our test Apache server for Basic and Digest authentication. The setup was required to verify few of the HTTP authentication related test cases.</p>  <p>I’m blogging it here so that I’ll not forget, if I need it again :) </p>  <p>I had <a href="http://www.wampserver.com/">WAMP Server</a> v2.0&nbsp; which included Apache v2.2.11 web server. </p>  <p>Setting up Basic authentication was straight forward.</p>  <p>1. Update <strong>http.conf</strong> by adding : </p>  <blockquote>   <p>AccessFileName htaccess.acl .htaccess </p> </blockquote> <style type="text/css"><br /><br /><br /><br /><br /><br /><br />.csharpcode, .csharpcode pre<br />{<br /> font-size: small;<br /> color: black;<br /> font-family: consolas, "Courier New", courier, monospace;<br /> background-color: #ffffff;<br /> /*white-space: pre;*/<br />}<br />.csharpcode pre { margin: 0em; }<br />.csharpcode .rem { color: #008000; }<br />.csharpcode .kwrd { color: #0000ff; }<br />.csharpcode .str { color: #006080; }<br />.csharpcode .op { color: #0000c0; }<br />.csharpcode .preproc { color: #cc6633; }<br />.csharpcode .asp { background-color: #ffff00; }<br />.csharpcode .html { color: #800000; }<br />.csharpcode .attr { color: #ff0000; }<br />.csharpcode .alt <br />{<br /> background-color: #f4f4f4;<br /> width: 100%;<br /> margin: 0em;<br />}<br />.csharpcode .lnum { color: #606060; }</style>  <p>An htaccess file can be used to modify the Apache configuration on a per-directory basis.</p>  <p>On some operating systems ‘htaccess.acl’ is not required. Ex, on Linux, you can just mention it as .htaccess. This is because, on Linux you can create a file with name .htaccess.</p>  <p>2. Add “Directory” tag into <strong>http.conf</strong> as shown below :</p>  <blockquote>   <p>&lt;Directory "c:/wamp/www/basic-auth/"&gt;      <br>&nbsp;&nbsp;&nbsp; Options None       <br>&nbsp;&nbsp;&nbsp; AllowOverride all       <br>&nbsp;&nbsp;&nbsp; Order Deny,Allow       <br>&lt;/Directory&gt;</p> </blockquote> <style type="text/css"><br /><br /><br /><br /><br />.csharpcode, .csharpcode pre<br />{<br /> font-size: small;<br /> color: black;<br /> font-family: consolas, "Courier New", courier, monospace;<br /> background-color: #ffffff;<br /> /*white-space: pre;*/<br />}<br />.csharpcode pre { margin: 0em; }<br />.csharpcode .rem { color: #008000; }<br />.csharpcode .kwrd { color: #0000ff; }<br />.csharpcode .str { color: #006080; }<br />.csharpcode .op { color: #0000c0; }<br />.csharpcode .preproc { color: #cc6633; }<br />.csharpcode .asp { background-color: #ffff00; }<br />.csharpcode .html { color: #800000; }<br />.csharpcode .attr { color: #ff0000; }<br />.csharpcode .alt <br />{<br /> background-color: #f4f4f4;<br /> width: 100%;<br /> margin: 0em;<br />}<br />.csharpcode .lnum { color: #606060; }</style>  <p><strong>c:/wamp/www/basic-auth/</strong> is the folder which needs to be secured by the authentication scheme which we are trying to impose.</p>  <p>3. Next step is to create password file. </p>  <blockquote>   <p>cd C:\wamp\bin\apache\Apache2.2.11\bin      <br>htpasswd -c pwd.txt prash</p> </blockquote>  <p>This prompts for the password for the username – ‘prash’. After supplying the password we will be ready with the password file – ‘pwd.txt’ under ‘C:\wamp\bin\apache\Apache2.2.11\bin’.</p>  <p>4. Create the htaccess file - ‘htaccess.acl’ file with the following data. </p>  <blockquote>   <p>AuthUserFile C:\wamp\bin\apache\Apache2.2.11\bin\pwd.txt      <br>AuthName "Protected"       <br>AuthType Basic </p>    <p>&lt;Limit GET POST&gt;      <br>require valid-user       <br>&lt;/Limit&gt;</p> </blockquote> <style type="text/css"><br /><br /><br /><br /><br />.csharpcode, .csharpcode pre<br />{<br /> font-size: small;<br /> color: black;<br /> font-family: consolas, "Courier New", courier, monospace;<br /> background-color: #ffffff;<br /> /*white-space: pre;*/<br />}<br />.csharpcode pre { margin: 0em; }<br />.csharpcode .rem { color: #008000; }<br />.csharpcode .kwrd { color: #0000ff; }<br />.csharpcode .str { color: #006080; }<br />.csharpcode .op { color: #0000c0; }<br />.csharpcode .preproc { color: #cc6633; }<br />.csharpcode .asp { background-color: #ffff00; }<br />.csharpcode .html { color: #800000; }<br />.csharpcode .attr { color: #ff0000; }<br />.csharpcode .alt <br />{<br /> background-color: #f4f4f4;<br /> width: 100%;<br /> margin: 0em;<br />}<br />.csharpcode .lnum { color: #606060; }</style>  <p>This specifies which password file need to be considered for the authentication – ‘C:/wamp/bin/apache/Apache2.2.11/bin/pwd.txt’ also the type of authentication scheme – Basic.</p>  <p>Place this file under the folder ‘c:/wamp/www/basic-auth/’ along with other live data and restart the server.</p>  <p>Now, try accessing the folder <a href="http://localhost/basic-auth">http://localhost/basic-auth</a>. This should prompt for username and password.</p>  <p>Reference : <a title="http://httpd.apache.org/docs/2.2/mod/mod_auth_basic.html" href="http://httpd.apache.org/docs/2.2/mod/mod_auth_basic.html">http://httpd.apache.org/docs/2.2/mod/mod_auth_basic.html</a></p><p></p>
+<div style="clear: both;"></div>
+</div>
+<div class="post-footer">
+<p class="post-footer-line post-footer-line-1"><span class="post-author">
+Posted by
+Prashanth Narayanaswamy
+</span>
+<span class="post-timestamp">
+at
+<a class="timestamp-link" href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/Prash's Tech Blog  Setting up HTTP Basic authentication with Apache.htm" title="permanent link">10:47 PM</a>
+</span>
+<span class="post-comment-link">
+</span>
+<span class="post-icons">
+</span>
+</p>
+<p class="post-footer-line post-footer-line-2"></p>
+<p class="post-footer-line post-footer-line-3"></p>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>
+2
+comments:
+        
+</h4>
+<div id="Blog1_comments-block-wrapper">
+<dl class="avatar-comment-indent" id="comments-block">
+<dt class="comment-author " id="c6874972006639919018">
+<a name="c6874972006639919018"></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><a href="http://damh.de/" rel="nofollow" onclick=""><img src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/blank.gif" width="16" height="16" alt="" title="Jochen Goerdts">
+
+</a></span></div>
+<a href="http://damh.de/" rel="nofollow">Jochen Goerdts</a>
+said...
+</dt>
+<dd class="comment-body" id="Blog1_cmt-6874972006639919018">
+<p>
+thanks a lot :) works great.
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html?showComment=1277983244318#c6874972006639919018" title="comment permalink">
+1 July 2010 4:50 PM
+</a>
+<span class="item-control blog-admin pid-658176754">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=5883865168597393160&postID=6874972006639919018" title="Delete Comment">
+<img src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+<dt class="comment-author " id="c6253124406823016492">
+<a name="c6253124406823016492"></a>
+<div class="avatar-image-container avatar-stock"><span dir="ltr"><img src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/blank.gif" width="16" height="16" alt="" title="hamish">
+
+</span></div>
+hamish
+said...
+</dt>
+<dd class="comment-body" id="Blog1_cmt-6253124406823016492">
+<p>
+Hi ..Did help but i some how could not get it to work...Even if i have entered valid username  and passwd it says forbidden. :(
+</p>
+</dd>
+<dd class="comment-footer">
+<span class="comment-timestamp">
+<a href="http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html?showComment=1292590908485#c6253124406823016492" title="comment permalink">
+17 December 2010 6:31 PM
+</a>
+<span class="item-control blog-admin pid-1141936802">
+<a class="comment-delete" href="http://www.blogger.com/delete-comment.g?blogID=5883865168597393160&postID=6253124406823016492" title="Delete Comment">
+<img src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon_delete13.gif">
+</a>
+</span>
+</span>
+</dd>
+</dl>
+</div>
+<p class="comment-footer">
+<a href="http://www.blogger.com/comment.g?blogID=5883865168597393160&postID=7944002644306223515" onclick="">Post a Comment</a>
+</p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+<div id="latency-7944002644306223515"></div><script type="text/javascript">if (window['tickAboveFold']) {window['tickAboveFold'](document.getElementById("latency-7944002644306223515")); } </script>
+
+        </div></div>
+      
+<!-- google_ad_section_end -->
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://prashanth-cpp.blogspot.com/2009/05/digest-authentication-with-apache.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://prashanth-cpp.blogspot.com/2009/05/making-my-blog-mobile-friendly.html" id="Blog1_blog-pager-older-link" title="Older Post">Older Post</a>
+</span>
+<a class="home-link" href="http://prashanth-cpp.blogspot.com/">Home</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+</div>
+</div></div>
+</div></div>
+<div id="sidebar-wrap">
+<div id="sidebartop-wrap"><div id="sidebartop-wrap2">
+<div class="sidebar section" id="sidebartop"><div class="widget Profile" id="Profile1">
+<h2>About Me</h2>
+<div class="widget-content">
+<a href="http://www.blogger.com/profile/17713594715167082598"><img alt="My Photo" class="profile-img" height="80" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/p.JPG" width="65"></a>
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a class="profile-name-link" href="http://www.blogger.com/profile/17713594715167082598" rel="author">
+Prashanth Narayanaswamy
+</a>
+</dt>
+<dd class="profile-textblock">I'm one of the millions of people who love technology. Fascinate to learn more and share with others. This blog is a great place to share few of my thoughts!</dd>
+</dl>
+<a class="profile-link" href="http://www.blogger.com/profile/17713594715167082598" rel="author">View my complete profile</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=Profile&widgetId=Profile1&action=editWidget&sectionId=sidebartop" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Profile1&quot;));" target="configProfile1" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div></div>
+</div></div>
+<div id="sidebarbottom-wrap1"><div id="sidebarbottom-wrap2">
+<div class="sidebar section" id="sidebar"><div class="widget BlogArchive" id="BlogArchive1">
+<h2>Blog Archive</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/search?updated-min=2011-01-01T00%3A00%3A00%2B05%3A30&updated-max=2012-01-01T00%3A00%3A00%2B05%3A30&max-results=1">2011</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2011_05_01_archive.html">May</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2011/05/bmtc-android.html">BMTC &amp; Android</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/search?updated-min=2010-01-01T00%3A00%3A00%2B05%3A30&updated-max=2011-01-01T00%3A00%3A00%2B05%3A30&max-results=7">2010</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2010_10_01_archive.html">October</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2010/10/age-of-webapps.html">The Age of ‘WebApps’</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2010/10/no-service-found-for.html">no service found for - "com.nokia.qt.mediaplayer"</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2010_08_01_archive.html">August</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2010/08/bypassing-same-origin-policy-on-firefox.html">Bypassing Same-Origin policy on Firefox.</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2010_07_01_archive.html">July</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2010/07/building-qtwebkit-on-windows-few-common.html">Building QtWebKit on Windows – Few common issues</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2010/07/building-qtwebkit-on-windows.html">Building QtWebKit on Windows</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2010/07/excluding-folders-while-checking-out.html">Excluding folders while checking out an SVN reposi...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2010_01_01_archive.html">January</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2010/01/swap-space-on-ubuntu.html">Swap space on Ubuntu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/search?updated-min=2009-01-01T00%3A00%3A00%2B05%3A30&updated-max=2010-01-01T00%3A00%3A00%2B05%3A30&max-results=8">2009</a>
+<span class="post-count" dir="ltr">(8)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_10_01_archive.html">October</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/10/developing-applications-with-nokia-wrt.html">Developing Applications with Nokia WRT - VTU EduSa...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_09_01_archive.html">September</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/09/dependency-walker-for-windows-binaries.html">Dependency Walker for Windows binaries</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_08_01_archive.html">August</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/08/html5-video.html">HTML5 video</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_07_01_archive.html">July</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/07/resolving-exported-symbols-from-symbian.html">Resolving the exported symbols from a Symbian DLL</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">▼&nbsp;</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_05_01_archive.html">May</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/05/digest-authentication-with-apache.html">Digest authentication with Apache</a></li>
+<li><a href="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/Prash's Tech Blog  Setting up HTTP Basic authentication with Apache.htm">Setting up HTTP Basic authentication with Apache</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2009/05/making-my-blog-mobile-friendly.html">Making my blog 'Mobile Friendly'</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2009_01_01_archive.html">January</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2009/01/very-happy-new-year-to-all-of-readers.html">Backward Compatibility with DLLs – Part 2 (Private...</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/search?updated-min=2008-01-01T00%3A00%3A00%2B05%3A30&updated-max=2009-01-01T00%3A00%3A00%2B05%3A30&max-results=3">2008</a>
+<span class="post-count" dir="ltr">(3)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2008_12_01_archive.html">December</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2008/12/backward-compatibility-with-dlls.html">Backward Compatibility with DLLs</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2008_06_01_archive.html">June</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2008/06/forward-declarations.html">Forward Declarations</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2008_01_01_archive.html">January</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2008/01/dynamiccasting-with-pointers-and.html">dynamic_casting with pointers and references</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/search?updated-min=2007-01-01T00%3A00%3A00%2B05%3A30&updated-max=2008-01-01T00%3A00%3A00%2B05%3A30&max-results=26">2007</a>
+<span class="post-count" dir="ltr">(26)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_09_01_archive.html">September</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/09/global-vs-member-overloaded-operator.html">Global vs Member overloaded operator new</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_08_01_archive.html">August</a>
+<span class="post-count" dir="ltr">(4)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/08/zombie.html">Zombie</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/08/overloading.html">Overloading "new"</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/08/overloading-const-and-non-const-member.html">Overloading const and non-const member functions</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/08/accessing-non-static-member-function.html">Accessing non-static member function without objec...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_07_01_archive.html">July</a>
+<span class="post-count" dir="ltr">(5)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/07/how-to-pronounce-bjarne-stroustrup.html">How to pronounce Bjarne Stroustrup?</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/07/rtti.html">RTTI</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/07/don-ever-mix-arrays-with-autoptr.html">Don't ever mix Arrays with auto_ptr !</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/07/c0x.html">C++0x</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/07/smart-pointers.html">Smart Pointers</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_06_01_archive.html">June</a>
+<span class="post-count" dir="ltr">(6)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/in-our-daily-development-activities-we.html">Library - Reusable binary component</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/can-access-private-function.html">Can access a private function?</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/dynamiccast.html">dynamic_cast</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/whats-new.html">What's "new"?</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/conceptual-virtual-constructors.html">Conceptual "Virtual Constructors"</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/06/static-dynamic-memory-allocations.html">Static &amp; Dynamic memory allocations...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_05_01_archive.html">May</a>
+<span class="post-count" dir="ltr">(2)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/05/const-correctness.html">Const Correctness</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/05/resolving-function-address.html">Resolving function address ...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_03_01_archive.html">March</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/03/calling-ctor.html">Calling ctor!!</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+          ►&nbsp;
+        
+</span>
+</a>
+<a class="post-count-link" href="http://prashanth-cpp.blogspot.com/2007_01_01_archive.html">January</a>
+<span class="post-count" dir="ltr">(7)</span>
+<ul class="posts">
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/delete-this.html">delete this;</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/implementing-final-class-in-c.html">Implementing a "final" class in C++</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/when-do-we-need-to-have-definition-for_11.html">When do we need to have definition for a "Pure Vir...</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/why-cant-we-have-virtual-constructors.html">Why can't we have "Virtual Constructors"?</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/if-we-have-2-classes-say-class-cbase.html">Need for "Virtual Destructor"</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/assignment-operator-vs-copy-constructor.html">Assignment operator Vs. Copy constructor</a></li>
+<li><a href="http://prashanth-cpp.blogspot.com/2007/01/overloading-vs-overriding.html">Overloading Vs. Overriding</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;BlogArchive1&quot;));" target="configBlogArchive1" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Label" id="Label1">
+<h2>Labels</h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/AJAX">AJAX</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Android">Android</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Apache">Apache</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/BackwardCompatibility">BackwardCompatibility</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Basic%20Authentication">Basic Authentication</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Bjarne%20Stroustrup">Bjarne Stroustrup</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Blog">Blog</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/BMTC">BMTC</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/C%2B%2B">C++</a>
+<span dir="ltr">(21)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/constructors">constructors</a>
+<span dir="ltr">(4)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Digest%20Authentication">Digest Authentication</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/DLL">DLL</a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/dynamic_cast">dynamic_cast</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Firefox">Firefox</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/GStreamer">GStreamer</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/HTML5">HTML5</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Library">Library</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Linux">Linux</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Mobile">Mobile</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/MoFuse">MoFuse</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Nokia">Nokia</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/operator%20new">operator new</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Ordinals">Ordinals</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Overloading">Overloading</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/PIMPL">PIMPL</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Qt">Qt</a>
+<span dir="ltr">(4)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/QtMobility">QtMobility</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/QtWebKit">QtWebKit</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/RTTI">RTTI</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Security">Security</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Smart%20Pointers">Smart Pointers</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/SVN">SVN</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Symbian">Symbian</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Ubuntu">Ubuntu</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Video">Video</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Web">Web</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/WebApp">WebApp</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/WebKit">WebKit</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/WebRuntime">WebRuntime</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/WebServer">WebServer</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Widget">Widget</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/Windows">Windows</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/WRT">WRT</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://prashanth-cpp.blogspot.com/search/label/XHR">XHR</a>
+<span dir="ltr">(1)</span>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;Label1&quot;));" target="configLabel1" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" id="HTML1">
+<div class="widget-content">
+<p><a href="http://prashanth-cpp.blogspot.com/feeds/posts/default" rel="alternate" type="application/rss+xml"><img alt="" style="border: 0pt none ; vertical-align: middle;" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/feed-icon32x32.png"></a> <a href="http://prashanth-cpp.blogspot.com/feeds/posts/default" rel="alternate" type="application/rss+xml">Subscribe</a> to this blog now!</p>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML1&quot;));" target="configHTML1" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML2">
+<h2 class="title">Twitter Updates</h2>
+<div class="widget-content">
+<div id="twitter_div">
+<h2 style="display:none;" class="sidebar-title">Twitter Updates</h2>
+<ul id="twitter_update_list"><li><span>@<a href="http://twitter.com/raghava">raghava</a> yake?</span> <a style="font-size:85%" href="http://twitter.com/prashanth_gedde/statuses/125102147917459456">20 days ago</a></li><li><span>Did you notice? <a href="http://t.co/tNt39tEQ">http://t.co/tNt39tEQ</a> Yahoo! maps is now powered by Nokia Ovi Maps! :) #fb</span> <a style="font-size:85%" href="http://twitter.com/prashanth_gedde/statuses/121264947098423296">31 days ago</a></li><li><span>@ the old adda... (@ Vasanth Nagar w/ @<a href="http://twitter.com/anandhp">anandhp</a>) <a href="http://t.co/04g4NBq4">http://t.co/04g4NBq4</a></span> <a style="font-size:85%" href="http://twitter.com/prashanth_gedde/statuses/120480056278663168">33 days ago</a></li></ul>
+<a id="twitter-link" style="display:block;text-align:right;" href="http://twitter.com/prashanth_gedde">follow me on Twitter</a>
+</div>
+<script src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/blogger.js" type="text/javascript"></script>
+<script src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/prashanth_gedde.json" type="text/javascript"></script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML2&quot;));" target="configHTML2" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML10">
+<h2 class="title">LinkedIn</h2>
+<div class="widget-content">
+<a href="http://www.linkedin.com/in/prashanthgedde"><img border="0" width="160" alt="View Prashanth Narayanaswamy&#39;s profile on LinkedIn" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/btn_viewmy_160x25.gif" height="25"></a>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=HTML&widgetId=HTML10&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML10&quot;));" target="configHTML10" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget TextList" id="TextList1">
+<h2>I visit these blogs</h2>
+<div class="widget-content">
+<ul>
+<li><a href="http://www.techcrunch.com/" target="_new">TechCrunch</a></li>
+<li><a href="http://cplus.about.com/" target="_new">About C++</a></li>
+<li><a href="http://labnol.blogspot.com/" target="_new">Digital Inspiration</a></li>
+<li><a href="http://southend.wordpress.com/" target="_new">South-End Talkies</a></li>
+<li><a href="http://anatomistudios.blogspot.com/" target="_new">Anatomi Studios</a></li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=TextList&widgetId=TextList1&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;TextList1&quot;));" target="configTextList1" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" id="HTML4">
+<h2 class="title">Cluster Map</h2>
+<div class="widget-content">
+<a id="clustrMapsLink" href="http://www3.clustrmaps.com/counter/maps.php?url=http://prashanth-cpp.blogspot.com"><img id="clustrMapsImg" style="border:0px;" alt="Locations of visitors to this page" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/index2.php" onerror="this.onError=null; this.src=&#39;http://www2.clustrmaps.com/images/clustrmaps-back-soon.jpg&#39;; document.getElementById(&#39;clustrMapsLink&#39;).href=&#39;http://www2.clustrmaps.com&#39;" title="Locations of visitors to this page">
+</a>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML4&quot;));" target="configHTML4" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" id="HTML7">
+<div class="widget-content">
+<!-- BlogCounter Code START -->
+<p><a id="bclink" href="http://blogcounter.com/" title="Blog counter"><span id="bccount" style="font-size:8px"><img src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/log.php" alt="BlogCounter.com - Free counter for Weblogs" border="0" width="80" height="15"></span></a></p><script src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/js.php" type="text/javascript"></script><noscript>&lt;p&gt;&lt;a href="http://blogcounter.com/"&gt;&lt;img style="border: 0px;" alt="Blog counter" src="http://blogcounter.com/log.php?id=prashanthgedde"/&gt;&lt;/a&gt; - &lt;a href="http://audio.zabim.com/"&gt;Audio Hosting&lt;/a&gt;&lt;/p&gt;</noscript>
+<!-- BlogCounter Code END -->
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=5883865168597393160&widgetType=HTML&widgetId=HTML7&action=editWidget&sectionId=sidebar" onclick="return _WidgetManager._PopupConfig(document.getElementById(&quot;HTML7&quot;));" target="configHTML7" title="Edit">
+<img alt="" height="18" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/icon18_wrench_allbkg.png" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div></div>
+</div>
+<div id="footer-wrap1"><div id="footer-wrap2">
+<div class="footer section" id="footer"></div>
+</div></div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2012998-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="./Prash's Tech Blog  Setting up HTTP Basic authentication with Apache_files/2446270697-widgets.js"></script>
+<script type="text/javascript">
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '5883865168597393160';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('http://www.blogger.com/rearrange?blogID=5883865168597393160','http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html','5883865168597393160');
+_WidgetManager._SetPageActionUrl('http://www.blogger.com/display?blogID=5883865168597393160','APq4FmA7tk5VNaaM8XQYd4Zjng34h_wREWozqRM5rRxDFhaukmq3LXQKY4N8OFtw3UpqG6PsLTcqvs1WkUEqTHOKoTrvrw-kMV_DEZKjN9NkGD1AtDgqUsk=','AOuZoY6DINR1iFINq6WE-Y9wTMrPw8MKOg:1320258106696');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'title': 'Prash\47s Tech Blog', 'pageType': 'item', 'url': 'http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html', 'canonicalUrl': 'http://prashanth-cpp.blogspot.com/2009/05/setting-up-http-basic-authentication.html', 'homepageUrl': 'http://prashanth-cpp.blogspot.com/', 'blogspotFaviconUrl': 'http://prashanth-cpp.blogspot.com/favicon.ico', 'enabledCommentProfileImages': true, 'searchLabel': '', 'searchQuery': '', 'pageName': 'Setting up HTTP Basic authentication with Apache', 'pageTitle': 'Prash\47s Tech Blog: Setting up HTTP Basic authentication with Apache', 'encoding': 'UTF-8', 'locale': 'en-IN', 'isPrivate': false, 'isMobile': false, 'mobileClass': '', 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Prash\46#39;s Tech Blog - Atom\42 href\75\42http://prashanth-cpp.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Prash\46#39;s Tech Blog - RSS\42 href\75\42http://prashanth-cpp.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Prash\46#39;s Tech Blog - Atom\42 href\75\42http://www.blogger.com/feeds/5883865168597393160/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0755883865168597393160\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var a\75window;function c(b){this.t\75{};this.tick\75function(b,i,d){d\75d!\75void 0?d:(new Date).getTime();this.t[b]\75[d,i]};this.tick(\42start\42,null,b)}var e\75new c;a.jstiming\75{Timer:c,load:e};try{var g\75null;a.chrome\46\46a.chrome.csi\46\46(g\75Math.floor(a.chrome.csi().pageT));g\75\75null\46\46a.gtbExternal\46\46(g\75a.gtbExternal.pageT());g\75\75null\46\46a.external\46\46(g\75a.external.pageT);g\46\46(a.jstiming.pt\75g)}catch(h){};a.tickAboveFold\75function(b){var f\0750;if(b.offsetParent){do f+\75b.offsetTop;while(b\75b.offsetParent)}b\75f;b\74\075750\46\46a.jstiming.load.tick(\42aft\42)};var j\75false;function k(){j||(j\75true,a.jstiming.load.tick(\42firstScrollTime\42))}a.addEventListener?a.addEventListener(\42scroll\42,k,false):a.attachEvent(\42onscroll\42,k);\n })();\74/script\076', 'mobileHeadScript': '', 'analyticsAccountNumber': ''}}]);
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebartop', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML10', 'sidebar', null, document.getElementById('HTML10'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_TextListView', new _WidgetInfo('TextList1', 'sidebar', null, document.getElementById('TextList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML7', 'sidebar', null, document.getElementById('HTML7'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'http://www.blogger.com/static/v1/jsbin/4215911123-lbx.js', 'lightboxCssUrl': 'http://www.blogger.com/static/v1/v-css/1683166225-lightbox_bundle.css'}, 'displayModeFull'));
+</script>
+
+</body></html>

@@ -1,0 +1,4 @@
+1. session hack
+	motivation - when we change password of cyberoam the session does not break. The session only breaks when we click logout. This means once the session is formed, password is not required.
+
+	next step - make session from one computer and then blocks it and generate the same packets from the other computer.

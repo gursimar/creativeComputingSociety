@@ -1,0 +1,10 @@
+get a mac-address flooding tool. ie. dsniff, macof.. when u flood the cam table of the switch with bogus mac-address, fill the cam table to the brim, then the switch will start acting like a hub.
+ 
+If the switch can't learn anymore mac-address, (since it's filled up with bogus macs) it'll start forwarding incoming packets out all ports. There u go, u hv a hub. ;)
+
+
+
+Rules:
+Rules are made to be broken. But you will be defaulter if you are caught!!!!
+
+network card has to be in promiscuous mode

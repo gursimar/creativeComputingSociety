@@ -1,0 +1,17 @@
+ip.addr == 172.31.47.57 && ip.addr == 172.31.1.6 && tcp.port == 8090 && tcp.len > 20 && tcp contains "mode=191" && !(tcp.analysis.retransmission)
+
+ip.addr == 172.31.1.6 && tcp.port == 8090 && tcp.len > 20 && tcp contains "mode=191" && !(tcp.analysis.retransmission)
+
+ip.dst_host == 172.31.1.6 && tcp.port == 8090 && tcp.len > 20 && tcp contains "mode=191" && !
+(tcp.analysis.retransmission)
+
+mode=191&username=601061001&password=megha8&a=1321643840147
+mode=191&username=100806093&password=lotion&a=1321643885927
+mode=191&username=701050015&password=115566111&btnSubmit=Login
+mode=191&username=601001011&password=pappupagervala&a=132164540995
+mode=191&username=101008035&password=9781324172&a=1321645768605
+mode=191&username=101008025&password=bprime&a=1321646184884
+mode=191&username=301105003&password=ARKA%2485&a=1321885384037
+
+
+
